@@ -10,7 +10,9 @@
 
 ### 已确认
 
-README、仓库名称/描述或 GitHub Topic 明确提及 `DeepSeek Harness` / `deepseek-harness`，并且存在插件、桌面端、工具、部署、视觉、渠道等实现信号。
+仓库名称、描述或 GitHub Topic 明确指向 `DeepSeek Harness` / `deepseek-harness`，并且存在插件、桌面端、工具、部署、视觉、渠道等实现信号；或者 README 明确说明“这是为 DeepSeek Harness 构建的实现”。
+
+如果完整名称只是在 README 中被顺带提及，而仓库身份和直接实现关系不清晰，自动任务只会放入“待复核”，不会直接进入主榜。
 
 “已确认”只确认相关性和公开实现入口，不等于：
 
@@ -25,7 +27,7 @@ README、仓库名称/描述或 GitHub Topic 明确提及 `DeepSeek Harness` / `
 
 ### 排除
 
-包括明显误命中、教程/白皮书/纯清单、起点前项目、无实现证据项目和维护者 denylist。
+包括明显误命中、教程/白皮书/纯清单、起点前项目、无实现证据项目和维护者 denylist。denylist 优先级最高，并会把历史已确认项目或候选项目移出对应清单。
 
 ## 发现方式
 
@@ -37,7 +39,7 @@ README、仓库名称/描述或 GitHub Topic 明确提及 `DeepSeek Harness` / `
 - `topic:dsh-plugin`
 - `dsh-plugin in:name,description`
 
-搜索结果会受到 GitHub 索引延迟和每次返回上限影响。对漏检仓库使用 `config/manual-allowlist.json` 补充。
+搜索结果会受到 GitHub 索引延迟、每次返回上限和 README 读取上限影响。默认每次最多读取 80 个新仓库 README；其余结果只基于元数据判断，证据不足时进入待复核。对漏检仓库使用 `config/manual-allowlist.json` 补充。
 
 ## 排名
 
@@ -71,4 +73,15 @@ rank_change = 上一个快照排名 - 当前排名
 
 每天保留一个上海日期命名的 JSON 快照。同一天手动重复运行会刷新当天文件，不会伪造多个“日增长”观察点。
 
-如果 GitHub API 返回限流或其他错误，更新脚本会失败并保留上一次成功数据，不会用空结果覆盖历史。
+对短暂网络错误、429、部分 5xx 和明确限流响应，更新器会进行最多 3 次、单次等待不超过 5 秒的有限重试。最终仍失败时，GitHub Actions 不会提交任何改动，因此远端仍保留上一次成功版本。
+
+本地手动运行如果在生成过程中失败，可能留下未提交文件；应先查看 `git status`，不要把失败运行产生的局部文件直接提交。
+
+## 可复现与安全边界
+
+- 自动任务只读取 GitHub 公开 API 和 README，不克隆、不安装、不执行被观察项目代码。
+- 排名、CSV、页面和推文草稿全部由同一份快照生成；CI 会在构建后检查生成文件是否有未提交差异。
+- 页面把 GitHub 描述当作不可信文本转义，并限制可打开链接为 `https://github.com/`。
+- 工作流按职责拆分：每日数据任务只获得内容写权限，Pages 部署才获得页面和身份令牌权限。
+- Pages 工作流监听每日任务成功完成事件；这是因为 `GITHUB_TOKEN` 产生的机器人推送不会再次触发普通 `push` 工作流。
+- GitHub Actions 版本由 Dependabot 每周检查，但首次上线后的真实运行结果仍需要维护者在 Actions 中确认。

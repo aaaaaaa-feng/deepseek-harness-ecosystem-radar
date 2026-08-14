@@ -4,8 +4,10 @@ import {
   attentionScore,
   buildRankings,
   categoryFor,
+  reconcileCatalogs,
   relevanceEvidence,
-  validateProjectSet
+  validateProjectSet,
+  validateRadarConfig
 } from '../scripts/lib/radar.mjs';
 
 test('exact DeepSeek Harness implementation is confirmed', () => {
@@ -26,6 +28,23 @@ test('ambiguous DSH repository is not auto-confirmed', () => {
     topics: []
   }, 'Generic research repository');
   assert.equal(result.level, 'excluded');
+});
+
+test('generic README mention is held for review, while a direct implementation is confirmed', () => {
+  const generic = relevanceEvidence({
+    full_name: 'example/agent-benchmark',
+    description: 'Agent benchmark suite',
+    language: 'Python',
+    topics: []
+  }, 'We compare several tools, including DeepSeek Harness, in this benchmark.');
+  const direct = relevanceEvidence({
+    full_name: 'example/new-plugin',
+    description: 'Developer utility',
+    language: 'TypeScript',
+    topics: []
+  }, 'This plugin is built for DeepSeek Harness and adds a project status panel.');
+  assert.equal(generic.level, 'candidate');
+  assert.equal(direct.level, 'confirmed');
 });
 
 test('category classifier recognizes a model gateway', () => {
@@ -60,6 +79,14 @@ test('rankings calculate snapshot deltas and rank changes', () => {
   assert.equal(rankings.observation_window_hours, 24);
 });
 
+test('rankings reject invalid or duplicate snapshot timestamps', () => {
+  assert.throws(() => buildRankings([], [{snapshot_at: 'invalid', projects: []}]), /Invalid snapshot timestamp/);
+  assert.throws(() => buildRankings([], [
+    {snapshot_at: '2026-08-14T00:00:00Z', projects: []},
+    {snapshot_at: '2026-08-14T00:00:00Z', projects: []}
+  ]), /unique and increasing/);
+});
+
 test('project validation catches duplicates and cutoff violations', () => {
   const projects = [
     {repo: 'a/one', url: 'https://github.com/a/one', created_at: '2026-08-13T13:00:00Z'},
@@ -68,4 +95,59 @@ test('project validation catches duplicates and cutoff violations', () => {
   const errors = validateProjectSet(projects, '2026-08-13T13:02:03.901Z');
   assert.ok(errors.some(error => error.startsWith('Before cutoff')));
   assert.ok(errors.some(error => error.startsWith('Duplicate repo')));
+});
+
+test('catalog reconciliation makes denylist and evidence transitions mutually exclusive', () => {
+  const result = reconcileCatalogs({
+    projects: [{repo: 'A/Confirmed', stars: 10}],
+    candidates: [{repo: 'B/Maybe', first_seen_at: '2026-08-14T00:00:00Z'}],
+    exclusions: [{repo: 'C/Old', discovered_at: '2026-08-14T00:00:00Z'}],
+    evaluated: [
+      {project: {repo: 'B/Maybe', url: 'https://github.com/B/Maybe', evidence_level: 'excluded', evidence_reason: '证据不足'}},
+      {project: {repo: 'C/Old', url: 'https://github.com/C/Old', evidence_level: 'candidate', stars: 2}}
+    ],
+    denylist: ['A/Confirmed'],
+    observedAt: '2026-08-15T00:00:00Z'
+  });
+  assert.deepEqual(result.projects, []);
+  assert.deepEqual(result.candidates.map(item => item.repo), ['C/Old']);
+  assert.deepEqual(result.exclusions.map(item => item.repo), ['A/Confirmed', 'B/Maybe']);
+  assert.match(result.exclusions[0].reason, /denylist/);
+});
+
+test('catalog promotion preserves original discovery time and query provenance', () => {
+  const result = reconcileCatalogs({
+    candidates: [{
+      repo: 'Example/Plugin',
+      first_seen_at: '2026-08-14T00:00:00Z',
+      discovery_queries: ['first-query']
+    }],
+    evaluated: [{
+      project: {
+        repo: 'example/plugin',
+        url: 'https://github.com/example/plugin',
+        evidence_level: 'confirmed',
+        first_seen_at: '2026-08-15T00:00:00Z'
+      },
+      discovery_queries: ['second-query']
+    }],
+    observedAt: '2026-08-15T00:00:00Z'
+  });
+  assert.equal(result.projects[0].first_seen_at, '2026-08-14T00:00:00Z');
+  assert.deepEqual(result.projects[0].discovery_queries, ['first-query', 'second-query']);
+  assert.deepEqual(result.candidates, []);
+});
+
+test('radar configuration validation rejects unsafe update bounds', () => {
+  const errors = validateRadarConfig({
+    release_cutoff_utc: 'not-a-date',
+    discovery_lookback_days: 0,
+    search_pages_per_query: 11,
+    max_readmes_per_run: 0,
+    api_max_attempts: 9,
+    api_max_retry_delay_ms: 30_001,
+    public_repository_url: 'https://example.com/repo',
+    queries: ['missing placeholder']
+  });
+  assert.ok(errors.length >= 8);
 });

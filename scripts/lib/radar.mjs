@@ -4,6 +4,7 @@ const DSH_NAME_PATTERN = /(?:^|\/)(?:[^/]*deepseek[-_]?harness[^/]*|dsh[-_][^/]+
 const DSH_TEXT_PATTERN = /\bDSH\b/i;
 const IMPLEMENTATION_PATTERN = /plugin|extension|desktop|launcher|client|tui|terminal|cli|vision|ocr|image|browser|playwright|tool|skin|theme|ui|web|bridge|bot|gateway|router|provider|market|store|workshop|installer|docker|android|termux|memory|context|usage|cost|balance|automation|skill|bundle|patch|插件|桌面|启动器|终端|视觉|浏览器|工具|皮肤|主题|桥接|机器人|市场|安装|记忆|上下文|用量|费用|自动化/i;
 const DOC_ONLY_PATTERN = /tutorial|guide|handbook|whitepaper|paper|research notes|awesome[-_ ]|curated list|教程|指南|手册|白皮书|论文|研究笔记|精选列表/i;
+const DIRECT_RELATIONSHIP_PATTERN = /(?:deepseek[-\s]?harness)[\s\S]{0,140}(?:plugin|extension|desktop|client|tool|skin|theme|bridge|gateway|market|插件|桌面|客户端|工具|皮肤|主题|桥接|网关|市场)|(?:plugin|extension|desktop|client|tool|skin|theme|bridge|gateway|market|插件|桌面|客户端|工具|皮肤|主题|桥接|网关|市场)[\s\S]{0,100}(?:for|inside|with|to|面向|适配|用于)[\s\S]{0,30}(?:deepseek[-\s]?harness)/i;
 
 export function toNumber(value) {
   const parsed = Number(value ?? 0);
@@ -13,6 +14,30 @@ export function toNumber(value) {
 export function round(value, digits = 2) {
   const factor = 10 ** digits;
   return Math.round(value * factor) / factor;
+}
+
+export function validateRadarConfig(config) {
+  const errors = [];
+  const boundedInteger = (key, minimum, maximum) => {
+    if (!Number.isInteger(config?.[key]) || config[key] < minimum || config[key] > maximum) {
+      errors.push(`${key} must be an integer between ${minimum} and ${maximum}`);
+    }
+  };
+  if (Number.isNaN(Date.parse(config?.release_cutoff_utc))) errors.push('release_cutoff_utc must be a valid timestamp');
+  boundedInteger('discovery_lookback_days', 1, 365);
+  boundedInteger('search_pages_per_query', 1, 10);
+  boundedInteger('max_readmes_per_run', 1, 1_000);
+  boundedInteger('api_max_attempts', 1, 5);
+  boundedInteger('api_max_retry_delay_ms', 0, 30_000);
+  if (!Array.isArray(config?.queries) || !config.queries.length || config.queries.some(query => typeof query !== 'string' || !query.includes('{since_date}'))) {
+    errors.push('Every discovery query must contain {since_date}');
+  } else if (new Set(config.queries).size !== config.queries.length) {
+    errors.push('Discovery queries must be unique');
+  }
+  if (config?.public_repository_url && !/^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(config.public_repository_url)) {
+    errors.push('public_repository_url must be an empty string or a GitHub repository URL');
+  }
+  return errors;
 }
 
 export function attentionScore(project) {
@@ -42,9 +67,11 @@ export function categoryFor(input) {
 
 export function relevanceEvidence(repo, readme = '') {
   const topics = Array.isArray(repo?.topics) ? repo.topics : [];
-  const metadata = `${repo?.full_name || repo?.repo || ''} ${repo?.description || ''} ${topics.join(' ')}`;
+  const identity = `${repo?.full_name || repo?.repo || ''} ${repo?.description || ''} ${topics.join(' ')}`;
+  const metadata = `${identity} ${repo?.language || ''}`;
   const allText = `${metadata}\n${readme}`;
-  const exactProject = EXACT_PROJECT_PATTERN.test(allText);
+  const exactIdentity = EXACT_PROJECT_PATTERN.test(identity);
+  const exactReadme = EXACT_PROJECT_PATTERN.test(readme);
   const topicMatch = topics.some(topic => DSH_TOPIC_PATTERN.test(topic));
   const dshName = DSH_NAME_PATTERN.test(repo?.full_name || repo?.repo || '');
   const dshText = DSH_TEXT_PATTERN.test(allText);
@@ -54,16 +81,94 @@ export function relevanceEvidence(repo, readme = '') {
   if (docsOnly) {
     return {level: 'excluded', reason: '资料型、教程型或纯清单仓库'};
   }
-  if ((exactProject || topicMatch) && implementation) {
+  if ((exactIdentity || topicMatch) && implementation) {
     return {
       level: 'confirmed',
       reason: topicMatch ? 'GitHub Topic 与实现信号同时命中' : 'README/仓库信息明确提及 DeepSeek Harness 且存在实现信号'
     };
   }
+  if (exactReadme && DIRECT_RELATIONSHIP_PATTERN.test(readme) && implementation) {
+    return {level: 'confirmed', reason: 'README 明确说明这是面向 DeepSeek Harness 的实现'};
+  }
+  if (exactReadme && implementation) {
+    return {level: 'candidate', reason: 'README 提及 DeepSeek Harness，但直接实现关系仍需复核'};
+  }
   if (dshName && dshText && implementation) {
     return {level: 'candidate', reason: 'DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据'};
   }
   return {level: 'excluded', reason: '相关性证据不足，可能是 DSH 缩写误命中'};
+}
+
+export function reconcileCatalogs({
+  projects = [],
+  candidates = [],
+  exclusions = [],
+  evaluated = [],
+  denylist = [],
+  observedAt = new Date().toISOString()
+}) {
+  const projectMap = new Map(projects.map(project => [project.repo.toLowerCase(), project]));
+  const candidateMap = new Map(candidates.map(project => [project.repo.toLowerCase(), project]));
+  const exclusionMap = new Map(exclusions.map(project => [project.repo.toLowerCase(), project]));
+  const denied = new Set(denylist.map(repo => repo.toLowerCase()));
+
+  for (const repository of denylist) {
+    const key = repository.toLowerCase();
+    const previous = exclusionMap.get(key) || candidateMap.get(key) || projectMap.get(key) || {};
+    projectMap.delete(key);
+    candidateMap.delete(key);
+    exclusionMap.set(key, {
+      repo: previous.repo || repository,
+      url: previous.url || `https://github.com/${repository}`,
+      reason: '维护者 denylist：已确认误收或不属于观察范围',
+      discovered_at: previous.discovered_at || previous.first_seen_at || observedAt,
+      discovery_queries: [...new Set([...(previous.discovery_queries || []), 'manual-denylist'])]
+    });
+  }
+
+  for (const {project, discovery_queries = []} of evaluated) {
+    const key = project.repo.toLowerCase();
+    if (denied.has(key)) continue;
+    if (project.evidence_level === 'confirmed') {
+      const previous = projectMap.get(key) || candidateMap.get(key) || exclusionMap.get(key);
+      projectMap.set(key, {
+        ...project,
+        discovery_queries: [...new Set([...(previous?.discovery_queries || []), ...discovery_queries])],
+        first_seen_at: previous?.first_seen_at || previous?.discovered_at || project.first_seen_at || observedAt,
+        last_seen_at: observedAt
+      });
+      candidateMap.delete(key);
+      exclusionMap.delete(key);
+    } else if (project.evidence_level === 'candidate') {
+      const previous = candidateMap.get(key) || exclusionMap.get(key) || projectMap.get(key);
+      projectMap.delete(key);
+      exclusionMap.delete(key);
+      candidateMap.set(key, {
+        ...previous,
+        ...project,
+        discovery_queries: [...new Set([...(previous?.discovery_queries || []), ...discovery_queries])],
+        first_seen_at: previous?.first_seen_at || previous?.discovered_at || project.first_seen_at || observedAt,
+        last_seen_at: observedAt
+      });
+    } else {
+      const previous = exclusionMap.get(key) || candidateMap.get(key) || projectMap.get(key);
+      projectMap.delete(key);
+      candidateMap.delete(key);
+      exclusionMap.set(key, {
+        repo: project.repo,
+        url: project.url,
+        reason: project.evidence_reason,
+        discovered_at: previous?.discovered_at || previous?.first_seen_at || observedAt,
+        discovery_queries: [...new Set([...(previous?.discovery_queries || []), ...discovery_queries])]
+      });
+    }
+  }
+
+  return {
+    projects: [...projectMap.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo)),
+    candidates: [...candidateMap.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo)),
+    exclusions: [...exclusionMap.values()].sort((a, b) => a.repo.localeCompare(b.repo))
+  };
 }
 
 export function normalizeApiProject(api, previous = {}, evidence = {}, observedAt = new Date().toISOString()) {
@@ -92,10 +197,10 @@ export function normalizeApiProject(api, previous = {}, evidence = {}, observedA
     category: categoryFor({repo: fullName, description, topics}),
     first_seen_at: previous.first_seen_at || observedAt,
     last_seen_at: observedAt,
-    verification: previous.verification || evidence.verification || 'metadata-only',
-    evidence_level: previous.evidence_level || evidence.level || 'candidate',
-    evidence_reason: previous.evidence_reason || evidence.reason || '',
-    evidence_url: previous.evidence_url || evidence.url || `https://github.com/${fullName}#readme`
+    verification: evidence.verification || previous.verification || 'metadata-only',
+    evidence_level: evidence.level || previous.evidence_level || 'candidate',
+    evidence_reason: evidence.reason || previous.evidence_reason || '',
+    evidence_url: evidence.url || previous.evidence_url || `https://github.com/${fullName}#readme`
   };
 }
 
@@ -126,18 +231,30 @@ function rankMetrics(items) {
 }
 
 export function buildRankings(projects, snapshots) {
-  const orderedSnapshots = [...snapshots].sort((a, b) => a.snapshot_at.localeCompare(b.snapshot_at));
-  const latest = orderedSnapshots.at(-1);
-  if (!latest) throw new Error('At least one snapshot is required');
-  const previous = orderedSnapshots.at(-2) || null;
-  const projectByRepo = new Map(projects.map(project => [project.repo, project]));
+  const orderedSnapshots = snapshots
+    .map(snapshot => {
+      const timestamp = Date.parse(snapshot?.snapshot_at);
+      if (Number.isNaN(timestamp)) throw new Error(`Invalid snapshot timestamp: ${snapshot?.snapshot_at || '(empty)'}`);
+      if (!Array.isArray(snapshot.projects)) throw new Error(`Invalid snapshot projects at ${snapshot.snapshot_at}`);
+      return {snapshot, timestamp};
+    })
+    .sort((a, b) => a.timestamp - b.timestamp);
+  const latestRecord = orderedSnapshots.at(-1);
+  if (!latestRecord) throw new Error('At least one snapshot is required');
+  const previousRecord = orderedSnapshots.at(-2) || null;
+  if (previousRecord && previousRecord.timestamp >= latestRecord.timestamp) {
+    throw new Error('Snapshot timestamps must be unique and increasing');
+  }
+  const latest = latestRecord.snapshot;
+  const previous = previousRecord?.snapshot || null;
+  const projectByRepo = new Map(projects.map(project => [project.repo.toLowerCase(), project]));
   const currentRanked = rankMetrics(latest.projects);
   const previousRanked = previous ? rankMetrics(previous.projects) : [];
-  const previousByRepo = new Map(previousRanked.map(item => [item.repo, item]));
+  const previousByRepo = new Map(previousRanked.map(item => [item.repo.toLowerCase(), item]));
 
   const current = currentRanked.map(item => {
-    const project = projectByRepo.get(item.repo) || {};
-    const before = previousByRepo.get(item.repo);
+    const project = projectByRepo.get(item.repo.toLowerCase()) || {};
+    const before = previousByRepo.get(item.repo.toLowerCase());
     return {
       rank: item.rank,
       repo: item.repo,
@@ -177,12 +294,12 @@ export function buildRankings(projects, snapshots) {
     latest_snapshot_at: latest.snapshot_at,
     previous_snapshot_at: previousAt,
     observation_window_hours: previousAt
-      ? round((new Date(latest.snapshot_at) - new Date(previousAt)) / 3_600_000, 1)
+      ? round((latestRecord.timestamp - previousRecord.timestamp) / 3_600_000, 1)
       : null,
     current,
     momentum,
     new_projects: previousAt
-      ? current.filter(item => item.first_seen_at && item.first_seen_at > previousAt)
+      ? current.filter(item => item.first_seen_at && Date.parse(item.first_seen_at) > previousRecord.timestamp)
       : [],
     categories: categories.map(([category, count]) => ({category, count}))
   };
@@ -191,13 +308,19 @@ export function buildRankings(projects, snapshots) {
 export function validateProjectSet(projects, cutoffUtc) {
   const errors = [];
   const seen = new Set();
+  const cutoff = Date.parse(cutoffUtc);
   for (const project of projects) {
     if (!project.repo || !project.repo.includes('/')) errors.push(`Invalid repo: ${project.repo || '(empty)'}`);
-    if (seen.has(project.repo)) errors.push(`Duplicate repo: ${project.repo}`);
-    seen.add(project.repo);
-    if (project.created_at && project.created_at <= cutoffUtc) errors.push(`Before cutoff: ${project.repo}`);
+    const key = String(project.repo || '').toLowerCase();
+    if (seen.has(key)) errors.push(`Duplicate repo: ${project.repo}`);
+    seen.add(key);
+    const createdAt = Date.parse(project.created_at);
+    if (Number.isNaN(createdAt)) errors.push(`Invalid created_at: ${project.repo}`);
+    else if (!Number.isNaN(cutoff) && createdAt <= cutoff) errors.push(`Before cutoff: ${project.repo}`);
     if (!project.url?.startsWith('https://github.com/')) errors.push(`Invalid URL: ${project.repo}`);
     if (toNumber(project.stars) < 0 || toNumber(project.forks) < 0) errors.push(`Negative metric: ${project.repo}`);
+    if (!['confirmed', 'candidate', 'excluded'].includes(project.evidence_level)) errors.push(`Invalid evidence level: ${project.repo}`);
+    if (project.evidence_level === 'confirmed' && !project.evidence_reason) errors.push(`Missing evidence reason: ${project.repo}`);
   }
   return errors;
 }

@@ -2,11 +2,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildArtifacts} from './build.mjs';
+import {createGitHubClient, mapLimit} from './lib/github.mjs';
 import {
   normalizeApiProject,
+  reconcileCatalogs,
   relevanceEvidence,
   snapshotFromProjects,
-  toNumber
+  toNumber,
+  validateRadarConfig
 } from './lib/radar.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -15,43 +18,15 @@ const writeJsonAtomic = async (relative, value) => {
   const target = path.join(root, relative);
   const temporary = path.join(path.dirname(target), `.tmp-${path.basename(target)}-${process.pid}`);
   await fs.mkdir(path.dirname(target), {recursive: true});
-  await fs.writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`);
-  await fs.rename(temporary, target);
+  try {
+    await fs.writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`);
+    await fs.rename(temporary, target);
+  } finally {
+    await fs.rm(temporary, {force: true});
+  }
 };
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
-const headers = {
-  Accept: 'application/vnd.github+json',
-  'X-GitHub-Api-Version': '2022-11-28',
-  'User-Agent': 'deepseek-harness-ecosystem-radar'
-};
-if (token) headers.Authorization = `Bearer ${token}`;
-
-async function github(pathname, options = {}) {
-  const response = await fetch(`https://api.github.com${pathname}`, {
-    headers: {...headers, ...(options.headers || {})}
-  });
-  if (response.status === 404 && options.allow404) return null;
-  if (!response.ok) {
-    const body = (await response.text()).slice(0, 500);
-    const remaining = response.headers.get('x-ratelimit-remaining');
-    throw new Error(`GitHub API ${response.status} for ${pathname}; remaining=${remaining ?? 'unknown'}; ${body}`);
-  }
-  return options.raw ? response.text() : response.json();
-}
-
-async function mapLimit(items, limit, worker) {
-  const output = new Array(items.length);
-  let next = 0;
-  async function run() {
-    while (next < items.length) {
-      const index = next++;
-      output[index] = await worker(items[index], index);
-    }
-  }
-  await Promise.all(Array.from({length: Math.min(limit, items.length)}, run));
-  return output;
-}
 
 function shanghaiDate(value = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -75,6 +50,27 @@ const [config, projectsPayload, candidatesPayload, exclusionsPayload, allowlist,
   readJson('config/manual-allowlist.json'),
   readJson('config/manual-denylist.json')
 ]);
+const configurationErrors = validateRadarConfig(config);
+if (configurationErrors.length) throw new Error(`Invalid radar config:\n${configurationErrors.join('\n')}`);
+const repositoryPattern = /^[^/\s]+\/[^/\s]+$/;
+for (const [label, value] of [
+  ['projects', projectsPayload.projects],
+  ['candidates', candidatesPayload.candidates],
+  ['exclusions', exclusionsPayload.exclusions],
+  ['allowlist', allowlist.repositories],
+  ['denylist', denylist.repositories]
+]) {
+  if (!Array.isArray(value)) throw new Error(`${label} payload must be an array`);
+}
+for (const [label, repositories] of [['allowlist', allowlist.repositories], ['denylist', denylist.repositories]]) {
+  const invalid = repositories.find(repository => typeof repository !== 'string' || !repositoryPattern.test(repository));
+  if (invalid) throw new Error(`${label} contains an invalid owner/repo entry: ${String(invalid)}`);
+}
+const github = createGitHubClient({
+  token,
+  maxAttempts: config.api_max_attempts,
+  maxRetryDelayMs: config.api_max_retry_delay_ms
+});
 
 const denied = new Set(denylist.repositories.map(repo => repo.toLowerCase()));
 const existing = new Map(projectsPayload.projects.map(project => [project.repo.toLowerCase(), project]));
@@ -99,7 +95,11 @@ for (const template of config.queries) {
 
 for (const repo of allowlist.repositories) {
   const item = await github(`/repos/${repo}`, {allow404: true});
-  if (item) discovered.set(item.full_name.toLowerCase(), {...item, manual_allowlist: true, discovery_queries: ['manual-allowlist']});
+  if (!item) throw new Error(`Manual allowlist repository is unavailable: ${repo}`);
+  if (Date.parse(item.created_at) <= Date.parse(config.release_cutoff_utc)) {
+    throw new Error(`Manual allowlist repository predates the research cutoff: ${repo}`);
+  }
+  discovered.set(item.full_name.toLowerCase(), {...item, manual_allowlist: true, discovery_queries: ['manual-allowlist']});
 }
 
 const refreshedExisting = await mapLimit([...existing.values()], 6, async project => {
@@ -107,12 +107,12 @@ const refreshedExisting = await mapLimit([...existing.values()], 6, async projec
   if (!api) return {...project, status: 'unavailable', last_checked_at: now};
   return normalizeApiProject(api, project, {}, now);
 });
-const nextProjects = new Map(refreshedExisting.map(project => [project.repo.toLowerCase(), project]));
+const existingKeys = new Set(refreshedExisting.map(project => project.repo.toLowerCase()));
 
 const newDiscoveries = [...discovered.values()]
-  .filter(item => !nextProjects.has(item.full_name.toLowerCase()))
+  .filter(item => !existingKeys.has(item.full_name.toLowerCase()))
   .filter(item => !denied.has(item.full_name.toLowerCase()))
-  .filter(item => item.created_at && item.created_at > config.release_cutoff_utc)
+  .filter(item => item.created_at && Date.parse(item.created_at) > Date.parse(config.release_cutoff_utc))
   .sort((a, b) => Number(Boolean(b.manual_allowlist)) - Number(Boolean(a.manual_allowlist)) || toNumber(b.stargazers_count) - toNumber(a.stargazers_count) || b.created_at.localeCompare(a.created_at));
 
 const readmeTargets = newDiscoveries.slice(0, config.max_readmes_per_run);
@@ -152,37 +152,14 @@ const evaluatedWithoutReadmes = newDiscoveries.slice(config.max_readmes_per_run)
   return {project, discovery_queries: item.discovery_queries || []};
 });
 const evaluated = [...evaluatedWithReadmes, ...evaluatedWithoutReadmes];
-
-const candidateMap = new Map(candidatesPayload.candidates.map(candidate => [candidate.repo.toLowerCase(), candidate]));
-const exclusionMap = new Map(exclusionsPayload.exclusions.map(item => [item.repo.toLowerCase(), item]));
-for (const {project, discovery_queries} of evaluated) {
-  const key = project.repo.toLowerCase();
-  if (project.evidence_level === 'confirmed') {
-    nextProjects.set(key, {...project, discovery_queries});
-    candidateMap.delete(key);
-    exclusionMap.delete(key);
-  } else if (project.evidence_level === 'candidate') {
-    candidateMap.set(key, {
-      ...candidateMap.get(key),
-      ...project,
-      discovery_queries,
-      first_seen_at: candidateMap.get(key)?.first_seen_at || now,
-      last_seen_at: now
-    });
-  } else {
-    exclusionMap.set(key, {
-      repo: project.repo,
-      url: project.url,
-      reason: project.evidence_reason,
-      discovered_at: now,
-      discovery_queries
-    });
-  }
-}
-
-const projects = [...nextProjects.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo));
-const candidates = [...candidateMap.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo));
-const exclusions = [...exclusionMap.values()].sort((a, b) => a.repo.localeCompare(b.repo));
+const {projects, candidates, exclusions} = reconcileCatalogs({
+  projects: refreshedExisting,
+  candidates: candidatesPayload.candidates,
+  exclusions: exclusionsPayload.exclusions,
+  evaluated,
+  denylist: denylist.repositories,
+  observedAt: now
+});
 const snapshot = snapshotFromProjects(projects, now);
 
 await Promise.all([

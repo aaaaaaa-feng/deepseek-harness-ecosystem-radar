@@ -6,6 +6,9 @@
   "discovery_lookback_days": 7,
   "search_pages_per_query": 1,
   "max_readmes_per_run": 80,
+  "api_max_attempts": 3,
+  "api_max_retry_delay_ms": 5000,
+  "public_repository_url": "",
   "queries": [
     "\"deepseek harness\" in:name,description,readme created:>={since_date}",
     "deepseek-harness in:name,description,readme created:>={since_date}",

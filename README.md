@@ -2,7 +2,7 @@
 
 一个可复查、按日更新的 DeepSeek Harness GitHub 生态观察仓库。
 
-它回答三个问题：开源后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？过去一个观察窗口里，哪些项目的公开指标发生了变化？
+它回答三个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？
 
 > 这里的“已确认”只表示与 DeepSeek Harness 的相关性和实现入口有公开证据，不代表本仓库已经逐个安装、完成安全审计或生产验收。
 
@@ -13,7 +13,7 @@
 - 待复核候选：**0**
 - 历史快照：**1**
 - 最新快照：**2026-08-14T15:48:43.830Z**
-- 24 小时趋势：**等待第二个快照后生成**
+- 观察窗口趋势：**等待第二个快照后生成**
 <!-- RADAR_SUMMARY_END -->
 
 ## 当前关注度排名
@@ -27,23 +27,23 @@
 它不是产品质量、安全性或真实用户数评分。
 
 <!-- RADAR_RANKING_START -->
-| 排名 | 项目 | 分类 | Stars | 24h变化 | 排名变化 |
-| ---: | --- | --- | ---: | ---: | ---: |
-| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 桌面端与启动器 | 1326 | — | — |
-| 2 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 544 | — | — |
-| 3 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 157 | — | — |
-| 4 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 桌面端与启动器 | 162 | — | — |
-| 5 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 桌面端与启动器 | 110 | — | — |
-| 6 | [Nagi-ovo/dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 视觉与浏览器 | 81 | — | — |
-| 7 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 视觉与浏览器 | 72 | — | — |
-| 8 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 桌面端与启动器 | 76 | — | — |
-| 9 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 桌面端与启动器 | 59 | — | — |
-| 10 | [Ruler4396/dsh-launcher](https://github.com/Ruler4396/dsh-launcher) | 桌面端与启动器 | 70 | — | — |
-| 11 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 桌面端与启动器 | 68 | — | — |
-| 12 | [xiincs/deepseek-harness-desktop](https://github.com/xiincs/deepseek-harness-desktop) | 桌面端与启动器 | 65 | — | — |
-| 13 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 40 | — | — |
-| 14 | [Nagi-ovo/dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) | 插件管理与生态工具 | 68 | — | — |
-| 15 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 48 | — | — |
+| 排名 | 项目 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |
+| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 桌面端与启动器 | 1326 | 68 | 273.77 | — | — |
+| 2 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 544 | 19 | 230.58 | — | — |
+| 3 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 157 | 12 | 187.32 | — | — |
+| 4 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 桌面端与启动器 | 162 | 7 | 181.95 | — | — |
+| 5 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 桌面端与启动器 | 110 | 7 | 170.27 | — | — |
+| 6 | [Nagi-ovo/dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 视觉与浏览器 | 81 | 3 | 152.03 | — | — |
+| 7 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 视觉与浏览器 | 72 | 4 | 151.4 | — | — |
+| 8 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 桌面端与启动器 | 76 | 3 | 150.12 | — | — |
+| 9 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 桌面端与启动器 | 59 | 6 | 149.82 | — | — |
+| 10 | [Ruler4396/dsh-launcher](https://github.com/Ruler4396/dsh-launcher) | 桌面端与启动器 | 70 | 3 | 147.65 | — | — |
+| 11 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 桌面端与启动器 | 68 | 3 | 146.78 | — | — |
+| 12 | [xiincs/deepseek-harness-desktop](https://github.com/xiincs/deepseek-harness-desktop) | 桌面端与启动器 | 65 | 2 | 141.68 | — | — |
+| 13 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 40 | 8 | 141.52 | — | — |
+| 14 | [Nagi-ovo/dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) | 插件管理与生态工具 | 68 | 0 | 128.72 | — | — |
+| 15 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 48 | 1 | 127.34 | — | — |
 <!-- RADAR_RANKING_END -->
 
 完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。
@@ -54,12 +54,14 @@
 
 1. 刷新观察清单中所有项目的 GitHub 指标。
 2. 使用多组查询发现最近 7 天创建的新仓库。
-3. 读取新仓库 README，按证据规则分为“自动确认、待复核、排除”。
+3. 读取新仓库 README，按严格证据规则分为“自动确认、待复核、排除”；仅在正文中顺带提及不会自动入榜。
 4. 写入当天快照，计算 Star/Fork 变化和排名变化。
 5. 重新生成 README、CSV、静态网页、状态页和推文草稿。
-6. 由 `github-actions[bot]` 提交回默认分支。
+6. 通过校验和密钥特征扫描后，由 `github-actions[bot]` 提交回默认分支。
 
 也可以在 Actions 页面手动运行 `Daily ecosystem update`。
+
+GitHub API 出现短暂的限流或服务错误时会有限次重试；最终仍失败时，工作流不会提交半成品。每次更新都有 15 分钟超时上限，避免任务无限挂起。
 
 ## 数据目录
 
@@ -71,29 +73,39 @@
 - `docs/`：不依赖后端的 GitHub Pages 页面。
 - `tweet-draft.md`：根据最新快照生成的 X/Twitter 草稿。
 
-## 发布到 GitHub 后要做的两件事
+## 发布到 GitHub 后的上线检查清单
 
-1. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；工作流本身只申请 `contents: write`。
-2. 如果需要 GitHub Pages，把仓库变量 `ENABLE_GITHUB_PAGES` 设为 `true`，并在 `Settings → Pages` 中选择 GitHub Actions 作为来源。
+1. 把本目录推送成一个独立 GitHub 仓库。
+2. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；每日更新工作流本身只申请 `contents: write`。
+3. 如果需要 GitHub Pages，把仓库变量 `ENABLE_GITHUB_PAGES` 设为 `true`，并在 `Settings → Pages` 中选择 GitHub Actions 作为来源。页面部署使用独立、最小权限的工作流。
+4. 在 Actions 页面手动运行一次 `Daily ecosystem update`，确认真实 API 更新、机器人提交和页面部署均成功。
+5. 把仓库地址写入 `config/radar.json` 的 `public_repository_url`，再运行一次 `npm run build`；页面页脚和推文草稿才会出现稳定、可复现的公开链接。
+
+每日任务使用仓库自带的 `GITHUB_TOKEN` 提交数据。此类机器人推送不会再触发普通 `push` 工作流，所以 Pages 工作流同时监听 `Daily ecosystem update` 的成功完成事件，确保每日数据提交后仍会部署最新页面。
 
 如默认分支启用了禁止机器人直接推送的保护规则，需要改为由工作流创建 Pull Request；当前第一版默认适配个人公开仓库的直接更新方式。
 
 ## 手动补充与排除
 
-- 搜索漏掉的已确认仓库：加入 `config/manual-allowlist.json`。
+- 搜索漏掉、且仍满足研究起点约束的已确认仓库：加入 `config/manual-allowlist.json`。
 - 明确误命中的仓库：加入 `config/manual-denylist.json`。
 - 调整搜索词和回看天数：修改 `config/radar.json`。
+
+denylist 优先级高于 allowlist。加入 denylist 后，下一次更新会同时从已确认项目和待复核候选中移除，并记录排除原因。
 
 提交新项目也可以使用仓库里的 Issue 模板。
 
 ## 本地运行
 
 ```bash
-npm install
+npm ci
 npm test
 npm run build
 npm run check
+npm run security-check
 ```
+
+需要 Node.js 20 或更新版本；日常开发推荐使用仓库 `.nvmrc` 指定的 Node.js 24。
 
 在线刷新需要 GitHub API 访问；推荐设置 `GITHUB_TOKEN` 后运行：
 
@@ -105,8 +117,9 @@ npm run update
 
 - GitHub 搜索不能证明绝对全网穷尽。
 - 搜索索引、关键词、Topic 和仓库描述都会影响发现结果。
-- 第一个快照只能形成当前排名；至少有两个快照后，才能计算观察窗口内的变化。
+- 第一个快照只能形成当前排名；至少有两个快照后，才能计算观察窗口内的变化。页面会显示真实窗口小时数，不把它硬写成精确 24 小时。
 - Star/Fork 变化是 GitHub 公开指标变化，不等于真实使用、留存或代码质量。
+- 自动分类和证据判定是可复核规则，不是对项目质量或安全性的背书。
 - 详细规则见 [METHODOLOGY.md](METHODOLOGY.md)。
 
 ## License

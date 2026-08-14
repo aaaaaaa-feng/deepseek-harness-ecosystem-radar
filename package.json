@@ -8,6 +8,7 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs",
     "normalize": "node scripts/normalize.mjs",
+    "security-check": "node scripts/security-check.mjs",
     "test": "node --test",
     "update": "node scripts/update.mjs"
   },

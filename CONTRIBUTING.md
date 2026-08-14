@@ -19,10 +19,11 @@
 ## 本地检查
 
 ```bash
-npm install
+npm ci
 npm test
 npm run build
 npm run check
+npm run security-check
 ```
 
 不要手工编辑 `data/rankings.json`、`data/rankings.csv`、`data/latest.json`、`docs/data/latest.json`、`STATUS.md` 或 `tweet-draft.md`；它们由构建脚本生成。
