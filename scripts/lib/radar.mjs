@@ -30,6 +30,12 @@ export function validateRadarConfig(config) {
   boundedInteger('api_max_attempts', 1, 5);
   boundedInteger('api_max_retry_delay_ms', 0, 30_000);
   boundedInteger('hourly_snapshot_retention_days', 1, 90);
+  boundedInteger('developer_profile_refresh_days', 1, 365);
+  boundedInteger('translation_batch_size', 1, 50);
+  boundedInteger('translation_max_attempts', 1, 3);
+  if (!/^[a-z0-9-]+\/[a-z0-9._-]+$/i.test(config?.translation_model || '')) {
+    errors.push('translation_model must use publisher/model format');
+  }
   if (!Array.isArray(config?.queries) || !config.queries.length || config.queries.some(query => typeof query !== 'string' || !query.includes('{since_date}'))) {
     errors.push('Every discovery query must contain {since_date}');
   } else if (new Set(config.queries).size !== config.queries.length) {
@@ -261,6 +267,10 @@ export function buildRankings(projects, snapshots) {
       repo: item.repo,
       url: project.url || `https://github.com/${item.repo}`,
       description: project.description || '',
+      description_zh: project.description_zh || '',
+      translation_status: project.translation_status || 'pending',
+      translation_provider: project.translation_provider || '',
+      developer: project.developer || null,
       category: project.category || '其他实现型扩展',
       stars: item.stars,
       forks: item.forks,
@@ -328,6 +338,9 @@ function signalProject(project) {
     repo: project.repo,
     url: project.url,
     description: project.description || '',
+    description_zh: project.description_zh || '',
+    translation_status: project.translation_status || 'pending',
+    developer: project.developer || null,
     category: project.category || '其他实现型扩展',
     stars: toNumber(project.stars),
     forks: toNumber(project.forks),

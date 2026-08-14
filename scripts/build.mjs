@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applyProjectEnrichment, DEVELOPER_REGION_LABELS} from './lib/enrichment.mjs';
 import {buildRankings, buildSignals, csvCell, escapeMarkdown} from './lib/radar.mjs';
 import {dedupeSnapshotRecords, loadSnapshotRecords, snapshotRecordStats} from './lib/snapshots.mjs';
 
@@ -35,23 +36,36 @@ function delta(value) {
 }
 
 export async function buildArtifacts() {
-  const [config, projectsPayload, candidatesPayload] = await Promise.all([
+  const [config, projectsPayload, candidatesPayload, developerPayload, translationPayload] = await Promise.all([
     readJson('config/radar.json'),
     readJson('data/projects.json'),
-    readJson('data/candidates.json')
+    readJson('data/candidates.json'),
+    readJson('data/developers.json'),
+    readJson('data/translations.json')
   ]);
   const snapshotRecords = await loadSnapshotRecords(root);
   const uniqueSnapshotRecords = dedupeSnapshotRecords(snapshotRecords);
   const snapshotStats = snapshotRecordStats(snapshotRecords);
   const snapshots = uniqueSnapshotRecords.map(record => record.snapshot);
-  const rankings = buildRankings(projectsPayload.projects, snapshots);
-  const signals = buildSignals(projectsPayload.projects);
+  const enrichedProjects = applyProjectEnrichment(projectsPayload.projects, developerPayload, translationPayload);
+  const rankings = buildRankings(enrichedProjects, snapshots);
+  const signals = buildSignals(enrichedProjects);
   const repositoryUrl = config.public_repository_url;
   await writeJson('data/rankings.json', rankings);
 
-  const activeProjects = projectsPayload.projects.filter(project => project.status === 'active' && project.evidence_level === 'confirmed');
+  const activeProjects = enrichedProjects.filter(project => project.status === 'active' && project.evidence_level === 'confirmed');
+  const developerAccounts = new Map(activeProjects.map(project => [project.developer.login.toLowerCase(), project.developer]));
+  const developerRegions = Object.keys(DEVELOPER_REGION_LABELS).reduce((counts, region) => ({...counts, [region]: 0}), {});
+  for (const developer of developerAccounts.values()) {
+    const region = Object.hasOwn(developerRegions, developer.region) ? developer.region : 'unknown';
+    developerRegions[region] += 1;
+  }
+  const translationStatus = activeProjects.reduce((counts, project) => {
+    counts[project.translation_status] = (counts[project.translation_status] || 0) + 1;
+    return counts;
+  }, {});
   const latest = {
-    schema_version: 1,
+    schema_version: 2,
     title: 'DeepSeek Harness 生态早期雷达',
     generated_at: rankings.generated_at,
     release_cutoff_utc: config.release_cutoff_utc,
@@ -64,7 +78,12 @@ export async function buildArtifacts() {
       snapshots: snapshots.length,
       hourly_snapshots: snapshotStats.hourly,
       daily_archives: snapshotStats.archives,
-      has_momentum_window: Boolean(rankings.previous_snapshot_at)
+      has_momentum_window: Boolean(rankings.previous_snapshot_at),
+      developer_accounts: developerAccounts.size,
+      developer_regions: developerRegions,
+      translated_descriptions: translationStatus.translated || 0,
+      source_chinese_descriptions: translationStatus['source-zh'] || 0,
+      pending_translations: translationStatus.pending || 0
     },
     rankings,
     signals,
@@ -73,11 +92,15 @@ export async function buildArtifacts() {
   await writeJson('data/latest.json', latest);
   await writeJson('docs/data/latest.json', latest);
 
-  const headers = ['rank', 'repo', 'category', 'stars', 'forks', 'stars_delta', 'rank_change', 'attention_score', 'snapshot_at'];
+  const headers = ['rank', 'repo', 'developer_region', 'developer_location', 'category', 'description_zh', 'description_original', 'stars', 'forks', 'stars_delta', 'rank_change', 'attention_score', 'snapshot_at'];
   const csvRows = rankings.current.map(item => [
     item.rank,
     item.repo,
+    item.developer?.region_label || DEVELOPER_REGION_LABELS.unknown,
+    item.developer?.location || '',
     item.category,
+    item.description_zh || '',
+    item.description || '',
     item.stars,
     item.forks,
     item.stars_delta ?? '',
@@ -91,10 +114,10 @@ export async function buildArtifacts() {
   );
 
   const topTable = [
-    '| 排名 | 项目 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |',
-    '| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |',
+    '| 排名 | 项目 | 维护者公开所在地 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |',
+    '| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |',
     ...rankings.current.slice(0, 15).map(item =>
-      `| ${item.rank} | [${escapeMarkdown(item.repo)}](${item.url}) | ${escapeMarkdown(item.category)} | ${item.stars} | ${item.forks} | ${item.attention_score} | ${delta(item.stars_delta)} | ${delta(item.rank_change)} |`,
+      `| ${item.rank} | [${escapeMarkdown(item.repo)}](${item.url}) | ${escapeMarkdown(item.developer?.region_label || DEVELOPER_REGION_LABELS.unknown)} | ${escapeMarkdown(item.category)} | ${item.stars} | ${item.forks} | ${item.attention_score} | ${delta(item.stars_delta)} | ${delta(item.rank_change)} |`,
     )
   ].join('\n');
   const summary = [
@@ -102,6 +125,8 @@ export async function buildArtifacts() {
     `- 待复核候选：**${candidatesPayload.candidates.length}**`,
     `- 历史观察点：**${snapshots.length}**`,
     `- 小时明细：**${snapshotStats.hourly}**；每日归档：**${snapshotStats.archives}**`,
+    `- 维护者公开所在地：国内 **${developerRegions.mainland_china}**；中国港澳台 **${developerRegions.greater_china}**；海外 **${developerRegions.overseas}**；未知 **${developerRegions.unknown}**`,
+    `- 项目简介：自动/缓存翻译 **${translationStatus.translated || 0}**；原文含中文 **${translationStatus['source-zh'] || 0}**；待翻译 **${translationStatus.pending || 0}**`,
     `- 最新快照：**${rankings.latest_snapshot_at}**`,
     `- 观察窗口趋势：${rankings.previous_snapshot_at ? `已基于 ${rankings.observation_window_hours} 小时窗口计算` : '**等待第二个快照后生成**'}`
   ].join('\n');
@@ -110,7 +135,7 @@ export async function buildArtifacts() {
   readme = replaceSection(readme, '<!-- RADAR_RANKING_START -->', '<!-- RADAR_RANKING_END -->', topTable);
   await writeText('README.md', readme);
 
-  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
+  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
   await writeText('STATUS.md', status);
 
   const top = rankings.current[0];
@@ -120,7 +145,9 @@ export async function buildArtifacts() {
     ? `${rankings.observation_window_hours}h 窗口动量：${mover ? `${mover.repo}（${delta(mover.stars_delta)} stars）` : '暂无可比较项目'}`
     : '观察窗口动量：等待第二个快照';
   const linkText = repositoryUrl ? `\n${repositoryUrl}\n` : '\n仓库链接：发布后补充\n';
-  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，也不是产品质量榜。\n\n#DeepSeek #OpenSource #AI\n`;
+  const locationText = `公开所在地（维护者账号）：国内 ${developerRegions.mainland_china} / 海外 ${developerRegions.overseas} / 未知 ${developerRegions.unknown}`;
+  const localizedDescriptions = activeProjects.length - (translationStatus.pending || 0);
+  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- ${locationText}\n- 中文可读简介：${localizedDescriptions}/${activeProjects.length}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，所在地不代表国籍，也不是产品质量榜。\n\n#DeepSeek #OpenSource #AI\n`;
   await writeText('tweet-draft.md', tweet);
   return latest;
 }

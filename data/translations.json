@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-15T00:00:00.000Z",
+  "translations": {
+    "dataelement/dsh-desktop": {
+      "repo": "dataelement/dsh-desktop",
+      "source_text": "Desktop app for DeepSeek Harness",
+      "zh": "DeepSeek Harness 桌面应用",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "myyangyunfan/dsh_desktop": {
+      "repo": "myYangyunfan/dsh_desktop",
+      "source_text": "DeepSeek Harness (dsh) Windows desktop client - bundled Node.js + dsh CLI, one-click launch",
+      "zh": "DeepSeek Harness（DSH）Windows 桌面客户端，内置 Node.js 与 DSH CLI，可一键启动",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "omdsh-dev/dsh-genui": {
+      "repo": "omdsh-dev/dsh-genui",
+      "source_text": "GenUI for DeepSeek Harness: interactive UI components rendered inline in assistant replies via the dsh-ui fence — layout, charts, plots, forms, quizzes, mermaid, 3D scenes, and an action event loop back to the model. Ships the fence-teaching host plugin, the browser renderer (client half), and the genui skill.",
+      "zh": "面向 DeepSeek Harness 的 GenUI：通过 dsh-ui 代码围栏，在助手回复中直接渲染布局、图表、绘图、表单、测验、Mermaid、3D 场景等交互式组件，并把操作事件回传给模型。包含围栏教学宿主插件、浏览器渲染端和 GenUI Skill。",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ruler4396/dsh-launcher": {
+      "repo": "Ruler4396/dsh-launcher",
+      "source_text": "Lightweight Windows launcher for DeepSeek Harness: silent autostart at logon + a minimal WebView2 window instead of a full browser",
+      "zh": "DeepSeek Harness 轻量级 Windows 启动器：登录后静默自启，并以精简的 WebView2 窗口替代完整浏览器",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "obdangshang07/dsh_creative_workshop": {
+      "repo": "OBdangshang07/DSH_Creative_Workshop",
+      "source_text": "Steam-Workshop-inspired discovery, trust, graph search, collections, and transactional installation planning for DeepSeek Harness plugins",
+      "zh": "受 Steam 创意工坊启发的 DeepSeek Harness 插件工具，提供插件发现、信任机制、图搜索、收藏集与事务式安装规划",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "xiaobright/dsh-anchored-standard": {
+      "repo": "xiaobright/dsh-anchored-standard",
+      "source_text": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
+      "zh": "两阶段 DeepSeek Harness 预设：先以 Minimal 对齐方式启动，再加载完整 Standard 工具（Project2 98/99）",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ysr666/dsh-vision-router": {
+      "repo": "ysr666/dsh-vision-router",
+      "source_text": "Eyes for text-only DeepSeek Harness agents: built-in free vision chain (no key) + pixel-level vision tools (Q&A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots). One-command install, no Python, image turns work like ordinary tool-calling turns.",
+      "zh": "为纯文本 DeepSeek Harness Agent 提供视觉能力：内置免密钥视觉链和像素级工具，包括问答、定位、裁剪、像素差异、颜色、OCR、SVG 描摹、抠图与截图。支持单命令安装，无需 Python，图像回合可像普通工具调用一样运行。",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "hiwhalew/dsh-toolbox": {
+      "repo": "HiWhaleW/dsh-toolbox",
+      "source_text": "Local-first DeepSeek Harness plugins for product research, context routing, plugin preflight, and compatibility monitoring.",
+      "zh": "本地优先的 DeepSeek Harness 插件套件，用于产品研究、上下文路由、插件预检与兼容性监控",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "bowenliang123/dsh-context": {
+      "repo": "bowenliang123/dsh-context",
+      "source_text": "A DeepSeek Harness plugin for  Context insight dashboard — showing what the model's context window is made of and how it evolves.",
+      "zh": "DeepSeek Harness 上下文洞察仪表盘插件，用于展示模型上下文窗口的组成及其变化过程",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ningbainb/deepseek-harness-desktop": {
+      "repo": "ningbainb/deepseek-harness-desktop",
+      "source_text": "Lossless Windows desktop app for DeepSeek Harness with the complete DSH Web UI, plugins, skins, and skill dock",
+      "zh": "DeepSeek Harness 的无损 Windows 桌面应用，完整保留 DSH Web UI、插件、皮肤与 Skill Dock",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "c3ll256/dsh-toy": {
+      "repo": "c3ll256/dsh-toy",
+      "source_text": "Toy Control Protocol for DSH",
+      "zh": "面向 DSH 的玩具控制协议",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ccmu04/dshdesktop": {
+      "repo": "CCMu04/DSHDesktop",
+      "source_text": "Unofficial Windows desktop client for the unmodified DeepSeek Harness Web UI",
+      "zh": "面向原版 DeepSeek Harness Web UI 的非官方 Windows 桌面客户端",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "cpj-dev/dsh-plugin-cc": {
+      "repo": "cpj-dev/dsh-plugin-cc",
+      "source_text": "Bridge Deepseek-harness into Claude Code for review, critique, delegation, and session import.",
+      "zh": "把 DeepSeek Harness 接入 Claude Code，用于审查、评议、任务委派与会话导入",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "dietcokewithsugar/dsh-user-experience": {
+      "repo": "DietCokewithSugar/dsh-user-experience",
+      "source_text": "Persona-driven UX walkthrough plugin for DeepSeek Harness (DSH) - scans React + TypeScript source code for UX issues, pinpoints them, and suggests fixes.",
+      "zh": "由用户角色驱动的 DeepSeek Harness（DSH）UX 走查插件：扫描 React 与 TypeScript 源码，定位体验问题并提出修复建议",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "justgenius-s/dsh-desktop": {
+      "repo": "JustGenius-s/DSH-Desktop",
+      "source_text": "DSH-Desktop",
+      "zh": "DSH 桌面端",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "anysearch-team/anysearch-dsh": {
+      "repo": "anysearch-team/anysearch-dsh",
+      "source_text": "AnySearch web search provider and advanced search tools for DeepSeek Harness (DSH)",
+      "zh": "面向 DeepSeek Harness（DSH）的 AnySearch 网页搜索提供方与高级搜索工具",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "oil-oil/dsh-vision": {
+      "repo": "oil-oil/dsh-vision",
+      "source_text": "Near-native image understanding for DeepSeek Harness",
+      "zh": "为 DeepSeek Harness 提供接近原生体验的图像理解能力",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ychris12138/dsh-usage-stats": {
+      "repo": "Ychris12138/dsh-usage-stats",
+      "source_text": "Token usage heatmap, per-model breakdowns, and DeepSeek account balance for the DeepSeek Harness Web GUI (dsh web).",
+      "zh": "面向 DeepSeek Harness Web GUI（DSH Web）的 Token 用量热力图、分模型统计与 DeepSeek 账户余额展示",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "bugmaker2/dsh-plugin-template": {
+      "repo": "bugmaker2/dsh-plugin-template",
+      "source_text": "Template for deepseek-harness plugin development.",
+      "zh": "DeepSeek Harness 插件开发模板",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "laynechai/superpowers-dsh": {
+      "repo": "LayneChai/superpowers-dsh",
+      "source_text": "Superpowers skills for DeepSeek Harness: TDD, debugging, planning, and collaboration skills adapted from obra/superpowers",
+      "zh": "面向 DeepSeek Harness 的 Superpowers Skills：由 obra/superpowers 适配而来的 TDD、调试、规划与协作能力",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "openma-ai/deepseek-harness-tui": {
+      "repo": "openma-ai/deepseek-harness-tui",
+      "source_text": "TUI Plugin of DeepSeek Harness",
+      "zh": "DeepSeek Harness 的终端用户界面（TUI）插件",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "cc1252/deepseek-harness-desktop": {
+      "repo": "cc1252/deepseek-harness-desktop",
+      "source_text": "Unofficial open-source Windows Electron wrapper for DeepSeek Harness",
+      "zh": "DeepSeek Harness 的非官方开源 Windows Electron 封装客户端",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "xingj404-lab/dsh-desktop": {
+      "repo": "xingj404-lab/dsh-desktop",
+      "source_text": "deepseek harness desktop",
+      "zh": "DeepSeek Harness 桌面端",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "yyyyukari/dsh-plugin-workshop": {
+      "repo": "yyyyukari/dsh-plugin-workshop",
+      "source_text": "Steam Workshop-style plugin browser for the DeepSeek Harness (DSH) Web UI - zero-server: GitHub-powered search, trending windows, Chinese search & bilingual translation, plugin-signature filtering, and smart one-click install/update/uninstall with an installed-plugins manager.",
+      "zh": "面向 DeepSeek Harness（DSH）Web UI 的 Steam 创意工坊式插件浏览器，无需服务器：由 GitHub 驱动搜索与趋势窗口，支持中文搜索、双语翻译、插件签名过滤，以及带已安装插件管理器的智能一键安装、更新和卸载。",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "ghost011118/dsh-balance-meter": {
+      "repo": "Ghost011118/dsh-balance-meter",
+      "source_text": "DeepSeek account balance and session cost readout for the DeepSeek Harness Web GUI",
+      "zh": "在 DeepSeek Harness Web GUI 中显示 DeepSeek 账户余额与会话成本",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "sleep2agi/deepseek-harness-desktop": {
+      "repo": "sleep2agi/DeepSeek-Harness-Desktop",
+      "source_text": "Unofficial community desktop shell for the public DeepSeek Harness (dsh) runtime.",
+      "zh": "面向公开 DeepSeek Harness（DSH）运行时的非官方社区桌面外壳",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    },
+    "dingkaihu63/dsh-robotic-harness": {
+      "repo": "dingkaihu63/dsh-robotic-harness",
+      "source_text": "Robotic Harness: embodied-intelligence research tools for DeepSeek Harness - robot asset inspection, MuJoCo pick-place simulation with fault injection, evidence-based diagnostics, and reproducible experiment bundles.",
+      "zh": "Robotic Harness：面向 DeepSeek Harness 的具身智能研究工具，支持机器人资产检查、带故障注入的 MuJoCo 抓取放置仿真、基于证据的诊断与可复现实验包。",
+      "provider": "manual-baseline",
+      "model": "",
+      "translated_at": "2026-08-15T00:00:00.000Z"
+    }
+  }
+}

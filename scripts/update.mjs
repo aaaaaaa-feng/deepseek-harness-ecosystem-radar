@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildArtifacts} from './build.mjs';
 import {createGitHubClient, mapLimit} from './lib/github.mjs';
+import {refreshDeveloperProfiles, updateTranslationCache} from './lib/enrichment.mjs';
 import {
   normalizeApiProject,
   reconcileCatalogs,
@@ -39,11 +40,13 @@ function daysAgoDate(days) {
 }
 
 const now = new Date().toISOString();
-const [config, projectsPayload, candidatesPayload, exclusionsPayload, allowlist, denylist] = await Promise.all([
+const [config, projectsPayload, candidatesPayload, exclusionsPayload, developerPayload, translationPayload, allowlist, denylist] = await Promise.all([
   readJson('config/radar.json'),
   readJson('data/projects.json'),
   readJson('data/candidates.json'),
   readJson('data/exclusions.json'),
+  readJson('data/developers.json'),
+  readJson('data/translations.json'),
   readJson('config/manual-allowlist.json'),
   readJson('config/manual-denylist.json')
 ]);
@@ -62,6 +65,12 @@ for (const [label, value] of [
 for (const [label, repositories] of [['allowlist', allowlist.repositories], ['denylist', denylist.repositories]]) {
   const invalid = repositories.find(repository => typeof repository !== 'string' || !repositoryPattern.test(repository));
   if (invalid) throw new Error(`${label} contains an invalid owner/repo entry: ${String(invalid)}`);
+}
+if (!developerPayload?.profiles || typeof developerPayload.profiles !== 'object' || Array.isArray(developerPayload.profiles)) {
+  throw new Error('developer profiles payload must be an object');
+}
+if (!translationPayload?.translations || typeof translationPayload.translations !== 'object' || Array.isArray(translationPayload.translations)) {
+  throw new Error('translations payload must be an object');
 }
 const github = createGitHubClient({
   token,
@@ -157,6 +166,21 @@ const {projects, candidates, exclusions} = reconcileCatalogs({
   denylist: denylist.repositories,
   observedAt: now
 });
+const trackedProjects = [...projects, ...candidates];
+const [developerResult, translationResult] = await Promise.all([
+  refreshDeveloperProfiles(trackedProjects, developerPayload, {
+    github,
+    observedAt: now,
+    refreshDays: config.developer_profile_refresh_days
+  }),
+  updateTranslationCache(trackedProjects, translationPayload, {
+    token,
+    model: config.translation_model,
+    batchSize: config.translation_batch_size,
+    maxAttempts: config.translation_max_attempts,
+    observedAt: now
+  })
+]);
 const snapshot = snapshotFromProjects(projects, now);
 const hourlySnapshotPath = `data/snapshots/${snapshotFilename('hourly', now)}`;
 const dailyArchivePath = `data/archive/${snapshotFilename('archive', now)}`;
@@ -171,6 +195,8 @@ await Promise.all([
   }),
   writeJsonAtomic('data/candidates.json', {schema_version: 1, generated_at: now, candidates}),
   writeJsonAtomic('data/exclusions.json', {schema_version: 1, generated_at: now, exclusions}),
+  writeJsonAtomic('data/developers.json', developerResult.payload),
+  writeJsonAtomic('data/translations.json', translationResult.payload),
   writeJsonAtomic(hourlySnapshotPath, snapshot),
   writeJsonAtomic(dailyArchivePath, snapshot)
 ]);
@@ -190,5 +216,7 @@ console.log(JSON.stringify({
   exclusions: exclusions.length,
   hourly_snapshot: hourlySnapshotPath,
   daily_archive: dailyArchivePath,
-  pruned_hourly_snapshots: prunedSnapshots.length
+  pruned_hourly_snapshots: prunedSnapshots.length,
+  developer_profiles: developerResult.stats,
+  translations: translationResult.stats
 }));

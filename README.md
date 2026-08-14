@@ -2,7 +2,7 @@
 
 一个可复查、按小时更新的 DeepSeek Harness GitHub 生态观察仓库。
 
-它回答三个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？
+它回答五个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？维护者公开位于哪里？英文项目简介用中文怎么理解？
 
 > 这里的“已确认”只表示与 DeepSeek Harness 的相关性和实现入口有公开证据，不代表本仓库已经逐个安装、完成安全审计或生产验收。
 
@@ -13,6 +13,8 @@
 - 待复核候选：**0**
 - 历史观察点：**1**
 - 小时明细：**0**；每日归档：**1**
+- 维护者公开所在地：国内 **13**；中国港澳台 **0**；海外 **1**；未知 **42**
+- 项目简介：自动/缓存翻译 **27**；原文含中文 **33**；待翻译 **0**
 - 最新快照：**2026-08-14T15:48:43.830Z**
 - 观察窗口趋势：**等待第二个快照后生成**
 <!-- RADAR_SUMMARY_END -->
@@ -28,26 +30,32 @@
 它不是产品质量、安全性或真实用户数评分。
 
 <!-- RADAR_RANKING_START -->
-| 排名 | 项目 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |
-| ---: | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 桌面端与启动器 | 1326 | 68 | 273.77 | — | — |
-| 2 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 544 | 19 | 230.58 | — | — |
-| 3 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 157 | 12 | 187.32 | — | — |
-| 4 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 桌面端与启动器 | 162 | 7 | 181.95 | — | — |
-| 5 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 桌面端与启动器 | 110 | 7 | 170.27 | — | — |
-| 6 | [Nagi-ovo/dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 视觉与浏览器 | 81 | 3 | 152.03 | — | — |
-| 7 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 视觉与浏览器 | 72 | 4 | 151.4 | — | — |
-| 8 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 桌面端与启动器 | 76 | 3 | 150.12 | — | — |
-| 9 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 桌面端与启动器 | 59 | 6 | 149.82 | — | — |
-| 10 | [Ruler4396/dsh-launcher](https://github.com/Ruler4396/dsh-launcher) | 桌面端与启动器 | 70 | 3 | 147.65 | — | — |
-| 11 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 桌面端与启动器 | 68 | 3 | 146.78 | — | — |
-| 12 | [xiincs/deepseek-harness-desktop](https://github.com/xiincs/deepseek-harness-desktop) | 桌面端与启动器 | 65 | 2 | 141.68 | — | — |
-| 13 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 40 | 8 | 141.52 | — | — |
-| 14 | [Nagi-ovo/dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) | 插件管理与生态工具 | 68 | 0 | 128.72 | — | — |
-| 15 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 48 | 1 | 127.34 | — | — |
+| 排名 | 项目 | 维护者公开所在地 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |
+| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 1326 | 68 | 273.77 | — | — |
+| 2 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 国内 | 界面与体验扩展 | 544 | 19 | 230.58 | — | — |
+| 3 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 未知 | 桌面端与启动器 | 157 | 12 | 187.32 | — | — |
+| 4 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 未知 | 桌面端与启动器 | 162 | 7 | 181.95 | — | — |
+| 5 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 国内 | 桌面端与启动器 | 110 | 7 | 170.27 | — | — |
+| 6 | [Nagi-ovo/dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) | 海外 | 视觉与浏览器 | 81 | 3 | 152.03 | — | — |
+| 7 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 未知 | 视觉与浏览器 | 72 | 4 | 151.4 | — | — |
+| 8 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 未知 | 桌面端与启动器 | 76 | 3 | 150.12 | — | — |
+| 9 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 未知 | 桌面端与启动器 | 59 | 6 | 149.82 | — | — |
+| 10 | [Ruler4396/dsh-launcher](https://github.com/Ruler4396/dsh-launcher) | 未知 | 桌面端与启动器 | 70 | 3 | 147.65 | — | — |
+| 11 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 68 | 3 | 146.78 | — | — |
+| 12 | [xiincs/deepseek-harness-desktop](https://github.com/xiincs/deepseek-harness-desktop) | 国内 | 桌面端与启动器 | 65 | 2 | 141.68 | — | — |
+| 13 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 国内 | 视觉与浏览器 | 40 | 8 | 141.52 | — | — |
+| 14 | [Nagi-ovo/dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) | 海外 | 插件管理与生态工具 | 68 | 0 | 128.72 | — | — |
+| 15 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 未知 | 开发与质量工具 | 48 | 1 | 127.34 | — | — |
 <!-- RADAR_RANKING_END -->
 
 完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。
+
+## 开发者所在地与中文介绍
+
+页面中的“国内 / 中国港澳台 / 海外 / 未知”来自仓库维护者账号主动公开的 GitHub `location`。它描述的是账号公开所在地，不是国籍、团队成员构成或项目归属；组织账号也按同一规则处理。系统只识别明确的国家、地区、省市名称，`Earth`、`Remote`、空值和无法可靠识别的自由文本都保留为“未知”，不会根据姓名、头像、语言或邮箱猜测。
+
+项目简介始终保留 GitHub 英文原文。原文已有中文时直接展示；纯英文简介优先读取翻译缓存，只有新项目或原文发生变化时才通过 GitHub Models 翻译成简体中文。网页默认显示中文，并允许展开核对英文原文。模型调用失败、配额不足或权限不可用时，排名更新仍会继续，页面暂时展示英文并标记为待翻译；已有译文不会被清空。
 
 ## 自动更新机制
 
@@ -56,9 +64,11 @@
 1. 刷新观察清单中所有项目的 GitHub 指标。
 2. 使用多组查询发现最近 7 天创建的新仓库。
 3. 读取新仓库 README，按严格证据规则分为“自动确认、待复核、排除”；仅在正文中顺带提及不会自动入榜。
-4. 写入一个小时明细快照，并刷新当天的长期归档点；计算真实观察窗口内的 Star/Fork 与排名变化。
-5. 重新生成 README、CSV、静态网页、状态页和推文草稿。
-6. 通过校验和密钥特征扫描后，由 `github-actions[bot]` 提交回默认分支。
+4. 对新维护者读取 GitHub 公开资料；已有资料默认缓存 30 天，再按公开地点做保守分组。
+5. 为新增或变化的纯英文简介调用 GitHub Models，并把译文缓存到仓库；不会重复翻译未变化的文本。
+6. 写入一个小时明细快照，并刷新当天的长期归档点；计算真实观察窗口内的 Star/Fork 与排名变化。
+7. 重新生成 README、CSV、静态网页、状态页和推文草稿。
+8. 通过校验和密钥特征扫描后，由 `github-actions[bot]` 提交回默认分支。
 
 也可以在 Actions 页面手动运行 `Hourly ecosystem update`。
 
@@ -71,6 +81,8 @@ GitHub API 出现短暂的限流或服务错误时会有限次重试；最终仍
 - `data/projects.json`：已确认观察清单和最新指标。
 - `data/candidates.json`：弱匹配或 fork 等待复核项目。
 - `data/exclusions.json`：明确误命中与排除原因。
+- `data/developers.json`：维护者公开地点、保守地区分组和最近核对时间；同一维护者只保存一份。
+- `data/translations.json`：按仓库与英文原文匹配的中文翻译缓存。
 - `data/snapshots/`：最近 14 天的小时明细；旧版日快照继续兼容。
 - `data/archive/`：每天一个长期归档点，内容会在当天每次成功更新后刷新。
 - `data/rankings.json` / `data/rankings.csv`：由快照自动生成的排名。
@@ -80,12 +92,12 @@ GitHub API 出现短暂的限流或服务错误时会有限次重试；最终仍
 ## 发布到 GitHub 后的上线检查清单
 
 1. 把本目录推送成一个独立 GitHub 仓库。
-2. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；小时更新工作流本身只申请 `contents: write`。
+2. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；小时更新工作流只申请 `contents: write` 与 `models: read`。其中 `models: read` 让内置 `GITHUB_TOKEN` 调用 [GitHub Models](https://docs.github.com/en/github-models/quickstart)，不需要另存模型 API Key。
 3. 如果需要 GitHub Pages，把仓库变量 `ENABLE_GITHUB_PAGES` 设为 `true`，并在 `Settings → Pages` 中选择 GitHub Actions 作为来源。页面部署使用独立、最小权限的工作流。
 4. 在 Actions 页面手动运行一次 `Hourly ecosystem update`，确认真实 API 更新、机器人提交和页面部署均成功。
 5. 把仓库地址写入 `config/radar.json` 的 `public_repository_url`，再运行一次 `npm run build`；页面页脚和推文草稿才会出现稳定、可复现的公开链接。
 
-小时任务使用仓库自带的 `GITHUB_TOKEN` 提交数据。此类机器人推送不会再触发普通 `push` 工作流，所以 Pages 工作流同时监听 `Hourly ecosystem update` 的成功完成事件，确保每次数据提交后仍会部署最新页面。
+小时任务使用仓库自带的 `GITHUB_TOKEN` 读取 GitHub API、调用 GitHub Models 并提交数据。此类机器人推送不会再触发普通 `push` 工作流，所以 Pages 工作流同时监听 `Hourly ecosystem update` 的成功完成事件，确保每次数据提交后仍会部署最新页面。
 
 当前一次运行的常规 API 请求量远低于 GitHub 对仓库 `GITHUB_TOKEN` 的每小时 1000 次额度（[GitHub Actions 限额](https://docs.github.com/en/actions/reference/limits#common-api-rate-limits)）；若未来观察项目或 README 上限显著扩大，应先重新核算请求预算。公开仓库若连续 60 天没有任何仓库活动，GitHub 可能停用计划任务；正常的小时快照提交本身会持续形成活动，但维护者仍应关注 Actions 失败通知。
 
@@ -119,6 +131,8 @@ npm run security-check
 npm run update
 ```
 
+只想重新核对维护者公开地点时，可以运行 `npm run refresh-developers`。本地 Token 若没有 GitHub Models 权限，项目数据仍可更新，只是新的纯英文简介会等待下一次具备 `models: read` 权限的在线任务翻译。
+
 ## 数据边界
 
 - GitHub 搜索不能证明绝对全网穷尽。
@@ -126,6 +140,8 @@ npm run update
 - 第一个观察点只能形成当前排名；至少有两个观察点后，才能计算窗口变化。页面会显示真实窗口小时数，不把延迟或漏跑的任务硬写成精确 1 小时。
 - Star/Fork 变化是 GitHub 公开指标变化，不等于真实使用、留存或代码质量。
 - 自动分类和证据判定是可复核规则，不是对项目质量或安全性的背书。
+- GitHub `location` 是维护者自行填写的自由文本，可能为空、过期、玩笑化或代表组织办公地；地区分组不代表国籍，也不能覆盖仓库全部贡献者。
+- 中文简介是辅助阅读的机器翻译或人工基线翻译，英文原文仍是核对依据；翻译不构成对项目功能声明的验证。
 - 详细规则见 [METHODOLOGY.md](METHODOLOGY.md)。
 
 ## License

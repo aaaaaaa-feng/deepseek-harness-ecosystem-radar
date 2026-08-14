@@ -171,8 +171,12 @@ test('radar configuration validation rejects unsafe update bounds', () => {
     max_readmes_per_run: 0,
     api_max_attempts: 9,
     api_max_retry_delay_ms: 30_001,
+    developer_profile_refresh_days: 0,
+    translation_model: 'invalid-model',
+    translation_batch_size: 0,
+    translation_max_attempts: 9,
     public_repository_url: 'https://example.com/repo',
     queries: ['missing placeholder']
   });
-  assert.ok(errors.length >= 8);
+  assert.ok(errors.length >= 12);
 });

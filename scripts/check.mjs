@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applyProjectEnrichment, containsHan, DEVELOPER_REGION_LABELS} from './lib/enrichment.mjs';
 import {validateProjectSet, validateRadarConfig} from './lib/radar.mjs';
 import {
   dedupeSnapshotRecords,
@@ -25,11 +26,13 @@ const duplicates = values => {
 };
 const intersect = (left, right) => [...left].filter(value => right.has(value));
 
-const [config, projects, candidates, exclusions, rankings, latest, docsLatest, allowlist, denylist] = await Promise.all([
+const [config, projects, candidates, exclusions, developers, translations, rankings, latest, docsLatest, allowlist, denylist] = await Promise.all([
   readJson('config/radar.json'),
   readJson('data/projects.json'),
   readJson('data/candidates.json'),
   readJson('data/exclusions.json'),
+  readJson('data/developers.json'),
+  readJson('data/translations.json'),
   readJson('data/rankings.json'),
   readJson('data/latest.json'),
   readJson('docs/data/latest.json'),
@@ -42,6 +45,7 @@ const errors = [
   ...validateProjectSet(projects.projects, config.release_cutoff_utc)
 ];
 const active = projects.projects.filter(project => project.status === 'active' && project.evidence_level === 'confirmed');
+const enrichedActive = applyProjectEnrichment(active, developers, translations);
 const projectKeys = keySet(projects.projects);
 const candidateKeys = keySet(candidates.candidates);
 const exclusionKeys = keySet(exclusions.exclusions);
@@ -67,6 +71,23 @@ if (latest.generated_at !== rankings.generated_at) errors.push('Latest and ranki
 if (latest.projects.length !== active.length) errors.push('Latest project payload count mismatch');
 if (JSON.stringify(latest) !== JSON.stringify(docsLatest)) errors.push('docs/data/latest.json is not synchronized');
 if (projects.projects.some(project => project.repo === 'unitarylab/quantum-practices')) errors.push('Known false positive is present');
+if (!developers?.profiles || typeof developers.profiles !== 'object' || Array.isArray(developers.profiles)) errors.push('Developer profiles cache is invalid');
+if (!translations?.translations || typeof translations.translations !== 'object' || Array.isArray(translations.translations)) errors.push('Translation cache is invalid');
+
+const validRegions = new Set(Object.keys(DEVELOPER_REGION_LABELS));
+for (const project of enrichedActive) {
+  if (!validRegions.has(project.developer?.region)) errors.push(`Invalid developer region at ${project.repo}`);
+  if (project.developer?.region_label !== DEVELOPER_REGION_LABELS[project.developer?.region]) errors.push(`Developer region label mismatch at ${project.repo}`);
+  if (!project.developer?.profile_url?.startsWith('https://github.com/')) errors.push(`Invalid developer profile URL at ${project.repo}`);
+  if (!['empty', 'source-zh', 'translated', 'pending'].includes(project.translation_status)) errors.push(`Invalid translation status at ${project.repo}`);
+  if (project.translation_status === 'translated' && !containsHan(project.description_zh)) errors.push(`Translated description is not Chinese at ${project.repo}`);
+}
+const developerAccounts = new Map(enrichedActive.map(project => [project.developer.login.toLowerCase(), project.developer]));
+const expectedRegions = Object.fromEntries([...validRegions].map(region => [region, 0]));
+for (const developer of developerAccounts.values()) expectedRegions[developer.region] += 1;
+if (latest.summary.developer_accounts !== developerAccounts.size) errors.push('Developer account count mismatch');
+if (JSON.stringify(latest.summary.developer_regions) !== JSON.stringify(expectedRegions)) errors.push('Developer region summary mismatch');
+if (latest.summary.pending_translations !== enrichedActive.filter(project => project.translation_status === 'pending').length) errors.push('Pending translation count mismatch');
 
 const rankedRepos = new Set();
 for (const [index, item] of rankings.current.entries()) {
@@ -116,10 +137,10 @@ if (!readme.includes('观察窗口趋势')) errors.push('README must use the hon
 if (readme.includes('24h变化')) errors.push('README contains a hard-coded 24h change label');
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
-if (!html.includes('id="ranking-table"') || !app.includes('colspan="8"')) errors.push('Static ranking table structure is incomplete');
+if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
 if (!html.includes('class="skip-link"') || !html.includes('<main id="main" tabindex="-1">')) errors.push('Static page skip navigation is incomplete');
 if (!tweet.includes('不代表全网穷尽')) errors.push('Tweet draft is missing the evidence boundary');
-if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write')) errors.push('Hourly workflow schedule or permissions are incomplete');
+if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write') || !hourlyWorkflow.includes('models: read')) errors.push('Hourly workflow schedule or permissions are incomplete');
 if (!pagesWorkflow.includes('workflow_run:') || !pagesWorkflow.includes('Hourly ecosystem update')) errors.push('Pages workflow will not follow hourly updates');
 if (!pagesWorkflow.includes('pages: write') || !pagesWorkflow.includes('id-token: write')) errors.push('Pages workflow permissions are incomplete');
 

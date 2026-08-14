@@ -50,6 +50,7 @@
       <article><span>待复核候选</span><strong id="candidate-count">—</strong></article>
       <article><span>历史快照</span><strong id="snapshot-count">—</strong></article>
       <article><span>最新数据</span><strong class="date-metric" id="snapshot-date">—</strong></article>
+      <article class="location-metric"><span>维护者公开所在地</span><strong id="region-counts">—</strong><small id="region-unknown">正在统计…</small></article>
     </section>
 
     <section class="section" id="ranking">
@@ -58,10 +59,12 @@
           <p class="eyebrow">CURRENT ATTENTION</p>
           <h2>当前关注度排名</h2>
           <p id="ranking-window">由 Stars 与 Forks 的对数分数计算，不是产品质量榜。</p>
+          <p class="translation-note">中文介绍优先展示；有英文原文时可以展开核对。</p>
         </div>
         <div class="controls">
-          <label>搜索 <input id="search" type="search" placeholder="owner/repo 或功能" aria-controls="ranking-table"></label>
+          <label>搜索 <input id="search" type="search" placeholder="owner/repo、中文功能或地点" aria-controls="ranking-table"></label>
           <label>分类 <select id="category" aria-controls="ranking-table"><option value="">全部分类</option></select></label>
+          <label>所在地 <select id="region" aria-controls="ranking-table"><option value="">全部地区</option></select></label>
         </div>
       </div>
       <div class="ranking-meta">
@@ -72,10 +75,10 @@
         <table id="ranking-table">
           <caption>DeepSeek Harness 相关项目关注度排名</caption>
           <colgroup>
-            <col class="col-rank"><col class="col-project"><col class="col-category"><col class="col-number">
+            <col class="col-rank"><col class="col-project"><col class="col-region"><col class="col-category"><col class="col-number">
             <col class="col-number"><col class="col-score"><col class="col-delta"><col class="col-delta">
           </colgroup>
-          <thead><tr><th scope="col">#</th><th scope="col">项目</th><th scope="col">分类</th><th scope="col">Stars</th><th scope="col">Forks</th><th scope="col">关注分</th><th scope="col" id="window-header">窗口 Stars Δ</th><th scope="col">排名变化</th></tr></thead>
+          <thead><tr><th scope="col">#</th><th scope="col">项目</th><th scope="col">公开所在地</th><th scope="col">分类</th><th scope="col">Stars</th><th scope="col">Forks</th><th scope="col">关注分</th><th scope="col" id="window-header">窗口 Stars Δ</th><th scope="col">排名变化</th></tr></thead>
           <tbody id="ranking-body"></tbody>
         </table>
       </div>
@@ -102,6 +105,7 @@
         <article><strong>是</strong><p>带来源、时间和历史快照的 GitHub 公开指标观察。</p></article>
         <article><strong>不是</strong><p>绝对全网穷尽、产品质量、安全性或真实用户数排名。</p></article>
         <article><strong>已确认</strong><p>表示相关性与实现入口有证据，不表示已经逐个安装验收。</p></article>
+        <article><strong>所在地</strong><p>只采用维护者主动公开的 GitHub 地点，不根据姓名、语言或头像推断国籍。</p></article>
       </div>
     </section>
   </main>

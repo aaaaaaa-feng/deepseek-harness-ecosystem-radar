@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-14T18:57:15.849Z",
+  "profiles": {
+    "147228": {
+      "login": "147228",
+      "account_type": "User",
+      "profile_url": "https://github.com/147228",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "small-tailqwq": {
+      "login": "Small-tailqwq",
+      "account_type": "User",
+      "profile_url": "https://github.com/Small-tailqwq",
+      "location": "China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "anywhere-labs": {
+      "login": "anywhere-labs",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/anywhere-labs",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "dataelement": {
+      "login": "dataelement",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/dataelement",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "steven-kid": {
+      "login": "steven-kid",
+      "account_type": "User",
+      "profile_url": "https://github.com/steven-kid",
+      "location": "China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "myyangyunfan": {
+      "login": "myYangyunfan",
+      "account_type": "User",
+      "profile_url": "https://github.com/myYangyunfan",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ruler4396": {
+      "login": "Ruler4396",
+      "account_type": "User",
+      "profile_url": "https://github.com/Ruler4396",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "turtle2209": {
+      "login": "turtle2209",
+      "account_type": "User",
+      "profile_url": "https://github.com/turtle2209",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "nagi-ovo": {
+      "login": "Nagi-ovo",
+      "account_type": "User",
+      "profile_url": "https://github.com/Nagi-ovo",
+      "location": "London",
+      "region": "overseas",
+      "region_label": "海外",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "xiincs": {
+      "login": "xiincs",
+      "account_type": "User",
+      "profile_url": "https://github.com/xiincs",
+      "location": "Jinan, China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "chisaalter": {
+      "login": "ChisaAlter",
+      "account_type": "User",
+      "profile_url": "https://github.com/ChisaAlter",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "omdsh-dev": {
+      "login": "omdsh-dev",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/omdsh-dev",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "hairyf": {
+      "login": "hairyf",
+      "account_type": "User",
+      "profile_url": "https://github.com/hairyf",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "xiaobright": {
+      "login": "xiaobright",
+      "account_type": "User",
+      "profile_url": "https://github.com/xiaobright",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "obdangshang07": {
+      "login": "OBdangshang07",
+      "account_type": "User",
+      "profile_url": "https://github.com/OBdangshang07",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ysr666": {
+      "login": "ysr666",
+      "account_type": "User",
+      "profile_url": "https://github.com/ysr666",
+      "location": "Xi'an Jiaotong University, Beiling District, Xi'an, Shaanxi Province, China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "laplaceyoung": {
+      "login": "LaplaceYoung",
+      "account_type": "User",
+      "profile_url": "https://github.com/LaplaceYoung",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "bradegithub": {
+      "login": "bradeGithub",
+      "account_type": "User",
+      "profile_url": "https://github.com/bradeGithub",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "titanwings": {
+      "login": "titanwings",
+      "account_type": "User",
+      "profile_url": "https://github.com/titanwings",
+      "location": "Shanghai",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "dsh-market": {
+      "login": "dsh-market",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/dsh-market",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "lhh010": {
+      "login": "lhh010",
+      "account_type": "User",
+      "profile_url": "https://github.com/lhh010",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "hiwhalew": {
+      "login": "HiWhaleW",
+      "account_type": "User",
+      "profile_url": "https://github.com/HiWhaleW",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ningbainb": {
+      "login": "ningbainb",
+      "account_type": "User",
+      "profile_url": "https://github.com/ningbainb",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "bowenliang123": {
+      "login": "bowenliang123",
+      "account_type": "User",
+      "profile_url": "https://github.com/bowenliang123",
+      "location": "Guangzhou, China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "c3ll256": {
+      "login": "c3ll256",
+      "account_type": "User",
+      "profile_url": "https://github.com/c3ll256",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "dancingmemory": {
+      "login": "dancingmemory",
+      "account_type": "User",
+      "profile_url": "https://github.com/dancingmemory",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "nwflower": {
+      "login": "Nwflower",
+      "account_type": "User",
+      "profile_url": "https://github.com/Nwflower",
+      "location": "Beijing",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ccmu04": {
+      "login": "CCMu04",
+      "account_type": "User",
+      "profile_url": "https://github.com/CCMu04",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "heigeai": {
+      "login": "HeiGeAi",
+      "account_type": "User",
+      "profile_url": "https://github.com/HeiGeAi",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "wess09": {
+      "login": "wess09",
+      "account_type": "User",
+      "profile_url": "https://github.com/wess09",
+      "location": "CN",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "tianji-qingtian": {
+      "login": "tianji-qingtian",
+      "account_type": "User",
+      "profile_url": "https://github.com/tianji-qingtian",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "cpj-dev": {
+      "login": "cpj-dev",
+      "account_type": "User",
+      "profile_url": "https://github.com/cpj-dev",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "dietcokewithsugar": {
+      "login": "DietCokewithSugar",
+      "account_type": "User",
+      "profile_url": "https://github.com/DietCokewithSugar",
+      "location": "Beijing",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "sanqi-normal": {
+      "login": "Sanqi-normal",
+      "account_type": "User",
+      "profile_url": "https://github.com/Sanqi-normal",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "justgenius-s": {
+      "login": "JustGenius-s",
+      "account_type": "User",
+      "profile_url": "https://github.com/JustGenius-s",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "anysearch-team": {
+      "login": "anysearch-team",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/anysearch-team",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "fishquito7": {
+      "login": "Fishquito7",
+      "account_type": "User",
+      "profile_url": "https://github.com/Fishquito7",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "iuikj": {
+      "login": "iuikj",
+      "account_type": "User",
+      "profile_url": "https://github.com/iuikj",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "oil-oil": {
+      "login": "oil-oil",
+      "account_type": "User",
+      "profile_url": "https://github.com/oil-oil",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "bugmaker2": {
+      "login": "bugmaker2",
+      "account_type": "User",
+      "profile_url": "https://github.com/bugmaker2",
+      "location": "Shanghai, China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ychris12138": {
+      "login": "Ychris12138",
+      "account_type": "User",
+      "profile_url": "https://github.com/Ychris12138",
+      "location": "Zhejiang Hangzhou",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "openma-ai": {
+      "login": "openma-ai",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/openma-ai",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "laynechai": {
+      "login": "LayneChai",
+      "account_type": "User",
+      "profile_url": "https://github.com/LayneChai",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "zasenjc": {
+      "login": "ZASENJC",
+      "account_type": "User",
+      "profile_url": "https://github.com/ZASENJC",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "awesome-dsh-plugin": {
+      "login": "awesome-dsh-plugin",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/awesome-dsh-plugin",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "lx2000wasd": {
+      "login": "LX2000WASD",
+      "account_type": "User",
+      "profile_url": "https://github.com/LX2000WASD",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "cc1252": {
+      "login": "cc1252",
+      "account_type": "User",
+      "profile_url": "https://github.com/cc1252",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "whyihaveyou": {
+      "login": "whyihaveyou",
+      "account_type": "User",
+      "profile_url": "https://github.com/whyihaveyou",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "xingj404-lab": {
+      "login": "xingj404-lab",
+      "account_type": "User",
+      "profile_url": "https://github.com/xingj404-lab",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "yyyyukari": {
+      "login": "yyyyukari",
+      "account_type": "User",
+      "profile_url": "https://github.com/yyyyukari",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ericwong5021": {
+      "login": "Ericwong5021",
+      "account_type": "User",
+      "profile_url": "https://github.com/Ericwong5021",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "sleep2agi": {
+      "login": "sleep2agi",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/sleep2agi",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "liyupi": {
+      "login": "liyupi",
+      "account_type": "User",
+      "profile_url": "https://github.com/liyupi",
+      "location": "China Shanghai",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "tencent-connect": {
+      "login": "tencent-connect",
+      "account_type": "Organization",
+      "profile_url": "https://github.com/tencent-connect",
+      "location": "China",
+      "region": "mainland_china",
+      "region_label": "国内",
+      "basis": "github-profile-location",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "ghost011118": {
+      "login": "Ghost011118",
+      "account_type": "User",
+      "profile_url": "https://github.com/Ghost011118",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    },
+    "dingkaihu63": {
+      "login": "dingkaihu63",
+      "account_type": "User",
+      "profile_url": "https://github.com/dingkaihu63",
+      "location": "",
+      "region": "unknown",
+      "region_label": "未知",
+      "basis": "location-not-public",
+      "checked_at": "2026-08-14T18:57:15.849Z"
+    }
+  }
+}
