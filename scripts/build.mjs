@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {buildRankings, csvCell, escapeMarkdown} from './lib/radar.mjs';
+import {buildRankings, buildSignals, csvCell, escapeMarkdown} from './lib/radar.mjs';
+import {dedupeSnapshotRecords, loadSnapshotRecords, snapshotRecordStats} from './lib/snapshots.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = async relative => JSON.parse(await fs.readFile(path.join(root, relative), 'utf8'));
@@ -39,11 +40,12 @@ export async function buildArtifacts() {
     readJson('data/projects.json'),
     readJson('data/candidates.json')
   ]);
-  const snapshotNames = (await fs.readdir(path.join(root, 'data/snapshots')))
-    .filter(name => /^\d{4}-\d{2}-\d{2}\.json$/.test(name))
-    .sort();
-  const snapshots = await Promise.all(snapshotNames.map(name => readJson(`data/snapshots/${name}`)));
+  const snapshotRecords = await loadSnapshotRecords(root);
+  const uniqueSnapshotRecords = dedupeSnapshotRecords(snapshotRecords);
+  const snapshotStats = snapshotRecordStats(snapshotRecords);
+  const snapshots = uniqueSnapshotRecords.map(record => record.snapshot);
   const rankings = buildRankings(projectsPayload.projects, snapshots);
+  const signals = buildSignals(projectsPayload.projects);
   const repositoryUrl = config.public_repository_url;
   await writeJson('data/rankings.json', rankings);
 
@@ -60,9 +62,12 @@ export async function buildArtifacts() {
       confirmed_projects: activeProjects.length,
       candidate_projects: candidatesPayload.candidates.length,
       snapshots: snapshots.length,
+      hourly_snapshots: snapshotStats.hourly,
+      daily_archives: snapshotStats.archives,
       has_momentum_window: Boolean(rankings.previous_snapshot_at)
     },
     rankings,
+    signals,
     projects: activeProjects
   };
   await writeJson('data/latest.json', latest);
@@ -95,7 +100,8 @@ export async function buildArtifacts() {
   const summary = [
     `- 已确认观察项目：**${activeProjects.length}**`,
     `- 待复核候选：**${candidatesPayload.candidates.length}**`,
-    `- 历史快照：**${snapshots.length}**`,
+    `- 历史观察点：**${snapshots.length}**`,
+    `- 小时明细：**${snapshotStats.hourly}**；每日归档：**${snapshotStats.archives}**`,
     `- 最新快照：**${rankings.latest_snapshot_at}**`,
     `- 观察窗口趋势：${rankings.previous_snapshot_at ? `已基于 ${rankings.observation_window_hours} 小时窗口计算` : '**等待第二个快照后生成**'}`
   ].join('\n');
@@ -104,16 +110,17 @@ export async function buildArtifacts() {
   readme = replaceSection(readme, '<!-- RADAR_RANKING_START -->', '<!-- RADAR_RANKING_END -->', topTable);
   await writeText('README.md', readme);
 
-  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个快照：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 快照文件：${snapshots.length}\n- 更新计划：${config.schedule_label}\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
+  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
   await writeText('STATUS.md', status);
 
   const top = rankings.current[0];
   const mover = rankings.momentum[0];
+  const arrival = signals.latest_arrivals[0];
   const windowText = rankings.previous_snapshot_at
     ? `${rankings.observation_window_hours}h 窗口动量：${mover ? `${mover.repo}（${delta(mover.stars_delta)} stars）` : '暂无可比较项目'}`
     : '观察窗口动量：等待第二个快照';
   const linkText = repositoryUrl ? `\n${repositoryUrl}\n` : '\n仓库链接：发布后补充\n';
-  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- ${windowText}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n这是可复查的 GitHub 快照，不代表全网穷尽，也不是产品质量榜。\n\n#DeepSeek #OpenSource #AI\n`;
+  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，也不是产品质量榜。\n\n#DeepSeek #OpenSource #AI\n`;
   await writeText('tweet-draft.md', tweet);
   return latest;
 }

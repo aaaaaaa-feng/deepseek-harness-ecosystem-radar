@@ -116,7 +116,7 @@ async function init() {
 
   const movers = data.rankings.momentum.slice(0, 8);
   if (!movers.length) {
-    $('#movers').innerHTML = '<li><span class="index">—</span><span>等待第二个每日快照</span><small>尚无可比较窗口</small></li>';
+    $('#movers').innerHTML = '<li><span class="index">—</span><span>等待第二个观察点</span><small>尚无可比较窗口</small></li>';
   } else {
     $('#momentum-note').textContent = `真实快照间隔：${windowHours} 小时`;
     $('#movers').innerHTML = movers.map((item, index) => `

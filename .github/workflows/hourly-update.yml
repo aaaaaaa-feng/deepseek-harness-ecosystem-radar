@@ -1,8 +1,8 @@
-name: Daily ecosystem update
+name: Hourly ecosystem update
 
 on:
   schedule:
-    - cron: "17 9 * * *"
+    - cron: "17 * * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
 
@@ -30,7 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run check
       - run: npm run security-check
-      - name: Commit daily snapshot
+      - name: Commit hourly snapshot
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -39,7 +39,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No data changes"
           else
-            SNAPSHOT_DATE="$(TZ=Asia/Shanghai date +%F)"
-            git commit -m "chore(data): daily ecosystem snapshot ${SNAPSHOT_DATE}"
+            SNAPSHOT_TIME="$(TZ=Asia/Shanghai date '+%F %H:%M')"
+            git commit -m "chore(data): hourly ecosystem snapshot ${SNAPSHOT_TIME} CST"
             git push
           fi

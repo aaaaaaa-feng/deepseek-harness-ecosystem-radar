@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {
   attentionScore,
   buildRankings,
+  buildSignals,
   categoryFor,
   reconcileCatalogs,
   relevanceEvidence,
@@ -77,6 +78,30 @@ test('rankings calculate snapshot deltas and rank changes', () => {
   assert.equal(rankings.current[0].stars_delta, 20);
   assert.equal(rankings.current[0].rank_change, 1);
   assert.equal(rankings.observation_window_hours, 24);
+  assert.deepEqual(rankings.ecosystem_delta, {stars: 21, forks: 1, projects: 0});
+  assert.deepEqual(rankings.history.map(point => point.stars), [30, 51]);
+});
+
+test('ecosystem signals use real creation, push, and milestone data', () => {
+  const signals = buildSignals([
+    {
+      repo: 'a/one', url: 'https://github.com/a/one', status: 'active', evidence_level: 'confirmed',
+      stars: 24, forks: 2, created_at: '2026-08-14T00:00:00Z', pushed_at: '2026-08-15T01:00:00Z'
+    },
+    {
+      repo: 'b/two', url: 'https://github.com/b/two', status: 'active', evidence_level: 'confirmed',
+      stars: 11, forks: 1, created_at: '2026-08-15T00:00:00Z', pushed_at: '2026-08-15T00:30:00Z'
+    },
+    {
+      repo: 'c/candidate', url: 'https://github.com/c/candidate', status: 'active', evidence_level: 'candidate',
+      stars: 99, created_at: '2026-08-16T00:00:00Z', pushed_at: '2026-08-16T00:00:00Z'
+    }
+  ]);
+  assert.equal(signals.latest_arrivals[0].repo, 'b/two');
+  assert.equal(signals.recently_active[0].repo, 'a/one');
+  assert.equal(signals.milestone_watch[0].repo, 'a/one');
+  assert.equal(signals.milestone_watch[0].next_milestone, 25);
+  assert.equal(signals.milestone_watch[0].stars_remaining, 1);
 });
 
 test('rankings reject invalid or duplicate snapshot timestamps', () => {

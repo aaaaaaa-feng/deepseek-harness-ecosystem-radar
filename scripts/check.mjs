@@ -2,6 +2,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {validateProjectSet, validateRadarConfig} from './lib/radar.mjs';
+import {
+  dedupeSnapshotRecords,
+  hourlyPathsToPrune,
+  loadSnapshotRecords,
+  shanghaiDate,
+  shanghaiHourKey,
+  snapshotRecordStats
+} from './lib/snapshots.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = async relative => JSON.parse(await fs.readFile(path.join(root, relative), 'utf8'));
@@ -16,14 +24,6 @@ const duplicates = values => {
   return [...repeated];
 };
 const intersect = (left, right) => [...left].filter(value => right.has(value));
-
-function shanghaiDate(value) {
-  const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'
-  }).formatToParts(new Date(value));
-  const map = Object.fromEntries(parts.map(part => [part.type, part.value]));
-  return `${map.year}-${map.month}-${map.day}`;
-}
 
 const [config, projects, candidates, exclusions, rankings, latest, docsLatest, allowlist, denylist] = await Promise.all([
   readJson('config/radar.json'),
@@ -80,29 +80,34 @@ for (const project of active) {
   if (!rankedRepos.has(project.repo.toLowerCase())) errors.push(`Active project missing from rankings: ${project.repo}`);
 }
 
-const snapshotNames = (await fs.readdir(path.join(root, 'data/snapshots')))
-  .filter(name => name.endsWith('.json'))
-  .sort();
-if (snapshotNames.length !== latest.summary.snapshots) errors.push('Snapshot file count mismatch');
-for (const name of snapshotNames) {
-  if (!/^\d{4}-\d{2}-\d{2}\.json$/.test(name)) {
-    errors.push(`Invalid snapshot filename: ${name}`);
-    continue;
-  }
-  const snapshot = await readJson(`data/snapshots/${name}`);
-  if (Number.isNaN(Date.parse(snapshot.snapshot_at))) errors.push(`Invalid snapshot timestamp: ${name}`);
-  else if (name !== `${shanghaiDate(snapshot.snapshot_at)}.json`) errors.push(`Snapshot filename and Asia/Shanghai date differ: ${name}`);
+const snapshotRecords = await loadSnapshotRecords(root);
+const uniqueSnapshotRecords = dedupeSnapshotRecords(snapshotRecords);
+const snapshotStats = snapshotRecordStats(snapshotRecords);
+if (uniqueSnapshotRecords.length !== latest.summary.snapshots) errors.push('Unique snapshot point count mismatch');
+if (snapshotStats.hourly !== latest.summary.hourly_snapshots) errors.push('Hourly snapshot count mismatch');
+if (snapshotStats.archives !== latest.summary.daily_archives) errors.push('Daily archive count mismatch');
+for (const record of snapshotRecords) {
+  const {relativePath, descriptor, snapshot} = record;
+  const expectedKey = descriptor.kind === 'hourly'
+    ? shanghaiHourKey(snapshot.snapshot_at)
+    : shanghaiDate(snapshot.snapshot_at);
+  if (descriptor.key !== expectedKey) errors.push(`Snapshot filename and Asia/Shanghai time differ: ${relativePath}`);
   const repos = snapshot.projects.map(project => project.repo.toLowerCase());
-  for (const duplicate of duplicates(repos)) errors.push(`Duplicate repository in snapshot ${name}: ${duplicate}`);
-  if (snapshot.projects.some(project => project.stars < 0 || project.forks < 0)) errors.push(`Negative metric in snapshot: ${name}`);
+  for (const duplicate of duplicates(repos)) errors.push(`Duplicate repository in snapshot ${relativePath}: ${duplicate}`);
+  if (snapshot.projects.some(project => project.stars < 0 || project.forks < 0)) errors.push(`Negative metric in snapshot: ${relativePath}`);
+}
+const latestSnapshotAt = uniqueSnapshotRecords.at(-1)?.snapshot.snapshot_at;
+if (latestSnapshotAt) {
+  const staleHourlyPaths = hourlyPathsToPrune(snapshotRecords, latestSnapshotAt, config.hourly_snapshot_retention_days);
+  for (const relativePath of staleHourlyPaths) errors.push(`Prunable hourly snapshot remains: ${relativePath}`);
 }
 
-const [readme, html, app, tweet, dailyWorkflow, pagesWorkflow] = await Promise.all([
+const [readme, html, app, tweet, hourlyWorkflow, pagesWorkflow] = await Promise.all([
   fs.readFile(path.join(root, 'README.md'), 'utf8'),
   fs.readFile(path.join(root, 'docs/index.html'), 'utf8'),
   fs.readFile(path.join(root, 'docs/app.js'), 'utf8'),
   fs.readFile(path.join(root, 'tweet-draft.md'), 'utf8'),
-  fs.readFile(path.join(root, '.github/workflows/daily-update.yml'), 'utf8'),
+  fs.readFile(path.join(root, '.github/workflows/hourly-update.yml'), 'utf8'),
   fs.readFile(path.join(root, '.github/workflows/pages.yml'), 'utf8')
 ]);
 if (!readme.includes(`已确认观察项目：**${active.length}**`)) errors.push('README summary is stale');
@@ -114,8 +119,8 @@ if (!html.includes('aria-live="polite"')) errors.push('Static page is missing li
 if (!html.includes('id="ranking-table"') || !app.includes('colspan="8"')) errors.push('Static ranking table structure is incomplete');
 if (!html.includes('class="skip-link"') || !html.includes('<main id="main" tabindex="-1">')) errors.push('Static page skip navigation is incomplete');
 if (!tweet.includes('不代表全网穷尽')) errors.push('Tweet draft is missing the evidence boundary');
-if (!dailyWorkflow.includes('timezone: "Asia/Shanghai"') || !dailyWorkflow.includes('contents: write')) errors.push('Daily workflow schedule or permissions are incomplete');
-if (!pagesWorkflow.includes('workflow_run:') || !pagesWorkflow.includes('Daily ecosystem update')) errors.push('Pages workflow will not follow daily updates');
+if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write')) errors.push('Hourly workflow schedule or permissions are incomplete');
+if (!pagesWorkflow.includes('workflow_run:') || !pagesWorkflow.includes('Hourly ecosystem update')) errors.push('Pages workflow will not follow hourly updates');
 if (!pagesWorkflow.includes('pages: write') || !pagesWorkflow.includes('id-token: write')) errors.push('Pages workflow permissions are incomplete');
 
 if (errors.length) {
@@ -127,6 +132,8 @@ console.log(JSON.stringify({
   projects: active.length,
   candidates: candidates.candidates.length,
   exclusions: exclusions.exclusions.length,
-  snapshots: snapshotNames.length,
+  snapshots: uniqueSnapshotRecords.length,
+  hourly_snapshots: snapshotStats.hourly,
+  daily_archives: snapshotStats.archives,
   ranked: rankings.current.length
 }));

@@ -29,6 +29,7 @@ export function validateRadarConfig(config) {
   boundedInteger('max_readmes_per_run', 1, 1_000);
   boundedInteger('api_max_attempts', 1, 5);
   boundedInteger('api_max_retry_delay_ms', 0, 30_000);
+  boundedInteger('hourly_snapshot_retention_days', 1, 90);
   if (!Array.isArray(config?.queries) || !config.queries.length || config.queries.some(query => typeof query !== 'string' || !query.includes('{since_date}'))) {
     errors.push('Every discovery query must contain {since_date}');
   } else if (new Set(config.queries).size !== config.queries.length) {
@@ -268,7 +269,10 @@ export function buildRankings(projects, snapshots) {
       forks_delta: before ? item.forks - before.forks : null,
       rank_change: before ? before.rank - item.rank : null,
       created_at: project.created_at || '',
-      first_seen_at: project.first_seen_at || ''
+      first_seen_at: project.first_seen_at || '',
+      pushed_at: project.pushed_at || '',
+      language: project.language || '',
+      license: project.license || 'NOASSERTION'
     };
   });
 
@@ -288,6 +292,14 @@ export function buildRankings(projects, snapshots) {
   ).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
   const previousAt = previous?.snapshot_at || null;
+  const history = orderedSnapshots.map(({snapshot}) => ({
+    snapshot_at: snapshot.snapshot_at,
+    project_count: snapshot.projects.length,
+    stars: snapshot.projects.reduce((sum, project) => sum + toNumber(project.stars), 0),
+    forks: snapshot.projects.reduce((sum, project) => sum + toNumber(project.forks), 0)
+  }));
+  const latestTotals = history.at(-1);
+  const previousTotals = history.at(-2) || null;
   return {
     schema_version: 1,
     generated_at: latest.snapshot_at,
@@ -301,7 +313,61 @@ export function buildRankings(projects, snapshots) {
     new_projects: previousAt
       ? current.filter(item => item.first_seen_at && Date.parse(item.first_seen_at) > previousRecord.timestamp)
       : [],
-    categories: categories.map(([category, count]) => ({category, count}))
+    categories: categories.map(([category, count]) => ({category, count})),
+    ecosystem_delta: previousTotals ? {
+      stars: latestTotals.stars - previousTotals.stars,
+      forks: latestTotals.forks - previousTotals.forks,
+      projects: latestTotals.project_count - previousTotals.project_count
+    } : null,
+    history
+  };
+}
+
+function signalProject(project) {
+  return {
+    repo: project.repo,
+    url: project.url,
+    description: project.description || '',
+    category: project.category || '其他实现型扩展',
+    stars: toNumber(project.stars),
+    forks: toNumber(project.forks),
+    language: project.language || '',
+    created_at: project.created_at || '',
+    first_seen_at: project.first_seen_at || '',
+    pushed_at: project.pushed_at || ''
+  };
+}
+
+function timestamp(value) {
+  const parsed = Date.parse(value);
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+
+export function buildSignals(projects) {
+  const active = projects
+    .filter(project => project.status === 'active' && project.evidence_level === 'confirmed')
+    .map(signalProject);
+  const milestones = [10, 25, 50, 100, 250, 500, 1_000, 2_500, 5_000, 10_000, 25_000];
+  return {
+    latest_arrivals: [...active]
+      .sort((a, b) => timestamp(b.created_at) - timestamp(a.created_at) || b.stars - a.stars || a.repo.localeCompare(b.repo))
+      .slice(0, 8),
+    recently_active: [...active]
+      .filter(project => timestamp(project.pushed_at) > 0)
+      .sort((a, b) => timestamp(b.pushed_at) - timestamp(a.pushed_at) || b.stars - a.stars || a.repo.localeCompare(b.repo))
+      .slice(0, 8),
+    milestone_watch: active
+      .map(project => {
+        const next_milestone = milestones.find(value => value > project.stars) || Math.ceil((project.stars + 1) / 25_000) * 25_000;
+        return {
+          ...project,
+          next_milestone,
+          stars_remaining: next_milestone - project.stars,
+          milestone_progress: round(100 * project.stars / next_milestone, 1)
+        };
+      })
+      .sort((a, b) => b.milestone_progress - a.milestone_progress || b.stars - a.stars || a.repo.localeCompare(b.repo))
+      .slice(0, 8)
   };
 }
 

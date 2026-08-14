@@ -11,6 +11,12 @@ import {
   toNumber,
   validateRadarConfig
 } from './lib/radar.mjs';
+import {
+  loadSnapshotRecords,
+  pruneHourlySnapshots,
+  shanghaiDate,
+  snapshotFilename
+} from './lib/snapshots.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = async relative => JSON.parse(await fs.readFile(path.join(root, relative), 'utf8'));
@@ -27,15 +33,6 @@ const writeJsonAtomic = async (relative, value) => {
 };
 
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
-
-function shanghaiDate(value = new Date()) {
-  const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Shanghai',
-    year: 'numeric', month: '2-digit', day: '2-digit'
-  }).formatToParts(value);
-  const map = Object.fromEntries(parts.map(part => [part.type, part.value]));
-  return `${map.year}-${map.month}-${map.day}`;
-}
 
 function daysAgoDate(days) {
   return shanghaiDate(new Date(Date.now() - days * 86_400_000));
@@ -161,6 +158,8 @@ const {projects, candidates, exclusions} = reconcileCatalogs({
   observedAt: now
 });
 const snapshot = snapshotFromProjects(projects, now);
+const hourlySnapshotPath = `data/snapshots/${snapshotFilename('hourly', now)}`;
+const dailyArchivePath = `data/archive/${snapshotFilename('archive', now)}`;
 
 await Promise.all([
   writeJsonAtomic('data/projects.json', {
@@ -172,8 +171,24 @@ await Promise.all([
   }),
   writeJsonAtomic('data/candidates.json', {schema_version: 1, generated_at: now, candidates}),
   writeJsonAtomic('data/exclusions.json', {schema_version: 1, generated_at: now, exclusions}),
-  writeJsonAtomic(`data/snapshots/${shanghaiDate()}.json`, snapshot)
+  writeJsonAtomic(hourlySnapshotPath, snapshot),
+  writeJsonAtomic(dailyArchivePath, snapshot)
 ]);
 
+const snapshotRecords = await loadSnapshotRecords(root);
+const prunedSnapshots = await pruneHourlySnapshots(
+  root,
+  snapshotRecords,
+  now,
+  config.hourly_snapshot_retention_days,
+);
 await buildArtifacts();
-console.log(JSON.stringify({updated_at: now, projects: projects.length, candidates: candidates.length, exclusions: exclusions.length}));
+console.log(JSON.stringify({
+  updated_at: now,
+  projects: projects.length,
+  candidates: candidates.length,
+  exclusions: exclusions.length,
+  hourly_snapshot: hourlySnapshotPath,
+  daily_archive: dailyArchivePath,
+  pruned_hourly_snapshots: prunedSnapshots.length
+}));
