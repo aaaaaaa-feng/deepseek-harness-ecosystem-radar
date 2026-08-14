@@ -21,6 +21,7 @@
       <a class="brand" href="#top">DSH / RADAR</a>
       <div class="nav-links">
         <a href="#ranking">排名</a>
+        <a href="#category-ranking">分类榜</a>
         <a href="#momentum">趋势</a>
         <a href="#methodology">方法</a>
       </div>
@@ -82,6 +83,30 @@
           <tbody id="ranking-body"></tbody>
         </table>
       </div>
+    </section>
+
+    <section class="section" id="category-ranking">
+      <div class="section-head category-section-head">
+        <div>
+          <p class="eyebrow">CATEGORY LEADERBOARD</p>
+          <h2>功能分类榜</h2>
+          <p id="category-ranking-note">默认按分类内项目的 Stars 总量排序，不是质量评分。</p>
+        </div>
+        <div class="sort-tabs" role="group" aria-label="分类榜排序方式">
+          <button class="sort-tab" type="button" data-category-sort="stars" aria-pressed="true">Stars 总量</button>
+          <button class="sort-tab" type="button" data-category-sort="projects" aria-pressed="false">项目数量</button>
+          <button class="sort-tab" type="button" data-category-sort="momentum" aria-pressed="false">窗口增长</button>
+        </div>
+      </div>
+      <div class="category-podium" id="category-podium" aria-live="polite"></div>
+      <div class="table-wrap category-table-wrap">
+        <table class="category-table" id="category-ranking-table">
+          <caption>DeepSeek Harness 功能分类排名</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">功能分类</th><th scope="col">项目数</th><th scope="col">Stars 总量</th><th scope="col">Stars 占比</th><th scope="col">窗口 Stars Δ</th><th scope="col">头部项目</th></tr></thead>
+          <tbody id="category-ranking-body"></tbody>
+        </table>
+      </div>
+      <p class="category-boundary">分类排名描述公开规模和变化。一个头部项目可能显著影响分类 Stars 总量，因此可以切换到“项目数量”交叉查看。</p>
     </section>
 
     <section class="split section" id="momentum">

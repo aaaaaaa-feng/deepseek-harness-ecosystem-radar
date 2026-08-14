@@ -51,7 +51,16 @@ export async function buildArtifacts() {
   const rankings = buildRankings(enrichedProjects, snapshots);
   const signals = buildSignals(enrichedProjects);
   const repositoryUrl = config.public_repository_url;
-  await writeJson('data/rankings.json', rankings);
+  const categoryPayload = {
+    schema_version: 1,
+    generated_at: rankings.generated_at,
+    observation_window_hours: rankings.observation_window_hours,
+    categories: rankings.category_rankings
+  };
+  await Promise.all([
+    writeJson('data/rankings.json', rankings),
+    writeJson('data/categories.json', categoryPayload)
+  ]);
 
   const activeProjects = enrichedProjects.filter(project => project.status === 'active' && project.evidence_level === 'confirmed');
   const developerAccounts = new Map(activeProjects.map(project => [project.developer.login.toLowerCase(), project.developer]));
@@ -112,6 +121,32 @@ export async function buildArtifacts() {
     'data/rankings.csv',
     `${headers.join(',')}\n${csvRows.map(row => row.map(csvCell).join(',')).join('\n')}\n`,
   );
+  const categoryHeaders = [
+    'rank_by_stars', 'rank_by_projects', 'rank_by_momentum', 'category', 'project_count',
+    'project_share', 'total_stars', 'stars_share', 'total_forks', 'stars_delta',
+    'forks_delta', 'comparable_projects', 'leader_repo', 'top_3_repositories', 'snapshot_at'
+  ];
+  const categoryRows = rankings.category_rankings.map(item => [
+    item.rank_by_stars,
+    item.rank_by_projects,
+    item.rank_by_momentum ?? '',
+    item.category,
+    item.project_count,
+    item.project_share,
+    item.total_stars,
+    item.stars_share,
+    item.total_forks,
+    item.stars_delta ?? '',
+    item.forks_delta ?? '',
+    item.comparable_projects,
+    item.leader?.repo || '',
+    item.top_projects.map(project => project.repo).join(' | '),
+    rankings.latest_snapshot_at
+  ]);
+  await writeText(
+    'data/categories.csv',
+    `${categoryHeaders.join(',')}\n${categoryRows.map(row => row.map(csvCell).join(',')).join('\n')}\n`,
+  );
 
   const topTable = [
     '| 排名 | 项目 | 维护者公开所在地 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |',
@@ -120,6 +155,14 @@ export async function buildArtifacts() {
       `| ${item.rank} | [${escapeMarkdown(item.repo)}](${item.url}) | ${escapeMarkdown(item.developer?.region_label || DEVELOPER_REGION_LABELS.unknown)} | ${escapeMarkdown(item.category)} | ${item.stars} | ${item.forks} | ${item.attention_score} | ${delta(item.stars_delta)} | ${delta(item.rank_change)} |`,
     )
   ].join('\n');
+  const categoryTable = [
+    '| Stars 排名 | 功能分类 | 项目数 | Stars 总量 | Forks 总量 | 窗口 Stars Δ | 头部项目 |',
+    '| ---: | --- | ---: | ---: | ---: | ---: | --- |',
+    ...rankings.category_rankings.map(item =>
+      `| ${item.rank_by_stars} | ${escapeMarkdown(item.category)} | ${item.project_count} | ${item.total_stars} | ${item.total_forks} | ${delta(item.stars_delta)} | ${item.leader ? `[${escapeMarkdown(item.leader.repo)}](${item.leader.url})` : '—'} |`,
+    )
+  ].join('\n');
+  const topCategory = rankings.category_rankings[0];
   const summary = [
     `- 已确认观察项目：**${activeProjects.length}**`,
     `- 待复核候选：**${candidatesPayload.candidates.length}**`,
@@ -127,15 +170,17 @@ export async function buildArtifacts() {
     `- 小时明细：**${snapshotStats.hourly}**；每日归档：**${snapshotStats.archives}**`,
     `- 维护者公开所在地：国内 **${developerRegions.mainland_china}**；中国港澳台 **${developerRegions.greater_china}**；海外 **${developerRegions.overseas}**；未知 **${developerRegions.unknown}**`,
     `- 项目简介：自动/缓存翻译 **${translationStatus.translated || 0}**；原文含中文 **${translationStatus['source-zh'] || 0}**；待翻译 **${translationStatus.pending || 0}**`,
+    `- 当前 Stars 总量第一分类：**${topCategory?.category || '暂无'}**（${topCategory?.total_stars || 0} Stars，${topCategory?.project_count || 0} 个项目）`,
     `- 最新快照：**${rankings.latest_snapshot_at}**`,
     `- 观察窗口趋势：${rankings.previous_snapshot_at ? `已基于 ${rankings.observation_window_hours} 小时窗口计算` : '**等待第二个快照后生成**'}`
   ].join('\n');
   let readme = await fs.readFile(path.join(root, 'README.md'), 'utf8');
   readme = replaceSection(readme, '<!-- RADAR_SUMMARY_START -->', '<!-- RADAR_SUMMARY_END -->', summary);
   readme = replaceSection(readme, '<!-- RADAR_RANKING_START -->', '<!-- RADAR_RANKING_END -->', topTable);
+  readme = replaceSection(readme, '<!-- RADAR_CATEGORY_RANKING_START -->', '<!-- RADAR_CATEGORY_RANKING_END -->', categoryTable);
   await writeText('README.md', readme);
 
-  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
+  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} Stars）\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> 分类榜可以按 Stars 总量、项目数量和真实窗口增长查看；它描述生态规模与公开变化，不代表产品质量。\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
   await writeText('STATUS.md', status);
 
   const top = rankings.current[0];
@@ -147,7 +192,7 @@ export async function buildArtifacts() {
   const linkText = repositoryUrl ? `\n${repositoryUrl}\n` : '\n仓库链接：发布后补充\n';
   const locationText = `公开所在地（维护者账号）：国内 ${developerRegions.mainland_china} / 海外 ${developerRegions.overseas} / 未知 ${developerRegions.unknown}`;
   const localizedDescriptions = activeProjects.length - (translationStatus.pending || 0);
-  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- ${locationText}\n- 中文可读简介：${localizedDescriptions}/${activeProjects.length}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，所在地不代表国籍，也不是产品质量榜。\n\n#DeepSeek #OpenSource #AI\n`;
+  const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- ${locationText}\n- 中文可读简介：${localizedDescriptions}/${activeProjects.length}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，分类榜和所在地都不是产品质量或国籍判断。\n\n#DeepSeek #OpenSource #AI\n`;
   await writeText('tweet-draft.md', tweet);
   return latest;
 }

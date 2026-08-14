@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   attentionScore,
+  buildCategoryRankings,
   buildRankings,
   buildSignals,
   categoryFor,
@@ -80,6 +81,26 @@ test('rankings calculate snapshot deltas and rank changes', () => {
   assert.equal(rankings.observation_window_hours, 24);
   assert.deepEqual(rankings.ecosystem_delta, {stars: 21, forks: 1, projects: 0});
   assert.deepEqual(rankings.history.map(point => point.stars), [30, 51]);
+});
+
+test('category rankings support stars, scale, momentum, and top projects', () => {
+  const categories = buildCategoryRankings([
+    {repo: 'a/one', url: 'https://github.com/a/one', category: '插件', stars: 20, forks: 2, attention_score: 100, stars_delta: 3, forks_delta: 1},
+    {repo: 'a/two', url: 'https://github.com/a/two', category: '插件', stars: 10, forks: 1, attention_score: 80, stars_delta: 5, forks_delta: 0},
+    {repo: 'b/one', url: 'https://github.com/b/one', category: '桌面', stars: 50, forks: 3, attention_score: 120, stars_delta: 1, forks_delta: 0},
+    {repo: 'c/one', url: 'https://github.com/c/one', category: '新分类', stars: 5, forks: 0, attention_score: 20, stars_delta: null, forks_delta: null}
+  ]);
+  const plugins = categories.find(item => item.category === '插件');
+  const desktop = categories.find(item => item.category === '桌面');
+  const newCategory = categories.find(item => item.category === '新分类');
+  assert.equal(desktop.rank_by_stars, 1);
+  assert.equal(plugins.rank_by_projects, 1);
+  assert.equal(plugins.rank_by_momentum, 1);
+  assert.equal(plugins.total_stars, 30);
+  assert.equal(plugins.stars_delta, 8);
+  assert.deepEqual(plugins.top_projects.map(item => item.repo), ['a/one', 'a/two']);
+  assert.equal(newCategory.stars_delta, null);
+  assert.equal(newCategory.rank_by_momentum, null);
 });
 
 test('ecosystem signals use real creation, push, and milestone data', () => {

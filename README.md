@@ -2,7 +2,7 @@
 
 一个可复查、按小时更新的 DeepSeek Harness GitHub 生态观察仓库。
 
-它回答五个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？维护者公开位于哪里？英文项目简介用中文怎么理解？
+它回答六个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？哪些功能分类更大或增长更快？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？维护者公开位于哪里？英文项目简介用中文怎么理解？
 
 > 这里的“已确认”只表示与 DeepSeek Harness 的相关性和实现入口有公开证据，不代表本仓库已经逐个安装、完成安全审计或生产验收。
 
@@ -15,6 +15,7 @@
 - 小时明细：**0**；每日归档：**1**
 - 维护者公开所在地：国内 **13**；中国港澳台 **0**；海外 **1**；未知 **42**
 - 项目简介：自动/缓存翻译 **27**；原文含中文 **33**；待翻译 **0**
+- 当前 Stars 总量第一分类：**桌面端与启动器**（2235 Stars，17 个项目）
 - 最新快照：**2026-08-14T15:48:43.830Z**
 - 观察窗口趋势：**等待第二个快照后生成**
 <!-- RADAR_SUMMARY_END -->
@@ -51,6 +52,26 @@
 
 完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。
 
+## 功能分类榜
+
+分类榜不使用不可解释的综合分。默认按分类内项目的 Stars 总量排序，同时保留“项目数量榜”和“真实观察窗口增长榜”；网页可以在三种视角之间切换并一键筛选该分类的全部项目。
+
+<!-- RADAR_CATEGORY_RANKING_START -->
+| Stars 排名 | 功能分类 | 项目数 | Stars 总量 | Forks 总量 | 窗口 Stars Δ | 头部项目 |
+| ---: | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | 桌面端与启动器 | 17 | 2235 | 121 | — | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) |
+| 2 | 界面与体验扩展 | 9 | 688 | 23 | — | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) |
+| 3 | 插件管理与生态工具 | 14 | 362 | 20 | — | [Nagi-ovo/dsh-find-plugins](https://github.com/Nagi-ovo/dsh-find-plugins) |
+| 4 | 视觉与浏览器 | 4 | 210 | 15 | — | [Nagi-ovo/dsh-visualize](https://github.com/Nagi-ovo/dsh-visualize) |
+| 5 | 开发与质量工具 | 5 | 123 | 4 | — | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) |
+| 6 | 渠道与模型接入 | 5 | 82 | 6 | — | [anysearch-team/anysearch-dsh](https://github.com/anysearch-team/anysearch-dsh) |
+| 7 | 记忆、上下文与成本 | 4 | 76 | 6 | — | [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) |
+| 8 | 其他实现型扩展 | 1 | 24 | 4 | — | [c3ll256/dsh-toy](https://github.com/c3ll256/dsh-toy) |
+| 9 | 终端与部署 | 1 | 16 | 1 | — | [openma-ai/deepseek-harness-tui](https://github.com/openma-ai/deepseek-harness-tui) |
+<!-- RADAR_CATEGORY_RANKING_END -->
+
+完整分类数据见 [data/categories.json](data/categories.json) 与 [data/categories.csv](data/categories.csv)。
+
 ## 开发者所在地与中文介绍
 
 页面中的“国内 / 中国港澳台 / 海外 / 未知”来自仓库维护者账号主动公开的 GitHub `location`。它描述的是账号公开所在地，不是国籍、团队成员构成或项目归属；组织账号也按同一规则处理。系统只识别明确的国家、地区、省市名称，`Earth`、`Remote`、空值和无法可靠识别的自由文本都保留为“未知”，不会根据姓名、头像、语言或邮箱猜测。
@@ -67,7 +88,7 @@
 4. 对新维护者读取 GitHub 公开资料；已有资料默认缓存 30 天，再按公开地点做保守分组。
 5. 为新增或变化的纯英文简介调用 GitHub Models，并把译文缓存到仓库；不会重复翻译未变化的文本。
 6. 写入一个小时明细快照，并刷新当天的长期归档点；计算真实观察窗口内的 Star/Fork 与排名变化。
-7. 重新生成 README、CSV、静态网页、状态页和推文草稿。
+7. 重新生成项目榜、功能分类榜、README、CSV、静态网页、状态页和推文草稿。
 8. 通过校验和密钥特征扫描后，由 `github-actions[bot]` 提交回默认分支。
 
 也可以在 Actions 页面手动运行 `Hourly ecosystem update`。
@@ -86,6 +107,7 @@ GitHub API 出现短暂的限流或服务错误时会有限次重试；最终仍
 - `data/snapshots/`：最近 14 天的小时明细；旧版日快照继续兼容。
 - `data/archive/`：每天一个长期归档点，内容会在当天每次成功更新后刷新。
 - `data/rankings.json` / `data/rankings.csv`：由快照自动生成的排名。
+- `data/categories.json` / `data/categories.csv`：功能分类的 Stars 总量、项目数、窗口增长与分类 Top 3。
 - `docs/`：不依赖后端的 GitHub Pages 页面。
 - `tweet-draft.md`：根据最新快照生成的 X/Twitter 草稿。
 
@@ -140,6 +162,7 @@ npm run update
 - 第一个观察点只能形成当前排名；至少有两个观察点后，才能计算窗口变化。页面会显示真实窗口小时数，不把延迟或漏跑的任务硬写成精确 1 小时。
 - Star/Fork 变化是 GitHub 公开指标变化，不等于真实使用、留存或代码质量。
 - 自动分类和证据判定是可复核规则，不是对项目质量或安全性的背书。
+- 分类 Stars 总量容易受到单个头部项目影响；应同时查看项目数量榜、分类 Top 3 和真实窗口增长榜，不把规模误读为质量。
 - GitHub `location` 是维护者自行填写的自由文本，可能为空、过期、玩笑化或代表组织办公地；地区分组不代表国籍，也不能覆盖仓库全部贡献者。
 - 中文简介是辅助阅读的机器翻译或人工基线翻译，英文原文仍是核对依据；翻译不构成对项目功能声明的验证。
 - 详细规则见 [METHODOLOGY.md](METHODOLOGY.md)。

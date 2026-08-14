@@ -237,6 +237,84 @@ function rankMetrics(items) {
     .map((item, index) => ({...item, rank: index + 1}));
 }
 
+export function buildCategoryRankings(items) {
+  const groups = new Map();
+  for (const item of items) {
+    const category = item.category || '其他实现型扩展';
+    const group = groups.get(category) || [];
+    group.push(item);
+    groups.set(category, group);
+  }
+  const ecosystemStars = items.reduce((sum, item) => sum + toNumber(item.stars), 0);
+  const categories = [...groups].map(([category, projects]) => {
+    const ordered = [...projects].sort((a, b) =>
+      toNumber(b.attention_score) - toNumber(a.attention_score) ||
+      toNumber(b.stars) - toNumber(a.stars) ||
+      a.repo.localeCompare(b.repo),
+    );
+    const comparable = projects.filter(project => project.stars_delta != null);
+    const totalStars = projects.reduce((sum, project) => sum + toNumber(project.stars), 0);
+    const totalForks = projects.reduce((sum, project) => sum + toNumber(project.forks), 0);
+    return {
+      category,
+      project_count: projects.length,
+      project_share: round(100 * projects.length / Math.max(items.length, 1), 1),
+      total_stars: totalStars,
+      stars_share: round(100 * totalStars / Math.max(ecosystemStars, 1), 1),
+      total_forks: totalForks,
+      stars_delta: comparable.length
+        ? comparable.reduce((sum, project) => sum + toNumber(project.stars_delta), 0)
+        : null,
+      forks_delta: comparable.length
+        ? comparable.reduce((sum, project) => sum + toNumber(project.forks_delta), 0)
+        : null,
+      comparable_projects: comparable.length,
+      leader: ordered[0] ? {
+        repo: ordered[0].repo,
+        url: ordered[0].url,
+        stars: toNumber(ordered[0].stars),
+        attention_score: toNumber(ordered[0].attention_score)
+      } : null,
+      top_projects: ordered.slice(0, 3).map((project, index) => ({
+        category_rank: index + 1,
+        repo: project.repo,
+        url: project.url,
+        stars: toNumber(project.stars),
+        forks: toNumber(project.forks),
+        attention_score: toNumber(project.attention_score),
+        stars_delta: project.stars_delta
+      }))
+    };
+  });
+
+  const rankBy = (compare, key, values = categories) => new Map(
+    [...values].sort(compare).map((category, index) => [category.category, {[key]: index + 1}]),
+  );
+  const byStars = rankBy(
+    (a, b) => b.total_stars - a.total_stars || b.project_count - a.project_count || a.category.localeCompare(b.category),
+    'rank_by_stars',
+  );
+  const byProjects = rankBy(
+    (a, b) => b.project_count - a.project_count || b.total_stars - a.total_stars || a.category.localeCompare(b.category),
+    'rank_by_projects',
+  );
+  const comparableCategories = categories.filter(category => category.stars_delta != null);
+  const byMomentum = comparableCategories.length ? rankBy(
+    (a, b) => toNumber(b.stars_delta) - toNumber(a.stars_delta) || b.total_stars - a.total_stars || a.category.localeCompare(b.category),
+    'rank_by_momentum',
+    comparableCategories,
+  ) : new Map();
+
+  return categories
+    .map(category => ({
+      ...category,
+      ...byStars.get(category.category),
+      ...byProjects.get(category.category),
+      rank_by_momentum: byMomentum.get(category.category)?.rank_by_momentum ?? null
+    }))
+    .sort((a, b) => a.rank_by_stars - b.rank_by_stars);
+}
+
 export function buildRankings(projects, snapshots) {
   const orderedSnapshots = snapshots
     .map(snapshot => {
@@ -294,12 +372,7 @@ export function buildRankings(projects, snapshots) {
         .map((item, index) => ({...item, momentum_rank: index + 1}))
     : [];
 
-  const categories = Object.entries(
-    current.reduce((acc, item) => {
-      acc[item.category] = (acc[item.category] || 0) + 1;
-      return acc;
-    }, {}),
-  ).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  const categoryRankings = buildCategoryRankings(current);
 
   const previousAt = previous?.snapshot_at || null;
   const history = orderedSnapshots.map(({snapshot}) => ({
@@ -323,7 +396,10 @@ export function buildRankings(projects, snapshots) {
     new_projects: previousAt
       ? current.filter(item => item.first_seen_at && Date.parse(item.first_seen_at) > previousRecord.timestamp)
       : [],
-    categories: categories.map(([category, count]) => ({category, count})),
+    categories: [...categoryRankings]
+      .sort((a, b) => b.project_count - a.project_count || b.total_stars - a.total_stars || a.category.localeCompare(b.category))
+      .map(item => ({category: item.category, count: item.project_count})),
+    category_rankings: categoryRankings,
     ecosystem_delta: previousTotals ? {
       stars: latestTotals.stars - previousTotals.stars,
       forks: latestTotals.forks - previousTotals.forks,

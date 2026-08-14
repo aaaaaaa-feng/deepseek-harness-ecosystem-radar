@@ -26,7 +26,7 @@ const duplicates = values => {
 };
 const intersect = (left, right) => [...left].filter(value => right.has(value));
 
-const [config, projects, candidates, exclusions, developers, translations, rankings, latest, docsLatest, allowlist, denylist] = await Promise.all([
+const [config, projects, candidates, exclusions, developers, translations, rankings, categoryPayload, latest, docsLatest, allowlist, denylist] = await Promise.all([
   readJson('config/radar.json'),
   readJson('data/projects.json'),
   readJson('data/candidates.json'),
@@ -34,6 +34,7 @@ const [config, projects, candidates, exclusions, developers, translations, ranki
   readJson('data/developers.json'),
   readJson('data/translations.json'),
   readJson('data/rankings.json'),
+  readJson('data/categories.json'),
   readJson('data/latest.json'),
   readJson('docs/data/latest.json'),
   readJson('config/manual-allowlist.json'),
@@ -70,6 +71,8 @@ if (latest.summary.snapshots < 1) errors.push('Snapshot count must be positive')
 if (latest.generated_at !== rankings.generated_at) errors.push('Latest and rankings timestamps differ');
 if (latest.projects.length !== active.length) errors.push('Latest project payload count mismatch');
 if (JSON.stringify(latest) !== JSON.stringify(docsLatest)) errors.push('docs/data/latest.json is not synchronized');
+if (categoryPayload.generated_at !== rankings.generated_at) errors.push('Category rankings timestamp mismatch');
+if (JSON.stringify(categoryPayload.categories) !== JSON.stringify(rankings.category_rankings)) errors.push('Category rankings artifact mismatch');
 if (projects.projects.some(project => project.repo === 'unitarylab/quantum-practices')) errors.push('Known false positive is present');
 if (!developers?.profiles || typeof developers.profiles !== 'object' || Array.isArray(developers.profiles)) errors.push('Developer profiles cache is invalid');
 if (!translations?.translations || typeof translations.translations !== 'object' || Array.isArray(translations.translations)) errors.push('Translation cache is invalid');
@@ -101,6 +104,23 @@ for (const project of active) {
   if (!rankedRepos.has(project.repo.toLowerCase())) errors.push(`Active project missing from rankings: ${project.repo}`);
 }
 
+const categoryNames = new Set(active.map(project => project.category || '其他实现型扩展'));
+if (rankings.category_rankings.length !== categoryNames.size) errors.push('Category ranking count mismatch');
+for (const key of ['rank_by_stars', 'rank_by_projects']) {
+  const values = rankings.category_rankings.map(item => item[key]).sort((a, b) => a - b);
+  if (values.some((value, index) => value !== index + 1)) errors.push(`Category ${key} is not contiguous`);
+}
+if (rankings.previous_snapshot_at) {
+  const comparableCategories = rankings.category_rankings.filter(item => item.stars_delta != null);
+  const momentumRanks = comparableCategories.map(item => item.rank_by_momentum).sort((a, b) => a - b);
+  if (momentumRanks.some((value, index) => value !== index + 1)) errors.push('Category momentum ranks are not contiguous');
+  if (rankings.category_rankings.some(item => (item.stars_delta == null) !== (item.rank_by_momentum == null))) errors.push('Category momentum rank and delta coverage differ');
+} else if (rankings.category_rankings.some(item => item.rank_by_momentum != null || item.stars_delta != null)) {
+  errors.push('Category momentum exists without a comparable snapshot');
+}
+if (rankings.category_rankings.reduce((sum, item) => sum + item.project_count, 0) !== active.length) errors.push('Category project totals mismatch');
+if (rankings.category_rankings.reduce((sum, item) => sum + item.total_stars, 0) !== active.reduce((sum, item) => sum + Number(item.stars || 0), 0)) errors.push('Category star totals mismatch');
+
 const snapshotRecords = await loadSnapshotRecords(root);
 const uniqueSnapshotRecords = dedupeSnapshotRecords(snapshotRecords);
 const snapshotStats = snapshotRecordStats(snapshotRecords);
@@ -123,21 +143,26 @@ if (latestSnapshotAt) {
   for (const relativePath of staleHourlyPaths) errors.push(`Prunable hourly snapshot remains: ${relativePath}`);
 }
 
-const [readme, html, app, tweet, hourlyWorkflow, pagesWorkflow] = await Promise.all([
+const [readme, html, app, tweet, categoryCsv, hourlyWorkflow, pagesWorkflow] = await Promise.all([
   fs.readFile(path.join(root, 'README.md'), 'utf8'),
   fs.readFile(path.join(root, 'docs/index.html'), 'utf8'),
   fs.readFile(path.join(root, 'docs/app.js'), 'utf8'),
   fs.readFile(path.join(root, 'tweet-draft.md'), 'utf8'),
+  fs.readFile(path.join(root, 'data/categories.csv'), 'utf8'),
   fs.readFile(path.join(root, '.github/workflows/hourly-update.yml'), 'utf8'),
   fs.readFile(path.join(root, '.github/workflows/pages.yml'), 'utf8')
 ]);
 if (!readme.includes(`已确认观察项目：**${active.length}**`)) errors.push('README summary is stale');
 if (!readme.includes('<!-- RADAR_RANKING_START -->')) errors.push('README ranking marker missing');
+if (!readme.includes('<!-- RADAR_CATEGORY_RANKING_START -->')) errors.push('README category ranking marker missing');
 if (!readme.includes('观察窗口趋势')) errors.push('README must use the honest observation-window label');
 if (readme.includes('24h变化')) errors.push('README contains a hard-coded 24h change label');
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
 if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
+if (!html.includes('id="category-ranking"') || !html.includes('data-category-sort="stars"') || !app.includes('renderCategoryRanking')) errors.push('Static category leaderboard is incomplete');
+if (!categoryCsv.startsWith('rank_by_stars,rank_by_projects,rank_by_momentum,category,')) errors.push('Category CSV header is incomplete');
+if (categoryCsv.trim().split('\n').length !== rankings.category_rankings.length + 1) errors.push('Category CSV row count mismatch');
 if (!html.includes('class="skip-link"') || !html.includes('<main id="main" tabindex="-1">')) errors.push('Static page skip navigation is incomplete');
 if (!tweet.includes('不代表全网穷尽')) errors.push('Tweet draft is missing the evidence boundary');
 if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write') || !hourlyWorkflow.includes('models: read')) errors.push('Hourly workflow schedule or permissions are incomplete');

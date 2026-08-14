@@ -36,6 +36,8 @@ function showFatalError(error) {
   $('.status-dot').classList.add('error');
   $('#ranking-status').textContent = '排名数据暂时不可用';
   $('#ranking-body').innerHTML = '<tr><td class="empty-state" colspan="9"><span>无法读取最新快照。已发布的历史数据不会因此被改写。</span></td></tr>';
+  $('#category-podium').textContent = '分类榜暂时不可用';
+  $('#category-ranking-body').innerHTML = '<tr><td class="empty-state" colspan="7"><span>无法读取分类数据。</span></td></tr>';
   $('#movers').innerHTML = '<li><span class="index">!</span><span>暂时无法读取趋势</span><small>请稍后重试</small></li>';
   $('#category-bars').textContent = '分类数据暂时不可用';
   console.error('Radar initialization failed', error);
@@ -144,6 +146,91 @@ async function init() {
   categorySelect.addEventListener('change', renderRanking);
   regionSelect.addEventListener('change', renderRanking);
   renderRanking();
+
+  const categoryRankingItems = Array.isArray(data.rankings.category_rankings)
+    ? data.rankings.category_rankings
+    : [];
+  const categorySortMeta = {
+    stars: {
+      key: 'total_stars',
+      label: 'Stars 总量',
+      note: '按分类内项目的 Stars 总量排序；头部项目可能显著影响结果。'
+    },
+    projects: {
+      key: 'project_count',
+      label: '项目数量',
+      note: '按已确认项目数量排序；用于观察哪个方向更拥挤或更多样。'
+    },
+    momentum: {
+      key: 'stars_delta',
+      label: windowHours == null ? '窗口 Stars 增长' : `${windowHours}h Stars 增长`,
+      note: windowHours == null
+        ? '至少有两个真实快照后，才会生成分类窗口增长榜。'
+        : `按真实 ${windowHours} 小时窗口内的分类 Stars 增量排序；暂无可比项目的新分类不参与。`
+    }
+  };
+  const momentumAvailable = windowHours != null && categoryRankingItems.some(item => item.stars_delta != null);
+  const momentumButton = $('[data-category-sort="momentum"]');
+  momentumButton.disabled = !momentumAvailable;
+  if (!momentumAvailable) {
+    momentumButton.textContent = '窗口增长（等待快照）';
+    momentumButton.title = '第二个真实快照出现后自动启用';
+  }
+
+  const orderedCategories = mode => {
+    const key = categorySortMeta[mode].key;
+    return categoryRankingItems
+      .filter(item => mode !== 'momentum' || item.stars_delta != null)
+      .sort((a, b) =>
+      Number(b[key] ?? Number.NEGATIVE_INFINITY) - Number(a[key] ?? Number.NEGATIVE_INFINITY) ||
+      Number(b.total_stars) - Number(a.total_stars) ||
+      a.category.localeCompare(b.category),
+      );
+  };
+
+  function renderCategoryRanking(mode = 'stars') {
+    const meta = categorySortMeta[mode] || categorySortMeta.stars;
+    const items = orderedCategories(mode);
+    document.querySelectorAll('[data-category-sort]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.categorySort === mode));
+    });
+    $('#category-ranking-note').textContent = meta.note;
+    $('#category-podium').innerHTML = items.slice(0, 3).map((item, index) => `
+      <article class="category-card">
+        <span class="category-card-rank">${String(index + 1).padStart(2, '0')}</span>
+        <p>${escapeHtml(item.category)}</p>
+        <strong>${mode === 'momentum' ? signed(item[meta.key]) : format(item[meta.key])}</strong>
+        <small>${escapeHtml(meta.label)}</small>
+        <ol>${item.top_projects.map(project => `<li><a href="${safeGithubUrl(project.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(project.repo)}</a><span>${format(project.stars)} ★</span></li>`).join('')}</ol>
+        <button class="category-jump" type="button" data-category-filter="${escapeHtml(item.category)}">查看该类 ${format(item.project_count)} 个项目</button>
+      </article>`).join('');
+    $('#category-ranking-body').innerHTML = items.map((item, index) => `
+      <tr>
+        <td class="numeric">${format(index + 1)}</td>
+        <td><button class="category-name-button" type="button" data-category-filter="${escapeHtml(item.category)}">${escapeHtml(item.category)}</button></td>
+        <td class="numeric">${format(item.project_count)}</td>
+        <td class="numeric">${format(item.total_stars)}</td>
+        <td class="numeric">${formatScore(item.stars_share)}%</td>
+        <td class="numeric ${deltaClass(item.stars_delta)}">${signed(item.stars_delta)}</td>
+        <td>${item.leader ? `<a class="repo-link" href="${safeGithubUrl(item.leader.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.leader.repo)}</a><div class="region-location">${format(item.leader.stars)} Stars</div>` : '—'}</td>
+      </tr>`).join('');
+  }
+
+  $('#category-ranking').addEventListener('click', event => {
+    const sortButton = event.target.closest('[data-category-sort]');
+    if (sortButton && !sortButton.disabled) {
+      renderCategoryRanking(sortButton.dataset.categorySort);
+      return;
+    }
+    const categoryButton = event.target.closest('[data-category-filter]');
+    if (!categoryButton) return;
+    $('#search').value = '';
+    regionSelect.value = '';
+    categorySelect.value = categoryButton.dataset.categoryFilter;
+    renderRanking();
+    $('#ranking').scrollIntoView({behavior: 'smooth', block: 'start'});
+  });
+  renderCategoryRanking();
 
   const movers = data.rankings.momentum.slice(0, 8);
   if (!movers.length) {
