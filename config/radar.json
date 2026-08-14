@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "release_cutoff_utc": "2026-08-13T13:02:03.901Z",
+  "release_cutoff_label": "2026-08-13 21:02:03（北京时间）",
+  "schedule_label": "每天 09:17（Asia/Shanghai）",
+  "discovery_lookback_days": 7,
+  "search_pages_per_query": 1,
+  "max_readmes_per_run": 80,
+  "queries": [
+    "\"deepseek harness\" in:name,description,readme created:>={since_date}",
+    "deepseek-harness in:name,description,readme created:>={since_date}",
+    "topic:deepseek-harness created:>={since_date}",
+    "topic:dsh-plugin created:>={since_date}",
+    "dsh-plugin in:name,description created:>={since_date}"
+  ]
+}

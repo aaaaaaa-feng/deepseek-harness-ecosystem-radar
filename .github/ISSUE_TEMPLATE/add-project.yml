@@ -1,0 +1,36 @@
+name: 提交一个 DeepSeek Harness 相关项目
+description: 补充自动搜索没有发现的实现型仓库
+title: "[项目提交] owner/repo"
+labels: ["project-candidate"]
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: GitHub 仓库
+      placeholder: owner/repo
+    validations:
+      required: true
+  - type: textarea
+    id: relation
+    attributes:
+      label: 与 DeepSeek Harness 的关系
+      description: 请提供 README、manifest 或 Topic 证据。
+    validations:
+      required: true
+  - type: textarea
+    id: runtime
+    attributes:
+      label: 安装或运行入口
+      description: 说明如何运行；如果尚未实测，也请如实注明。
+    validations:
+      required: true
+  - type: dropdown
+    id: fork
+    attributes:
+      label: 是否为 fork
+      options:
+        - 否
+        - 是，且有独立功能
+        - 是，但独立改动尚不明确
+    validations:
+      required: true

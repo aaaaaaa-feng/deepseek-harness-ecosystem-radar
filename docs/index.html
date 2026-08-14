@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按日更新的 DeepSeek Harness GitHub 生态早期雷达">
+  <title>DeepSeek Harness 生态早期雷达</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top">DSH / RADAR</a>
+      <div class="nav-links">
+        <a href="#ranking">排名</a>
+        <a href="#momentum">趋势</a>
+        <a href="#methodology">方法</a>
+      </div>
+    </nav>
+    <div class="hero-grid" id="top">
+      <div>
+        <p class="eyebrow">OPEN-SOURCE ECOSYSTEM OBSERVATORY</p>
+        <h1>DeepSeek Harness<br>生态早期雷达</h1>
+        <p class="lede">发现新仓库，保存每日快照，跟踪公开指标变化。每个数字都有时间和来源边界。</p>
+        <div class="status-line">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="freshness">正在读取最新快照…</span>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <p>研究起点</p>
+        <strong id="cutoff">—</strong>
+        <p>自动更新</p>
+        <strong id="schedule">—</strong>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="metrics" aria-label="概览指标">
+      <article><span>已确认项目</span><strong id="project-count">—</strong></article>
+      <article><span>待复核候选</span><strong id="candidate-count">—</strong></article>
+      <article><span>历史快照</span><strong id="snapshot-count">—</strong></article>
+      <article><span>最新数据</span><strong class="date-metric" id="snapshot-date">—</strong></article>
+    </section>
+
+    <section class="section" id="ranking">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CURRENT ATTENTION</p>
+          <h2>当前关注度排名</h2>
+          <p>由 Stars 与 Forks 的对数分数计算，不是产品质量榜。</p>
+        </div>
+        <div class="controls">
+          <label>搜索 <input id="search" type="search" placeholder="owner/repo 或功能"></label>
+          <label>分类 <select id="category"><option value="">全部分类</option></select></label>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>项目</th><th>分类</th><th>Stars</th><th>变化</th><th>排名变化</th></tr></thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="split section" id="momentum">
+      <div>
+        <p class="eyebrow">OBSERVED MOMENTUM</p>
+        <h2>观察窗口动量</h2>
+        <p id="momentum-note">至少有两个快照后才生成。</p>
+        <ol class="movers" id="movers"></ol>
+      </div>
+      <div>
+        <p class="eyebrow">CATEGORY MAP</p>
+        <h2>项目方向分布</h2>
+        <div class="category-bars" id="category-bars"></div>
+      </div>
+    </section>
+
+    <section class="method section" id="methodology">
+      <p class="eyebrow">READ THIS BEFORE SHARING</p>
+      <h2>这是什么，也不是什么</h2>
+      <div class="method-grid">
+        <article><strong>是</strong><p>带来源、时间和历史快照的 GitHub 公开指标观察。</p></article>
+        <article><strong>不是</strong><p>绝对全网穷尽、产品质量、安全性或真实用户数排名。</p></article>
+        <article><strong>已确认</strong><p>表示相关性与实现入口有证据，不表示已经逐个安装验收。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>DeepSeek Harness 生态早期雷达 · Snapshot-based, reproducible, evidence-bounded.</p>
+    <p id="footer-time"></p>
+  </footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
