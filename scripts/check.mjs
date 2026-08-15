@@ -160,6 +160,7 @@ if (readme.includes('<!-- RADAR_SUMMARY_') || readme.includes('<!-- RADAR_RANKIN
 if (readme.includes('已确认观察项目：**')) errors.push('README still embeds volatile snapshot counts');
 if (config.public_site_url && !readme.includes(config.public_site_url)) errors.push('README is missing the public site URL');
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
+if (!html.includes("script-src 'self' https://static.cloudflareinsights.com/beacon.min.js")) errors.push('Static page CSP must allow the Cloudflare Web Analytics beacon');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
 if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
 if (!html.includes('id="ranking-viewport"') || !html.includes('id="ranking-range"') || !html.includes('id="ranking-scroll-next"') || !html.includes('ranking-frame-3') || !app.includes('updateRankingViewport') || !app.includes('PageDown') || !styles.includes('.ranking-viewport thead th { position: sticky;')) errors.push('Scrollable ranking viewport is incomplete');
