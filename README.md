@@ -2,6 +2,12 @@
 
 一个可复查、按小时更新的 DeepSeek Harness GitHub 生态观察仓库。
 
+[![在线雷达](https://img.shields.io/badge/在线雷达-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://deepseek-harness-ecosystem-radar.pages.dev/)
+[![每小时更新](https://github.com/aaaaaaa-feng/deepseek-harness-ecosystem-radar/actions/workflows/hourly-update.yml/badge.svg)](https://github.com/aaaaaaa-feng/deepseek-harness-ecosystem-radar/actions/workflows/hourly-update.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
+
+**在线查看：** [deepseek-harness-ecosystem-radar.pages.dev](https://deepseek-harness-ecosystem-radar.pages.dev/) · **源码仓库：** [aaaaaaa-feng/deepseek-harness-ecosystem-radar](https://github.com/aaaaaaa-feng/deepseek-harness-ecosystem-radar)
+
 它回答六个问题：发布后出现了哪些实现型项目？当前哪些项目受到更多 GitHub 关注？哪些功能分类更大或增长更快？过去一个真实快照窗口里，哪些项目的公开指标发生了变化？维护者公开位于哪里？英文项目简介用中文怎么理解？
 
 > 这里的“已确认”只表示与 DeepSeek Harness 的相关性和实现入口有公开证据，不代表本仓库已经逐个安装、完成安全审计或生产验收。
@@ -111,13 +117,17 @@ GitHub API 出现短暂的限流或服务错误时会有限次重试；最终仍
 - `docs/`：不依赖后端的 GitHub Pages 页面。
 - `tweet-draft.md`：根据最新快照生成的 X/Twitter 草稿。
 
-## 发布到 GitHub 后的上线检查清单
+## 在线部署与复刻
 
-1. 把本目录推送成一个独立 GitHub 仓库。
-2. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；小时更新工作流只申请 `contents: write` 与 `models: read`。其中 `models: read` 让内置 `GITHUB_TOKEN` 调用 [GitHub Models](https://docs.github.com/en/github-models/quickstart)，不需要另存模型 API Key。
-3. 如果需要 GitHub Pages，把仓库变量 `ENABLE_GITHUB_PAGES` 设为 `true`，并在 `Settings → Pages` 中选择 GitHub Actions 作为来源。页面部署使用独立、最小权限的工作流。
-4. 在 Actions 页面手动运行一次 `Hourly ecosystem update`，确认真实 API 更新、机器人提交和页面部署均成功。
-5. 把仓库地址写入 `config/radar.json` 的 `public_repository_url`，再运行一次 `npm run build`；页面页脚和推文草稿才会出现稳定、可复现的公开链接。
+当前主站已经发布到 [Cloudflare Pages](https://deepseek-harness-ecosystem-radar.pages.dev/)，生产分支为 `main`，构建命令为 `exit 0`，发布目录为 `docs`。Cloudflare 的 GitHub 集成已启用生产自动部署：每小时 Action 把新快照提交到 `main` 后，Cloudflare 会自动构建并发布同一份页面，不需要自定义域名。
+
+如果你 Fork 本仓库并部署自己的副本：
+
+1. 在仓库 `Settings → Actions → General → Workflow permissions` 中允许工作流写入仓库内容；小时更新工作流只申请 `contents: write` 与 `models: read`。其中 `models: read` 让内置 `GITHUB_TOKEN` 调用 [GitHub Models](https://docs.github.com/en/github-models/quickstart)，不需要另存模型 API Key。
+2. 在 Cloudflare Pages 连接 Fork 后的 GitHub 仓库，选择 `main`，填写构建命令 `exit 0`、输出目录 `docs`，根目录留空。
+3. 把 `config/radar.json` 中的 `public_repository_url` 和 `public_site_url` 改为你的地址，再运行 `npm run build`。
+4. 在 Actions 页面手动运行一次 `Hourly ecosystem update`，确认真实 API 刷新、机器人提交和 Cloudflare 自动部署均成功。
+5. 如果还需要 GitHub Pages，可把仓库变量 `ENABLE_GITHUB_PAGES` 设为 `true`，并在 `Settings → Pages` 中选择 GitHub Actions 作为来源；它与 Cloudflare Pages 相互独立。
 
 小时任务使用仓库自带的 `GITHUB_TOKEN` 读取 GitHub API、调用 GitHub Models 并提交数据。此类机器人推送不会再触发普通 `push` 工作流，所以 Pages 工作流同时监听 `Hourly ecosystem update` 的成功完成事件，确保每次数据提交后仍会部署最新页面。
 

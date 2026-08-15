@@ -44,6 +44,9 @@ export function validateRadarConfig(config) {
   if (config?.public_repository_url && !/^https:\/\/github\.com\/[^/]+\/[^/]+\/?$/.test(config.public_repository_url)) {
     errors.push('public_repository_url must be an empty string or a GitHub repository URL');
   }
+  if (config?.public_site_url && !/^https:\/\/[a-z0-9-]+\.pages\.dev\/?$/i.test(config.public_site_url)) {
+    errors.push('public_site_url must be an empty string or a Cloudflare Pages URL');
+  }
   return errors;
 }
 

@@ -51,6 +51,7 @@ export async function buildArtifacts() {
   const rankings = buildRankings(enrichedProjects, snapshots);
   const signals = buildSignals(enrichedProjects);
   const repositoryUrl = config.public_repository_url;
+  const siteUrl = config.public_site_url;
   const categoryPayload = {
     schema_version: 1,
     generated_at: rankings.generated_at,
@@ -81,6 +82,7 @@ export async function buildArtifacts() {
     release_cutoff_label: config.release_cutoff_label,
     schedule_label: config.schedule_label,
     repository_url: repositoryUrl,
+    site_url: siteUrl,
     summary: {
       confirmed_projects: activeProjects.length,
       candidate_projects: candidatesPayload.candidates.length,
@@ -189,7 +191,8 @@ export async function buildArtifacts() {
   const windowText = rankings.previous_snapshot_at
     ? `${rankings.observation_window_hours}h 窗口动量：${mover ? `${mover.repo}（${delta(mover.stars_delta)} stars）` : '暂无可比较项目'}`
     : '观察窗口动量：等待第二个快照';
-  const linkText = repositoryUrl ? `\n${repositoryUrl}\n` : '\n仓库链接：发布后补充\n';
+  const publicUrl = siteUrl || repositoryUrl;
+  const linkText = publicUrl ? `\n${publicUrl}\n` : '\n在线链接：发布后补充\n';
   const locationText = `公开所在地（维护者账号）：国内 ${developerRegions.mainland_china} / 海外 ${developerRegions.overseas} / 未知 ${developerRegions.unknown}`;
   const localizedDescriptions = activeProjects.length - (translationStatus.pending || 0);
   const tweet = `# X / Twitter 草稿\n\nDeepSeek Harness 生态早期雷达更新：\n\n- 已确认观察项目：${activeProjects.length}\n- 当前关注度第 1：${top?.repo || '暂无'}（${top?.stars || 0} stars）\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} stars）\n- ${windowText}\n- 最近创建项目：${arrival?.repo || '暂无'}\n- ${locationText}\n- 中文可读简介：${localizedDescriptions}/${activeProjects.length}\n- 数据时点：${rankings.latest_snapshot_at}\n${linkText}\n每小时公开快照，可复查、可追溯；不代表全网穷尽，分类榜和所在地都不是产品质量或国籍判断。\n\n#DeepSeek #OpenSource #AI\n`;

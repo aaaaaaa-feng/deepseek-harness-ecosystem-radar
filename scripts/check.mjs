@@ -158,6 +158,7 @@ if (!readme.includes('<!-- RADAR_RANKING_START -->')) errors.push('README rankin
 if (!readme.includes('<!-- RADAR_CATEGORY_RANKING_START -->')) errors.push('README category ranking marker missing');
 if (!readme.includes('观察窗口趋势')) errors.push('README must use the honest observation-window label');
 if (readme.includes('24h变化')) errors.push('README contains a hard-coded 24h change label');
+if (config.public_site_url && !readme.includes(config.public_site_url)) errors.push('README is missing the public site URL');
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
 if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
@@ -167,6 +168,7 @@ if (!categoryCsv.startsWith('rank_by_stars,rank_by_projects,rank_by_momentum,cat
 if (categoryCsv.trim().split('\n').length !== rankings.category_rankings.length + 1) errors.push('Category CSV row count mismatch');
 if (!html.includes('class="skip-link"') || !html.includes('<main id="main" tabindex="-1">')) errors.push('Static page skip navigation is incomplete');
 if (!tweet.includes('不代表全网穷尽')) errors.push('Tweet draft is missing the evidence boundary');
+if (config.public_site_url && !tweet.includes(config.public_site_url)) errors.push('Tweet draft is missing the public site URL');
 if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write') || !hourlyWorkflow.includes('models: read')) errors.push('Hourly workflow schedule or permissions are incomplete');
 if (!pagesWorkflow.includes('workflow_run:') || !pagesWorkflow.includes('Hourly ecosystem update')) errors.push('Pages workflow will not follow hourly updates');
 if (!pagesWorkflow.includes('pages: write') || !pagesWorkflow.includes('id-token: write')) errors.push('Pages workflow permissions are incomplete');

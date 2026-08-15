@@ -197,7 +197,8 @@ test('radar configuration validation rejects unsafe update bounds', () => {
     translation_batch_size: 0,
     translation_max_attempts: 9,
     public_repository_url: 'https://example.com/repo',
+    public_site_url: 'http://example.com/radar',
     queries: ['missing placeholder']
   });
-  assert.ok(errors.length >= 12);
+  assert.ok(errors.length >= 13);
 });
