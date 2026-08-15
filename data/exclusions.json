@@ -1,12 +1,162 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T15:48:43.830Z",
+  "generated_at": "2026-08-15T05:58:37.929Z",
   "exclusions": [
+    {
+      "repo": "237229953-create/uiopt",
+      "url": "https://github.com/237229953-create/uiopt",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "alsj213/local-ocr-cli",
+      "url": "https://github.com/alsj213/local-ocr-cli",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "ashark-ai-05/enterprise-harness",
+      "url": "https://github.com/ashark-ai-05/enterprise-harness",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Chillizu/mop-plugins",
+      "url": "https://github.com/Chillizu/mop-plugins",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "chuangxiaohui-cloud/ai-butler-v01",
+      "url": "https://github.com/chuangxiaohui-cloud/ai-butler-v01",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "cjs19890026-cmyk/deep-harness",
+      "url": "https://github.com/cjs19890026-cmyk/deep-harness",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "liheng-lk/inspection-robot-platform",
+      "url": "https://github.com/liheng-lk/inspection-robot-platform",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "mauriragna88/argos",
+      "url": "https://github.com/mauriragna88/argos",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Palind-Rome/wild-routes",
+      "url": "https://github.com/Palind-Rome/wild-routes",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "programmingWTF/NUAAgent",
+      "url": "https://github.com/programmingWTF/NUAAgent",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "raviagarwalla1007/Openworker",
+      "url": "https://github.com/raviagarwalla1007/Openworker",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
     {
       "repo": "unitarylab/quantum-practices",
       "url": "https://github.com/unitarylab/quantum-practices",
-      "reason": "与 DeepSeek Harness 无明确关系，属于 DSH 缩写误命中",
-      "discovered_at": "2026-08-14T15:48:43.830Z"
+      "reason": "维护者 denylist：已确认误收或不属于观察范围",
+      "discovered_at": "2026-08-14T15:48:43.830Z",
+      "discovery_queries": [
+        "manual-denylist"
+      ]
+    },
+    {
+      "repo": "wxlawyers/lark-remote-control",
+      "url": "https://github.com/wxlawyers/lark-remote-control",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "xtd1145/prts-deskpet-patched",
+      "url": "https://github.com/xtd1145/prts-deskpet-patched",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "YASEILANEI/AI-Daily-Digest",
+      "url": "https://github.com/YASEILANEI/AI-Daily-Digest",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "zengwenliang416/specnav-dsh-plugin",
+      "url": "https://github.com/zengwenliang416/specnav-dsh-plugin",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T05:58:37.929Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
     }
   ]
 }
