@@ -5,7 +5,18 @@
 </p>
 
 <p align="center">
-  <a href="https://deepseek-harness-ecosystem-radar.pages.dev/"><strong>在线雷达</strong></a> ·
+  <a href="https://deepseek-harness-ecosystem-radar.pages.dev/" title="点击进入在线雷达">
+    <img src="assets/online-radar-cta.svg" alt="点击进入 DeepSeek Harness 生态早期雷达" width="900">
+  </a>
+</p>
+
+<p align="center">
+  <strong>↑ 点击上方横幅，打开完整在线雷达</strong><br>
+  <sub>完整项目榜 · 分类榜 · 趋势变化 · 搜索筛选 · 每小时更新</sub>
+</p>
+
+<p align="center">
+  <a href="https://deepseek-harness-ecosystem-radar.pages.dev/"><strong>网页入口</strong></a> ·
   <a href="STATUS.md">最新快照</a> ·
   <a href="METHODOLOGY.md">数据方法</a> ·
   <a href="https://github.com/aaaaaaa-feng/deepseek-harness-ecosystem-radar/issues/new?template=add-project.yml">提交项目</a>

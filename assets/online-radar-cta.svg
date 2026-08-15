@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="title description">
+  <title id="title">点击进入 DeepSeek Harness 生态早期雷达</title>
+  <desc id="description">打开完整项目榜、分类趋势、搜索与筛选页面</desc>
+  <rect width="1200" height="240" rx="28" fill="#111111"/>
+  <path d="M28 0h16v240H28C12.536 240 0 227.464 0 212V28C0 12.536 12.536 0 28 0Z" fill="#E2432F"/>
+
+  <g fill="none" stroke="#3B3B3B">
+    <path d="M72 29H1128"/>
+    <path d="M72 211H1128"/>
+    <path d="M806 29V211" stroke-dasharray="3 7"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'PingFang SC', sans-serif">
+    <text x="72" y="64" fill="#E2432F" font-size="18" font-weight="700" letter-spacing="2.4">LIVE · HOURLY SNAPSHOT</text>
+    <text x="72" y="133" fill="#FFFFFF" font-size="52" font-weight="750">点击进入在线雷达</text>
+    <text x="72" y="180" fill="#B8B8B3" font-size="22" font-weight="500">完整项目榜  ·  分类趋势  ·  搜索筛选  ·  每小时更新</text>
+  </g>
+
+  <g transform="translate(930 120)" fill="none">
+    <circle r="88" stroke="#474747"/>
+    <circle r="60" stroke="#60605D" stroke-dasharray="4 6"/>
+    <circle r="31" stroke="#7A7A76"/>
+    <path d="M-103 0H103M0-103V103" stroke="#444444"/>
+    <path d="M-73-73 73 73M73-73-73 73" stroke="#333333" stroke-dasharray="3 6"/>
+    <circle r="7" fill="#E2432F" stroke="none"/>
+    <circle cx="48" cy="-36" r="8" fill="#FFFFFF" stroke="none"/>
+    <circle cx="-53" cy="31" r="6" fill="#8A8A86" stroke="none"/>
+    <circle cx="29" cy="67" r="5" fill="#E2432F" stroke="none"/>
+    <circle cx="-25" cy="-64" r="4" fill="#B8B8B3" stroke="none"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <circle cx="1090" cy="120" r="36" fill="#E2432F"/>
+    <text x="1090" y="135" text-anchor="middle" fill="#FFFFFF" font-size="44" font-weight="700">→</text>
+  </g>
+</svg>
