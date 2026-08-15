@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T13:01:28.517Z",
+  "generated_at": "2026-08-15T13:45:28.794Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -37,16 +37,6 @@
       "url": "https://github.com/ashark-ai-05/enterprise-harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T05:58:37.929Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "baidd1011/codex-dsh-subagent",
-      "url": "https://github.com/baidd1011/codex-dsh-subagent",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
@@ -112,6 +102,16 @@
       ]
     },
     {
+      "repo": "d-maxdodo-b/DeepSeek-Desktop",
+      "url": "https://github.com/d-maxdodo-b/DeepSeek-Desktop",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "DCHEric/dsh-ios-companion",
       "url": "https://github.com/DCHEric/dsh-ios-companion",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -156,6 +156,15 @@
       "discovered_at": "2026-08-15T07:00:35.967Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Eclipse-NotFound/F1-Race-Engine",
+      "url": "https://github.com/Eclipse-NotFound/F1-Race-Engine",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
@@ -230,6 +239,15 @@
       "url": "https://github.com/hutaojiazi010304/ai-news-radar",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T07:00:35.967Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "IS27-Particle/os-autofix-engine",
+      "url": "https://github.com/IS27-Particle/os-autofix-engine",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
@@ -417,10 +435,28 @@
       ]
     },
     {
+      "repo": "pauldmartinphd/llm-performance-engineering-notebook",
+      "url": "https://github.com/pauldmartinphd/llm-performance-engineering-notebook",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "pengp8029-cmd/how-computers-work",
       "url": "https://github.com/pengp8029-cmd/how-computers-work",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T08:47:35.397Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "pragyensh/OpenMontage",
+      "url": "https://github.com/pragyensh/OpenMontage",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
@@ -496,6 +532,16 @@
       ]
     },
     {
+      "repo": "RNlao/dsh-wallpaper",
+      "url": "https://github.com/RNlao/dsh-wallpaper",
+      "reason": "资料型、教程型或纯清单仓库",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "topic:deepseek-harness created:>=2026-08-08",
+        "topic:dsh-plugin created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "rodascaar/ai-proxy-agent-harness",
       "url": "https://github.com/rodascaar/ai-proxy-agent-harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -519,7 +565,8 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08"
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
     {
@@ -586,6 +633,16 @@
       "discovered_at": "2026-08-15T13:01:28.517Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "tonytzhang/ic-copilot-demo",
+      "url": "https://github.com/tonytzhang/ic-copilot-demo",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
     {
@@ -658,6 +715,16 @@
       ]
     },
     {
+      "repo": "windwhiterain/comrade-harness-dsh-minimal",
+      "url": "https://github.com/windwhiterain/comrade-harness-dsh-minimal",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "wxlawyers/lark-remote-control",
       "url": "https://github.com/wxlawyers/lark-remote-control",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -698,6 +765,15 @@
       ]
     },
     {
+      "repo": "Yhx888/j-space-cognition-suite",
+      "url": "https://github.com/Yhx888/j-space-cognition-suite",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T13:45:28.794Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "yuzhounh/ai-agent-landscape",
       "url": "https://github.com/yuzhounh/ai-agent-landscape",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -722,16 +798,6 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "zhenkun26/RepoAtlas",
-      "url": "https://github.com/zhenkun26/RepoAtlas",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T11:37:23.139Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
