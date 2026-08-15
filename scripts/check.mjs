@@ -153,11 +153,11 @@ const [readme, html, app, styles, tweet, categoryCsv, hourlyWorkflow, pagesWorkf
   fs.readFile(path.join(root, '.github/workflows/hourly-update.yml'), 'utf8'),
   fs.readFile(path.join(root, '.github/workflows/pages.yml'), 'utf8')
 ]);
-if (!readme.includes(`已确认观察项目：**${active.length}**`)) errors.push('README summary is stale');
-if (!readme.includes('<!-- RADAR_RANKING_START -->')) errors.push('README ranking marker missing');
-if (!readme.includes('<!-- RADAR_CATEGORY_RANKING_START -->')) errors.push('README category ranking marker missing');
-if (!readme.includes('观察窗口趋势')) errors.push('README must use the honest observation-window label');
-if (readme.includes('24h变化')) errors.push('README contains a hard-coded 24h change label');
+if (!readme.includes('为一个正在形成中的开源生态')) errors.push('README is missing the project purpose');
+if (!readme.includes('不是实时流式数据')) errors.push('README must explain the hourly snapshot boundary');
+if (!readme.includes('<!-- RADAR_TOP10_START -->') || !readme.includes('<!-- RADAR_TOP10_END -->')) errors.push('README hourly Top 10 markers are missing');
+if (readme.includes('<!-- RADAR_SUMMARY_') || readme.includes('<!-- RADAR_RANKING_') || readme.includes('<!-- RADAR_CATEGORY_')) errors.push('README still contains oversized generated snapshot sections');
+if (readme.includes('已确认观察项目：**')) errors.push('README still embeds volatile snapshot counts');
 if (config.public_site_url && !readme.includes(config.public_site_url)) errors.push('README is missing the public site URL');
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
@@ -170,6 +170,7 @@ if (!html.includes('class="skip-link"') || !html.includes('<main id="main" tabin
 if (!tweet.includes('不代表全网穷尽')) errors.push('Tweet draft is missing the evidence boundary');
 if (config.public_site_url && !tweet.includes(config.public_site_url)) errors.push('Tweet draft is missing the public site URL');
 if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write') || !hourlyWorkflow.includes('models: read')) errors.push('Hourly workflow schedule or permissions are incomplete');
+if (!hourlyWorkflow.includes('git add -- README.md')) errors.push('Hourly workflow must publish the compact README Top 10');
 if (!pagesWorkflow.includes('workflow_run:') || !pagesWorkflow.includes('Hourly ecosystem update')) errors.push('Pages workflow will not follow hourly updates');
 if (!pagesWorkflow.includes('pages: write') || !pagesWorkflow.includes('id-token: write')) errors.push('Pages workflow permissions are incomplete');
 

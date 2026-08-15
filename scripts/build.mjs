@@ -150,36 +150,21 @@ export async function buildArtifacts() {
     `${categoryHeaders.join(',')}\n${categoryRows.map(row => row.map(csvCell).join(',')).join('\n')}\n`,
   );
 
-  const topTable = [
-    '| 排名 | 项目 | 维护者公开所在地 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |',
-    '| ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |',
-    ...rankings.current.slice(0, 15).map(item =>
-      `| ${item.rank} | [${escapeMarkdown(item.repo)}](${item.url}) | ${escapeMarkdown(item.developer?.region_label || DEVELOPER_REGION_LABELS.unknown)} | ${escapeMarkdown(item.category)} | ${item.stars} | ${item.forks} | ${item.attention_score} | ${delta(item.stars_delta)} | ${delta(item.rank_change)} |`,
-    )
-  ].join('\n');
-  const categoryTable = [
-    '| Stars 排名 | 功能分类 | 项目数 | Stars 总量 | Forks 总量 | 窗口 Stars Δ | 头部项目 |',
-    '| ---: | --- | ---: | ---: | ---: | ---: | --- |',
-    ...rankings.category_rankings.map(item =>
-      `| ${item.rank_by_stars} | ${escapeMarkdown(item.category)} | ${item.project_count} | ${item.total_stars} | ${item.total_forks} | ${delta(item.stars_delta)} | ${item.leader ? `[${escapeMarkdown(item.leader.repo)}](${item.leader.url})` : '—'} |`,
-    )
-  ].join('\n');
   const topCategory = rankings.category_rankings[0];
-  const summary = [
-    `- 已确认观察项目：**${activeProjects.length}**`,
-    `- 待复核候选：**${candidatesPayload.candidates.length}**`,
-    `- 历史观察点：**${snapshots.length}**`,
-    `- 小时明细：**${snapshotStats.hourly}**；每日归档：**${snapshotStats.archives}**`,
-    `- 维护者公开所在地：国内 **${developerRegions.mainland_china}**；中国港澳台 **${developerRegions.greater_china}**；海外 **${developerRegions.overseas}**；未知 **${developerRegions.unknown}**`,
-    `- 项目简介：自动/缓存翻译 **${translationStatus.translated || 0}**；原文含中文 **${translationStatus['source-zh'] || 0}**；待翻译 **${translationStatus.pending || 0}**`,
-    `- 当前 Stars 总量第一分类：**${topCategory?.category || '暂无'}**（${topCategory?.total_stars || 0} Stars，${topCategory?.project_count || 0} 个项目）`,
-    `- 最新快照：**${rankings.latest_snapshot_at}**`,
-    `- 观察窗口趋势：${rankings.previous_snapshot_at ? `已基于 ${rankings.observation_window_hours} 小时窗口计算` : '**等待第二个快照后生成**'}`
+  const observationWindow = rankings.previous_snapshot_at
+    ? `${rankings.observation_window_hours} 小时`
+    : '等待下一个可比较快照';
+  const top10 = [
+    `**数据时点：** \`${rankings.latest_snapshot_at}\`　·　**观察窗口：** ${observationWindow}`,
+    '',
+    '| 排名 | 项目 | 分类 | Stars | Forks | 窗口 Stars Δ | 关注分 |',
+    '| ---: | --- | --- | ---: | ---: | ---: | ---: |',
+    ...rankings.current.slice(0, 10).map(item =>
+      `| ${item.rank} | [${escapeMarkdown(item.repo)}](${item.url}) | ${escapeMarkdown(item.category)} | ${item.stars} | ${item.forks} | ${delta(item.stars_delta)} | ${item.attention_score} |`,
+    )
   ].join('\n');
   let readme = await fs.readFile(path.join(root, 'README.md'), 'utf8');
-  readme = replaceSection(readme, '<!-- RADAR_SUMMARY_START -->', '<!-- RADAR_SUMMARY_END -->', summary);
-  readme = replaceSection(readme, '<!-- RADAR_RANKING_START -->', '<!-- RADAR_RANKING_END -->', topTable);
-  readme = replaceSection(readme, '<!-- RADAR_CATEGORY_RANKING_START -->', '<!-- RADAR_CATEGORY_RANKING_END -->', categoryTable);
+  readme = replaceSection(readme, '<!-- RADAR_TOP10_START -->', '<!-- RADAR_TOP10_END -->', top10);
   await writeText('README.md', readme);
 
   const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} Stars）\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> 分类榜可以按 Stars 总量、项目数量和真实窗口增长查看；它描述生态规模与公开变化，不代表产品质量。\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
