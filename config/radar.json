@@ -13,7 +13,7 @@
   "translation_model": "openai/gpt-4.1-mini",
   "translation_batch_size": 12,
   "translation_max_attempts": 2,
-  "public_repository_url": "",
+  "public_repository_url": "https://github.com/xue-feng-bai/deepseek-harness-ecosystem-radar",
   "queries": [
     "\"deepseek harness\" in:name,description,readme created:>={since_date}",
     "deepseek-harness in:name,description,readme created:>={since_date}",

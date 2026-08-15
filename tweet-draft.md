@@ -11,7 +11,7 @@ DeepSeek Harness 生态早期雷达更新：
 - 中文可读简介：60/60
 - 数据时点：2026-08-14T15:48:43.830Z
 
-仓库链接：发布后补充
+https://github.com/xue-feng-bai/deepseek-harness-ecosystem-radar
 
 每小时公开快照，可复查、可追溯；不代表全网穷尽，分类榜和所在地都不是产品质量或国籍判断。
 
