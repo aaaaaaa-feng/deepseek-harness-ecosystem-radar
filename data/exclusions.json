@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T19:38:19.141Z",
+  "generated_at": "2026-08-15T20:42:14.425Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -59,6 +59,15 @@
       "discovered_at": "2026-08-15T17:38:50.810Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "ArbenApura/xianscan",
+      "url": "https://github.com/ArbenApura/xianscan",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T20:42:14.425Z",
+      "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
@@ -206,6 +215,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "DataHanyang/whalex",
+      "url": "https://github.com/DataHanyang/whalex",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T20:42:14.425Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -417,6 +435,15 @@
       ]
     },
     {
+      "repo": "Hioness/agents-skills-prompts",
+      "url": "https://github.com/Hioness/agents-skills-prompts",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T20:42:14.425Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "HT7-Lab/NaCl",
       "url": "https://github.com/HT7-Lab/NaCl",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -560,6 +587,15 @@
       ]
     },
     {
+      "repo": "kenichi-shibata/hermes-model-bench",
+      "url": "https://github.com/kenichi-shibata/hermes-model-bench",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T20:42:14.425Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "kevenhu001-cyber/astra-harness",
       "url": "https://github.com/kevenhu001-cyber/astra-harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -652,18 +688,6 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T16:44:17.939Z",
       "discovery_queries": [
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
-      "repo": "mauriragna88/argos",
-      "url": "https://github.com/mauriragna88/argos",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T05:58:37.929Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08",
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
@@ -876,6 +900,15 @@
       "discovered_at": "2026-08-15T13:01:28.517Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "ronisaguey-ux/LLM-Drift-Detector",
+      "url": "https://github.com/ronisaguey-ux/LLM-Drift-Detector",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T20:42:14.425Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1099,20 +1132,6 @@
       ]
     },
     {
-      "repo": "wangkaxds/dsh-aurora-wallpaper",
-      "url": "https://github.com/wangkaxds/dsh-aurora-wallpaper",
-      "reason": "资料型、教程型或纯清单仓库",
-      "discovered_at": "2026-08-15T10:42:17.152Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08",
-        "topic:dsh-plugin created:>=2026-08-08",
-        "topic:dsh-plugin created:>=2026-08-09",
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
       "repo": "Wangleshan025/Agent-Harness",
       "url": "https://github.com/Wangleshan025/Agent-Harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1237,16 +1256,6 @@
       "discovered_at": "2026-08-15T05:58:37.929Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "ZgblKylin/dsh-review",
-      "url": "https://github.com/ZgblKylin/dsh-review",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T19:38:19.141Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
