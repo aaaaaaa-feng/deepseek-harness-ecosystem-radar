@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T18:50:16.099Z",
+  "generated_at": "2026-08-15T19:38:19.141Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -520,16 +520,6 @@
       ]
     },
     {
-      "repo": "Johnnyzlee/skills-arsenal",
-      "url": "https://github.com/Johnnyzlee/skills-arsenal",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T17:38:50.810Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
       "repo": "jtc268/balto-speedrunner-mac",
       "url": "https://github.com/jtc268/balto-speedrunner-mac",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -672,7 +662,9 @@
       "discovered_at": "2026-08-15T05:58:37.929Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -787,6 +779,15 @@
       "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "primarykid/dsh-multiwindow",
+      "url": "https://github.com/primarykid/dsh-multiwindow",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T19:38:19.141Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1106,7 +1107,9 @@
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
         "topic:dsh-plugin created:>=2026-08-08",
-        "topic:dsh-plugin created:>=2026-08-09"
+        "topic:dsh-plugin created:>=2026-08-09",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1234,6 +1237,16 @@
       "discovered_at": "2026-08-15T05:58:37.929Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "ZgblKylin/dsh-review",
+      "url": "https://github.com/ZgblKylin/dsh-review",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T19:38:19.141Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
