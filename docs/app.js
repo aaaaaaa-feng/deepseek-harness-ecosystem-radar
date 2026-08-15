@@ -35,6 +35,8 @@ function showFatalError(error) {
   $('#freshness').textContent = '数据加载失败，请稍后刷新或查看仓库状态页';
   $('.status-dot').classList.add('error');
   $('#ranking-status').textContent = '排名数据暂时不可用';
+  $('#ranking-range').textContent = '排名视窗暂时不可用';
+  $('#ranking-progress-bar').style.width = '0%';
   $('#ranking-body').innerHTML = '<tr><td class="empty-state" colspan="9"><span>无法读取最新快照。已发布的历史数据不会因此被改写。</span></td></tr>';
   $('#category-podium').textContent = '分类榜暂时不可用';
   $('#category-ranking-body').innerHTML = '<tr><td class="empty-state" colspan="7"><span>无法读取分类数据。</span></td></tr>';
@@ -106,6 +108,49 @@ async function init() {
     regionSelect.append(option);
   }
 
+  const rankingFrame = $('#ranking-frame');
+  const rankingViewport = $('#ranking-viewport');
+  const rankingRange = $('#ranking-range');
+  const rankingProgressBar = $('#ranking-progress-bar');
+  const rankingScrollTop = $('#ranking-scroll-top');
+  rankingViewport.setAttribute('aria-label', `${data.rankings.current.length} 个项目的完整关注度排名`);
+  let rankingViewportFrame = 0;
+
+  function updateRankingViewport() {
+    rankingViewportFrame = 0;
+    const rows = [...document.querySelectorAll('#ranking-body tr[data-rank]')];
+    const maxScroll = Math.max(0, rankingViewport.scrollHeight - rankingViewport.clientHeight);
+    const progress = maxScroll ? rankingViewport.scrollTop / maxScroll : 0;
+    const atStart = rankingViewport.scrollTop <= 2;
+    const atEnd = maxScroll === 0 || rankingViewport.scrollTop >= maxScroll - 2;
+    rankingProgressBar.style.width = `${Math.min(100, Math.max(0, progress * 100))}%`;
+    rankingScrollTop.disabled = atStart;
+    rankingFrame.classList.toggle('is-at-start', atStart);
+    rankingFrame.classList.toggle('is-at-end', atEnd);
+
+    if (!rows.length) {
+      rankingRange.textContent = '当前无匹配结果';
+      return;
+    }
+    const viewportRect = rankingViewport.getBoundingClientRect();
+    const headerHeight = $('#ranking-table thead')?.getBoundingClientRect().height || 0;
+    const visibleRows = rows.filter(row => {
+      const rect = row.getBoundingClientRect();
+      return rect.bottom > viewportRect.top + headerHeight && rect.top < viewportRect.bottom;
+    });
+    const first = visibleRows[0] || rows[0];
+    const last = visibleRows.at(-1) || first;
+    const firstRank = first.dataset.rank;
+    const lastRank = last.dataset.rank;
+    const range = firstRank === lastRank ? `#${firstRank}` : `#${firstRank}–#${lastRank}`;
+    rankingRange.textContent = `当前可见 ${range} · ${rows.length} 个结果`;
+  }
+
+  function scheduleRankingViewportUpdate() {
+    if (rankingViewportFrame) return;
+    rankingViewportFrame = requestAnimationFrame(updateRankingViewport);
+  }
+
   function renderRanking() {
     const query = $('#search').value.trim().toLowerCase();
     const category = categorySelect.value;
@@ -129,7 +174,7 @@ async function init() {
         : '';
       const description = item.description_zh || item.description || '暂无简短说明';
       return `
-      <tr>
+      <tr data-rank="${Number(item.rank)}">
         <td class="numeric">${format(item.rank)}</td>
         <td><a class="repo-link" href="${safeGithubUrl(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.repo)}</a><div class="repo-desc">${escapeHtml(description)}</div>${original}</td>
         <td><a class="region-badge region-${escapeHtml(developer.region || 'unknown')}" href="${safeGithubUrl(developer.profile_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(developer.region_label || '未知')}</a><div class="region-location">${escapeHtml(developer.location || '未公开')}</div></td>
@@ -141,7 +186,47 @@ async function init() {
         <td class="numeric ${deltaClass(item.rank_change)}">${signed(item.rank_change)}</td>
       </tr>`;
     }).join('') : '<tr><td class="empty-state" colspan="9"><span>没有匹配项目。清空搜索词或重置筛选后可恢复完整排名。</span></td></tr>';
+    rankingViewport.scrollTop = 0;
+    scheduleRankingViewportUpdate();
   }
+  rankingViewport.addEventListener('scroll', scheduleRankingViewportUpdate, {passive: true});
+  rankingViewport.addEventListener('toggle', scheduleRankingViewportUpdate, true);
+  rankingViewport.addEventListener('keydown', event => {
+    const maxScroll = Math.max(0, rankingViewport.scrollHeight - rankingViewport.clientHeight);
+    const atStart = rankingViewport.scrollTop <= 2;
+    const atEnd = maxScroll === 0 || rankingViewport.scrollTop >= maxScroll - 2;
+    const pageStep = Math.max(160, Math.round(rankingViewport.clientHeight * .82));
+    const keyActions = {
+      ArrowDown: {blocked: atEnd, top: rankingViewport.scrollTop + 72},
+      ArrowUp: {blocked: atStart, top: rankingViewport.scrollTop - 72},
+      PageDown: {blocked: atEnd, top: rankingViewport.scrollTop + pageStep},
+      PageUp: {blocked: atStart, top: rankingViewport.scrollTop - pageStep},
+      End: {blocked: atEnd, top: maxScroll},
+      Home: {blocked: atStart, top: 0}
+    };
+    const action = keyActions[event.key];
+    if (!action) return;
+    if (action.blocked) {
+      const outerSteps = {
+        ArrowDown: 72,
+        ArrowUp: -72,
+        PageDown: pageStep,
+        PageUp: -pageStep
+      };
+      if (outerSteps[event.key]) {
+        event.preventDefault();
+        window.scrollBy({top: outerSteps[event.key], behavior: 'auto'});
+      }
+      return;
+    }
+    event.preventDefault();
+    rankingViewport.scrollTo({top: action.top, behavior: 'auto'});
+  });
+  window.addEventListener('resize', scheduleRankingViewportUpdate, {passive: true});
+  rankingScrollTop.addEventListener('click', () => {
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    rankingViewport.scrollTo({top: 0, behavior});
+  });
   $('#search').addEventListener('input', renderRanking);
   categorySelect.addEventListener('change', renderRanking);
   regionSelect.addEventListener('change', renderRanking);

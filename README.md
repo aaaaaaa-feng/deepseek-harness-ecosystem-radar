@@ -50,7 +50,7 @@
 | 15 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 未知 | 开发与质量工具 | 48 | 1 | 127.34 | — | — |
 <!-- RADAR_RANKING_END -->
 
-完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。
+完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。网页会把全部项目收进一个独立滚动的榜单视窗，表头保持吸顶，页面不会因排名数量增长而被不断拉长。
 
 ## 功能分类榜
 

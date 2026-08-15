@@ -70,18 +70,31 @@
       </div>
       <div class="ranking-meta">
         <p id="ranking-status" aria-live="polite">正在准备排名…</p>
-        <p class="table-scroll-note">窄屏可横向滑动表格，查看完整指标。</p>
+        <p class="table-scroll-note">窄屏可在榜单视窗内横向滑动，查看完整指标。</p>
       </div>
-      <div class="table-wrap">
-        <table id="ranking-table">
-          <caption>DeepSeek Harness 相关项目关注度排名</caption>
-          <colgroup>
-            <col class="col-rank"><col class="col-project"><col class="col-region"><col class="col-category"><col class="col-number">
-            <col class="col-number"><col class="col-score"><col class="col-delta"><col class="col-delta">
-          </colgroup>
-          <thead><tr><th scope="col">#</th><th scope="col">项目</th><th scope="col">公开所在地</th><th scope="col">分类</th><th scope="col">Stars</th><th scope="col">Forks</th><th scope="col">关注分</th><th scope="col" id="window-header">窗口 Stars Δ</th><th scope="col">排名变化</th></tr></thead>
-          <tbody id="ranking-body"></tbody>
-        </table>
+      <div class="ranking-frame" id="ranking-frame">
+        <div class="ranking-frame-bar">
+          <div class="ranking-frame-status">
+            <span class="ranking-frame-dot" aria-hidden="true"></span>
+            <strong id="ranking-range">正在计算可见排名…</strong>
+          </div>
+          <div class="ranking-frame-actions">
+            <span id="ranking-scroll-help">在框内滚动查看全部排名；到达边缘后继续滚动即可浏览下一部分。</span>
+            <button id="ranking-scroll-top" type="button" aria-controls="ranking-viewport" disabled>回到榜首</button>
+          </div>
+        </div>
+        <div class="ranking-progress" aria-hidden="true"><span id="ranking-progress-bar"></span></div>
+        <div class="table-wrap ranking-viewport" id="ranking-viewport" tabindex="0" aria-label="完整关注度排名" aria-describedby="ranking-scroll-help">
+          <table id="ranking-table">
+            <caption>DeepSeek Harness 相关项目关注度排名</caption>
+            <colgroup>
+              <col class="col-rank"><col class="col-project"><col class="col-region"><col class="col-category"><col class="col-number">
+              <col class="col-number"><col class="col-score"><col class="col-delta"><col class="col-delta">
+            </colgroup>
+            <thead><tr><th scope="col">#</th><th scope="col">项目</th><th scope="col">公开所在地</th><th scope="col">分类</th><th scope="col">Stars</th><th scope="col">Forks</th><th scope="col">关注分</th><th scope="col" id="window-header">窗口 Stars Δ</th><th scope="col">排名变化</th></tr></thead>
+            <tbody id="ranking-body"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 

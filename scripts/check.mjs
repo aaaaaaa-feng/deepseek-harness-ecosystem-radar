@@ -143,10 +143,11 @@ if (latestSnapshotAt) {
   for (const relativePath of staleHourlyPaths) errors.push(`Prunable hourly snapshot remains: ${relativePath}`);
 }
 
-const [readme, html, app, tweet, categoryCsv, hourlyWorkflow, pagesWorkflow] = await Promise.all([
+const [readme, html, app, styles, tweet, categoryCsv, hourlyWorkflow, pagesWorkflow] = await Promise.all([
   fs.readFile(path.join(root, 'README.md'), 'utf8'),
   fs.readFile(path.join(root, 'docs/index.html'), 'utf8'),
   fs.readFile(path.join(root, 'docs/app.js'), 'utf8'),
+  fs.readFile(path.join(root, 'docs/styles.css'), 'utf8'),
   fs.readFile(path.join(root, 'tweet-draft.md'), 'utf8'),
   fs.readFile(path.join(root, 'data/categories.csv'), 'utf8'),
   fs.readFile(path.join(root, '.github/workflows/hourly-update.yml'), 'utf8'),
@@ -160,6 +161,7 @@ if (readme.includes('24h变化')) errors.push('README contains a hard-coded 24h 
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
 if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
+if (!html.includes('id="ranking-viewport"') || !html.includes('id="ranking-range"') || !app.includes('updateRankingViewport') || !app.includes('PageDown') || !styles.includes('.ranking-viewport thead th { position: sticky;')) errors.push('Scrollable ranking viewport is incomplete');
 if (!html.includes('id="category-ranking"') || !html.includes('data-category-sort="stars"') || !app.includes('renderCategoryRanking')) errors.push('Static category leaderboard is incomplete');
 if (!categoryCsv.startsWith('rank_by_stars,rank_by_projects,rank_by_momentum,category,')) errors.push('Category CSV header is incomplete');
 if (categoryCsv.trim().split('\n').length !== rankings.category_rankings.length + 1) errors.push('Category CSV row count mismatch');
