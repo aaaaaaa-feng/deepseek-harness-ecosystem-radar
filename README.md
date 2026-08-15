@@ -9,15 +9,15 @@
 ## 最新状态
 
 <!-- RADAR_SUMMARY_START -->
-- 已确认观察项目：**982**
-- 待复核候选：**125**
-- 历史观察点：**7**
-- 小时明细：**6**；每日归档：**2**
-- 维护者公开所在地：国内 **154**；中国港澳台 **3**；海外 **16**；未知 **676**
-- 项目简介：自动/缓存翻译 **27**；原文含中文 **390**；待翻译 **476**
-- 当前 Stars 总量第一分类：**桌面端与启动器**（5667 Stars，142 个项目）
-- 最新快照：**2026-08-15T11:37:23.139Z**
-- 观察窗口趋势：已基于 0.9 小时窗口计算
+- 已确认观察项目：**1095**
+- 待复核候选：**136**
+- 历史观察点：**8**
+- 小时明细：**7**；每日归档：**2**
+- 维护者公开所在地：国内 **168**；中国港澳台 **3**；海外 **17**；未知 **762**
+- 项目简介：自动/缓存翻译 **27**；原文含中文 **424**；待翻译 **545**
+- 当前 Stars 总量第一分类：**桌面端与启动器**（6040 Stars，169 个项目）
+- 最新快照：**2026-08-15T13:01:28.517Z**
+- 观察窗口趋势：已基于 1.4 小时窗口计算
 <!-- RADAR_SUMMARY_END -->
 
 ## 当前关注度排名
@@ -33,21 +33,21 @@
 <!-- RADAR_RANKING_START -->
 | 排名 | 项目 | 维护者公开所在地 | 分类 | Stars | Forks | 关注分 | 窗口 Stars Δ | 排名变化 |
 | ---: | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 4183 | 177 | 321.02 | +205 | 0 |
-| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 未知 | 其他实现型扩展 | 2274 | 422 | 313.78 | +77 | 0 |
-| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 未知 | 开发与质量工具 | 1612 | 50 | 275.76 | +77 | 0 |
-| 4 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 国内 | 界面与体验扩展 | 790 | 25 | 245.32 | +16 | 0 |
-| 5 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 未知 | 桌面端与启动器 | 217 | 22 | 204.54 | +2 | 0 |
-| 6 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 未知 | 插件管理与生态工具 | 192 | 17 | 197.65 | +8 | 0 |
-| 7 | [Electricitysheep/dsh-handbook](https://github.com/Electricitysheep/dsh-handbook) | 未知 | 其他实现型扩展 | 261 | 6 | 194.63 | +1 | 0 |
-| 8 | [bruc3van/awesome-dsh-plugin](https://github.com/bruc3van/awesome-dsh-plugin) | 国内 | 其他实现型扩展 | 130 | 32 | 193.76 | +1 | 0 |
-| 9 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 未知 | 桌面端与启动器 | 201 | 10 | 192.62 | +15 | +1 |
-| 10 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 未知 | 桌面端与启动器 | 197 | 9 | 190.77 | +2 | -1 |
-| 11 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 国内 | 桌面端与启动器 | 132 | 8 | 177.3 | 0 | 0 |
-| 12 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 国内 | 视觉与浏览器 | 105 | 9 | 171.77 | +2 | 0 |
-| 13 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 132 | 4 | 169.64 | +3 | 0 |
-| 14 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 未知 | 视觉与浏览器 | 91 | 7 | 164.56 | +2 | 0 |
-| 15 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 未知 | 桌面端与启动器 | 80 | 7 | 160.69 | +1 | 0 |
+| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 4467 | 185 | 323.59 | +284 | 0 |
+| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 未知 | 其他实现型扩展 | 2409 | 456 | 316.54 | +135 | 0 |
+| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 未知 | 开发与质量工具 | 1739 | 54 | 279.05 | +127 | 0 |
+| 4 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 国内 | 界面与体验扩展 | 821 | 27 | 247.46 | +31 | 0 |
+| 5 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 未知 | 桌面端与启动器 | 218 | 24 | 205.77 | +1 | 0 |
+| 6 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 未知 | 插件管理与生态工具 | 207 | 17 | 199.92 | +15 | 0 |
+| 7 | [Electricitysheep/dsh-handbook](https://github.com/Electricitysheep/dsh-handbook) | 未知 | 其他实现型扩展 | 271 | 6 | 195.77 | +10 | 0 |
+| 8 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 未知 | 桌面端与启动器 | 219 | 10 | 195.21 | +18 | +1 |
+| 9 | [bruc3van/awesome-dsh-plugin](https://github.com/bruc3van/awesome-dsh-plugin) | 国内 | 其他实现型扩展 | 133 | 32 | 194.45 | +3 | -1 |
+| 10 | [turtle2209/Bigfish](https://github.com/turtle2209/Bigfish) | 未知 | 桌面端与启动器 | 201 | 9 | 191.37 | +4 | 0 |
+| 11 | [steven-kid/deepseek-harness-desktop](https://github.com/steven-kid/deepseek-harness-desktop) | 国内 | 桌面端与启动器 | 137 | 8 | 178.42 | +5 | 0 |
+| 12 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 国内 | 视觉与浏览器 | 110 | 9 | 173.17 | +5 | 0 |
+| 13 | [hairyf/deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) | 未知 | 桌面端与启动器 | 140 | 4 | 171.41 | +8 | 0 |
+| 14 | [omdsh-dev/dsh-genui](https://github.com/omdsh-dev/dsh-genui) | 未知 | 视觉与浏览器 | 94 | 8 | 167.07 | +3 | 0 |
+| 15 | [ChisaAlter/Deepseek-Harness-Desktop](https://github.com/ChisaAlter/Deepseek-Harness-Desktop) | 未知 | 桌面端与启动器 | 81 | 7 | 161.06 | +1 | 0 |
 <!-- RADAR_RANKING_END -->
 
 完整排名见 [data/rankings.csv](data/rankings.csv)，可视化页面见 [docs/index.html](docs/index.html)。网页会把全部项目收进一个独立滚动的榜单视窗，表头保持吸顶，页面不会因排名数量增长而被不断拉长。
@@ -59,15 +59,15 @@
 <!-- RADAR_CATEGORY_RANKING_START -->
 | Stars 排名 | 功能分类 | 项目数 | Stars 总量 | Forks 总量 | 窗口 Stars Δ | 头部项目 |
 | ---: | --- | ---: | ---: | ---: | ---: | --- |
-| 1 | 桌面端与启动器 | 142 | 5667 | 278 | +240 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) |
-| 2 | 其他实现型扩展 | 269 | 3149 | 527 | +101 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) |
-| 3 | 开发与质量工具 | 53 | 1810 | 64 | +82 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) |
-| 4 | 界面与体验扩展 | 100 | 1169 | 53 | +22 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) |
-| 5 | 插件管理与生态工具 | 104 | 935 | 78 | +30 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) |
-| 6 | 视觉与浏览器 | 99 | 499 | 60 | +9 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) |
-| 7 | 记忆、上下文与成本 | 105 | 285 | 28 | +2 | [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) |
-| 8 | 渠道与模型接入 | 69 | 260 | 21 | +12 | [yjh051108/dsh-router-standard](https://github.com/yjh051108/dsh-router-standard) |
-| 9 | 终端与部署 | 41 | 110 | 17 | +1 | [openma-ai/deepseek-harness-tui](https://github.com/openma-ai/deepseek-harness-tui) |
+| 1 | 桌面端与启动器 | 169 | 6040 | 294 | +349 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) |
+| 2 | 其他实现型扩展 | 296 | 3357 | 568 | +188 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) |
+| 3 | 开发与质量工具 | 57 | 1950 | 70 | +137 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) |
+| 4 | 界面与体验扩展 | 111 | 1221 | 63 | +49 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) |
+| 5 | 插件管理与生态工具 | 117 | 985 | 81 | +46 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) |
+| 6 | 视觉与浏览器 | 116 | 533 | 68 | +14 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) |
+| 7 | 记忆、上下文与成本 | 110 | 308 | 29 | +17 | [Nwflower/dsh-chat-import](https://github.com/Nwflower/dsh-chat-import) |
+| 8 | 渠道与模型接入 | 76 | 284 | 23 | +24 | [yjh051108/dsh-router-standard](https://github.com/yjh051108/dsh-router-standard) |
+| 9 | 终端与部署 | 43 | 121 | 19 | +8 | [openma-ai/deepseek-harness-tui](https://github.com/openma-ai/deepseek-harness-tui) |
 <!-- RADAR_CATEGORY_RANKING_END -->
 
 完整分类数据见 [data/categories.json](data/categories.json) 与 [data/categories.csv](data/categories.csv)。
