@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T07:46:04.594Z",
+  "generated_at": "2026-08-15T08:47:35.397Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -110,6 +110,16 @@
       ]
     },
     {
+      "repo": "fengshenyuan/oh-my-agentX",
+      "url": "https://github.com/fengshenyuan/oh-my-agentX",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T08:47:35.397Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "GK-Y/deep_infer",
       "url": "https://github.com/GK-Y/deep_infer",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -204,6 +214,16 @@
       ]
     },
     {
+      "repo": "marius-patrik/agents",
+      "url": "https://github.com/marius-patrik/agents",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T08:47:35.397Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "mauriragna88/argos",
       "url": "https://github.com/mauriragna88/argos",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -244,6 +264,15 @@
       ]
     },
     {
+      "repo": "pengp8029-cmd/how-computers-work",
+      "url": "https://github.com/pengp8029-cmd/how-computers-work",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T08:47:35.397Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
       "repo": "programmingWTF/NUAAgent",
       "url": "https://github.com/programmingWTF/NUAAgent",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -258,6 +287,16 @@
       "url": "https://github.com/qianalove1006-beep/DeepSeek-Harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T07:46:04.594Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "qwesswhite/project-hub",
+      "url": "https://github.com/qwesswhite/project-hub",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T08:47:35.397Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
@@ -299,6 +338,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "TideSparrow/find-dsh-plugin-skill",
+      "url": "https://github.com/TideSparrow/find-dsh-plugin-skill",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T08:47:35.397Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-08"
       ]
     },
     {
