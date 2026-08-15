@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T20:42:14.425Z",
+  "generated_at": "2026-08-15T21:38:22.619Z",
   "candidates": [
     {
       "repo": "0liveiraaa/myDshPresets",
@@ -222,14 +222,16 @@
       "discovered_at": "2026-08-15T07:00:35.967Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ],
       "name": "Meristem",
       "owner": "btnalit",
       "description": "From the smallest beginning, everything can grow",
       "created_at": "2026-08-15T05:01:53Z",
-      "updated_at": "2026-08-15T11:34:46Z",
-      "pushed_at": "2026-08-15T11:34:41Z",
+      "updated_at": "2026-08-15T21:30:33Z",
+      "pushed_at": "2026-08-15T21:30:18Z",
       "stars": 1,
       "forks": 0,
       "subscribers": null,
@@ -242,7 +244,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T07:00:35.967Z",
-      "last_seen_at": "2026-08-15T11:37:23.139Z",
+      "last_seen_at": "2026-08-15T21:38:22.619Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
@@ -1504,6 +1506,36 @@
       "evidence_level": "candidate",
       "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
       "evidence_url": "https://github.com/DDwsgood/opencode-dsh-godmode#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "DoiiarX/dsh-handoff-plugin",
+      "name": "dsh-handoff-plugin",
+      "owner": "DoiiarX",
+      "url": "https://github.com/DoiiarX/dsh-handoff-plugin",
+      "description": "",
+      "created_at": "2026-08-15T21:14:23Z",
+      "updated_at": "2026-08-15T21:30:22Z",
+      "pushed_at": "2026-08-15T21:29:46Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-15T21:38:22.619Z",
+      "last_seen_at": "2026-08-15T21:38:22.619Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/DoiiarX/dsh-handoff-plugin#readme",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-09"
       ]
@@ -2864,13 +2896,13 @@
       "url": "https://github.com/kaiqiangh/dsh-workshpace-plugin",
       "description": "",
       "created_at": "2026-08-15T08:48:58Z",
-      "updated_at": "2026-08-15T09:01:32Z",
-      "pushed_at": "2026-08-15T09:43:51Z",
+      "updated_at": "2026-08-15T21:32:02Z",
+      "pushed_at": "2026-08-15T21:31:35Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
-      "open_issues": 13,
-      "language": "",
+      "open_issues": 6,
+      "language": "TypeScript",
       "license": "MIT",
       "topics": [],
       "fork": false,
@@ -2878,13 +2910,14 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T09:44:03.751Z",
-      "last_seen_at": "2026-08-15T09:44:03.751Z",
+      "last_seen_at": "2026-08-15T21:38:22.619Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/kaiqiangh/dsh-workshpace-plugin",
+      "evidence_url": "https://github.com/kaiqiangh/dsh-workshpace-plugin#readme",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-08"
+        "dsh-plugin in:name,description created:>=2026-08-08",
+        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -3465,7 +3498,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T13:45:28.794Z",
-      "last_seen_at": "2026-08-15T20:42:14.425Z",
+      "last_seen_at": "2026-08-15T21:38:22.619Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -3565,37 +3598,6 @@
       "evidence_url": "https://github.com/margbug01/dsh-ma-plugins",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "Max-Null/dsh-memory",
-      "name": "dsh-memory",
-      "owner": "Max-Null",
-      "url": "https://github.com/Max-Null/dsh-memory",
-      "description": "",
-      "created_at": "2026-08-15T06:56:43Z",
-      "updated_at": "2026-08-15T06:58:28Z",
-      "pushed_at": "2026-08-15T06:58:22Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "TypeScript",
-      "license": "MIT",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "记忆、上下文与成本",
-      "first_seen_at": "2026-08-15T07:00:35.967Z",
-      "last_seen_at": "2026-08-15T07:00:35.967Z",
-      "verification": "metadata-only",
-      "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/Max-Null/dsh-memory",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
     {

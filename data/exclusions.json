@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T20:42:14.425Z",
+  "generated_at": "2026-08-15T21:38:22.619Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -284,6 +284,15 @@
       ]
     },
     {
+      "repo": "dominionbanjo/teamshare-bridge",
+      "url": "https://github.com/dominionbanjo/teamshare-bridge",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T21:38:22.619Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "Eclipse-NotFound/F1-Race-Engine",
       "url": "https://github.com/Eclipse-NotFound/F1-Race-Engine",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -309,6 +318,24 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "EnzoVezzaro/aba-arena",
+      "url": "https://github.com/EnzoVezzaro/aba-arena",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T21:38:22.619Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "eranshir/bench3",
+      "url": "https://github.com/eranshir/bench3",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T21:38:22.619Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -900,6 +927,15 @@
       "discovered_at": "2026-08-15T13:01:28.517Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "ronisaguey-ux/Insane-Custum-Claude-Settings",
+      "url": "https://github.com/ronisaguey-ux/Insane-Custum-Claude-Settings",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T21:38:22.619Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
