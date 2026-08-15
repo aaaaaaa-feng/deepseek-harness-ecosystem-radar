@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T16:44:17.939Z",
+  "generated_at": "2026-08-15T17:38:50.810Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -53,6 +53,16 @@
       ]
     },
     {
+      "repo": "aptacc2421/-niulai-",
+      "url": "https://github.com/aptacc2421/-niulai-",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "ashark-ai-05/enterprise-harness",
       "url": "https://github.com/ashark-ai-05/enterprise-harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -89,6 +99,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "chadixearth/graphyloop",
+      "url": "https://github.com/chadixearth/graphyloop",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -245,6 +264,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "evepupil/keel-code",
+      "url": "https://github.com/evepupil/keel-code",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -408,6 +436,15 @@
       ]
     },
     {
+      "repo": "j-kuman/m1-max-llm-tuning",
+      "url": "https://github.com/j-kuman/m1-max-llm-tuning",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "jackygilbert498-debug/xiaoshe-agent",
       "url": "https://github.com/jackygilbert498-debug/xiaoshe-agent",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -445,6 +482,16 @@
       ]
     },
     {
+      "repo": "jkesh/The-Multiple-Deepseek",
+      "url": "https://github.com/jkesh/The-Multiple-Deepseek",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "JoaquinDG/quorum",
       "url": "https://github.com/JoaquinDG/quorum",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -454,12 +501,23 @@
       ]
     },
     {
+      "repo": "jtc268/balto-speedrunner-mac",
+      "url": "https://github.com/jtc268/balto-speedrunner-mac",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "junaidshahid-dev/private-llm",
       "url": "https://github.com/junaidshahid-dev/private-llm",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T10:42:17.152Z",
       "discovery_queries": [
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -661,7 +719,8 @@
       "discovered_at": "2026-08-15T14:42:32.223Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -670,16 +729,6 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "programmingWTF/NUAAgent",
-      "url": "https://github.com/programmingWTF/NUAAgent",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T05:58:37.929Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
     },
@@ -810,6 +859,25 @@
       ]
     },
     {
+      "repo": "shixiaohui127/create-dsh-app",
+      "url": "https://github.com/shixiaohui127/create-dsh-app",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "Signalight/codex-to-dsh-pet",
+      "url": "https://github.com/Signalight/codex-to-dsh-pet",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "stef41/agent-bridge",
       "url": "https://github.com/stef41/agent-bridge",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -904,6 +972,16 @@
       ]
     },
     {
+      "repo": "tonytsangzen/harness-market",
+      "url": "https://github.com/tonytsangzen/harness-market",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "tonytzhang/ic-copilot-demo",
       "url": "https://github.com/tonytzhang/ic-copilot-demo",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -970,7 +1048,8 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
-        "topic:dsh-plugin created:>=2026-08-08"
+        "topic:dsh-plugin created:>=2026-08-08",
+        "topic:dsh-plugin created:>=2026-08-09"
       ]
     },
     {
@@ -1059,6 +1138,16 @@
       "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "yolorouter/llmasking-ts",
+      "url": "https://github.com/yolorouter/llmasking-ts",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T17:38:50.810Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
