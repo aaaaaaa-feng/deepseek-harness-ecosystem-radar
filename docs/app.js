@@ -37,6 +37,7 @@ function showFatalError(error) {
   $('#ranking-status').textContent = '排名数据暂时不可用';
   $('#ranking-range').textContent = '排名视窗暂时不可用';
   $('#ranking-progress-bar').style.width = '0%';
+  $('#ranking-scroll-next').disabled = true;
   $('#ranking-body').innerHTML = '<tr><td class="empty-state" colspan="9"><span>无法读取最新快照。已发布的历史数据不会因此被改写。</span></td></tr>';
   $('#category-podium').textContent = '分类榜暂时不可用';
   $('#category-ranking-body').innerHTML = '<tr><td class="empty-state" colspan="7"><span>无法读取分类数据。</span></td></tr>';
@@ -112,6 +113,7 @@ async function init() {
   const rankingViewport = $('#ranking-viewport');
   const rankingRange = $('#ranking-range');
   const rankingProgressBar = $('#ranking-progress-bar');
+  const rankingScrollNext = $('#ranking-scroll-next');
   const rankingScrollTop = $('#ranking-scroll-top');
   rankingViewport.setAttribute('aria-label', `${data.rankings.current.length} 个项目的完整关注度排名`);
   let rankingViewportFrame = 0;
@@ -124,6 +126,7 @@ async function init() {
     const atStart = rankingViewport.scrollTop <= 2;
     const atEnd = maxScroll === 0 || rankingViewport.scrollTop >= maxScroll - 2;
     rankingProgressBar.style.width = `${Math.min(100, Math.max(0, progress * 100))}%`;
+    rankingScrollNext.disabled = atEnd;
     rankingScrollTop.disabled = atStart;
     rankingFrame.classList.toggle('is-at-start', atStart);
     rankingFrame.classList.toggle('is-at-end', atEnd);
@@ -223,6 +226,11 @@ async function init() {
     rankingViewport.scrollTo({top: action.top, behavior: 'auto'});
   });
   window.addEventListener('resize', scheduleRankingViewportUpdate, {passive: true});
+  rankingScrollNext.addEventListener('click', () => {
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    const pageStep = Math.max(160, Math.round(rankingViewport.clientHeight * .82));
+    rankingViewport.scrollBy({top: pageStep, behavior});
+  });
   rankingScrollTop.addEventListener('click', () => {
     const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
     rankingViewport.scrollTo({top: 0, behavior});

@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <title>DeepSeek Harness 生态早期雷达</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260815-ranking-frame-3">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -79,8 +79,11 @@
             <strong id="ranking-range">正在计算可见排名…</strong>
           </div>
           <div class="ranking-frame-actions">
-            <span id="ranking-scroll-help">在框内滚动查看全部排名；到达边缘后继续滚动即可浏览下一部分。</span>
-            <button id="ranking-scroll-top" type="button" aria-controls="ranking-viewport" disabled>回到榜首</button>
+            <span id="ranking-scroll-help">固定视窗 · 框内滚动全部排名，榜尾后继续滚动进入下一部分。</span>
+            <span class="ranking-frame-buttons">
+              <button id="ranking-scroll-next" type="button" aria-controls="ranking-viewport" disabled>向下翻榜</button>
+              <button id="ranking-scroll-top" type="button" aria-controls="ranking-viewport" disabled>回到榜首</button>
+            </span>
           </div>
         </div>
         <div class="ranking-progress" aria-hidden="true"><span id="ranking-progress-bar"></span></div>
@@ -153,6 +156,6 @@
     <p><a id="repository-link" class="footer-link" hidden target="_blank" rel="noopener noreferrer">GitHub 仓库</a> <span id="footer-time"></span></p>
   </footer>
   <noscript><p class="noscript">需要启用 JavaScript 才能读取排名数据。</p></noscript>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=20260815-ranking-frame-3"></script>
 </body>
 </html>
