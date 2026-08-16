@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T16:44:28.127Z",
+  "generated_at": "2026-08-16T18:49:43.525Z",
   "candidates": [
     {
       "repo": "0liveiraaa/myDshPresets",
@@ -1050,6 +1050,37 @@
       ]
     },
     {
+      "repo": "6Kmfi6HP/v4-flash-godmode-claude-code",
+      "name": "v4-flash-godmode-claude-code",
+      "owner": "6Kmfi6HP",
+      "url": "https://github.com/6Kmfi6HP/v4-flash-godmode-claude-code",
+      "description": "",
+      "created_at": "2026-08-16T18:42:10Z",
+      "updated_at": "2026-08-16T18:47:03Z",
+      "pushed_at": "2026-08-16T18:46:15Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/6Kmfi6HP/v4-flash-godmode-claude-code#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "781316853/dsh-plan-mode-ext",
       "name": "dsh-plan-mode-ext",
       "owner": "781316853",
@@ -1180,8 +1211,8 @@
       "url": "https://github.com/aburaMSMS/dsh-music",
       "description": "DSH music plugin: NetEase Cloud Music search/playback, synced lyrics, floating ball, and AI chat",
       "created_at": "2026-08-15T08:59:27Z",
-      "updated_at": "2026-08-15T09:43:19Z",
-      "pushed_at": "2026-08-15T09:42:58Z",
+      "updated_at": "2026-08-16T18:02:08Z",
+      "pushed_at": "2026-08-16T18:01:23Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -1194,7 +1225,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T09:44:03.751Z",
-      "last_seen_at": "2026-08-15T09:44:03.751Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -1202,7 +1233,8 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
-        "dsh-plugin in:name,description created:>=2026-08-08"
+        "dsh-plugin in:name,description created:>=2026-08-08",
+        "dsh-plugin in:name,description created:>=2026-08-10"
       ]
     },
     {
@@ -1361,37 +1393,6 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "Andiii208/dsh-remote",
-      "name": "dsh-remote",
-      "owner": "Andiii208",
-      "url": "https://github.com/Andiii208/dsh-remote",
-      "description": "",
-      "created_at": "2026-08-16T07:01:44Z",
-      "updated_at": "2026-08-16T07:02:03Z",
-      "pushed_at": "2026-08-16T07:01:49Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "",
-      "license": "MIT",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-16T07:02:30.891Z",
-      "last_seen_at": "2026-08-16T07:02:30.891Z",
-      "verification": "readme-evidence-not-runtime-tested",
-      "evidence_level": "candidate",
-      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
-      "evidence_url": "https://github.com/Andiii208/dsh-remote#readme",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -2163,6 +2164,37 @@
       ]
     },
     {
+      "repo": "dingminhua/dsh-subagent-default-model",
+      "name": "dsh-subagent-default-model",
+      "owner": "dingminhua",
+      "url": "https://github.com/dingminhua/dsh-subagent-default-model",
+      "description": "",
+      "created_at": "2026-08-16T05:11:56Z",
+      "updated_at": "2026-08-16T18:41:21Z",
+      "pushed_at": "2026-08-16T18:41:09Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "开发与质量工具",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/dingminhua/dsh-subagent-default-model",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "DobeShadow/dsh-session-history",
       "name": "dsh-session-history",
       "owner": "DobeShadow",
@@ -2862,6 +2894,36 @@
       "evidence_url": "https://github.com/fyun520/dsh-plugins",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "gameswu/dsh-cross-collaboration",
+      "name": "dsh-cross-collaboration",
+      "owner": "gameswu",
+      "url": "https://github.com/gameswu/dsh-cross-collaboration",
+      "description": "dsh跨设备agent协作插件",
+      "created_at": "2026-08-16T18:35:20Z",
+      "updated_at": "2026-08-16T18:36:36Z",
+      "pushed_at": "2026-08-16T18:35:48Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/gameswu/dsh-cross-collaboration#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -4957,13 +5019,13 @@
       "url": "https://github.com/LQFHUB/dsh-plugin",
       "description": "自用插件仓库",
       "created_at": "2026-08-15T13:22:31Z",
-      "updated_at": "2026-08-16T12:36:39Z",
-      "pushed_at": "2026-08-16T12:36:15Z",
+      "updated_at": "2026-08-16T18:44:45Z",
+      "pushed_at": "2026-08-16T18:44:23Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
       "open_issues": 0,
-      "language": "TypeScript",
+      "language": "JavaScript",
       "license": "NOASSERTION",
       "topics": [],
       "fork": false,
@@ -4971,14 +5033,15 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T13:45:28.794Z",
-      "last_seen_at": "2026-08-16T13:03:48.093Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
       "evidence_url": "https://github.com/LQFHUB/dsh-plugin",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08",
-        "dsh-plugin in:name,description created:>=2026-08-09"
+        "dsh-plugin in:name,description created:>=2026-08-09",
+        "dsh-plugin in:name,description created:>=2026-08-10"
       ]
     },
     {
@@ -7035,6 +7098,36 @@
       ]
     },
     {
+      "repo": "tanpaopao/dsh-telegram-plugin",
+      "name": "dsh-telegram-plugin",
+      "owner": "tanpaopao",
+      "url": "https://github.com/tanpaopao/dsh-telegram-plugin",
+      "description": "",
+      "created_at": "2026-08-16T18:17:51Z",
+      "updated_at": "2026-08-16T18:18:19Z",
+      "pushed_at": "2026-08-16T18:17:57Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/tanpaopao/dsh-telegram-plugin#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "TheColdWorld/dsh-wsl-keepalive",
       "name": "dsh-wsl-keepalive",
       "owner": "TheColdWorld",
@@ -7246,6 +7339,37 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "U1s1-king/dsh-live2d-afterglow",
+      "name": "dsh-live2d-afterglow",
+      "owner": "U1s1-king",
+      "url": "https://github.com/U1s1-king/dsh-live2d-afterglow",
+      "description": "",
+      "created_at": "2026-08-16T17:44:43Z",
+      "updated_at": "2026-08-16T18:41:29Z",
+      "pushed_at": "2026-08-16T18:41:03Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/U1s1-king/dsh-live2d-afterglow#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -8318,6 +8442,37 @@
       "evidence_url": "https://github.com/youyli03/dsh-palenight-theme",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "yukariyukaro/dsh-rules",
+      "name": "dsh-rules",
+      "owner": "yukariyukaro",
+      "url": "https://github.com/yukariyukaro/dsh-rules",
+      "description": "",
+      "created_at": "2026-08-16T18:46:29Z",
+      "updated_at": "2026-08-16T18:47:59Z",
+      "pushed_at": "2026-08-16T18:47:47Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T18:49:43.525Z",
+      "last_seen_at": "2026-08-16T18:49:43.525Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/yukariyukaro/dsh-rules#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
