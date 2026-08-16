@@ -162,11 +162,13 @@ if (config.public_site_url && !readme.includes(config.public_site_url)) errors.p
 if (!html.includes('Content-Security-Policy')) errors.push('Static page is missing a Content Security Policy');
 if (!html.includes("script-src 'self' https://static.cloudflareinsights.com/beacon.min.js")) errors.push('Static page CSP must allow the Cloudflare Web Analytics beacon');
 if (!html.includes("connect-src 'self' https://cloudflareinsights.com")) errors.push('Static page CSP must allow Cloudflare Web Analytics data uploads');
+if (!html.includes("img-src 'self' data: https://github.com https://avatars.githubusercontent.com")) errors.push('Static page CSP must allow validated GitHub avatar images');
 if (!html.includes('<meta name="referrer" content="same-origin">')) errors.push('Static page must preserve same-origin referrers for Cloudflare Web Analytics');
 if (!html.includes('aria-live="polite"')) errors.push('Static page is missing live ranking feedback');
 if (!html.includes('id="ranking-table"') || !html.includes('id="region"') || !app.includes('colspan="9"')) errors.push('Static ranking table structure is incomplete');
-if (!html.includes('id="ranking-viewport"') || !html.includes('id="ranking-range"') || !html.includes('id="ranking-scroll-next"') || !html.includes('mobile-cards-1') || !app.includes('updateRankingViewport') || !app.includes('PageDown') || !styles.includes('.ranking-viewport thead th { position: sticky;')) errors.push('Scrollable ranking viewport is incomplete');
+if (!html.includes('id="ranking-viewport"') || !html.includes('id="ranking-range"') || !html.includes('id="ranking-scroll-next"') || !html.includes('avatar-orbit-1') || !app.includes('updateRankingViewport') || !app.includes('PageDown') || !styles.includes('.ranking-viewport thead th { position: sticky;')) errors.push('Scrollable ranking viewport is incomplete');
 if (!app.includes('data-label="排名"') || !app.includes('data-label="分类排名"') || !styles.includes('@media (max-width: 640px)') || !styles.includes('#ranking-table tbody {') || !styles.includes('.category-table tbody {')) errors.push('Mobile card layouts are incomplete');
+if (!html.includes('id="ecosystem-top20"') || !html.includes('id="planet-leaders"') || !html.includes('id="planet-detail"') || !app.includes('githubAvatarUrl') || !app.includes('renderPlanetDetail') || !app.includes('slice(0, 20)') || !styles.includes('.orb-rank-20') || !styles.includes('--orb-size-mobile')) errors.push('Top 20 GitHub avatar orbit is incomplete');
 if (!html.includes('id="category-ranking"') || !html.includes('data-category-sort="stars"') || !app.includes('renderCategoryRanking')) errors.push('Static category leaderboard is incomplete');
 if (!categoryCsv.startsWith('rank_by_stars,rank_by_projects,rank_by_momentum,category,')) errors.push('Category CSV header is incomplete');
 if (categoryCsv.trim().split('\n').length !== rankings.category_rankings.length + 1) errors.push('Category CSV row count mismatch');

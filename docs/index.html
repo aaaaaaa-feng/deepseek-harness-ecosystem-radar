@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js; style-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js; style-src 'self'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="same-origin">
   <meta name="description" content="按小时更新的 DeepSeek Harness GitHub 生态早期雷达">
   <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <title>DeepSeek Harness 生态早期雷达</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=20260816-mobile-cards-1">
+  <link rel="stylesheet" href="./styles.css?v=20260816-avatar-orbit-1">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -20,9 +20,9 @@
     <nav class="nav" aria-label="主导航">
       <a class="brand" href="#top">DSH / RADAR</a>
       <div class="nav-links">
+        <a href="#ecosystem-top20">星球</a>
         <a href="#ranking">排名</a>
         <a href="#category-ranking">分类榜</a>
-        <a href="#momentum">趋势</a>
         <a href="#methodology">方法</a>
       </div>
     </nav>
@@ -52,6 +52,31 @@
       <article><span>历史快照</span><strong id="snapshot-count">—</strong></article>
       <article><span>最新数据</span><strong class="date-metric" id="snapshot-date">—</strong></article>
       <article class="location-metric"><span>维护者公开所在地</span><strong id="region-counts">—</strong><small id="region-unknown">正在统计…</small></article>
+    </section>
+
+    <section class="ecosystem-planet section" id="ecosystem-top20" aria-labelledby="ecosystem-top20-title">
+      <div class="section-head planet-section-head">
+        <div>
+          <p class="eyebrow">ECOSYSTEM AVATAR ORBIT</p>
+          <h2 id="ecosystem-top20-title">生态头像星球 · Top 20</h2>
+          <p>每个圆形代表一个开源项目，头像来自维护者的公开 GitHub 资料。名次越靠前，头像越大。</p>
+        </div>
+        <div class="planet-legend" aria-label="图例">
+          <span><i class="legend-dot legend-rank" aria-hidden="true"></i>大小 = 当前名次</span>
+          <span><i class="legend-dot legend-category" aria-hidden="true"></i>光环 = 功能分类</span>
+        </div>
+      </div>
+      <div class="planet-layout">
+        <div class="planet-stage" id="planet-stage" role="region" aria-label="当前关注度排名前二十项目头像图">
+          <div class="planet-stage-label" aria-hidden="true"><span>LIVE ORBIT</span><strong>20</strong></div>
+          <div class="planet-leaders" id="planet-leaders" role="list" aria-label="前三名项目"></div>
+          <div class="planet-field" id="planet-field" role="list" aria-label="第四至第二十名项目"></div>
+        </div>
+        <article class="planet-detail" id="planet-detail" aria-live="polite" aria-atomic="true">
+          <p class="planet-detail-loading">正在装载 Top 20 项目…</p>
+        </article>
+      </div>
+      <p class="planet-boundary">头像大小只表达当前关注度名次，不表示项目质量、实际用户数，也不表示规模差距的倍数。点击或聚焦头像可查看项目详情。</p>
     </section>
 
     <section class="section" id="ranking">
@@ -156,6 +181,6 @@
     <p><a id="repository-link" class="footer-link" hidden target="_blank" rel="noopener noreferrer">GitHub 仓库</a> <span id="footer-time"></span></p>
   </footer>
   <noscript><p class="noscript">需要启用 JavaScript 才能读取排名数据。</p></noscript>
-  <script type="module" src="./app.js?v=20260816-mobile-cards-1"></script>
+  <script type="module" src="./app.js?v=20260816-avatar-orbit-1"></script>
 </body>
 </html>

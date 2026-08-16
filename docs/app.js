@@ -30,6 +30,22 @@ const safeGithubUrl = value => {
     return '#';
   }
 };
+const githubLoginFor = item => {
+  const login = String(item?.developer?.login || item?.repo?.split('/')[0] || '').trim();
+  return /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/.test(login) ? login : '';
+};
+const githubAvatarUrl = login => login
+  ? `https://github.com/${encodeURIComponent(login)}.png?size=240`
+  : '';
+const avatarInitials = login => {
+  const letters = String(login || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 2).toUpperCase();
+  return letters || 'GH';
+};
+const repositoryName = repo => String(repo || '').split('/').filter(Boolean).at(-1) || 'project';
+const planetAccentClass = category => {
+  const hash = [...String(category || '')].reduce((total, character) => (total * 31 + character.codePointAt(0)) >>> 0, 0);
+  return `planet-accent-${hash % 6}`;
+};
 
 function showFatalError(error) {
   $('#freshness').textContent = '数据加载失败，请稍后刷新或查看仓库状态页';
@@ -41,6 +57,9 @@ function showFatalError(error) {
   $('#ranking-body').innerHTML = '<tr><td class="empty-state" colspan="9"><span>无法读取最新快照。已发布的历史数据不会因此被改写。</span></td></tr>';
   $('#category-podium').textContent = '分类榜暂时不可用';
   $('#category-ranking-body').innerHTML = '<tr><td class="empty-state" colspan="7"><span>无法读取分类数据。</span></td></tr>';
+  $('#planet-leaders').textContent = '';
+  $('#planet-field').textContent = '';
+  $('#planet-detail').innerHTML = '<p class="planet-detail-loading">头像星球暂时无法读取，请稍后刷新。</p>';
   $('#movers').innerHTML = '<li><span class="index">!</span><span>暂时无法读取趋势</span><small>请稍后重试</small></li>';
   $('#category-bars').textContent = '分类数据暂时不可用';
   console.error('Radar initialization failed', error);
@@ -86,6 +105,126 @@ async function init() {
     ? '由 Stars 与 Forks 的对数分数计算；当前只有一个快照，变化列暂不生成。'
     : `由 Stars 与 Forks 的对数分数计算；变化列使用真实 ${windowHours} 小时快照窗口。`;
   $('#window-header').textContent = windowHours == null ? '窗口 Stars Δ' : `${windowHours}h Stars Δ`;
+
+  const planetItems = data.rankings.current.slice(0, 20);
+  const planetStage = $('#planet-stage');
+  const planetDetail = $('#planet-detail');
+  const planetLeaders = $('#planet-leaders');
+  const planetField = $('#planet-field');
+
+  const renderPlanetOrb = (item, index) => {
+    const rank = Number(item.rank) || index + 1;
+    const login = githubLoginFor(item);
+    const avatarUrl = githubAvatarUrl(login);
+    const avatarImage = avatarUrl
+      ? `<img src="${escapeHtml(avatarUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-github-avatar>`
+      : '';
+    const label = `第 ${rank} 名，${item.repo}，${format(item.stars)} Stars，查看项目详情`;
+    return `
+      <div class="planet-item orb-rank-${rank} ${planetAccentClass(item.category)}" role="listitem" data-orbit-rank="${rank}">
+        <button class="project-orb${avatarUrl ? '' : ' avatar-missing'}" type="button" data-planet-index="${index}" aria-pressed="false" aria-label="${escapeHtml(label)}">
+          <span class="orb-avatar" aria-hidden="true">
+            <span class="orb-fallback">${escapeHtml(avatarInitials(login))}</span>
+            ${avatarImage}
+            <span class="orb-rank">#${String(rank).padStart(2, '0')}</span>
+          </span>
+          <span class="orb-repo">${escapeHtml(repositoryName(item.repo))}</span>
+          <span class="orb-author">@${escapeHtml(login || 'unknown')}</span>
+        </button>
+      </div>`;
+  };
+
+  const rankChangeText = value => {
+    const number = Number(value);
+    if (value == null || !Number.isFinite(number)) return '首次进入可比窗口，暂无排名变化';
+    if (number > 0) return `较上一可比快照上升 ${number} 位`;
+    if (number < 0) return `较上一可比快照下降 ${Math.abs(number)} 位`;
+    return '较上一可比快照名次不变';
+  };
+
+  function renderPlanetDetail(item) {
+    const rank = Number(item.rank) || 0;
+    const developer = item.developer || {};
+    const login = githubLoginFor(item);
+    const avatarUrl = githubAvatarUrl(login);
+    const repositoryUrl = safeGithubUrl(item.url);
+    const profileUrl = safeGithubUrl(developer.profile_url || (login ? `https://github.com/${login}` : ''));
+    const windowLabel = windowHours == null ? '窗口 Stars Δ' : `${windowHours}h Stars Δ`;
+    const description = item.description_zh || item.description || '暂无简短说明。';
+    const avatarImage = avatarUrl
+      ? `<img src="${escapeHtml(avatarUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-github-avatar>`
+      : '';
+    planetDetail.className = `planet-detail ${planetAccentClass(item.category)}${avatarUrl ? '' : ' avatar-missing'}`;
+    planetDetail.innerHTML = `
+      <div class="planet-detail-header">
+        <div class="planet-detail-avatar" aria-hidden="true">
+          <span class="orb-fallback">${escapeHtml(avatarInitials(login))}</span>
+          ${avatarImage}
+        </div>
+        <div>
+          <p class="planet-detail-kicker">CURRENT ATTENTION · #${String(rank).padStart(2, '0')}</p>
+          <h3>${escapeHtml(item.repo)}</h3>
+          <p class="planet-maintainer">维护者 ${profileUrl === '#' ? `@${escapeHtml(login || 'unknown')}` : `<a href="${profileUrl}" target="_blank" rel="noopener noreferrer">@${escapeHtml(login)}</a>`}</p>
+        </div>
+      </div>
+      <div class="planet-tags">
+        <span>${escapeHtml(item.category || '未分类')}</span>
+        <span>${escapeHtml(developer.region_label || '所在地未知')}</span>
+      </div>
+      <p class="planet-description">${escapeHtml(description)}</p>
+      <dl class="planet-stats">
+        <div><dt>Stars</dt><dd>${format(item.stars)}</dd></div>
+        <div><dt>Forks</dt><dd>${format(item.forks)}</dd></div>
+        <div><dt>关注分</dt><dd>${formatScore(item.attention_score)}</dd></div>
+        <div><dt>${escapeHtml(windowLabel)}</dt><dd class="${deltaClass(item.stars_delta)}">${signed(item.stars_delta)}</dd></div>
+      </dl>
+      <p class="planet-rank-change">${escapeHtml(rankChangeText(item.rank_change))}</p>
+      ${repositoryUrl === '#' ? '' : `<a class="planet-repo-cta" href="${repositoryUrl}" target="_blank" rel="noopener noreferrer">打开 GitHub 仓库 <span aria-hidden="true">↗</span></a>`}`;
+  }
+
+  function activatePlanetItem(index, {focus = false} = {}) {
+    const item = planetItems[index];
+    if (!item) return;
+    planetStage.querySelectorAll('.project-orb').forEach(button => {
+      button.setAttribute('aria-pressed', String(Number(button.dataset.planetIndex) === index));
+    });
+    renderPlanetDetail(item);
+    if (focus) planetStage.querySelector(`[data-planet-index="${index}"]`)?.focus();
+  }
+
+  if (planetItems.length) {
+    planetLeaders.innerHTML = planetItems.slice(0, 3).map(renderPlanetOrb).join('');
+    planetField.innerHTML = planetItems.slice(3).map((item, fieldIndex) => renderPlanetOrb(item, fieldIndex + 3)).join('');
+    activatePlanetItem(0);
+  } else {
+    planetDetail.innerHTML = '<p class="planet-detail-loading">当前快照还没有可展示的项目。</p>';
+  }
+
+  planetStage.addEventListener('click', event => {
+    const button = event.target.closest('[data-planet-index]');
+    if (button) activatePlanetItem(Number(button.dataset.planetIndex));
+  });
+  planetStage.addEventListener('focusin', event => {
+    const button = event.target.closest('[data-planet-index]');
+    if (button) activatePlanetItem(Number(button.dataset.planetIndex));
+  });
+  planetStage.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    const button = event.target.closest('[data-planet-index]');
+    if (!button) return;
+    const step = ['ArrowLeft', 'ArrowUp'].includes(event.key) ? -1 : 1;
+    const nextIndex = (Number(button.dataset.planetIndex) + step + planetItems.length) % planetItems.length;
+    event.preventDefault();
+    activatePlanetItem(nextIndex, {focus: true});
+  });
+  planetStage.addEventListener('error', event => {
+    if (!event.target.matches('img[data-github-avatar]')) return;
+    event.target.closest('.project-orb, .planet-detail')?.classList.add('avatar-missing');
+  }, true);
+  planetDetail.addEventListener('error', event => {
+    if (!event.target.matches('img[data-github-avatar]')) return;
+    planetDetail.classList.add('avatar-missing');
+  }, true);
 
   const categorySelect = $('#category');
   for (const item of data.rankings.categories) {
