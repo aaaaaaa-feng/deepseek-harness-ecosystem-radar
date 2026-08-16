@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-15T23:37:31.276Z",
+  "generated_at": "2026-08-16T01:59:18.176Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -10,6 +10,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "1624318455/rvc-for-tts",
+      "url": "https://github.com/1624318455/rvc-for-tts",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -39,6 +48,16 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "abc12524/custom-file",
+      "url": "https://github.com/abc12524/custom-file",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T22:41:17.122Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -508,6 +527,16 @@
       ]
     },
     {
+      "repo": "huawaimen/Olivia-Lin-in-DeepSeek-Harness",
+      "url": "https://github.com/huawaimen/Olivia-Lin-in-DeepSeek-Harness",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "Hunterleeeee/deepseek-harness--electron",
       "url": "https://github.com/Hunterleeeee/deepseek-harness--electron",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -552,15 +581,6 @@
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "jhonden/my-dsh-plugins",
-      "url": "https://github.com/jhonden/my-dsh-plugins",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T09:44:03.751Z",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-08"
       ]
     },
     {
@@ -743,6 +763,16 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Luisarg03/tabimichi",
+      "url": "https://github.com/Luisarg03/tabimichi",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1022,6 +1052,16 @@
       ]
     },
     {
+      "repo": "sandbaseai/dsh101",
+      "url": "https://github.com/sandbaseai/dsh101",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "Saolence/pi-dsh-optimizer",
       "url": "https://github.com/Saolence/pi-dsh-optimizer",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1073,6 +1113,15 @@
       "url": "https://github.com/sinaghadermarzi/agentic-lab",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T23:37:31.276Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "snake-aabb-wtf/LumiAgent",
+      "url": "https://github.com/snake-aabb-wtf/LumiAgent",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
@@ -1159,7 +1208,9 @@
       "discovered_at": "2026-08-15T15:38:22.172Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1386,10 +1437,10 @@
       ]
     },
     {
-      "repo": "zereraz/dsh-native",
-      "url": "https://github.com/zereraz/dsh-native",
+      "repo": "Zenjibad/headroom-stats-plugin",
+      "url": "https://github.com/Zenjibad/headroom-stats-plugin",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T23:37:31.276Z",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
