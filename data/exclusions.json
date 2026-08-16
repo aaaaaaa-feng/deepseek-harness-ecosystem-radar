@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T03:15:18.001Z",
+  "generated_at": "2026-08-16T04:04:26.371Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -48,6 +48,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "AAA-STM32XinPianPiFaWangGe/DeepSeekHarness--",
+      "url": "https://github.com/AAA-STM32XinPianPiFaWangGe/DeepSeekHarness--",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:04:26.371Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -105,7 +114,8 @@
       "reason": "资料型、教程型或纯清单仓库",
       "discovered_at": "2026-08-16T03:15:18.001Z",
       "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "topic:deepseek-harness created:>=2026-08-09"
       ]
     },
     {
@@ -406,16 +416,6 @@
       ]
     },
     {
-      "repo": "fatiaowu-desktop/fatiaowu-desktop",
-      "url": "https://github.com/fatiaowu-desktop/fatiaowu-desktop",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T15:38:22.172Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
       "repo": "fcoury/local-models",
       "url": "https://github.com/fcoury/local-models",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -583,6 +583,15 @@
       "discovered_at": "2026-08-15T07:00:35.967Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "Indosaram/omo-bridge",
+      "url": "https://github.com/Indosaram/omo-bridge",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:04:26.371Z",
+      "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
@@ -792,15 +801,6 @@
       "discovered_at": "2026-08-15T13:01:28.517Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "linjianyu233/my-dsh-plugins",
-      "url": "https://github.com/linjianyu233/my-dsh-plugins",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-16T03:15:18.001Z",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -1542,15 +1542,6 @@
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
-      "repo": "zouxiaoyang/deepseek-vision-bridge",
-      "url": "https://github.com/zouxiaoyang/deepseek-vision-bridge",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-16T03:15:18.001Z",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
