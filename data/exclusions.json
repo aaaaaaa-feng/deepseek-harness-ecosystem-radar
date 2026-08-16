@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T04:52:02.213Z",
+  "generated_at": "2026-08-16T05:46:21.920Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -126,6 +126,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "ashuai/localai",
+      "url": "https://github.com/ashuai/localai",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T05:46:21.920Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -870,6 +879,15 @@
       ]
     },
     {
+      "repo": "MemTensor/MemOS-Cloud-Dsh-Plugin",
+      "url": "https://github.com/MemTensor/MemOS-Cloud-Dsh-Plugin",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T05:46:21.920Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "mfzzf/astraflow-cli",
       "url": "https://github.com/mfzzf/astraflow-cli",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -896,6 +914,16 @@
       "discovered_at": "2026-08-15T18:50:16.099Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "n0bele/AntiAIMark",
+      "url": "https://github.com/n0bele/AntiAIMark",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T05:46:21.920Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1139,6 +1167,16 @@
       "url": "https://github.com/salathleizhang/deepseek-harness-phone",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T16:44:17.939Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "sandbaseai/dsh101",
+      "url": "https://github.com/sandbaseai/dsh101",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T01:59:18.176Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
@@ -1539,6 +1577,16 @@
       "url": "https://github.com/Zenjibad/headroom-stats-plugin",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-16T01:59:18.176Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "zhangfeite/meridian",
+      "url": "https://github.com/zhangfeite/meridian",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T22:41:17.122Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
