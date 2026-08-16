@@ -2,14 +2,14 @@
 
 DeepSeek Harness 生态早期雷达更新：
 
-- 已确认观察项目：2907
-- 当前关注度第 1：anywhere-labs/deepseek-harness-desktop（8399 stars）
-- Stars 总量第一分类：插件管理与生态工具（10370 stars）
-- 1.6h 窗口动量：awesome-dsh-plugin/awesome-dsh-plugin（+282 stars）
-- 最近创建项目：Aaaaamadeus/dsh-gui
-- 公开所在地（维护者账号）：国内 375 / 海外 47 / 未知 1961
-- 中文可读简介：1507/2907
-- 数据时点：2026-08-16T14:42:37.510Z
+- 已确认观察项目：3008
+- 当前关注度第 1：anywhere-labs/deepseek-harness-desktop（8666 stars）
+- Stars 总量第一分类：插件管理与生态工具（10719 stars）
+- 2h 窗口动量：awesome-dsh-plugin/awesome-dsh-plugin（+292 stars）
+- 最近创建项目：PerryLink/dsh-observe
+- 公开所在地（维护者账号）：国内 384 / 海外 48 / 未知 2027
+- 中文可读简介：1561/3008
+- 数据时点：2026-08-16T16:44:28.127Z
 
 https://deepseek-harness-ecosystem-radar.pages.dev/
 

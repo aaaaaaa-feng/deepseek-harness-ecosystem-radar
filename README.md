@@ -68,20 +68,20 @@ README 以长期有效的项目说明为主，只保留一个按小时更新的�
 这一小段与在线雷达使用同一份小时快照。它不是实时榜单；任务延迟或失败时会保留上一份成功结果，并继续显示对应的数据时点。
 
 <!-- RADAR_TOP10_START -->
-**数据时点：** `2026-08-16T14:42:37.510Z`　·　**观察窗口：** 1.6 小时
+**数据时点：** `2026-08-16T16:44:28.127Z`　·　**观察窗口：** 2 小时
 
 | 排名 | 项目 | 分类 | Stars | Forks | 窗口 Stars Δ | 关注分 |
 | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 插件管理与生态工具 | 8399 | 343 | +299 | 350.8 |
-| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 其他实现型扩展 | 4473 | 811 | +282 | 342.84 |
-| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 2846 | 90 | +87 | 300.58 |
-| 4 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 1049 | 35 | +20 | 258.17 |
-| 5 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 插件管理与生态工具 | 510 | 42 | +39 | 238.59 |
-| 6 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 461 | 48 | +21 | 237.23 |
-| 7 | [zouyuxuan122/Deepseek-Harness-EAC](https://github.com/zouyuxuan122/Deepseek-Harness-EAC) | 桌面端与启动器 | 490 | 11 | +34 | 220.75 |
-| 8 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 374 | 18 | +36 | 218.54 |
-| 9 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 桌面端与启动器 | 361 | 18 | +11 | 217.47 |
-| 10 | [Electricitysheep/dsh-handbook](https://github.com/Electricitysheep/dsh-handbook) | 其他实现型扩展 | 348 | 12 | +6 | 211.42 |
+| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 插件管理与生态工具 | 8666 | 356 | +267 | 352.23 |
+| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 其他实现型扩展 | 4765 | 841 | +292 | 345.23 |
+| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 2944 | 92 | +98 | 301.89 |
+| 4 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 1073 | 35 | +24 | 258.86 |
+| 5 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 插件管理与生态工具 | 541 | 45 | +31 | 241.26 |
+| 6 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 484 | 51 | +23 | 239.48 |
+| 7 | [zouyuxuan122/Deepseek-Harness-EAC](https://github.com/zouyuxuan122/Deepseek-Harness-EAC) | 桌面端与启动器 | 524 | 14 | +34 | 225.69 |
+| 8 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 405 | 19 | +31 | 221.63 |
+| 9 | [myYangyunfan/dsh_desktop](https://github.com/myYangyunfan/dsh_desktop) | 桌面端与启动器 | 370 | 18 | +9 | 218.22 |
+| 10 | [Electricitysheep/dsh-handbook](https://github.com/Electricitysheep/dsh-handbook) | 其他实现型扩展 | 360 | 14 | +12 | 214.31 |
 <!-- RADAR_TOP10_END -->
 
 关注度只反映可公开复算的 GitHub 信号，不代表项目质量、安全性或真实用户数。[查看完整排名 →](https://deepseek-harness-ecosystem-radar.pages.dev/#ranking)
