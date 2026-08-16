@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T13:03:48.093Z",
+  "generated_at": "2026-08-16T14:42:37.510Z",
   "exclusions": [
     {
       "repo": "0liveiraaa/DeepseekCotexplorations",
@@ -105,6 +105,16 @@
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "AndyYang12345/butler-memory-mcp",
+      "url": "https://github.com/AndyYang12345/butler-memory-mcp",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -406,6 +416,16 @@
       ]
     },
     {
+      "repo": "eafen405/local-api-relay",
+      "url": "https://github.com/eafen405/local-api-relay",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "Eclipse-NotFound/F1-Race-Engine",
       "url": "https://github.com/Eclipse-NotFound/F1-Race-Engine",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -458,6 +478,15 @@
       "discovered_at": "2026-08-15T16:44:17.939Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "evanwtf/local-llm",
+      "url": "https://github.com/evanwtf/local-llm",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
@@ -628,6 +657,16 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T20:42:14.425Z",
       "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "HQ1995/deepseek-code",
+      "url": "https://github.com/HQ1995/deepseek-code",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
@@ -855,6 +894,26 @@
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "leostudiooo/lyriseek",
+      "url": "https://github.com/leostudiooo/lyriseek",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "leotangjc/plan-execute",
+      "url": "https://github.com/leotangjc/plan-execute",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1132,6 +1191,16 @@
       ]
     },
     {
+      "repo": "Nothing-is-important/Aurora",
+      "url": "https://github.com/Nothing-is-important/Aurora",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "NovaAgentZero/DeepSeekHarnessNoveAgent",
       "url": "https://github.com/NovaAgentZero/DeepSeekHarnessNoveAgent",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1192,6 +1261,15 @@
       "url": "https://github.com/pengtianhao48-lab/watermarks-remover",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-16T07:02:30.891Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "pholex/zhinu",
+      "url": "https://github.com/pholex/zhinu",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
@@ -1557,6 +1635,17 @@
       ]
     },
     {
+      "repo": "TianYa-DAO/dsh-wallpaper-engine",
+      "url": "https://github.com/TianYa-DAO/dsh-wallpaper-engine",
+      "reason": "资料型、教程型或纯清单仓库",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09",
+        "topic:dsh-plugin created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "tianyin231/codely-dsh-bridge",
       "url": "https://github.com/tianyin231/codely-dsh-bridge",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1605,7 +1694,8 @@
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T13:01:28.517Z",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-08"
+        "dsh-plugin in:name,description created:>=2026-08-08",
+        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -1711,6 +1801,16 @@
       "discovered_at": "2026-08-16T04:52:02.213Z",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "warm-flame-core/new-project-init",
+      "url": "https://github.com/warm-flame-core/new-project-init",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1835,6 +1935,15 @@
       ]
     },
     {
+      "repo": "yingmohaishan/feibo-flash-",
+      "url": "https://github.com/yingmohaishan/feibo-flash-",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "yolorouter/llmasking-ts",
       "url": "https://github.com/yolorouter/llmasking-ts",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1851,6 +1960,15 @@
       "discovered_at": "2026-08-16T10:43:20.469Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "yulia674e-cmd/emotion-lens",
+      "url": "https://github.com/yulia674e-cmd/emotion-lens",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1880,6 +1998,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "zhangcheng-zzz/dsh_plugin",
+      "url": "https://github.com/zhangcheng-zzz/dsh_plugin",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T14:42:37.510Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
