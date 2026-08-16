@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T20:41:37.571Z",
+  "generated_at": "2026-08-16T22:40:11.928Z",
   "candidates": [
     {
       "repo": "0liveiraaa/myDshPresets",
@@ -1335,6 +1335,39 @@
       ]
     },
     {
+      "repo": "Alleyfoo/learning-lab",
+      "url": "https://github.com/Alleyfoo/learning-lab",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T20:41:37.571Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ],
+      "name": "learning-lab",
+      "owner": "Alleyfoo",
+      "description": "Learning for llm data systems",
+      "created_at": "2026-08-16T16:56:04Z",
+      "updated_at": "2026-08-16T22:23:29Z",
+      "pushed_at": "2026-08-16T22:23:19Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Python",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T20:41:37.571Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/Alleyfoo/learning-lab#readme"
+    },
+    {
       "repo": "aloneusername/dsh-plugin-manager",
       "name": "dsh-plugin-manager",
       "owner": "aloneusername",
@@ -2103,6 +2136,36 @@
       ]
     },
     {
+      "repo": "coreyleung-art/dsh-plugin-repo-pipeline",
+      "name": "dsh-plugin-repo-pipeline",
+      "owner": "coreyleung-art",
+      "url": "https://github.com/coreyleung-art/dsh-plugin-repo-pipeline",
+      "description": "",
+      "created_at": "2026-08-16T11:21:42Z",
+      "updated_at": "2026-08-16T21:31:21Z",
+      "pushed_at": "2026-08-16T21:31:13Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T22:40:11.928Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/coreyleung-art/dsh-plugin-repo-pipeline#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "cupen/dsh-workbench",
       "name": "dsh-workbench",
       "owner": "cupen",
@@ -2161,6 +2224,37 @@
       "evidence_url": "https://github.com/cxj6667/dsh-doubao-vision-plugin",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Da-AiXZ/velum-dsh",
+      "name": "velum-dsh",
+      "owner": "Da-AiXZ",
+      "url": "https://github.com/Da-AiXZ/velum-dsh",
+      "description": "",
+      "created_at": "2026-08-16T21:41:24Z",
+      "updated_at": "2026-08-16T22:21:00Z",
+      "pushed_at": "2026-08-16T22:20:37Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "C",
+      "license": "GPL-3.0",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T22:40:11.928Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/Da-AiXZ/velum-dsh#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -2887,11 +2981,11 @@
       "status": "active",
       "category": "开发与质量工具",
       "first_seen_at": "2026-08-16T20:41:37.571Z",
-      "last_seen_at": "2026-08-16T20:41:37.571Z",
-      "verification": "metadata-only",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/fonlan/dsh-task-kanban",
+      "evidence_url": "https://github.com/fonlan/dsh-task-kanban#readme",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-10"
       ]
@@ -3754,6 +3848,36 @@
       "evidence_url": "https://github.com/hzhz314159/dsh-side-session",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "id5463/dshd-green",
+      "name": "dshd-green",
+      "owner": "id5463",
+      "url": "https://github.com/id5463/dshd-green",
+      "description": "",
+      "created_at": "2026-08-16T21:58:14Z",
+      "updated_at": "2026-08-16T21:58:29Z",
+      "pushed_at": "2026-08-16T21:58:18Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-16T22:40:11.928Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/id5463/dshd-green#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -6515,37 +6639,6 @@
       ]
     },
     {
-      "repo": "rin721/dsh-docker",
-      "name": "dsh-docker",
-      "owner": "rin721",
-      "url": "https://github.com/rin721/dsh-docker",
-      "description": "",
-      "created_at": "2026-08-16T19:15:33Z",
-      "updated_at": "2026-08-16T20:35:38Z",
-      "pushed_at": "2026-08-16T20:35:19Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "Shell",
-      "license": "NOASSERTION",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "终端与部署",
-      "first_seen_at": "2026-08-16T20:41:37.571Z",
-      "last_seen_at": "2026-08-16T20:41:37.571Z",
-      "verification": "readme-evidence-not-runtime-tested",
-      "evidence_level": "candidate",
-      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
-      "evidence_url": "https://github.com/rin721/dsh-docker#readme",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
-        "deepseek-harness in:name,description,readme created:>=2026-08-10"
-      ]
-    },
-    {
       "repo": "RogueServitor-495/dsh-custom-plugins",
       "name": "dsh-custom-plugins",
       "owner": "RogueServitor-495",
@@ -6941,6 +7034,39 @@
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
       ]
+    },
+    {
+      "repo": "simhaonline/aiops",
+      "url": "https://github.com/simhaonline/aiops",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T20:41:37.571Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ],
+      "name": "aiops",
+      "owner": "simhaonline",
+      "description": "Simha AiOps is a production-oriented collection of lifecycle managers for operating an AI development/inference server without mixing every runtime into one monolithic installer.",
+      "created_at": "2026-08-16T13:44:21Z",
+      "updated_at": "2026-08-16T22:33:50Z",
+      "pushed_at": "2026-08-16T22:33:25Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Shell",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "终端与部署",
+      "first_seen_at": "2026-08-16T20:41:37.571Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/simhaonline/aiops#readme"
     },
     {
       "repo": "sixtysevenlf/dsh-opencode-go-monitor",
@@ -8294,6 +8420,41 @@
       ]
     },
     {
+      "repo": "YaserXuanFrankFaraz/PengPilot",
+      "url": "https://github.com/YaserXuanFrankFaraz/PengPilot",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T09:44:03.751Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ],
+      "name": "PengPilot",
+      "owner": "YaserXuanFrankFaraz",
+      "description": "A fast native desktop control plane for local coding agents. Forked from Waku.",
+      "created_at": "2026-08-14T19:14:51Z",
+      "updated_at": "2026-08-16T22:28:08Z",
+      "pushed_at": "2026-08-16T22:28:02Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Rust",
+      "license": "GPL-3.0",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "桌面端与启动器",
+      "first_seen_at": "2026-08-15T09:44:03.751Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/YaserXuanFrankFaraz/PengPilot#readme"
+    },
+    {
       "repo": "YBQ-FF/my-first-project-8-16",
       "name": "my-first-project-8-16",
       "owner": "YBQ-FF",
@@ -8536,36 +8697,6 @@
       ]
     },
     {
-      "repo": "YUCONG-28/dsh-skills-plugins",
-      "name": "dsh-skills-plugins",
-      "owner": "YUCONG-28",
-      "url": "https://github.com/YUCONG-28/dsh-skills-plugins",
-      "description": "",
-      "created_at": "2026-08-16T14:00:48Z",
-      "updated_at": "2026-08-16T20:05:28Z",
-      "pushed_at": "2026-08-16T20:04:47Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "Python",
-      "license": "MIT",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-16T20:41:37.571Z",
-      "last_seen_at": "2026-08-16T20:41:37.571Z",
-      "verification": "metadata-only",
-      "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/YUCONG-28/dsh-skills-plugins",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
-      ]
-    },
-    {
       "repo": "yukariyukaro/dsh-rules",
       "name": "dsh-rules",
       "owner": "yukariyukaro",
@@ -8648,7 +8779,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-16T20:41:37.571Z",
-      "last_seen_at": "2026-08-16T20:41:37.571Z",
+      "last_seen_at": "2026-08-16T22:40:11.928Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
