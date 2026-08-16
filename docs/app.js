@@ -178,15 +178,15 @@ async function init() {
       const description = item.description_zh || item.description || '暂无简短说明';
       return `
       <tr data-rank="${Number(item.rank)}">
-        <td class="numeric">${format(item.rank)}</td>
-        <td><a class="repo-link" href="${safeGithubUrl(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.repo)}</a><div class="repo-desc">${escapeHtml(description)}</div>${original}</td>
-        <td><a class="region-badge region-${escapeHtml(developer.region || 'unknown')}" href="${safeGithubUrl(developer.profile_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(developer.region_label || '未知')}</a><div class="region-location">${escapeHtml(developer.location || '未公开')}</div></td>
-        <td>${escapeHtml(item.category)}</td>
-        <td class="numeric">${format(item.stars)}</td>
-        <td class="numeric">${format(item.forks)}</td>
-        <td class="numeric">${formatScore(item.attention_score)}</td>
-        <td class="numeric ${deltaClass(item.stars_delta)}">${signed(item.stars_delta)}</td>
-        <td class="numeric ${deltaClass(item.rank_change)}">${signed(item.rank_change)}</td>
+        <td class="numeric" data-label="排名">${format(item.rank)}</td>
+        <td data-label="项目"><a class="repo-link" href="${safeGithubUrl(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.repo)}</a><div class="repo-desc">${escapeHtml(description)}</div>${original}</td>
+        <td data-label="维护者公开所在地"><a class="region-badge region-${escapeHtml(developer.region || 'unknown')}" href="${safeGithubUrl(developer.profile_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(developer.region_label || '未知')}</a><div class="region-location">${escapeHtml(developer.location || '未公开')}</div></td>
+        <td data-label="分类">${escapeHtml(item.category)}</td>
+        <td class="numeric" data-label="Stars">${format(item.stars)}</td>
+        <td class="numeric" data-label="Forks">${format(item.forks)}</td>
+        <td class="numeric" data-label="关注分">${formatScore(item.attention_score)}</td>
+        <td class="numeric ${deltaClass(item.stars_delta)}" data-label="窗口 Stars Δ">${signed(item.stars_delta)}</td>
+        <td class="numeric ${deltaClass(item.rank_change)}" data-label="排名变化">${signed(item.rank_change)}</td>
       </tr>`;
     }).join('') : '<tr><td class="empty-state" colspan="9"><span>没有匹配项目。清空搜索词或重置筛选后可恢复完整排名。</span></td></tr>';
     rankingViewport.scrollTop = 0;
@@ -299,13 +299,13 @@ async function init() {
       </article>`).join('');
     $('#category-ranking-body').innerHTML = items.map((item, index) => `
       <tr>
-        <td class="numeric">${format(index + 1)}</td>
-        <td><button class="category-name-button" type="button" data-category-filter="${escapeHtml(item.category)}">${escapeHtml(item.category)}</button></td>
-        <td class="numeric">${format(item.project_count)}</td>
-        <td class="numeric">${format(item.total_stars)}</td>
-        <td class="numeric">${formatScore(item.stars_share)}%</td>
-        <td class="numeric ${deltaClass(item.stars_delta)}">${signed(item.stars_delta)}</td>
-        <td>${item.leader ? `<a class="repo-link" href="${safeGithubUrl(item.leader.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.leader.repo)}</a><div class="region-location">${format(item.leader.stars)} Stars</div>` : '—'}</td>
+        <td class="numeric" data-label="分类排名">${format(index + 1)}</td>
+        <td data-label="功能分类"><button class="category-name-button" type="button" data-category-filter="${escapeHtml(item.category)}">${escapeHtml(item.category)}</button></td>
+        <td class="numeric" data-label="项目数">${format(item.project_count)}</td>
+        <td class="numeric" data-label="Stars 总量">${format(item.total_stars)}</td>
+        <td class="numeric" data-label="Stars 占比">${formatScore(item.stars_share)}%</td>
+        <td class="numeric ${deltaClass(item.stars_delta)}" data-label="窗口 Stars Δ">${signed(item.stars_delta)}</td>
+        <td data-label="头部项目">${item.leader ? `<a class="repo-link" href="${safeGithubUrl(item.leader.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.leader.repo)}</a><div class="region-location">${format(item.leader.stars)} Stars</div>` : '—'}</td>
       </tr>`).join('');
   }
 
