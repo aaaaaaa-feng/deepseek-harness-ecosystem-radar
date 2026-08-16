@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-16T04:04:26.371Z",
+  "generated_at": "2026-08-16T04:52:02.213Z",
   "exclusions": [
     {
       "repo": "150410awe/consume-plugin",
@@ -337,6 +337,15 @@
       "url": "https://github.com/dominionbanjo/teamshare-bridge",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-15T21:38:22.619Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "dongpen-max/XinyunOpenBot",
+      "url": "https://github.com/dongpen-max/XinyunOpenBot",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:52:02.213Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
@@ -833,6 +842,15 @@
       ]
     },
     {
+      "repo": "lxj808624/skills",
+      "url": "https://github.com/lxj808624/skills",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:52:02.213Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "marius-patrik/agents",
       "url": "https://github.com/marius-patrik/agents",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -923,15 +941,6 @@
       "discovered_at": "2026-08-15T18:50:16.099Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
-      "repo": "omdsh-dev/omdsh-plugin-lab",
-      "url": "https://github.com/omdsh-dev/omdsh-plugin-lab",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T16:44:17.939Z",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -1051,6 +1060,15 @@
       ]
     },
     {
+      "repo": "Rayegoe/zuaef-agent",
+      "url": "https://github.com/Rayegoe/zuaef-agent",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:52:02.213Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "RedDous/web-search-service",
       "url": "https://github.com/RedDous/web-search-service",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1127,16 +1145,6 @@
       ]
     },
     {
-      "repo": "sandbaseai/dsh101",
-      "url": "https://github.com/sandbaseai/dsh101",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-16T01:59:18.176Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
-        "deepseek-harness in:name,description,readme created:>=2026-08-09"
-      ]
-    },
-    {
       "repo": "Saolence/pi-dsh-optimizer",
       "url": "https://github.com/Saolence/pi-dsh-optimizer",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1144,15 +1152,6 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
-      ]
-    },
-    {
-      "repo": "ShanHaiFish/fexp-file-explorer",
-      "url": "https://github.com/ShanHaiFish/fexp-file-explorer",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-15T16:44:17.939Z",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-09"
       ]
     },
     {
@@ -1405,6 +1404,15 @@
       ]
     },
     {
+      "repo": "wangzishu-CN/CursorBridge",
+      "url": "https://github.com/wangzishu-CN/CursorBridge",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:52:02.213Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-09"
+      ]
+    },
+    {
       "repo": "William-RM-Gardner/eden-harness",
       "url": "https://github.com/William-RM-Gardner/eden-harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -1433,7 +1441,9 @@
       "discovered_at": "2026-08-15T13:45:28.794Z",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
-        "deepseek-harness in:name,description,readme created:>=2026-08-08"
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
     {
@@ -1541,6 +1551,15 @@
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "ZJie-Wang/pi-extensions",
+      "url": "https://github.com/ZJie-Wang/pi-extensions",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-16T04:52:02.213Z",
+      "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
       ]
     },
