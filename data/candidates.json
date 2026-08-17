@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T20:46:40.319Z",
+  "generated_at": "2026-08-17T22:44:35.001Z",
   "candidates": [
     {
       "repo": "ANGELBERRIOS23/conversation-reclaim",
@@ -616,7 +616,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T11:37:23.139Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -962,6 +962,37 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "yichen14/Proteus",
+      "name": "Proteus",
+      "owner": "yichen14",
+      "url": "https://github.com/yichen14/Proteus",
+      "description": "A harness-agnostic self-evolution framework for AI agents.",
+      "created_at": "2026-08-17T10:09:33Z",
+      "updated_at": "2026-08-17T22:34:27Z",
+      "pushed_at": "2026-08-17T22:33:39Z",
+      "stars": 1,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Python",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-17T22:44:35.001Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/yichen14/Proteus#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -1393,37 +1424,6 @@
       ]
     },
     {
-      "repo": "abcofabc/dsh-enter-approve",
-      "name": "dsh-enter-approve",
-      "owner": "abcofabc",
-      "url": "https://github.com/abcofabc/dsh-enter-approve",
-      "description": "",
-      "created_at": "2026-08-17T20:39:46Z",
-      "updated_at": "2026-08-17T20:41:02Z",
-      "pushed_at": "2026-08-17T20:40:08Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "JavaScript",
-      "license": "MIT",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-17T20:46:40.319Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
-      "verification": "readme-evidence-not-runtime-tested",
-      "evidence_level": "candidate",
-      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
-      "evidence_url": "https://github.com/abcofabc/dsh-enter-approve#readme",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
-        "deepseek-harness in:name,description,readme created:>=2026-08-11"
-      ]
-    },
-    {
       "repo": "abhishekgahlot2/pi-dsh",
       "name": "pi-dsh",
       "owner": "abhishekgahlot2",
@@ -1825,8 +1825,8 @@
       "url": "https://github.com/anitman/dsh-plugin-video-player",
       "description": "DSH 刷视频 / DSH Video Player — web GUI 侧栏抖音式竖屏刷视频（窗口随视频宽高比自适应 + Range 流式播放 + SMB NAS 支持）",
       "created_at": "2026-08-17T00:34:14Z",
-      "updated_at": "2026-08-17T04:52:02Z",
-      "pushed_at": "2026-08-17T04:51:52Z",
+      "updated_at": "2026-08-17T22:42:20Z",
+      "pushed_at": "2026-08-17T22:42:17Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -1839,13 +1839,14 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T01:57:45.301Z",
-      "last_seen_at": "2026-08-17T05:01:14.940Z",
-      "verification": "metadata-only",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/anitman/dsh-plugin-video-player",
+      "evidence_url": "https://github.com/anitman/dsh-plugin-video-player#readme",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -2219,8 +2220,8 @@
       "url": "https://github.com/BiBoyang/huohou",
       "description": "",
       "created_at": "2026-08-17T19:19:18Z",
-      "updated_at": "2026-08-17T20:25:50Z",
-      "pushed_at": "2026-08-17T20:25:27Z",
+      "updated_at": "2026-08-17T21:56:46Z",
+      "pushed_at": "2026-08-17T21:56:31Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -2233,7 +2234,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T20:46:40.319Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
@@ -2917,7 +2918,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T19:00:53.604Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -2933,8 +2934,8 @@
       "url": "https://github.com/coreyleung-art/dsh-plugin-repo-pipeline",
       "description": "",
       "created_at": "2026-08-16T11:21:42Z",
-      "updated_at": "2026-08-17T12:21:22Z",
-      "pushed_at": "2026-08-17T12:20:15Z",
+      "updated_at": "2026-08-17T21:26:25Z",
+      "pushed_at": "2026-08-17T21:26:20Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -2947,13 +2948,14 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-16T22:40:11.928Z",
-      "last_seen_at": "2026-08-17T13:09:16.788Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/coreyleung-art/dsh-plugin-repo-pipeline",
+      "evidence_url": "https://github.com/coreyleung-art/dsh-plugin-repo-pipeline#readme",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -3870,6 +3872,37 @@
       "evidence_url": "https://github.com/FICCIF/dsh-plugin-manager",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "FindSomeSkills/Super-Skill",
+      "name": "Super-Skill",
+      "owner": "FindSomeSkills",
+      "url": "https://github.com/FindSomeSkills/Super-Skill",
+      "description": "",
+      "created_at": "2026-08-17T22:03:03Z",
+      "updated_at": "2026-08-17T22:34:26Z",
+      "pushed_at": "2026-08-17T22:33:28Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Shell",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-17T22:44:35.001Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/FindSomeSkills/Super-Skill#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -5077,8 +5110,8 @@
       "url": "https://github.com/id5463/dshd-green",
       "description": "",
       "created_at": "2026-08-16T21:58:14Z",
-      "updated_at": "2026-08-16T21:58:29Z",
-      "pushed_at": "2026-08-16T21:58:18Z",
+      "updated_at": "2026-08-17T22:20:53Z",
+      "pushed_at": "2026-08-17T22:20:49Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -5091,13 +5124,15 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-16T22:40:11.928Z",
-      "last_seen_at": "2026-08-16T22:40:11.928Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
       "evidence_url": "https://github.com/id5463/dshd-green#readme",
       "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10"
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -5716,7 +5751,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T19:00:53.604Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -7317,8 +7352,8 @@
       "url": "https://github.com/mayf3/dsh-agent-core",
       "description": "",
       "created_at": "2026-08-14T15:34:32Z",
-      "updated_at": "2026-08-17T16:45:04Z",
-      "pushed_at": "2026-08-17T16:46:56Z",
+      "updated_at": "2026-08-17T22:22:54Z",
+      "pushed_at": "2026-08-17T22:31:05Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -7331,11 +7366,11 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T01:57:45.301Z",
-      "last_seen_at": "2026-08-17T16:49:16.559Z",
-      "verification": "metadata-only",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/mayf3/dsh-agent-core",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/mayf3/dsh-agent-core#readme",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
         "deepseek-harness in:name,description,readme created:>=2026-08-10",
@@ -8508,6 +8543,36 @@
       ]
     },
     {
+      "repo": "qgallouedec/nanoharness",
+      "name": "nanoharness",
+      "owner": "qgallouedec",
+      "url": "https://github.com/qgallouedec/nanoharness",
+      "description": "",
+      "created_at": "2026-08-17T22:12:24Z",
+      "updated_at": "2026-08-17T22:31:53Z",
+      "pushed_at": "2026-08-17T22:31:09Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Python",
+      "license": "Apache-2.0",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-17T22:44:35.001Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/qgallouedec/nanoharness#readme",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
+      ]
+    },
+    {
       "repo": "QinLuza/dsh-file-undo",
       "name": "dsh-file-undo",
       "owner": "QinLuza",
@@ -8588,7 +8653,7 @@
       "status": "active",
       "category": "记忆、上下文与成本",
       "first_seen_at": "2026-08-17T17:47:53.654Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
       "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -9120,36 +9185,6 @@
       ]
     },
     {
-      "repo": "sandbaseai/dsh-plugin-store",
-      "name": "dsh-plugin-store",
-      "owner": "sandbaseai",
-      "url": "https://github.com/sandbaseai/dsh-plugin-store",
-      "description": "",
-      "created_at": "2026-08-17T05:45:38Z",
-      "updated_at": "2026-08-17T10:43:33Z",
-      "pushed_at": "2026-08-17T10:41:38Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "TypeScript",
-      "license": "NOASSERTION",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "插件管理与生态工具",
-      "first_seen_at": "2026-08-17T10:50:15.363Z",
-      "last_seen_at": "2026-08-17T10:50:15.363Z",
-      "verification": "metadata-only",
-      "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/sandbaseai/dsh-plugin-store",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
-      ]
-    },
-    {
       "repo": "Semidia/dsh-settings-tuner",
       "name": "dsh-settings-tuner",
       "owner": "Semidia",
@@ -9673,36 +9708,6 @@
       ]
     },
     {
-      "repo": "Taler97/dsh-remote-tunnel",
-      "name": "dsh-remote-tunnel",
-      "owner": "Taler97",
-      "url": "https://github.com/Taler97/dsh-remote-tunnel",
-      "description": "dsh reverse-tunnel plugin: outbound WebSocket carrier over ctx.apiProxy, zero changes to dsh source",
-      "created_at": "2026-08-17T20:27:29Z",
-      "updated_at": "2026-08-17T20:27:30Z",
-      "pushed_at": "2026-08-17T20:27:30Z",
-      "stars": 0,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "",
-      "license": "NOASSERTION",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-17T20:46:40.319Z",
-      "last_seen_at": "2026-08-17T20:46:40.319Z",
-      "verification": "metadata-only",
-      "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/Taler97/dsh-remote-tunnel#readme",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-11"
-      ]
-    },
-    {
       "repo": "tanliuyi/dsh-plugin",
       "name": "dsh-plugin",
       "owner": "tanliuyi",
@@ -9791,6 +9796,43 @@
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08"
       ]
+    },
+    {
+      "repo": "TheEarlyWinter/TheEarlyWinter",
+      "url": "https://github.com/TheEarlyWinter/TheEarlyWinter",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T17:47:53.654Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
+      ],
+      "name": "TheEarlyWinter",
+      "owner": "TheEarlyWinter",
+      "description": "✨ Personal Profile README & Open-source Showcase for TheEarlyWinter.",
+      "created_at": "2026-08-16T17:47:21Z",
+      "updated_at": "2026-08-17T21:46:37Z",
+      "pushed_at": "2026-08-17T21:46:45Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "",
+      "license": "NOASSERTION",
+      "topics": [
+        "config",
+        "profile",
+        "readme"
+      ],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-17T17:47:53.654Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/TheEarlyWinter/TheEarlyWinter#readme"
     },
     {
       "repo": "TheEyeless/dsh-chan-bond",
@@ -10311,6 +10353,36 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "wang-jie-git/dsh-plugin-preflight",
+      "name": "dsh-plugin-preflight",
+      "owner": "wang-jie-git",
+      "url": "https://github.com/wang-jie-git/dsh-plugin-preflight",
+      "description": "DSH 插件安装预检闸 — 服务冲突 / peerDependencies 红线 / 双包危害检测",
+      "created_at": "2026-08-17T21:32:22Z",
+      "updated_at": "2026-08-17T21:32:51Z",
+      "pushed_at": "2026-08-17T21:32:31Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-17T22:44:35.001Z",
+      "last_seen_at": "2026-08-17T22:44:35.001Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/wang-jie-git/dsh-plugin-preflight#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
