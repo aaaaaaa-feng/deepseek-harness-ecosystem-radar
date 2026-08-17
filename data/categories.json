@@ -1,149 +1,149 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T07:19:17.807Z",
-  "observation_window_hours": 2.3,
+  "generated_at": "2026-08-17T09:03:35.562Z",
+  "observation_window_hours": 1.7,
   "categories": [
     {
       "category": "插件管理与生态工具",
-      "project_count": 330,
+      "project_count": 340,
       "project_share": 9.1,
-      "total_stars": 12922,
+      "total_stars": 13400,
       "stars_share": 35.5,
-      "total_forks": 707,
-      "stars_delta": 582,
+      "total_forks": 742,
+      "stars_delta": 470,
       "forks_delta": 34,
-      "comparable_projects": 317,
+      "comparable_projects": 331,
       "leader": {
         "repo": "anywhere-labs/deepseek-harness-desktop",
         "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
-        "stars": 10410,
-        "attention_score": 360.99
+        "stars": 10766,
+        "attention_score": 362.71
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "anywhere-labs/deepseek-harness-desktop",
           "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
-          "stars": 10410,
-          "forks": 455,
-          "attention_score": 360.99,
-          "stars_delta": 450
+          "stars": 10766,
+          "forks": 480,
+          "attention_score": 362.71,
+          "stars_delta": 356
         },
         {
           "category_rank": 2,
           "repo": "dsh-market/dsh-market",
           "url": "https://github.com/dsh-market/dsh-market",
-          "stars": 706,
-          "forks": 55,
-          "attention_score": 251.9,
-          "stars_delta": 50
+          "stars": 750,
+          "forks": 56,
+          "attention_score": 253.97,
+          "stars_delta": 44
         },
         {
           "category_rank": 3,
           "repo": "leenkcool/Blue-Whale-Harness",
           "url": "https://github.com/leenkcool/Blue-Whale-Harness",
-          "stars": 105,
-          "forks": 36,
-          "attention_score": 188.82,
-          "stars_delta": 8
+          "stars": 111,
+          "forks": 39,
+          "attention_score": 191.51,
+          "stars_delta": 6
         }
       ],
       "rank_by_stars": 1,
       "rank_by_projects": 5,
-      "rank_by_momentum": 2
+      "rank_by_momentum": 1
     },
     {
       "category": "其他实现型扩展",
-      "project_count": 1152,
-      "project_share": 31.8,
-      "total_stars": 9265,
-      "stars_share": 25.5,
-      "total_forks": 1293,
-      "stars_delta": 596,
-      "forks_delta": 33,
-      "comparable_projects": 1113,
+      "project_count": 1180,
+      "project_share": 31.7,
+      "total_stars": 9719,
+      "stars_share": 25.7,
+      "total_forks": 1332,
+      "stars_delta": 446,
+      "forks_delta": 35,
+      "comparable_projects": 1147,
       "leader": {
         "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
         "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
-        "stars": 6510,
-        "attention_score": 356.34
+        "stars": 6866,
+        "attention_score": 358.36
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
           "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
-          "stars": 6510,
-          "forks": 953,
-          "attention_score": 356.34,
-          "stars_delta": 469
+          "stars": 6866,
+          "forks": 983,
+          "attention_score": 358.36,
+          "stars_delta": 356
         },
         {
           "category_rank": 2,
           "repo": "Electricitysheep/dsh-handbook",
           "url": "https://github.com/Electricitysheep/dsh-handbook",
-          "stars": 411,
+          "stars": 426,
           "forks": 19,
-          "attention_score": 222.07,
-          "stars_delta": 20
+          "attention_score": 223.16,
+          "stars_delta": 15
         },
         {
           "category_rank": 3,
           "repo": "bruc3van/awesome-dsh-plugin",
           "url": "https://github.com/bruc3van/awesome-dsh-plugin",
-          "stars": 190,
+          "stars": 196,
           "forks": 42,
-          "attention_score": 208.68,
-          "stars_delta": 2
+          "attention_score": 209.62,
+          "stars_delta": 6
         }
       ],
       "rank_by_stars": 2,
       "rank_by_projects": 1,
-      "rank_by_momentum": 1
+      "rank_by_momentum": 2
     },
     {
       "category": "桌面端与启动器",
-      "project_count": 543,
+      "project_count": 557,
       "project_share": 15,
-      "total_stars": 4297,
-      "stars_share": 11.8,
-      "total_forks": 308,
-      "stars_delta": 213,
-      "forks_delta": 9,
-      "comparable_projects": 525,
+      "total_stars": 4419,
+      "stars_share": 11.7,
+      "total_forks": 312,
+      "stars_delta": 118,
+      "forks_delta": 4,
+      "comparable_projects": 541,
       "leader": {
         "repo": "dataelement/dsh-desktop",
         "url": "https://github.com/dataelement/dsh-desktop",
-        "stars": 653,
-        "attention_score": 250.65
+        "stars": 676,
+        "attention_score": 252.12
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "dataelement/dsh-desktop",
           "url": "https://github.com/dataelement/dsh-desktop",
-          "stars": 653,
-          "forks": 60,
-          "attention_score": 250.65,
-          "stars_delta": 37
+          "stars": 676,
+          "forks": 62,
+          "attention_score": 252.12,
+          "stars_delta": 23
         },
         {
           "category_rank": 2,
           "repo": "zouyuxuan122/Deepseek-Harness-EAC",
           "url": "https://github.com/zouyuxuan122/Deepseek-Harness-EAC",
-          "stars": 609,
+          "stars": 628,
           "forks": 16,
-          "attention_score": 231.89,
-          "stars_delta": 22
+          "attention_score": 232.82,
+          "stars_delta": 19
         },
         {
           "category_rank": 3,
           "repo": "myYangyunfan/dsh_desktop",
           "url": "https://github.com/myYangyunfan/dsh_desktop",
-          "stars": 409,
+          "stars": 419,
           "forks": 19,
-          "attention_score": 221.93,
-          "stars_delta": 9
+          "attention_score": 222.66,
+          "stars_delta": 10
         }
       ],
       "rank_by_stars": 3,
@@ -152,225 +152,225 @@
     },
     {
       "category": "开发与质量工具",
-      "project_count": 215,
-      "project_share": 5.9,
-      "total_stars": 3884,
-      "stars_share": 10.7,
+      "project_count": 217,
+      "project_share": 5.8,
+      "total_stars": 3976,
+      "stars_share": 10.5,
       "total_forks": 147,
-      "stars_delta": 84,
-      "forks_delta": 4,
-      "comparable_projects": 212,
+      "stars_delta": 68,
+      "forks_delta": 0,
+      "comparable_projects": 215,
       "leader": {
         "repo": "xiaobright/dsh-anchored-standard",
         "url": "https://github.com/xiaobright/dsh-anchored-standard",
-        "stars": 3262,
-        "attention_score": 306.34
+        "stars": 3304,
+        "attention_score": 306.85
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "xiaobright/dsh-anchored-standard",
           "url": "https://github.com/xiaobright/dsh-anchored-standard",
-          "stars": 3262,
-          "forks": 102,
-          "attention_score": 306.34,
-          "stars_delta": 53
+          "stars": 3304,
+          "forks": 103,
+          "attention_score": 306.85,
+          "stars_delta": 42
         },
         {
           "category_rank": 2,
           "repo": "NanmiCoder/dsh-auto-mode",
           "url": "https://github.com/NanmiCoder/dsh-auto-mode",
-          "stars": 76,
+          "stars": 78,
           "forks": 4,
-          "attention_score": 153.02,
-          "stars_delta": 0
+          "attention_score": 153.8,
+          "stars_delta": 2
         },
         {
           "category_rank": 3,
           "repo": "titanwings/dsh-automation",
           "url": "https://github.com/titanwings/dsh-automation",
-          "stars": 47,
-          "forks": 5,
-          "attention_score": 141.03,
-          "stars_delta": 1
+          "stars": 49,
+          "forks": 4,
+          "attention_score": 139.9,
+          "stars_delta": 2
         }
       ],
       "rank_by_stars": 4,
       "rank_by_projects": 8,
-      "rank_by_momentum": 6
+      "rank_by_momentum": 5
     },
     {
       "category": "界面与体验扩展",
-      "project_count": 347,
-      "project_share": 9.6,
-      "total_stars": 2224,
-      "stars_share": 6.1,
-      "total_forks": 134,
-      "stars_delta": 88,
-      "forks_delta": 4,
-      "comparable_projects": 337,
+      "project_count": 352,
+      "project_share": 9.5,
+      "total_stars": 2329,
+      "stars_share": 6.2,
+      "total_forks": 136,
+      "stars_delta": 86,
+      "forks_delta": 1,
+      "comparable_projects": 346,
       "leader": {
         "repo": "Small-tailqwq/dsh-deep-whale",
         "url": "https://github.com/Small-tailqwq/dsh-deep-whale",
-        "stars": 1153,
-        "attention_score": 263.36
+        "stars": 1187,
+        "attention_score": 263.93
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "Small-tailqwq/dsh-deep-whale",
           "url": "https://github.com/Small-tailqwq/dsh-deep-whale",
-          "stars": 1153,
-          "forks": 42,
-          "attention_score": 263.36,
-          "stars_delta": 22
+          "stars": 1187,
+          "forks": 41,
+          "attention_score": 263.93,
+          "stars_delta": 34
         },
         {
           "category_rank": 2,
           "repo": "WYH66666666/DSH-Transparent-UI-Plugin",
           "url": "https://github.com/WYH66666666/DSH-Transparent-UI-Plugin",
-          "stars": 194,
-          "forks": 10,
-          "attention_score": 191.54,
-          "stars_delta": 18
+          "stars": 209,
+          "forks": 11,
+          "attention_score": 194.93,
+          "stars_delta": 15
         },
         {
           "category_rank": 3,
           "repo": "kingOfSoySauce/dsh-liang-skin",
           "url": "https://github.com/kingOfSoySauce/dsh-liang-skin",
-          "stars": 70,
+          "stars": 71,
           "forks": 7,
-          "attention_score": 156.68,
-          "stars_delta": 4
+          "attention_score": 157.11,
+          "stars_delta": 1
         }
       ],
       "rank_by_stars": 5,
       "rank_by_projects": 4,
-      "rank_by_momentum": 5
+      "rank_by_momentum": 4
     },
     {
       "category": "视觉与浏览器",
-      "project_count": 321,
+      "project_count": 329,
       "project_share": 8.8,
-      "total_stars": 1693,
+      "total_stars": 1773,
       "stars_share": 4.7,
       "total_forks": 151,
-      "stars_delta": 123,
-      "forks_delta": 6,
-      "comparable_projects": 312,
+      "stars_delta": 58,
+      "forks_delta": 0,
+      "comparable_projects": 319,
       "leader": {
         "repo": "ysr666/dsh-vision-router",
         "url": "https://github.com/ysr666/dsh-vision-router",
-        "stars": 516,
-        "attention_score": 230.8
+        "stars": 545,
+        "attention_score": 233.01
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "ysr666/dsh-vision-router",
           "url": "https://github.com/ysr666/dsh-vision-router",
-          "stars": 516,
-          "forks": 22,
-          "attention_score": 230.8,
-          "stars_delta": 28
+          "stars": 545,
+          "forks": 23,
+          "attention_score": 233.01,
+          "stars_delta": 29
         },
         {
           "category_rank": 2,
           "repo": "Dominic789654/awesome-deepseek-harness",
           "url": "https://github.com/Dominic789654/awesome-deepseek-harness",
-          "stars": 104,
-          "forks": 60,
-          "attention_score": 195.04,
-          "stars_delta": 4
+          "stars": 110,
+          "forks": 59,
+          "attention_score": 196.52,
+          "stars_delta": 6
         },
         {
           "category_rank": 3,
           "repo": "omdsh-dev/dsh-genui",
           "url": "https://github.com/omdsh-dev/dsh-genui",
-          "stars": 156,
+          "stars": 163,
           "forks": 14,
-          "attention_score": 189,
+          "attention_score": 190.32,
           "stars_delta": 7
         }
       ],
       "rank_by_stars": 6,
       "rank_by_projects": 6,
-      "rank_by_momentum": 4
+      "rank_by_momentum": 6
     },
     {
       "category": "渠道与模型接入",
-      "project_count": 251,
-      "project_share": 6.9,
-      "total_stars": 927,
-      "stars_share": 2.5,
-      "total_forks": 92,
-      "stars_delta": 27,
+      "project_count": 264,
+      "project_share": 7.1,
+      "total_stars": 969,
+      "stars_share": 2.6,
+      "total_forks": 98,
+      "stars_delta": 33,
       "forks_delta": 5,
-      "comparable_projects": 239,
+      "comparable_projects": 250,
       "leader": {
         "repo": "yjh051108/dsh-router-standard",
         "url": "https://github.com/yjh051108/dsh-router-standard",
-        "stars": 280,
-        "attention_score": 212.82
+        "stars": 285,
+        "attention_score": 213.88
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "yjh051108/dsh-router-standard",
           "url": "https://github.com/yjh051108/dsh-router-standard",
-          "stars": 280,
-          "forks": 23,
-          "attention_score": 212.82,
-          "stars_delta": 3
+          "stars": 285,
+          "forks": 24,
+          "attention_score": 213.88,
+          "stars_delta": 5
         },
         {
           "category_rank": 2,
           "repo": "anysearch-team/anysearch-dsh",
           "url": "https://github.com/anysearch-team/anysearch-dsh",
-          "stars": 76,
+          "stars": 78,
           "forks": 5,
-          "attention_score": 155.4,
+          "attention_score": 156.18,
           "stars_delta": 2
         },
         {
           "category_rank": 3,
           "repo": "tencent-connect/dsh-qqbot",
           "url": "https://github.com/tencent-connect/dsh-qqbot",
-          "stars": 54,
+          "stars": 55,
           "forks": 6,
-          "attention_score": 147.18,
+          "attention_score": 147.73,
           "stars_delta": 1
         }
       ],
       "rank_by_stars": 7,
       "rank_by_projects": 7,
-      "rank_by_momentum": 8
+      "rank_by_momentum": 7
     },
     {
       "category": "记忆、上下文与成本",
-      "project_count": 350,
-      "project_share": 9.6,
-      "total_stars": 860,
+      "project_count": 360,
+      "project_share": 9.7,
+      "total_stars": 897,
       "stars_share": 2.4,
-      "total_forks": 84,
-      "stars_delta": 31,
-      "forks_delta": 5,
-      "comparable_projects": 341,
+      "total_forks": 86,
+      "stars_delta": 28,
+      "forks_delta": 0,
+      "comparable_projects": 349,
       "leader": {
         "repo": "ZSeven-W/dsh-noema",
         "url": "https://github.com/ZSeven-W/dsh-noema",
-        "stars": 91,
-        "attention_score": 164.56
+        "stars": 93,
+        "attention_score": 165.21
       },
       "top_projects": [
         {
           "category_rank": 1,
           "repo": "ZSeven-W/dsh-noema",
           "url": "https://github.com/ZSeven-W/dsh-noema",
-          "stars": 91,
+          "stars": 93,
           "forks": 7,
-          "attention_score": 164.56,
-          "stars_delta": 1
+          "attention_score": 165.21,
+          "stars_delta": 2
         },
         {
           "category_rank": 2,
@@ -379,32 +379,32 @@
           "stars": 54,
           "forks": 9,
           "attention_score": 151.83,
-          "stars_delta": 5
+          "stars_delta": 0
         },
         {
           "category_rank": 3,
           "repo": "Han-1413141/dsh-cost-meter",
           "url": "https://github.com/Han-1413141/dsh-cost-meter",
-          "stars": 62,
+          "stars": 66,
           "forks": 5,
-          "attention_score": 149.3,
+          "attention_score": 151.17,
           "stars_delta": 4
         }
       ],
       "rank_by_stars": 8,
       "rank_by_projects": 3,
-      "rank_by_momentum": 7
+      "rank_by_momentum": 8
     },
     {
       "category": "终端与部署",
-      "project_count": 119,
+      "project_count": 124,
       "project_share": 3.3,
-      "total_stars": 284,
+      "total_stars": 294,
       "stars_share": 0.8,
       "total_forks": 38,
       "stars_delta": 10,
       "forks_delta": 0,
-      "comparable_projects": 116,
+      "comparable_projects": 119,
       "leader": {
         "repo": "openma-ai/deepseek-harness-tui",
         "url": "https://github.com/openma-ai/deepseek-harness-tui",
@@ -425,19 +425,19 @@
           "category_rank": 2,
           "repo": "kejixiaoliang/awesome-dsh-plugins",
           "url": "https://github.com/kejixiaoliang/awesome-dsh-plugins",
-          "stars": 19,
+          "stars": 20,
           "forks": 11,
-          "attention_score": 123.45,
+          "attention_score": 124.93,
           "stars_delta": 1
         },
         {
           "category_rank": 3,
           "repo": "UNLINEARITY/dsh-code",
           "url": "https://github.com/UNLINEARITY/dsh-code",
-          "stars": 24,
+          "stars": 23,
           "forks": 2,
-          "attention_score": 112.17,
-          "stars_delta": 1
+          "attention_score": 110.93,
+          "stars_delta": -1
         }
       ],
       "rank_by_stars": 9,
