@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T01:57:45.301Z",
+  "generated_at": "2026-08-17T03:15:09.366Z",
   "exclusions": [
     {
       "repo": "0liveiraaa/DeepseekCotexplorations",
@@ -92,6 +92,24 @@
       "url": "https://github.com/aenigma555/uhuru",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
       "discovered_at": "2026-08-16T20:41:37.571Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "agentrebench/Tether",
+      "url": "https://github.com/agentrebench/Tether",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "aitachi/miniagent",
+      "url": "https://github.com/aitachi/miniagent",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
@@ -492,6 +510,15 @@
       ]
     },
     {
+      "repo": "DshMarketPlace/awesome-dsh-plugin",
+      "url": "https://github.com/DshMarketPlace/awesome-dsh-plugin",
+      "reason": "资料型、教程型或纯清单仓库",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "dshplugin-app/.github",
       "url": "https://github.com/dshplugin-app/.github",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -767,6 +794,16 @@
       ]
     },
     {
+      "repo": "HuangMF666/dsh-background-wallpaper",
+      "url": "https://github.com/HuangMF666/dsh-background-wallpaper",
+      "reason": "资料型、教程型或纯清单仓库",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "huawaimen/Olivia-Lin-in-DeepSeek-Harness",
       "url": "https://github.com/huawaimen/Olivia-Lin-in-DeepSeek-Harness",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -849,6 +886,16 @@
       "discovered_at": "2026-08-15T11:37:23.139Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "Jason-GG/we-see",
+      "url": "https://github.com/Jason-GG/we-see",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -1059,6 +1106,16 @@
       ]
     },
     {
+      "repo": "KryMind/harness-learning-lab",
+      "url": "https://github.com/KryMind/harness-learning-lab",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "Lanxi26/dsh-bash-windows",
       "url": "https://github.com/Lanxi26/dsh-bash-windows",
       "reason": "资料型、教程型或纯清单仓库",
@@ -1116,6 +1173,15 @@
         "deepseek-harness in:name,description,readme created:>=2026-08-10",
         "topic:deepseek-harness created:>=2026-08-10",
         "topic:dsh-plugin created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "Lightmaze/pulse",
+      "url": "https://github.com/Lightmaze/pulse",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
@@ -1943,6 +2009,15 @@
       ]
     },
     {
+      "repo": "thesagarmahapatra/VectorFFN",
+      "url": "https://github.com/thesagarmahapatra/VectorFFN",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-17T03:15:09.366Z",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
       "repo": "TianYa-DAO/dsh-wallpaper-engine",
       "url": "https://github.com/TianYa-DAO/dsh-wallpaper-engine",
       "reason": "资料型、教程型或纯清单仓库",
@@ -2229,6 +2304,18 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "YaserXuanFrankFaraz/PengPilot",
+      "url": "https://github.com/YaserXuanFrankFaraz/PengPilot",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-15T09:44:03.751Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
+        "deepseek-harness in:name,description,readme created:>=2026-08-08",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
+        "deepseek-harness in:name,description,readme created:>=2026-08-10"
       ]
     },
     {
