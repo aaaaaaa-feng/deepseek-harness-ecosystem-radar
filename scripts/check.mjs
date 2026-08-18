@@ -189,6 +189,8 @@ if (publicLatestStat.size > 20 * 1024 * 1024) errors.push('Public latest payload
 if (!hourlyWorkflow.includes('cron: "17 * * * *"') || !hourlyWorkflow.includes('timezone: "Asia/Shanghai"') || !hourlyWorkflow.includes('contents: write') || !hourlyWorkflow.includes('models: read')) errors.push('Hourly workflow schedule or permissions are incomplete');
 if (!hourlyWorkflow.includes('actions/cache/restore@v5') || !hourlyWorkflow.includes('actions/cache/save@v5')) errors.push('Hourly workflow does not persist rolling state outside Git history');
 if (!hourlyWorkflow.includes('radar-live') || !hourlyWorkflow.includes('HEAD:refs/heads/${LIVE_BRANCH}')) errors.push('Hourly workflow does not publish the generated live branch');
+if (!hourlyWorkflow.includes('GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}') || !hourlyWorkflow.includes('x-access-token:${GITHUB_TOKEN}')) errors.push('Hourly workflow does not authenticate the isolated live-branch push explicitly');
+if (hourlyWorkflow.includes('git config --local --get http.https://github.com/.extraheader')) errors.push('Hourly workflow still assumes checkout credentials live in local Git config');
 if (!hourlyWorkflow.includes('git add -- README.md STATUS.md tweet-draft.md data docs/data/latest.json')) errors.push('Hourly workflow does not create the bounded daily checkpoint');
 if (hourlyWorkflow.includes('Commit hourly snapshot')) errors.push('Hourly workflow still commits every run to main');
 if (pagesWorkflow.includes('workflow_run:')) errors.push('GitHub Pages workflow still follows every hourly run');

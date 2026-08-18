@@ -74,6 +74,7 @@ jobs:
       - name: Publish generated site branch
         env:
           LIVE_BRANCH: radar-live
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           LIVE_MARKER="deepseek-harness-ecosystem-radar generated branch v1"
@@ -95,17 +96,15 @@ jobs:
           git init --initial-branch="${LIVE_BRANCH}" "${LIVE_DIR}"
           git -C "${LIVE_DIR}" config user.name "github-actions[bot]"
           git -C "${LIVE_DIR}" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          AUTH_HEADER="$(git config --local --get http.https://github.com/.extraheader || true)"
-          if [[ -z "${AUTH_HEADER}" ]]; then
-            echo "::error::GitHub checkout credentials are unavailable."
-            exit 1
-          fi
-          git -C "${LIVE_DIR}" config http.https://github.com/.extraheader "${AUTH_HEADER}"
           git -C "${LIVE_DIR}" remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
           git -C "${LIVE_DIR}" add -- .radar-generated-branch docs
           SNAPSHOT_TIME="$(TZ=Asia/Shanghai date '+%F %H:%M')"
           git -C "${LIVE_DIR}" commit -m "chore(live): publish radar ${SNAPSHOT_TIME} CST"
-          git -C "${LIVE_DIR}" push --force origin "HEAD:refs/heads/${LIVE_BRANCH}"
+          # checkout v6+ can keep persisted credentials outside the repository
+          # config, so authenticate this isolated generated repository explicitly.
+          PUSH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C "${LIVE_DIR}" push --force "${PUSH_URL}" "HEAD:refs/heads/${LIVE_BRANCH}"
+          unset PUSH_URL
 
       - name: Decide whether main needs a daily checkpoint
         id: checkpoint
