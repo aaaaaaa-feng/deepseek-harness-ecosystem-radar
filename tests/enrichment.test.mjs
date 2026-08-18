@@ -61,6 +61,27 @@ test('developer refresh deduplicates owners and reuses fresh cache entries', asy
   assert.equal(result.stats.cached, 1);
 });
 
+test('developer refresh limits stale profile requests and reports deferred owners', async () => {
+  const calls = [];
+  const result = await refreshDeveloperProfiles([
+    {repo: 'c/one', owner: 'c'},
+    {repo: 'a/one', owner: 'a'},
+    {repo: 'b/one', owner: 'b'}
+  ], {profiles: {}}, {
+    github: async pathname => {
+      calls.push(pathname);
+      const login = pathname.split('/').at(-1);
+      return {login, type: 'User', html_url: `https://github.com/${login}`, location: ''};
+    },
+    observedAt: '2026-08-18T13:00:00Z',
+    refreshDays: 30,
+    maxRefreshes: 2
+  });
+  assert.deepEqual(calls, ['/users/a', '/users/b']);
+  assert.equal(result.stats.refreshed, 2);
+  assert.equal(result.stats.deferred, 1);
+});
+
 test('project enrichment uses Chinese source, cached translation, and honest fallbacks', () => {
   const result = applyProjectEnrichment([
     {repo: 'a/zh', owner: 'a', description: '中文说明'},
@@ -118,5 +139,33 @@ test('translation cache stays usable when no model token is available', async ()
   );
   assert.equal(result.stats.provider_available, false);
   assert.equal(result.stats.remaining, 1);
+  assert.equal(result.stats.deferred, 1);
   assert.deepEqual(result.payload.translations, {});
+});
+
+test('translation cache bounds model work and reports deferred descriptions', async () => {
+  const calls = [];
+  const result = await updateTranslationCache([
+    {repo: 'a/one', description: 'First plugin'},
+    {repo: 'b/two', description: 'Second plugin'},
+    {repo: 'c/three', description: 'Third plugin'}
+  ], {translations: {}}, {
+    token: 'test-token',
+    maxItems: 2,
+    batchSize: 2,
+    fetchImpl: async (_url, options) => {
+      const items = JSON.parse(JSON.parse(options.body).messages[1].content).items;
+      calls.push(items.map(item => item.id));
+      return new Response(JSON.stringify({
+        choices: [{message: {content: JSON.stringify({
+          translations: items.map(item => ({id: item.id, zh: `中文 ${item.id}`}))
+        })}}]
+      }), {status: 200});
+    }
+  });
+  assert.deepEqual(calls, [['a/one', 'b/two']]);
+  assert.equal(result.stats.attempted, 2);
+  assert.equal(result.stats.translated, 2);
+  assert.equal(result.stats.deferred, 1);
+  assert.equal(result.stats.remaining, 1);
 });

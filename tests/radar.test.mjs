@@ -6,8 +6,11 @@ import {
   buildRankings,
   buildSignals,
   categoryFor,
+  normalizeApiProject,
+  plannedGitHubRequestCeiling,
   reconcileCatalogs,
   relevanceEvidence,
+  selectProjectsForRefresh,
   validateProjectSet,
   validateRadarConfig
 } from '../scripts/lib/radar.mjs';
@@ -64,6 +67,31 @@ test('category classifier prioritizes concrete plugin and UI signals', () => {
 
 test('attention score grows with observable popularity', () => {
   assert.ok(attentionScore({stars: 100, forks: 10}) > attentionScore({stars: 10, forks: 1}));
+});
+
+test('repository refresh keeps leaders current and rotates the stalest remainder', () => {
+  const selected = selectProjectsForRefresh([
+    {repo: 'z/leader', stars: 100, forks: 10, last_checked_at: '2026-08-15T00:00:00Z'},
+    {repo: 'a/missing', stars: 1, forks: 0},
+    {repo: 'b/old', stars: 2, forks: 0, last_checked_at: '2026-08-01T00:00:00Z'},
+    {repo: 'c/fresh', stars: 3, forks: 0, last_checked_at: '2026-08-14T00:00:00Z'}
+  ], {limit: 3, priorityLimit: 1});
+  assert.deepEqual(selected.map(project => project.repo), ['z/leader', 'a/missing', 'b/old']);
+});
+
+test('planned GitHub API work stays inside an explicit request budget', () => {
+  assert.equal(plannedGitHubRequestCeiling({
+    queries: ['one', 'two', 'three', 'four', 'five'],
+    search_pages_per_query: 1,
+    max_existing_refresh_per_run: 1000,
+    max_readmes_per_run: 80,
+    max_developer_refresh_per_run: 200
+  }), 1285);
+});
+
+test('normalized repository records remember when metrics were checked', () => {
+  const result = normalizeApiProject({full_name: 'a/project'}, {}, {}, '2026-08-18T13:00:00Z');
+  assert.equal(result.last_checked_at, '2026-08-18T13:00:00Z');
 });
 
 test('rankings calculate snapshot deltas and rank changes', () => {
