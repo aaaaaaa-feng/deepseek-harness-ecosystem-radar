@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T01:53:46.169Z",
+  "generated_at": "2026-08-18T03:10:54.667Z",
   "candidates": [
     {
       "repo": "ANGELBERRIOS23/conversation-reclaim",
@@ -96,34 +96,63 @@
       ]
     },
     {
-      "repo": "linyufeng123456/dsh_plugins",
-      "name": "dsh_plugins",
-      "owner": "linyufeng123456",
-      "url": "https://github.com/linyufeng123456/dsh_plugins",
-      "description": "dsh插件",
-      "created_at": "2026-08-15T13:46:59Z",
-      "updated_at": "2026-08-16T08:43:51Z",
-      "pushed_at": "2026-08-16T08:43:47Z",
+      "repo": "T-Auto/dsh-ecosystem-spec",
+      "name": "dsh-ecosystem-spec",
+      "owner": "T-Auto",
+      "url": "https://github.com/T-Auto/dsh-ecosystem-spec",
+      "description": "dsh Terminal Plugin Access and Implementation Standards / dsh终端交互生态插件准入规范与实施标准",
+      "created_at": "2026-08-17T07:54:37Z",
+      "updated_at": "2026-08-18T03:09:18Z",
+      "pushed_at": "2026-08-18T03:09:22Z",
       "stars": 3,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 1,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "终端与部署",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/T-Auto/dsh-ecosystem-spec#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
+      ]
+    },
+    {
+      "repo": "lpz0521/dsh-plugin-task-done-notify",
+      "name": "dsh-plugin-task-done-notify",
+      "owner": "lpz0521",
+      "url": "https://github.com/lpz0521/dsh-plugin-task-done-notify",
+      "description": "",
+      "created_at": "2026-08-18T01:11:41Z",
+      "updated_at": "2026-08-18T03:07:39Z",
+      "pushed_at": "2026-08-18T03:07:05Z",
+      "stars": 2,
       "forks": 0,
       "subscribers": null,
       "open_issues": 0,
       "language": "JavaScript",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [],
       "fork": false,
       "archived": false,
       "status": "active",
       "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-15T14:42:32.223Z",
-      "last_seen_at": "2026-08-16T08:49:43.194Z",
-      "verification": "metadata-only",
+      "first_seen_at": "2026-08-18T01:53:46.169Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/linyufeng123456/dsh_plugins#readme",
+      "evidence_url": "https://github.com/lpz0521/dsh-plugin-task-done-notify#readme",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-08",
-        "dsh-plugin in:name,description created:>=2026-08-09"
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -595,36 +624,6 @@
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-09",
         "dsh-plugin in:name,description created:>=2026-08-10"
-      ]
-    },
-    {
-      "repo": "lpz0521/dsh-plugin-task-done-notify",
-      "name": "dsh-plugin-task-done-notify",
-      "owner": "lpz0521",
-      "url": "https://github.com/lpz0521/dsh-plugin-task-done-notify",
-      "description": "",
-      "created_at": "2026-08-18T01:11:41Z",
-      "updated_at": "2026-08-18T01:12:51Z",
-      "pushed_at": "2026-08-18T01:11:47Z",
-      "stars": 1,
-      "forks": 0,
-      "subscribers": null,
-      "open_issues": 0,
-      "language": "JavaScript",
-      "license": "MIT",
-      "topics": [],
-      "fork": false,
-      "archived": false,
-      "status": "active",
-      "category": "其他实现型扩展",
-      "first_seen_at": "2026-08-18T01:53:46.169Z",
-      "last_seen_at": "2026-08-18T01:53:46.169Z",
-      "verification": "readme-evidence-not-runtime-tested",
-      "evidence_level": "candidate",
-      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
-      "evidence_url": "https://github.com/lpz0521/dsh-plugin-task-done-notify#readme",
-      "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -1948,8 +1947,8 @@
       "url": "https://github.com/anitman/dsh-plugin-video-player",
       "description": "DSH 刷视频 / DSH Video Player — web GUI 侧栏抖音式竖屏刷视频（窗口随视频宽高比自适应 + Range 流式播放 + SMB NAS 支持）",
       "created_at": "2026-08-17T00:34:14Z",
-      "updated_at": "2026-08-18T00:09:27Z",
-      "pushed_at": "2026-08-18T00:09:11Z",
+      "updated_at": "2026-08-18T02:36:57Z",
+      "pushed_at": "2026-08-18T02:36:37Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -1962,7 +1961,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-17T01:57:45.301Z",
-      "last_seen_at": "2026-08-18T01:53:46.169Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -2058,6 +2057,37 @@
       "evidence_level": "candidate",
       "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
       "evidence_url": "https://github.com/aridiosilva/Modelos_IA_Chinesas_AGO_2026#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
+      ]
+    },
+    {
+      "repo": "ArrynBi/token-running",
+      "name": "token-running",
+      "owner": "ArrynBi",
+      "url": "https://github.com/ArrynBi/token-running",
+      "description": "token-running app",
+      "created_at": "2026-08-17T16:56:33Z",
+      "updated_at": "2026-08-18T03:07:32Z",
+      "pushed_at": "2026-08-18T03:06:59Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "Python",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "记忆、上下文与成本",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/ArrynBi/token-running#readme",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
         "deepseek-harness in:name,description,readme created:>=2026-08-11"
@@ -2956,6 +2986,36 @@
       "evidence_url": "https://github.com/coderstory/dsh-plugins",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "codeXJW/dsh-git",
+      "name": "dsh-git",
+      "owner": "codeXJW",
+      "url": "https://github.com/codeXJW/dsh-git",
+      "description": "",
+      "created_at": "2026-08-16T08:24:29Z",
+      "updated_at": "2026-08-18T03:06:09Z",
+      "pushed_at": "2026-08-18T03:05:19Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/codeXJW/dsh-git",
+      "discovery_queries": [
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -5560,8 +5620,8 @@
       "url": "https://github.com/jianxx/dsh-cc-plugins",
       "description": "",
       "created_at": "2026-08-15T08:33:17Z",
-      "updated_at": "2026-08-17T12:23:50Z",
-      "pushed_at": "2026-08-17T12:22:15Z",
+      "updated_at": "2026-08-18T02:52:26Z",
+      "pushed_at": "2026-08-18T02:52:15Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -5574,7 +5634,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T08:47:35.397Z",
-      "last_seen_at": "2026-08-17T13:09:16.788Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -5584,7 +5644,8 @@
         "dsh-plugin in:name,description created:>=2026-08-09",
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
         "deepseek-harness in:name,description,readme created:>=2026-08-10",
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -5710,6 +5771,36 @@
       "evidence_url": "https://github.com/jokerwen666/dsh-bili-taskmaster#readme",
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "jooey/dsh-usage-minimax-cn",
+      "name": "dsh-usage-minimax-cn",
+      "owner": "jooey",
+      "url": "https://github.com/jooey/dsh-usage-minimax-cn",
+      "description": "DSH command plugin: /usage-minimax-cn command and composer readout for your MiniMax (minimax-cn) Coding Plan subscription quota usage",
+      "created_at": "2026-08-18T01:56:07Z",
+      "updated_at": "2026-08-18T02:49:02Z",
+      "pushed_at": "2026-08-18T02:48:36Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "记忆、上下文与成本",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/jooey/dsh-usage-minimax-cn#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -6309,6 +6400,36 @@
       ]
     },
     {
+      "repo": "kongshan-zhuyu/dsh-balance-plugin",
+      "name": "dsh-balance-plugin",
+      "owner": "kongshan-zhuyu",
+      "url": "https://github.com/kongshan-zhuyu/dsh-balance-plugin",
+      "description": "",
+      "created_at": "2026-08-18T02:20:15Z",
+      "updated_at": "2026-08-18T02:32:16Z",
+      "pushed_at": "2026-08-18T02:31:52Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "记忆、上下文与成本",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/kongshan-zhuyu/dsh-balance-plugin#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
+      ]
+    },
+    {
       "repo": "KongXiangning/dsh-remote-access",
       "name": "dsh-remote-access",
       "owner": "KongXiangning",
@@ -6526,6 +6647,36 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "Lavender3533/dsh-codex-bridge",
+      "name": "dsh-codex-bridge",
+      "owner": "Lavender3533",
+      "url": "https://github.com/Lavender3533/dsh-codex-bridge",
+      "description": "DSH plugin / MCP server — let Codex, Claude Code, Cursor use DSH as an external resumable sub-agent",
+      "created_at": "2026-08-18T03:03:15Z",
+      "updated_at": "2026-08-18T03:03:46Z",
+      "pushed_at": "2026-08-18T03:03:20Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "渠道与模型接入",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/Lavender3533/dsh-codex-bridge#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -7107,6 +7258,37 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "deepseek-harness in:name,description,readme created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "lomehong/dsh-memory",
+      "name": "dsh-memory",
+      "owner": "lomehong",
+      "url": "https://github.com/lomehong/dsh-memory",
+      "description": "",
+      "created_at": "2026-08-18T02:40:02Z",
+      "updated_at": "2026-08-18T03:08:59Z",
+      "pushed_at": "2026-08-18T03:08:37Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "记忆、上下文与成本",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "README 提及 DeepSeek Harness，但直接实现关系仍需复核",
+      "evidence_url": "https://github.com/lomehong/dsh-memory#readme",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -9349,6 +9531,36 @@
       ]
     },
     {
+      "repo": "sataycat/dsh-plugin-skills",
+      "name": "dsh-plugin-skills",
+      "owner": "sataycat",
+      "url": "https://github.com/sataycat/dsh-plugin-skills",
+      "description": "",
+      "created_at": "2026-08-18T02:51:54Z",
+      "updated_at": "2026-08-18T02:52:06Z",
+      "pushed_at": "2026-08-18T02:51:57Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/sataycat/dsh-plugin-skills#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
+      ]
+    },
+    {
       "repo": "Semidia/dsh-settings-tuner",
       "name": "dsh-settings-tuner",
       "owner": "Semidia",
@@ -9377,6 +9589,37 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
         "deepseek-harness in:name,description,readme created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "SenmuuuuW/dsh-deeptrace-tui",
+      "name": "dsh-deeptrace-tui",
+      "owner": "SenmuuuuW",
+      "url": "https://github.com/SenmuuuuW/dsh-deeptrace-tui",
+      "description": "深迹 DeepTrace TUI — Your Agent, in numbers. 不离开终端，复盘你的 Agent。",
+      "created_at": "2026-08-17T11:23:35Z",
+      "updated_at": "2026-08-18T00:44:51Z",
+      "pushed_at": "2026-08-18T03:10:47Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "终端与部署",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/SenmuuuuW/dsh-deeptrace-tui",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -9715,6 +9958,36 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-08",
         "dsh-plugin in:name,description created:>=2026-08-08"
+      ]
+    },
+    {
+      "repo": "soolaugust/dsh-cli-plugin",
+      "name": "dsh-cli-plugin",
+      "owner": "soolaugust",
+      "url": "https://github.com/soolaugust/dsh-cli-plugin",
+      "description": "",
+      "created_at": "2026-08-18T03:10:21Z",
+      "updated_at": "2026-08-18T03:10:22Z",
+      "pushed_at": "2026-08-18T03:10:22Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "",
+      "license": "NOASSERTION",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/soolaugust/dsh-cli-plugin#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -10739,8 +11012,8 @@
       "url": "https://github.com/Willmylife/dsh-dynamic-wallpaper",
       "description": "DSH dynamic wallpaper plugin: 6+ animated backgrounds (particles, meteor shower, etc.), custom import, opacity/blur/speed controls",
       "created_at": "2026-08-17T06:17:19Z",
-      "updated_at": "2026-08-17T07:01:01Z",
-      "pushed_at": "2026-08-17T07:00:03Z",
+      "updated_at": "2026-08-18T03:02:45Z",
+      "pushed_at": "2026-08-18T03:02:26Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -10753,13 +11026,14 @@
       "status": "active",
       "category": "界面与体验扩展",
       "first_seen_at": "2026-08-17T07:19:17.807Z",
-      "last_seen_at": "2026-08-17T07:19:17.807Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
       "evidence_url": "https://github.com/Willmylife/dsh-dynamic-wallpaper",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -10822,6 +11096,38 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "worksAssistant/dsh-plugin-template",
+      "name": "dsh-plugin-template",
+      "owner": "worksAssistant",
+      "url": "https://github.com/worksAssistant/dsh-plugin-template",
+      "description": "",
+      "created_at": "2026-08-17T12:57:52Z",
+      "updated_at": "2026-08-18T03:07:42Z",
+      "pushed_at": "2026-08-18T03:06:56Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "TypeScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "插件管理与生态工具",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/worksAssistant/dsh-plugin-template",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -11010,6 +11316,37 @@
       ]
     },
     {
+      "repo": "xiaoq17/dsh-desktop",
+      "name": "dsh-desktop",
+      "owner": "xiaoq17",
+      "url": "https://github.com/xiaoq17/dsh-desktop",
+      "description": "",
+      "created_at": "2026-08-13T17:32:23Z",
+      "updated_at": "2026-08-18T03:09:05Z",
+      "pushed_at": "2026-08-18T03:08:57Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 1,
+      "language": "Swift",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "桌面端与启动器",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/xiaoq17/dsh-desktop",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
+      ]
+    },
+    {
       "repo": "xiaoyi-xx/dsh-peak-indicator",
       "name": "dsh-peak-indicator",
       "owner": "xiaoyi-xx",
@@ -11129,6 +11466,36 @@
       "evidence_url": "https://github.com/Xinyu-lumos/dsh-session-delete#readme",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "Xinyu-lumos/dsh-temporary-chat",
+      "name": "dsh-temporary-chat",
+      "owner": "Xinyu-lumos",
+      "url": "https://github.com/Xinyu-lumos/dsh-temporary-chat",
+      "description": "DSH Web plugin: ChatGPT-style temporary chat (no project, not persisted, gone on close)",
+      "created_at": "2026-08-17T09:53:57Z",
+      "updated_at": "2026-08-18T03:02:15Z",
+      "pushed_at": "2026-08-18T03:01:52Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "其他实现型扩展",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "metadata-only",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/Xinyu-lumos/dsh-temporary-chat",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -11558,6 +11925,36 @@
       "evidence_url": "https://github.com/yoiizesdev-crypto/DSH-Balance-display",
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-10"
+      ]
+    },
+    {
+      "repo": "yokuminto/dsh-handheld",
+      "name": "dsh-handheld",
+      "owner": "yokuminto",
+      "url": "https://github.com/yokuminto/dsh-handheld",
+      "description": "dsh mobile UI plugin (snapshot of mexiaosqwq/dsh-web-mobile, self-maintained)",
+      "created_at": "2026-08-18T02:48:40Z",
+      "updated_at": "2026-08-18T03:04:17Z",
+      "pushed_at": "2026-08-18T03:03:46Z",
+      "stars": 0,
+      "forks": 0,
+      "subscribers": null,
+      "open_issues": 0,
+      "language": "JavaScript",
+      "license": "MIT",
+      "topics": [],
+      "fork": false,
+      "archived": false,
+      "status": "active",
+      "category": "界面与体验扩展",
+      "first_seen_at": "2026-08-18T03:10:54.667Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
+      "verification": "readme-evidence-not-runtime-tested",
+      "evidence_level": "candidate",
+      "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
+      "evidence_url": "https://github.com/yokuminto/dsh-handheld#readme",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -12133,8 +12530,8 @@
       "url": "https://github.com/ZwqJG/dsh-plugins",
       "description": "",
       "created_at": "2026-08-14T11:13:21Z",
-      "updated_at": "2026-08-17T02:52:48Z",
-      "pushed_at": "2026-08-17T02:52:41Z",
+      "updated_at": "2026-08-18T02:48:23Z",
+      "pushed_at": "2026-08-18T02:48:12Z",
       "stars": 0,
       "forks": 0,
       "subscribers": null,
@@ -12147,7 +12544,7 @@
       "status": "active",
       "category": "其他实现型扩展",
       "first_seen_at": "2026-08-15T07:46:04.594Z",
-      "last_seen_at": "2026-08-17T03:15:09.366Z",
+      "last_seen_at": "2026-08-18T03:10:54.667Z",
       "verification": "metadata-only",
       "evidence_level": "candidate",
       "evidence_reason": "DSH 名称与实现信号命中，但缺少完整名称或官方 Topic 证据",
@@ -12155,7 +12552,8 @@
       "discovery_queries": [
         "dsh-plugin in:name,description created:>=2026-08-08",
         "dsh-plugin in:name,description created:>=2026-08-09",
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
