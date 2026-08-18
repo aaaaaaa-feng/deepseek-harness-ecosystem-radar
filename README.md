@@ -12,12 +12,12 @@
 
 <p align="center">
   <strong>↑ 点击上方横幅，打开完整在线雷达</strong><br>
-  <sub>完整项目榜 · 分类榜 · 趋势变化 · 搜索筛选 · 每小时更新</sub>
+  <sub>完整项目榜 · 分类榜 · 趋势变化 · 搜索筛选 · 网站每小时更新</sub>
 </p>
 
 <p align="center">
   <a href="https://deepseek-harness-ecosystem-radar.pages.dev/"><strong>网页入口</strong></a> ·
-  <a href="STATUS.md">最新快照</a> ·
+  <a href="STATUS.md">每日检查点</a> ·
   <a href="METHODOLOGY.md">数据方法</a> ·
   <a href="https://github.com/aaaaaaa-feng/deepseek-harness-ecosystem-radar/issues/new?template=add-project.yml">提交项目</a>
 </p>
@@ -29,7 +29,7 @@
 </p>
 
 > [!IMPORTANT]
-> **这不是实时行情系统。** GitHub Actions 每小时第 17 分钟尝试生成一次新快照，网页、状态页和数据文件都以“最近一次成功快照”为准。GitHub 调度延迟或任务失败时，会继续展示上一份有效数据，不会伪装成实时结果。
+> **这不是实时行情系统。** GitHub Actions 每小时第 17 分钟尝试生成一次新快照，在线雷达以“最近一次成功快照”为准。GitHub 调度延迟或任务失败时，会继续展示上一份有效数据，不会伪装成实时结果。为了避免自动数据淹没代码历史，README 与 `main` 数据检查点每天最多更新一次。
 
 ## 初衷
 
@@ -54,18 +54,19 @@ DeepSeek Harness 生态早期雷达因此而生。它想做的不是又一份链
 
 ## 去哪里看最新数据
 
-README 以长期有效的项目说明为主，只保留一个按小时更新的精简 Top 10；项目总数、完整排名和分类总量统一在在线雷达与数据文件中查看。
+README 以长期有效的项目说明为主，只保留一个每天更新的精简 Top 10；项目总数、完整排名和分类总量统一在每小时更新的在线雷达中查看。
 
 - [在线雷达](https://deepseek-harness-ecosystem-radar.pages.dev/)：搜索、筛选、完整项目榜、分类榜和观察窗口动量。
-- [最新状态](STATUS.md)：最近一次成功快照的时间、规模和更新状态。
-- [完整数据](data/latest.json)：网页使用的最新结构化数据。
+- [网页最新数据](https://deepseek-harness-ecosystem-radar.pages.dev/data/latest.json)：在线雷达当前使用的精简结构化数据。
+- [仓库状态](STATUS.md)：`main` 最近一次每日检查点的时间、规模和更新状态。
+- [每日榜单数据](data/latest.json)：随 `main` 每日检查点保存的结构化排名与摘要。
 - [项目排名 CSV](data/rankings.csv)：适合下载、复算和二次分析。
 - [功能分类 CSV](data/categories.csv)：分类规模、增长和头部项目。
 - [待复核候选](data/candidates.json)：相关性证据尚不充分、未进入正式榜单的项目。
 
-## 每小时快照 · 关注度 Top 10
+## 每日检查点 · 关注度 Top 10
 
-这一小段与在线雷达使用同一份小时快照。它不是实时榜单；任务延迟或失败时会保留上一份成功结果，并继续显示对应的数据时点。
+这一小段每天最多写入 `main` 一次，数据时点会明确标出。在线雷达仍然每小时更新，因此网页可能比 README 更新。
 
 <!-- RADAR_TOP10_START -->
 **数据时点：** `2026-08-18T13:11:55.307Z`　·　**观察窗口：** 2.4 小时
@@ -95,8 +96,8 @@ README 以长期有效的项目说明为主，只保留一个按小时更新的�
 - **真实窗口动量**：根据两个有效快照之间的真实时间差计算变化，不硬写“24 小时”。
 - **开发者公开所在地**：只使用 GitHub 账号主动填写的 `location`，未知信息保持未知。
 - **中文辅助介绍**：保留英文原文，增量翻译新增或发生变化的英文简介。
-- **可审计数据**：保留 JSON、CSV、小时快照、每日归档和排除理由。
-- **自动发布**：小时任务提交新快照后，Cloudflare Pages 自动发布最新页面。
+- **可审计数据**：保留 JSON、CSV、滚动小时快照、每日归档和排除理由。
+- **自动发布**：小时任务把生成页面发布到独立的 `radar-live` 分支，`main` 每天最多留下一个数据检查点。
 
 ## 更新方式
 
@@ -106,16 +107,18 @@ flowchart LR
     B --> C["核对相关证据<br/>更新地区与翻译"]
     C --> D["保存快照<br/>重算项目榜与分类榜"]
     D --> E["测试、数据校验<br/>密钥特征扫描"]
-    E --> F["提交到 main"]
-    F --> G["Cloudflare Pages<br/>自动发布"]
+    E --> F["发布单提交<br/>radar-live 分支"]
+    F --> G["Cloudflare Pages<br/>每小时自动发布"]
+    E --> H["每天最多一次<br/>main 数据检查点"]
 ```
 
 - 计划频率：每小时第 17 分钟，时区 `Asia/Shanghai`。
 - 更新性质：**按小时生成的离散快照，不是实时流式数据**。
 - 延迟处理：页面展示真实数据时点和真实观察窗口，不假设任务一定准点执行。
-- 失败处理：API、翻译或校验失败时不提交半成品，继续保留上一份成功快照。
-- 历史保留：保存最近 14 天的小时明细，并为每个上海日期保留一个长期日归档点。
-- README 策略：小时任务只更新上方精简 Top 10；其余项目介绍保持稳定。
+- 失败处理：API、翻译或校验失败时不发布半成品，继续保留上一份成功快照。
+- 历史保留：保存最近 3 天的小时明细和最近 90 天的每日归档，自动状态放在 GitHub Actions 滚动缓存中。
+- 分支策略：`radar-live` 每小时只保留一个可部署提交；`main` 不再产生小时数据提交。
+- README 策略：README 每天最多更新一次精简 Top 10；其余项目介绍保持稳定。
 
 ## 排名如何理解
 
@@ -156,12 +159,12 @@ flowchart LR
 | `data/exclusions.json` | 排除项目及其原因 |
 | `data/developers.json` | 维护者公开地点和地区分组缓存 |
 | `data/translations.json` | 英文原文与中文翻译缓存 |
-| `data/snapshots/` | 最近 14 天的小时明细 |
-| `data/archive/` | 每天一个长期归档点 |
+| `data/snapshots/` | 最近 3 天的滚动小时明细 |
+| `data/archive/` | 最近 90 天、每天一个归档点 |
 | `data/rankings.json` / `.csv` | 项目排名与观察窗口变化 |
 | `data/categories.json` / `.csv` | 功能分类榜与分类头部项目 |
 | `docs/` | Cloudflare Pages 使用的静态页面 |
-| `tweet-draft.md` | 随最新快照生成的 X/Twitter 草稿 |
+| `tweet-draft.md` | 随 `main` 每日检查点保存的 X/Twitter 草稿 |
 
 ## 手动补充与纠错
 
@@ -198,10 +201,11 @@ GITHUB_TOKEN=... npm run update
 <summary><strong>部署自己的副本</strong></summary>
 
 1. Fork 本仓库，并允许 GitHub Actions 写入仓库内容。
-2. 在 Cloudflare Pages 连接 Fork 后的仓库，生产分支选择 `main`。
-3. 构建命令填写 `exit 0`，输出目录填写 `docs`，根目录留空。
-4. 更新 `config/radar.json` 中的 `public_repository_url` 与 `public_site_url`。
-5. 手动运行一次 `Hourly ecosystem update`，确认数据提交和自动部署成功。
+2. 更新 `config/radar.json` 中的 `public_repository_url` 与 `public_site_url`。
+3. 手动运行一次 `Hourly ecosystem update`，让工作流创建 `radar-live` 生成分支。
+4. 在 Cloudflare Pages 连接 Fork 后的仓库，生产分支选择 `radar-live`。
+5. 构建命令填写 `exit 0`，输出目录填写 `docs`，根目录留空。
+6. 再次运行工作流，确认在线雷达更新，同时 `main` 没有新增小时提交。
 
 GitHub Pages 仍可作为可选发布方式；它与 Cloudflare Pages 相互独立。
 

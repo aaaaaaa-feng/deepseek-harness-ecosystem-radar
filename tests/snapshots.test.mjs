@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  archivePathsToPrune,
   dedupeSnapshotRecords,
   describeSnapshotFile,
   hourlyPathsToPrune,
@@ -61,5 +62,18 @@ test('hourly retention prunes only history protected by a daily archive', () => 
   ];
   assert.deepEqual(hourlyPathsToPrune(records, '2026-08-15T05:50:00.000Z', 7), [
     'data/snapshots/2026-08-01-23.json'
+  ]);
+});
+
+test('daily archive retention keeps recent checkpoints and prunes old ones', () => {
+  const records = [
+    record('data/archive/2026-04-01.json', 'archive', '2026-04-01', '2026-04-01T15:50:00.000Z'),
+    record('data/snapshots/2026-04-02.json', 'legacy-daily', '2026-04-02', '2026-04-02T15:50:00.000Z'),
+    record('data/archive/2026-08-15.json', 'archive', '2026-08-15', '2026-08-15T05:50:00.000Z'),
+    record('data/snapshots/2026-04-01-23.json', 'hourly', '2026-04-01-23', '2026-04-01T15:50:00.000Z')
+  ];
+  assert.deepEqual(archivePathsToPrune(records, '2026-08-15T05:50:00.000Z', 90), [
+    'data/archive/2026-04-01.json',
+    'data/snapshots/2026-04-02.json'
   ]);
 });

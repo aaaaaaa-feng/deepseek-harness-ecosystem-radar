@@ -30,6 +30,8 @@ export function validateRadarConfig(config) {
   boundedInteger('api_max_attempts', 1, 5);
   boundedInteger('api_max_retry_delay_ms', 0, 30_000);
   boundedInteger('hourly_snapshot_retention_days', 1, 90);
+  boundedInteger('daily_archive_retention_days', 7, 3650);
+  boundedInteger('public_momentum_limit', 8, 1_000);
   boundedInteger('developer_profile_refresh_days', 1, 365);
   boundedInteger('translation_batch_size', 1, 50);
   boundedInteger('translation_max_attempts', 1, 3);
