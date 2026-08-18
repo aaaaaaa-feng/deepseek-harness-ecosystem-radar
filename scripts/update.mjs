@@ -14,6 +14,7 @@ import {
 } from './lib/radar.mjs';
 import {
   loadSnapshotRecords,
+  pruneArchiveSnapshots,
   pruneHourlySnapshots,
   shanghaiDate,
   snapshotFilename
@@ -208,6 +209,12 @@ const prunedSnapshots = await pruneHourlySnapshots(
   now,
   config.hourly_snapshot_retention_days,
 );
+const prunedArchives = await pruneArchiveSnapshots(
+  root,
+  snapshotRecords,
+  now,
+  config.daily_archive_retention_days,
+);
 await buildArtifacts();
 console.log(JSON.stringify({
   updated_at: now,
@@ -217,6 +224,7 @@ console.log(JSON.stringify({
   hourly_snapshot: hourlySnapshotPath,
   daily_archive: dailyArchivePath,
   pruned_hourly_snapshots: prunedSnapshots.length,
+  pruned_daily_archives: prunedArchives.length,
   developer_profiles: developerResult.stats,
   translations: translationResult.stats
 }));

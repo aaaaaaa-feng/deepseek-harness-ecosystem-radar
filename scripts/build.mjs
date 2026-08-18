@@ -74,8 +74,13 @@ export async function buildArtifacts() {
     counts[project.translation_status] = (counts[project.translation_status] || 0) + 1;
     return counts;
   }, {});
+  const publicRankings = {
+    ...rankings,
+    momentum: rankings.momentum.slice(0, config.public_momentum_limit),
+    new_projects: rankings.new_projects.slice(0, config.public_momentum_limit)
+  };
   const latest = {
-    schema_version: 2,
+    schema_version: 3,
     title: 'DeepSeek Harness 生态早期雷达',
     generated_at: rankings.generated_at,
     release_cutoff_utc: config.release_cutoff_utc,
@@ -94,11 +99,10 @@ export async function buildArtifacts() {
       developer_regions: developerRegions,
       translated_descriptions: translationStatus.translated || 0,
       source_chinese_descriptions: translationStatus['source-zh'] || 0,
-      pending_translations: translationStatus.pending || 0
+      pending_translations: translationStatus.pending || 0,
+      published_momentum_projects: publicRankings.momentum.length
     },
-    rankings,
-    signals,
-    projects: activeProjects
+    rankings: publicRankings
   };
   await writeJson('data/latest.json', latest);
   await writeJson('docs/data/latest.json', latest);
@@ -167,7 +171,7 @@ export async function buildArtifacts() {
   readme = replaceSection(readme, '<!-- RADAR_TOP10_START -->', '<!-- RADAR_TOP10_END -->', top10);
   await writeText('README.md', readme);
 
-  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} Stars）\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n\n> 分类榜可以按 Stars 总量、项目数量和真实窗口增长查看；它描述生态规模与公开变化，不代表产品质量。\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
+  const status = `# 更新状态\n\n- 最新成功快照：${rankings.latest_snapshot_at}\n- 上一个观察点：${rankings.previous_snapshot_at || '暂无'}\n- 观察项目：${activeProjects.length}\n- 待复核候选：${candidatesPayload.candidates.length}\n- 历史观察点：${snapshots.length}\n- 小时明细：${snapshotStats.hourly}\n- 每日归档：${snapshotStats.archives}\n- Stars 总量第一分类：${topCategory?.category || '暂无'}（${topCategory?.total_stars || 0} Stars）\n- 维护者公开所在地：国内 ${developerRegions.mainland_china}；中国港澳台 ${developerRegions.greater_china}；海外 ${developerRegions.overseas}；未知 ${developerRegions.unknown}\n- 待翻译英文简介：${translationStatus.pending || 0}\n- 更新计划：${config.schedule_label}\n- 网站发布：每小时更新 radar-live 生成分支\n- main 数据检查点：每天最多 1 次\n- 小时明细保留：最近 ${config.hourly_snapshot_retention_days} 天\n- 每日归档保留：最近 ${config.daily_archive_retention_days} 天\n\n> 分类榜可以按 Stars 总量、项目数量和真实窗口增长查看；它描述生态规模与公开变化，不代表产品质量。\n\n> 所在地来自维护者 GitHub 公开资料，只是账户地点分组，不代表国籍。未知信息不会根据姓名或语言猜测。\n\n> “已确认”只表示与 DeepSeek Harness 的相关性有公开证据，不表示已经完成本地安装、安全审计或生产验收。\n`;
   await writeText('STATUS.md', status);
 
   const top = rankings.current[0];

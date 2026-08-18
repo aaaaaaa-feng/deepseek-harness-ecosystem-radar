@@ -119,8 +119,27 @@ export function hourlyPathsToPrune(records, latestAt, retentionDays) {
     .sort();
 }
 
+export function archivePathsToPrune(records, latestAt, retentionDays) {
+  if (!Number.isInteger(retentionDays) || retentionDays < 1) {
+    throw new Error('retentionDays must be a positive integer');
+  }
+  const latestTimestamp = asDate(latestAt).getTime();
+  const cutoff = latestTimestamp - retentionDays * 86_400_000;
+  return records
+    .filter(record => record.descriptor.kind !== 'hourly')
+    .filter(record => Date.parse(record.snapshot.snapshot_at) < cutoff)
+    .map(record => record.relativePath)
+    .sort();
+}
+
 export async function pruneHourlySnapshots(root, records, latestAt, retentionDays) {
   const relativePaths = hourlyPathsToPrune(records, latestAt, retentionDays);
+  await Promise.all(relativePaths.map(relativePath => fs.rm(path.join(root, relativePath))));
+  return relativePaths;
+}
+
+export async function pruneArchiveSnapshots(root, records, latestAt, retentionDays) {
+  const relativePaths = archivePathsToPrune(records, latestAt, retentionDays);
   await Promise.all(relativePaths.map(relativePath => fs.rm(path.join(root, relativePath))));
   return relativePaths;
 }

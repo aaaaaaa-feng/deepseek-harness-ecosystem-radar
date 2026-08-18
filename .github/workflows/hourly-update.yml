@@ -5,6 +5,12 @@ on:
     - cron: "17 * * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
+    inputs:
+      commit_checkpoint:
+        description: "同时把本次状态作为当天 main 数据检查点"
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: ecosystem-radar-update
@@ -13,34 +19,118 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     permissions:
       contents: write
       models: read
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          persist-credentials: true
       - uses: actions/setup-node@v7
         with:
           node-version: 24
           package-manager-cache: false
       - run: npm ci
       - run: npm test
+
+      - name: Restore rolling radar state
+        id: restore-state
+        uses: actions/cache/restore@v5
+        with:
+          path: |
+            data/projects.json
+            data/candidates.json
+            data/exclusions.json
+            data/developers.json
+            data/translations.json
+            data/snapshots
+            data/archive
+          key: radar-state-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            radar-state-v2-
+
       - name: Refresh GitHub data and rebuild artifacts
         run: npm run update
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: npm run check
       - run: npm run security-check
-      - name: Commit hourly snapshot
+
+      - name: Save rolling radar state
+        uses: actions/cache/save@v5
+        with:
+          path: |
+            data/projects.json
+            data/candidates.json
+            data/exclusions.json
+            data/developers.json
+            data/translations.json
+            data/snapshots
+            data/archive
+          key: radar-state-v2-${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Publish generated site branch
+        env:
+          LIVE_BRANCH: radar-live
+        run: |
+          set -euo pipefail
+          LIVE_MARKER="deepseek-harness-ecosystem-radar generated branch v1"
+
+          if git ls-remote --exit-code --heads origin "refs/heads/${LIVE_BRANCH}" >/dev/null 2>&1; then
+            git fetch --no-tags --depth=1 origin "${LIVE_BRANCH}"
+            REMOTE_MARKER="$(git show FETCH_HEAD:.radar-generated-branch 2>/dev/null || true)"
+            if [[ "${REMOTE_MARKER}" != "${LIVE_MARKER}" ]]; then
+              echo "::error::Refusing to overwrite ${LIVE_BRANCH}: generated-branch marker is missing."
+              exit 1
+            fi
+          fi
+
+          LIVE_DIR="${RUNNER_TEMP}/radar-live"
+          mkdir -p "${LIVE_DIR}/docs"
+          cp -R docs/. "${LIVE_DIR}/docs/"
+          printf '%s\n' "${LIVE_MARKER}" > "${LIVE_DIR}/.radar-generated-branch"
+
+          git init --initial-branch="${LIVE_BRANCH}" "${LIVE_DIR}"
+          git -C "${LIVE_DIR}" config user.name "github-actions[bot]"
+          git -C "${LIVE_DIR}" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          AUTH_HEADER="$(git config --local --get http.https://github.com/.extraheader || true)"
+          if [[ -z "${AUTH_HEADER}" ]]; then
+            echo "::error::GitHub checkout credentials are unavailable."
+            exit 1
+          fi
+          git -C "${LIVE_DIR}" config http.https://github.com/.extraheader "${AUTH_HEADER}"
+          git -C "${LIVE_DIR}" remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git -C "${LIVE_DIR}" add -- .radar-generated-branch docs
+          SNAPSHOT_TIME="$(TZ=Asia/Shanghai date '+%F %H:%M')"
+          git -C "${LIVE_DIR}" commit -m "chore(live): publish radar ${SNAPSHOT_TIME} CST"
+          git -C "${LIVE_DIR}" push --force origin "HEAD:refs/heads/${LIVE_BRANCH}"
+
+      - name: Decide whether main needs a daily checkpoint
+        id: checkpoint
+        env:
+          FORCE_CHECKPOINT: ${{ inputs.commit_checkpoint }}
+        run: |
+          set -euo pipefail
+          CHECKPOINT_DATE="$(TZ=Asia/Shanghai date '+%F')"
+          if [[ "${FORCE_CHECKPOINT:-false}" == "true" ]] || ! git cat-file -e "HEAD:data/archive/${CHECKPOINT_DATE}.json" 2>/dev/null; then
+            echo "due=true" >> "${GITHUB_OUTPUT}"
+            echo "date=${CHECKPOINT_DATE}" >> "${GITHUB_OUTPUT}"
+          else
+            echo "due=false" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Commit bounded daily checkpoint to main
+        if: steps.checkpoint.outputs.due == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- README.md STATUS.md tweet-draft.md data docs
+          git add -- README.md STATUS.md tweet-draft.md data docs/data/latest.json
           if git diff --cached --quiet; then
-            echo "No data changes"
+            echo "No checkpoint changes"
           else
-            SNAPSHOT_TIME="$(TZ=Asia/Shanghai date '+%F %H:%M')"
-            git commit -m "chore(data): hourly ecosystem snapshot ${SNAPSHOT_TIME} CST"
-            git push
+            git commit -m "chore(data): daily ecosystem checkpoint ${{ steps.checkpoint.outputs.date }} CST"
+            git push origin HEAD:main
           fi
