@@ -32,8 +32,13 @@ export function validateRadarConfig(config) {
   boundedInteger('hourly_snapshot_retention_days', 1, 90);
   boundedInteger('daily_archive_retention_days', 7, 3650);
   boundedInteger('public_momentum_limit', 8, 1_000);
+  boundedInteger('max_existing_refresh_per_run', 50, 4_000);
+  boundedInteger('priority_existing_refresh_per_run', 0, 1_000);
+  boundedInteger('max_developer_refresh_per_run', 1, 1_000);
+  boundedInteger('api_request_budget_per_run', 500, 4_000);
   boundedInteger('developer_profile_refresh_days', 1, 365);
   boundedInteger('translation_batch_size', 1, 50);
+  boundedInteger('max_translation_items_per_run', 1, 500);
   boundedInteger('translation_max_attempts', 1, 3);
   if (!/^[a-z0-9-]+\/[a-z0-9._-]+$/i.test(config?.translation_model || '')) {
     errors.push('translation_model must use publisher/model format');
@@ -49,7 +54,27 @@ export function validateRadarConfig(config) {
   if (config?.public_site_url && !/^https:\/\/[a-z0-9-]+\.pages\.dev\/?$/i.test(config.public_site_url)) {
     errors.push('public_site_url must be an empty string or a Cloudflare Pages URL');
   }
+  if (Number.isInteger(config?.priority_existing_refresh_per_run) &&
+      Number.isInteger(config?.max_existing_refresh_per_run) &&
+      config.priority_existing_refresh_per_run > config.max_existing_refresh_per_run) {
+    errors.push('priority_existing_refresh_per_run cannot exceed max_existing_refresh_per_run');
+  }
+  if (Number.isInteger(config?.api_request_budget_per_run) &&
+      plannedGitHubRequestCeiling(config) > config.api_request_budget_per_run) {
+    errors.push('configured GitHub API work exceeds api_request_budget_per_run');
+  }
   return errors;
+}
+
+export function plannedGitHubRequestCeiling(config, allowlistCount = 0) {
+  const searches = Array.isArray(config?.queries)
+    ? config.queries.length * toNumber(config.search_pages_per_query)
+    : 0;
+  return searches +
+    toNumber(config?.max_existing_refresh_per_run) +
+    toNumber(config?.max_readmes_per_run) +
+    toNumber(config?.max_developer_refresh_per_run) +
+    Math.max(0, toNumber(allowlistCount));
 }
 
 export function attentionScore(project) {
@@ -57,6 +82,40 @@ export function attentionScore(project) {
     70 * Math.log10(toNumber(project.stars) + 1) +
       30 * Math.log10(toNumber(project.forks) + 1),
   );
+}
+
+function checkedAtTimestamp(project) {
+  const timestamp = Date.parse(project?.last_checked_at || '');
+  return Number.isFinite(timestamp) ? timestamp : Number.NEGATIVE_INFINITY;
+}
+
+export function selectProjectsForRefresh(projects, {limit, priorityLimit} = {}) {
+  if (!Number.isInteger(limit) || limit < 1) throw new Error('refresh limit must be a positive integer');
+  if (!Number.isInteger(priorityLimit) || priorityLimit < 0 || priorityLimit > limit) {
+    throw new Error('priority refresh limit must be an integer between 0 and refresh limit');
+  }
+  const unique = [...new Map(
+    (projects || [])
+      .filter(project => typeof project?.repo === 'string' && project.repo.includes('/'))
+      .map(project => [project.repo.toLowerCase(), project]),
+  ).values()];
+  const priority = [...unique].sort((a, b) =>
+    toNumber(b.stars) - toNumber(a.stars) ||
+    toNumber(b.forks) - toNumber(a.forks) ||
+    a.repo.localeCompare(b.repo),
+  );
+  const selected = new Map(priority.slice(0, Math.min(priorityLimit, limit)).map(project => [project.repo.toLowerCase(), project]));
+  const rotating = unique
+    .filter(project => !selected.has(project.repo.toLowerCase()))
+    .sort((a, b) =>
+      checkedAtTimestamp(a) - checkedAtTimestamp(b) ||
+      a.repo.localeCompare(b.repo),
+    );
+  for (const project of rotating) {
+    if (selected.size >= limit) break;
+    selected.set(project.repo.toLowerCase(), project);
+  }
+  return [...selected.values()];
 }
 
 export function categoryFor(input) {
@@ -209,6 +268,7 @@ export function normalizeApiProject(api, previous = {}, evidence = {}, observedA
     category: categoryFor({repo: fullName, description, topics}),
     first_seen_at: previous.first_seen_at || observedAt,
     last_seen_at: observedAt,
+    last_checked_at: observedAt,
     verification: evidence.verification || previous.verification || 'metadata-only',
     evidence_level: evidence.level || previous.evidence_level || 'candidate',
     evidence_reason: evidence.reason || previous.evidence_reason || '',

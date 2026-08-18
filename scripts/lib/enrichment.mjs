@@ -66,9 +66,11 @@ export async function refreshDeveloperProfiles(projects, payload, {
   github,
   observedAt = new Date().toISOString(),
   refreshDays = 30,
-  concurrency = 6
+  concurrency = 6,
+  maxRefreshes = Number.MAX_SAFE_INTEGER
 } = {}) {
   if (typeof github !== 'function') throw new Error('github client is required');
+  if (!Number.isInteger(maxRefreshes) || maxRefreshes < 1) throw new Error('maxRefreshes must be a positive integer');
   const profiles = Object.fromEntries(Object.entries(payload?.profiles || {}).map(([key, profile]) => [
     key,
     {...profile, ...classifyDeveloperRegion(profile?.location)}
@@ -78,7 +80,16 @@ export async function refreshDeveloperProfiles(projects, payload, {
     const login = String(project?.owner || project?.repo?.split('/')[0] || '').trim();
     if (login) owners.set(login.toLowerCase(), login);
   }
-  const pending = [...owners].filter(([key]) => !isFresh(profiles[key], observedAt, refreshDays));
+  const stale = [...owners]
+    .filter(([key]) => !isFresh(profiles[key], observedAt, refreshDays))
+    .sort(([leftKey], [rightKey]) => {
+      const left = Date.parse(profiles[leftKey]?.checked_at || '');
+      const right = Date.parse(profiles[rightKey]?.checked_at || '');
+      const leftValue = Number.isFinite(left) ? left : Number.NEGATIVE_INFINITY;
+      const rightValue = Number.isFinite(right) ? right : Number.NEGATIVE_INFINITY;
+      return leftValue - rightValue || leftKey.localeCompare(rightKey);
+    });
+  const pending = stale.slice(0, maxRefreshes);
   let refreshed = 0;
   let failed = 0;
 
@@ -108,7 +119,13 @@ export async function refreshDeveloperProfiles(projects, payload, {
 
   return {
     payload: {schema_version: 1, generated_at: observedAt, profiles},
-    stats: {owners: owners.size, refreshed, cached: owners.size - pending.length, failed}
+    stats: {
+      owners: owners.size,
+      refreshed,
+      cached: owners.size - stale.length,
+      deferred: stale.length - pending.length,
+      failed
+    }
   };
 }
 
@@ -210,11 +227,13 @@ export async function updateTranslationCache(projects, payload, {
   token = '',
   model = 'openai/gpt-4.1-mini',
   batchSize = 12,
+  maxItems = Number.MAX_SAFE_INTEGER,
   maxAttempts = 2,
   observedAt = new Date().toISOString(),
   fetchImpl = fetch,
   endpoint = 'https://models.github.ai/inference/chat/completions'
 } = {}) {
+  if (!Number.isInteger(maxItems) || maxItems < 1) throw new Error('maxItems must be a positive integer');
   const translations = {...(payload?.translations || {})};
   const unique = new Map();
   for (const project of projects) {
@@ -226,12 +245,13 @@ export async function updateTranslationCache(projects, payload, {
     unique.set(repo.toLowerCase(), {repo, description});
   }
   const pending = [...unique.values()];
+  const workItems = pending.slice(0, maxItems);
   let translated = 0;
   let failedBatches = 0;
 
   if (token) {
-    for (let index = 0; index < pending.length; index += batchSize) {
-      const batch = pending.slice(index, index + batchSize);
+    for (let index = 0; index < workItems.length; index += batchSize) {
+      const batch = workItems.slice(index, index + batchSize);
       try {
         const responseItems = await requestTranslation(batch, {token, model, fetchImpl, endpoint, maxAttempts});
         const byId = new Map(responseItems.map(item => [String(item?.id || '').toLowerCase(), String(item?.zh || '').trim()]));
@@ -259,8 +279,10 @@ export async function updateTranslationCache(projects, payload, {
     payload: {schema_version: 1, generated_at: observedAt, translations},
     stats: {
       pending: pending.length,
+      attempted: token ? workItems.length : 0,
       translated,
       remaining: pending.length - translated,
+      deferred: pending.length - (token ? workItems.length : 0),
       failed_batches: failedBatches,
       provider_available: Boolean(token)
     }

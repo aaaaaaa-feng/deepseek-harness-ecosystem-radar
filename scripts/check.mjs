@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {applyProjectEnrichment, containsHan, DEVELOPER_REGION_LABELS} from './lib/enrichment.mjs';
-import {validateProjectSet, validateRadarConfig} from './lib/radar.mjs';
+import {plannedGitHubRequestCeiling, validateProjectSet, validateRadarConfig} from './lib/radar.mjs';
 import {
   archivePathsToPrune,
   dedupeSnapshotRecords,
@@ -53,6 +53,8 @@ const candidateKeys = keySet(candidates.candidates);
 const exclusionKeys = keySet(exclusions.exclusions);
 const denied = new Set(denylist.repositories.map(repo => repo.toLowerCase()));
 const repositoryPattern = /^[^/\s]+\/[^/\s]+$/;
+const plannedRequestCeiling = plannedGitHubRequestCeiling(config, allowlist.repositories.length);
+if (plannedRequestCeiling > config.api_request_budget_per_run) errors.push('Planned GitHub API work exceeds the configured per-run budget');
 
 for (const duplicate of duplicates(allowlist.repositories)) errors.push(`Duplicate allowlist entry: ${duplicate}`);
 for (const duplicate of duplicates(denylist.repositories)) errors.push(`Duplicate denylist entry: ${duplicate}`);

@@ -6,8 +6,10 @@ import {createGitHubClient, mapLimit} from './lib/github.mjs';
 import {refreshDeveloperProfiles, updateTranslationCache} from './lib/enrichment.mjs';
 import {
   normalizeApiProject,
+  plannedGitHubRequestCeiling,
   reconcileCatalogs,
   relevanceEvidence,
+  selectProjectsForRefresh,
   snapshotFromProjects,
   toNumber,
   validateRadarConfig
@@ -63,6 +65,10 @@ for (const [label, value] of [
 ]) {
   if (!Array.isArray(value)) throw new Error(`${label} payload must be an array`);
 }
+const plannedRequestCeiling = plannedGitHubRequestCeiling(config, allowlist.repositories.length);
+if (plannedRequestCeiling > config.api_request_budget_per_run) {
+  throw new Error(`Planned GitHub API work (${plannedRequestCeiling}) exceeds per-run budget (${config.api_request_budget_per_run})`);
+}
 for (const [label, repositories] of [['allowlist', allowlist.repositories], ['denylist', denylist.repositories]]) {
   const invalid = repositories.find(repository => typeof repository !== 'string' || !repositoryPattern.test(repository));
   if (invalid) throw new Error(`${label} contains an invalid owner/repo entry: ${String(invalid)}`);
@@ -109,11 +115,19 @@ for (const repo of allowlist.repositories) {
   discovered.set(item.full_name.toLowerCase(), {...item, manual_allowlist: true, discovery_queries: ['manual-allowlist']});
 }
 
-const refreshedExisting = await mapLimit([...existing.values()], 6, async project => {
-  const api = await github(`/repos/${project.repo}`, {allow404: true});
-  if (!api) return {...project, status: 'unavailable', last_checked_at: now};
-  return normalizeApiProject(api, project, {}, now);
+const refreshTargets = selectProjectsForRefresh([...existing.values()], {
+  limit: config.max_existing_refresh_per_run,
+  priorityLimit: config.priority_existing_refresh_per_run
 });
+const refreshedProjectPairs = await mapLimit(refreshTargets, 6, async project => {
+  const api = await github(`/repos/${project.repo}`, {allow404: true});
+  const refreshed = api
+    ? normalizeApiProject(api, project, {}, now)
+    : {...project, status: 'unavailable', last_checked_at: now};
+  return [project.repo.toLowerCase(), refreshed];
+});
+const refreshedByRepository = new Map(refreshedProjectPairs);
+const refreshedExisting = [...existing.values()].map(project => refreshedByRepository.get(project.repo.toLowerCase()) || project);
 const existingKeys = new Set(refreshedExisting.map(project => project.repo.toLowerCase()));
 
 const newDiscoveries = [...discovered.values()]
@@ -172,12 +186,14 @@ const [developerResult, translationResult] = await Promise.all([
   refreshDeveloperProfiles(trackedProjects, developerPayload, {
     github,
     observedAt: now,
-    refreshDays: config.developer_profile_refresh_days
+    refreshDays: config.developer_profile_refresh_days,
+    maxRefreshes: config.max_developer_refresh_per_run
   }),
   updateTranslationCache(trackedProjects, translationPayload, {
     token,
     model: config.translation_model,
     batchSize: config.translation_batch_size,
+    maxItems: config.max_translation_items_per_run,
     maxAttempts: config.translation_max_attempts,
     observedAt: now
   })
@@ -225,6 +241,13 @@ console.log(JSON.stringify({
   daily_archive: dailyArchivePath,
   pruned_hourly_snapshots: prunedSnapshots.length,
   pruned_daily_archives: prunedArchives.length,
+  repository_refresh: {
+    tracked: existing.size,
+    refreshed: refreshTargets.length,
+    deferred: Math.max(0, existing.size - refreshTargets.length),
+    priority: Math.min(config.priority_existing_refresh_per_run, refreshTargets.length)
+  },
+  planned_github_api_request_ceiling: plannedRequestCeiling,
   developer_profiles: developerResult.stats,
   translations: translationResult.stats
 }));
