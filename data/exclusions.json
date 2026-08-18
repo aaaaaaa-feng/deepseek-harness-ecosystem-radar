@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-17T22:44:35.001Z",
+  "generated_at": "2026-08-18T01:53:46.169Z",
   "exclusions": [
     {
       "repo": "0liveiraaa/DeepseekCotexplorations",
@@ -542,6 +542,16 @@
       ]
     },
     {
+      "repo": "damnbayu-droid/myai-pro",
+      "url": "https://github.com/damnbayu-droid/myai-pro",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-18T01:53:46.169Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
+      ]
+    },
+    {
       "repo": "danhimura/kira",
       "url": "https://github.com/danhimura/kira",
       "reason": "相关性证据不足，可能是 DSH 缩写误命中",
@@ -718,7 +728,10 @@
       "reason": "资料型、教程型或纯清单仓库",
       "discovered_at": "2026-08-17T03:15:09.366Z",
       "discovery_queries": [
-        "dsh-plugin in:name,description created:>=2026-08-10"
+        "dsh-plugin in:name,description created:>=2026-08-10",
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11",
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
@@ -2805,17 +2818,6 @@
       ]
     },
     {
-      "repo": "under-the-ocean/cyrene-dsh-plugins",
-      "url": "https://github.com/under-the-ocean/cyrene-dsh-plugins",
-      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
-      "discovered_at": "2026-08-17T13:09:16.788Z",
-      "discovery_queries": [
-        "\"deepseek harness\" in:name,description,readme created:>=2026-08-10",
-        "deepseek-harness in:name,description,readme created:>=2026-08-10",
-        "dsh-plugin in:name,description created:>=2026-08-10"
-      ]
-    },
-    {
       "repo": "unitarylab/quantum-practices",
       "url": "https://github.com/unitarylab/quantum-practices",
       "reason": "维护者 denylist：已确认误收或不属于观察范围",
@@ -2841,6 +2843,16 @@
       "discovered_at": "2026-08-15T23:37:31.276Z",
       "discovery_queries": [
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "vitoriga20/vibepm",
+      "url": "https://github.com/vitoriga20/vibepm",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-18T01:53:46.169Z",
+      "discovery_queries": [
+        "\"deepseek harness\" in:name,description,readme created:>=2026-08-11",
+        "deepseek-harness in:name,description,readme created:>=2026-08-11"
       ]
     },
     {
@@ -2889,6 +2901,15 @@
       "discovery_queries": [
         "\"deepseek harness\" in:name,description,readme created:>=2026-08-09",
         "deepseek-harness in:name,description,readme created:>=2026-08-09"
+      ]
+    },
+    {
+      "repo": "wave-av/wave-runtime-registry",
+      "url": "https://github.com/wave-av/wave-runtime-registry",
+      "reason": "相关性证据不足，可能是 DSH 缩写误命中",
+      "discovered_at": "2026-08-18T01:53:46.169Z",
+      "discovery_queries": [
+        "dsh-plugin in:name,description created:>=2026-08-11"
       ]
     },
     {
