@@ -170,6 +170,29 @@ export function relevanceEvidence(repo, readme = '') {
   return {level: 'excluded', reason: '相关性证据不足，可能是 DSH 缩写误命中'};
 }
 
+function earliestCatalogTimestamp(...records) {
+  const values = records.flatMap(record => [record?.first_seen_at, record?.discovered_at])
+    .filter(value => typeof value === 'string' && value);
+  const valid = values
+    .map(value => ({value, timestamp: Date.parse(value)}))
+    .filter(item => Number.isFinite(item.timestamp))
+    .sort((a, b) => a.timestamp - b.timestamp);
+  return valid[0]?.value || values[0] || '';
+}
+
+function mergeCatalogProvenance(primary, timestampField, ...duplicates) {
+  const records = [primary, ...duplicates].filter(Boolean);
+  const timestamp = earliestCatalogTimestamp(...records);
+  const discoveryQueries = [...new Set(records.flatMap(record =>
+    Array.isArray(record.discovery_queries) ? record.discovery_queries : []
+  ))];
+  return {
+    ...primary,
+    ...(timestamp ? {[timestampField]: timestamp} : {}),
+    ...(discoveryQueries.length ? {discovery_queries: discoveryQueries} : {})
+  };
+}
+
 export function reconcileCatalogs({
   projects = [],
   candidates = [],
@@ -182,6 +205,24 @@ export function reconcileCatalogs({
   const candidateMap = new Map(candidates.map(project => [project.repo.toLowerCase(), project]));
   const exclusionMap = new Map(exclusions.map(project => [project.repo.toLowerCase(), project]));
   const denied = new Set(denylist.map(repo => repo.toLowerCase()));
+
+  // Repository renames can make an existing confirmed item collide with a
+  // candidate or exclusion after GitHub returns the new canonical full name.
+  // Heal stale cross-catalog overlaps before applying this run's evaluation.
+  for (const [key, project] of projectMap) {
+    const candidate = candidateMap.get(key);
+    const exclusion = exclusionMap.get(key);
+    if (!candidate && !exclusion) continue;
+    projectMap.set(key, mergeCatalogProvenance(project, 'first_seen_at', candidate, exclusion));
+    candidateMap.delete(key);
+    exclusionMap.delete(key);
+  }
+  for (const [key, candidate] of candidateMap) {
+    const exclusion = exclusionMap.get(key);
+    if (!exclusion) continue;
+    candidateMap.set(key, mergeCatalogProvenance(candidate, 'first_seen_at', exclusion));
+    exclusionMap.delete(key);
+  }
 
   for (const repository of denylist) {
     const key = repository.toLowerCase();
