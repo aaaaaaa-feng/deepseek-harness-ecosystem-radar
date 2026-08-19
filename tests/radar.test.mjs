@@ -212,6 +212,64 @@ test('catalog promotion preserves original discovery time and query provenance',
   assert.deepEqual(result.candidates, []);
 });
 
+test('catalog reconciliation heals stale overlaps after a repository rename', () => {
+  const result = reconcileCatalogs({
+    projects: [{
+      repo: 'under-the-ocean/dsh-plugin-cyrene',
+      evidence_level: 'confirmed',
+      evidence_reason: 'GitHub Topic 与实现信号同时命中',
+      stars: 42,
+      first_seen_at: '2026-08-15T00:00:00Z',
+      discovery_queries: ['confirmed-query']
+    }],
+    candidates: [{
+      repo: 'UNDER-THE-OCEAN/DSH-PLUGIN-CYRENE',
+      evidence_level: 'candidate',
+      stars: 3,
+      first_seen_at: '2026-08-14T00:00:00Z',
+      discovery_queries: ['candidate-query']
+    }],
+    exclusions: [{
+      repo: 'under-the-ocean/dsh-plugin-cyrene',
+      discovered_at: '2026-08-13T00:00:00Z',
+      discovery_queries: ['excluded-query']
+    }]
+  });
+  assert.equal(result.projects.length, 1);
+  assert.equal(result.projects[0].repo, 'under-the-ocean/dsh-plugin-cyrene');
+  assert.equal(result.projects[0].evidence_level, 'confirmed');
+  assert.equal(result.projects[0].stars, 42);
+  assert.equal(result.projects[0].first_seen_at, '2026-08-13T00:00:00Z');
+  assert.deepEqual(result.projects[0].discovery_queries, [
+    'confirmed-query',
+    'candidate-query',
+    'excluded-query'
+  ]);
+  assert.deepEqual(result.candidates, []);
+  assert.deepEqual(result.exclusions, []);
+});
+
+test('catalog reconciliation keeps a candidate over a stale exclusion', () => {
+  const result = reconcileCatalogs({
+    candidates: [{
+      repo: 'example/plugin',
+      evidence_level: 'candidate',
+      first_seen_at: '2026-08-15T00:00:00Z',
+      discovery_queries: ['candidate-query']
+    }],
+    exclusions: [{
+      repo: 'Example/Plugin',
+      discovered_at: '2026-08-14T00:00:00Z',
+      discovery_queries: ['excluded-query']
+    }]
+  });
+  assert.equal(result.candidates.length, 1);
+  assert.equal(result.candidates[0].evidence_level, 'candidate');
+  assert.equal(result.candidates[0].first_seen_at, '2026-08-14T00:00:00Z');
+  assert.deepEqual(result.candidates[0].discovery_queries, ['candidate-query', 'excluded-query']);
+  assert.deepEqual(result.exclusions, []);
+});
+
 test('radar configuration validation rejects unsafe update bounds', () => {
   const errors = validateRadarConfig({
     release_cutoff_utc: 'not-a-date',
