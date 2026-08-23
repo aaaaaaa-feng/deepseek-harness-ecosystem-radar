@@ -199,6 +199,7 @@ export function reconcileCatalogs({
   exclusions = [],
   evaluated = [],
   denylist = [],
+  releaseCutoffUtc = '',
   observedAt = new Date().toISOString()
 }) {
   const projectMap = new Map(projects.map(project => [project.repo.toLowerCase(), project]));
@@ -276,11 +277,62 @@ export function reconcileCatalogs({
     }
   }
 
+  const quarantinedOutsideReleaseWindow = [];
+  const cutoffTimestamp = releaseCutoffUtc ? Date.parse(releaseCutoffUtc) : null;
+  if (releaseCutoffUtc && !Number.isFinite(cutoffTimestamp)) {
+    throw new Error(`Invalid release cutoff: ${releaseCutoffUtc}`);
+  }
+  const quarantineOutsideReleaseWindow = (catalog, catalogName) => {
+    if (cutoffTimestamp == null) return;
+    for (const [key, project] of catalog) {
+      const createdTimestamp = Date.parse(project.created_at || '');
+      if (Number.isFinite(createdTimestamp) && createdTimestamp > cutoffTimestamp) continue;
+      const reason = Number.isFinite(createdTimestamp)
+        ? `创建时间 ${project.created_at} 不在发布后观察窗口内（起点 ${releaseCutoffUtc}）`
+        : '创建时间缺失或无效，无法确认位于发布后观察窗口内';
+      const previousExclusion = exclusionMap.get(key);
+      const exclusion = mergeCatalogProvenance({
+        repo: project.repo,
+        url: project.url || `https://github.com/${project.repo}`,
+        reason,
+        discovered_at: project.first_seen_at || project.discovered_at || observedAt,
+        discovery_queries: project.discovery_queries || []
+      }, 'discovered_at', previousExclusion, project);
+      catalog.delete(key);
+      exclusionMap.set(key, exclusion);
+      quarantinedOutsideReleaseWindow.push({
+        repo: project.repo,
+        catalog: catalogName,
+        created_at: project.created_at || '',
+        reason
+      });
+    }
+  };
+  quarantineOutsideReleaseWindow(projectMap, 'confirmed');
+  quarantineOutsideReleaseWindow(candidateMap, 'candidate');
+
   return {
     projects: [...projectMap.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo)),
     candidates: [...candidateMap.values()].sort((a, b) => toNumber(b.stars) - toNumber(a.stars) || a.repo.localeCompare(b.repo)),
-    exclusions: [...exclusionMap.values()].sort((a, b) => a.repo.localeCompare(b.repo))
+    exclusions: [...exclusionMap.values()].sort((a, b) => a.repo.localeCompare(b.repo)),
+    reconciliation: {
+      quarantined_outside_release_window: quarantinedOutsideReleaseWindow
+    }
   };
+}
+
+export function repositoryIdentityChanged(previous = {}, api = {}) {
+  if (previous.github_id != null && api.id != null) {
+    return String(previous.github_id) !== String(api.id);
+  }
+  if (previous.github_node_id && api.node_id) {
+    return previous.github_node_id !== api.node_id;
+  }
+  const previousCreatedAt = Date.parse(previous.created_at || '');
+  const currentCreatedAt = Date.parse(api.created_at || '');
+  return Number.isFinite(previousCreatedAt) &&
+    Number.isFinite(currentCreatedAt) &&
+    previousCreatedAt !== currentCreatedAt;
 }
 
 export function normalizeApiProject(api, previous = {}, evidence = {}, observedAt = new Date().toISOString()) {
@@ -291,6 +343,8 @@ export function normalizeApiProject(api, previous = {}, evidence = {}, observedA
     repo: fullName,
     name: api.name || previous.name || fullName?.split('/')[1] || '',
     owner: api.owner?.login || previous.owner || fullName?.split('/')[0] || '',
+    github_id: api.id ?? previous.github_id ?? null,
+    github_node_id: api.node_id || previous.github_node_id || '',
     url: api.html_url || previous.url || `https://github.com/${fullName}`,
     description,
     created_at: api.created_at || previous.created_at || '',
@@ -314,6 +368,22 @@ export function normalizeApiProject(api, previous = {}, evidence = {}, observedA
     evidence_level: evidence.level || previous.evidence_level || 'candidate',
     evidence_reason: evidence.reason || previous.evidence_reason || '',
     evidence_url: evidence.url || previous.evidence_url || `https://github.com/${fullName}#readme`
+  };
+}
+
+export function normalizeRefreshedProject(api, previous = {}, observedAt = new Date().toISOString()) {
+  const identityChanged = repositoryIdentityChanged(previous, api);
+  const project = normalizeApiProject(api, previous, {}, observedAt);
+  if (!identityChanged) return {project, identityChanged: false};
+  return {
+    project: {
+      ...project,
+      verification: 'repository-identity-change-pending-review',
+      evidence_level: 'candidate',
+      evidence_reason: 'GitHub 仓库身份或不可变创建时间发生变化，需要重新核验相关性',
+      evidence_url: `https://github.com/${project.repo}#readme`
+    },
+    identityChanged: true
   };
 }
 
