@@ -44,7 +44,9 @@ const [config, projects, candidates, exclusions, developers, translations, ranki
 
 const errors = [
   ...validateRadarConfig(config),
-  ...validateProjectSet(projects.projects, config.release_cutoff_utc)
+  ...validateProjectSet(projects.projects, config.release_cutoff_utc),
+  ...validateProjectSet(candidates.candidates, config.release_cutoff_utc)
+    .map(error => `Candidate ${error}`)
 ];
 const active = projects.projects.filter(project => project.status === 'active' && project.evidence_level === 'confirmed');
 const enrichedActive = applyProjectEnrichment(active, developers, translations);

@@ -6,6 +6,7 @@ import {createGitHubClient, mapLimit} from './lib/github.mjs';
 import {refreshDeveloperProfiles, updateTranslationCache} from './lib/enrichment.mjs';
 import {
   normalizeApiProject,
+  normalizeRefreshedProject,
   plannedGitHubRequestCeiling,
   reconcileCatalogs,
   relevanceEvidence,
@@ -122,12 +123,24 @@ const refreshTargets = selectProjectsForRefresh([...existing.values()], {
 const refreshedProjectPairs = await mapLimit(refreshTargets, 6, async project => {
   const api = await github(`/repos/${project.repo}`, {allow404: true});
   const refreshed = api
-    ? normalizeApiProject(api, project, {}, now)
-    : {...project, status: 'unavailable', last_checked_at: now};
+    ? normalizeRefreshedProject(api, project, now)
+    : {project: {...project, status: 'unavailable', last_checked_at: now}, identityChanged: false};
   return [project.repo.toLowerCase(), refreshed];
 });
 const refreshedByRepository = new Map(refreshedProjectPairs);
-const refreshedExisting = [...existing.values()].map(project => refreshedByRepository.get(project.repo.toLowerCase()) || project);
+const refreshedExisting = [];
+const identityChangeEvaluations = [];
+for (const project of existing.values()) {
+  const refreshed = refreshedByRepository.get(project.repo.toLowerCase()) || {project, identityChanged: false};
+  if (refreshed.identityChanged) {
+    identityChangeEvaluations.push({
+      project: refreshed.project,
+      discovery_queries: ['repository-identity-change']
+    });
+  } else {
+    refreshedExisting.push(refreshed.project);
+  }
+}
 const existingKeys = new Set(refreshedExisting.map(project => project.repo.toLowerCase()));
 
 const newDiscoveries = [...discovered.values()]
@@ -172,13 +185,14 @@ const evaluatedWithoutReadmes = newDiscoveries.slice(config.max_readmes_per_run)
   }
   return {project, discovery_queries: item.discovery_queries || []};
 });
-const evaluated = [...evaluatedWithReadmes, ...evaluatedWithoutReadmes];
-const {projects, candidates, exclusions} = reconcileCatalogs({
+const evaluated = [...identityChangeEvaluations, ...evaluatedWithReadmes, ...evaluatedWithoutReadmes];
+const {projects, candidates, exclusions, reconciliation} = reconcileCatalogs({
   projects: refreshedExisting,
   candidates: candidatesPayload.candidates,
   exclusions: exclusionsPayload.exclusions,
   evaluated,
   denylist: denylist.repositories,
+  releaseCutoffUtc: config.release_cutoff_utc,
   observedAt: now
 });
 const trackedProjects = [...projects, ...candidates];
@@ -247,6 +261,8 @@ console.log(JSON.stringify({
     deferred: Math.max(0, existing.size - refreshTargets.length),
     priority: Math.min(config.priority_existing_refresh_per_run, refreshTargets.length)
   },
+  repository_identity_changes: identityChangeEvaluations.length,
+  catalog_reconciliation: reconciliation,
   planned_github_api_request_ceiling: plannedRequestCeiling,
   developer_profiles: developerResult.stats,
   translations: translationResult.stats

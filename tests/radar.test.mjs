@@ -7,8 +7,10 @@ import {
   buildSignals,
   categoryFor,
   normalizeApiProject,
+  normalizeRefreshedProject,
   plannedGitHubRequestCeiling,
   reconcileCatalogs,
+  repositoryIdentityChanged,
   relevanceEvidence,
   selectProjectsForRefresh,
   validateProjectSet,
@@ -90,8 +92,45 @@ test('planned GitHub API work stays inside an explicit request budget', () => {
 });
 
 test('normalized repository records remember when metrics were checked', () => {
-  const result = normalizeApiProject({full_name: 'a/project'}, {}, {}, '2026-08-18T13:00:00Z');
+  const result = normalizeApiProject({id: 123, node_id: 'R_123', full_name: 'a/project'}, {}, {}, '2026-08-18T13:00:00Z');
   assert.equal(result.last_checked_at, '2026-08-18T13:00:00Z');
+  assert.equal(result.github_id, 123);
+  assert.equal(result.github_node_id, 'R_123');
+});
+
+test('repository identity changes use immutable ids with a creation-time fallback', () => {
+  assert.equal(repositoryIdentityChanged(
+    {github_id: 123, created_at: '2026-08-14T00:00:00Z'},
+    {id: 123, created_at: '2026-07-01T00:00:00Z'}
+  ), false);
+  assert.equal(repositoryIdentityChanged(
+    {github_id: 123, created_at: '2026-08-14T00:00:00Z'},
+    {id: 456, created_at: '2026-08-14T00:00:00Z'}
+  ), true);
+  assert.equal(repositoryIdentityChanged(
+    {created_at: '2026-08-20T01:57:26Z'},
+    {created_at: '2026-07-08T09:40:30Z'}
+  ), true);
+});
+
+test('an identity-changing refresh is held for fresh evidence', () => {
+  const result = normalizeRefreshedProject({
+    id: 456,
+    node_id: 'R_456',
+    full_name: 'example/reused-name',
+    created_at: '2026-08-20T00:00:00Z'
+  }, {
+    github_id: 123,
+    github_node_id: 'R_123',
+    repo: 'example/reused-name',
+    created_at: '2026-08-19T00:00:00Z',
+    evidence_level: 'confirmed',
+    evidence_reason: 'old evidence'
+  }, '2026-08-23T00:00:00Z');
+  assert.equal(result.identityChanged, true);
+  assert.equal(result.project.github_id, 456);
+  assert.equal(result.project.evidence_level, 'candidate');
+  assert.match(result.project.evidence_reason, /重新核验/);
 });
 
 test('rankings calculate snapshot deltas and rank changes', () => {
@@ -268,6 +307,61 @@ test('catalog reconciliation keeps a candidate over a stale exclusion', () => {
   assert.equal(result.candidates[0].first_seen_at, '2026-08-14T00:00:00Z');
   assert.deepEqual(result.candidates[0].discovery_queries, ['candidate-query', 'excluded-query']);
   assert.deepEqual(result.exclusions, []);
+});
+
+test('catalog reconciliation quarantines mutable repositories outside the release window', () => {
+  const result = reconcileCatalogs({
+    projects: [{
+      repo: 'uaenamyf/dsh-researchOS',
+      url: 'https://github.com/uaenamyf/dsh-researchOS',
+      created_at: '2026-07-08T09:40:30Z',
+      first_seen_at: '2026-08-20T04:56:39Z',
+      evidence_level: 'confirmed',
+      evidence_reason: 'README evidence',
+      discovery_queries: ['discovery-query']
+    }],
+    candidates: [{
+      repo: 'example/missing-created-at',
+      url: 'https://github.com/example/missing-created-at',
+      created_at: '',
+      first_seen_at: '2026-08-22T00:00:00Z',
+      evidence_level: 'candidate'
+    }],
+    releaseCutoffUtc: '2026-08-13T13:02:03.901Z',
+    observedAt: '2026-08-23T00:00:00Z'
+  });
+  assert.deepEqual(result.projects, []);
+  assert.deepEqual(result.candidates, []);
+  assert.deepEqual(result.exclusions.map(item => item.repo), [
+    'example/missing-created-at',
+    'uaenamyf/dsh-researchOS'
+  ]);
+  assert.match(result.exclusions[1].reason, /不在发布后观察窗口内/);
+  assert.equal(result.exclusions[1].discovered_at, '2026-08-20T04:56:39Z');
+  assert.deepEqual(result.exclusions[1].discovery_queries, ['discovery-query']);
+  assert.deepEqual(
+    result.reconciliation.quarantined_outside_release_window.map(item => item.catalog),
+    ['confirmed', 'candidate']
+  );
+});
+
+test('release-window quarantine runs after fresh evidence evaluation', () => {
+  const result = reconcileCatalogs({
+    evaluated: [{
+      project: {
+        repo: 'example/pre-cutoff',
+        url: 'https://github.com/example/pre-cutoff',
+        created_at: '2026-08-01T00:00:00Z',
+        evidence_level: 'confirmed',
+        evidence_reason: 'fresh README evidence'
+      }
+    }],
+    releaseCutoffUtc: '2026-08-13T13:02:03.901Z',
+    observedAt: '2026-08-23T00:00:00Z'
+  });
+  assert.deepEqual(result.projects, []);
+  assert.equal(result.exclusions[0].repo, 'example/pre-cutoff');
+  assert.equal(result.reconciliation.quarantined_outside_release_window.length, 1);
 });
 
 test('radar configuration validation rejects unsafe update bounds', () => {
