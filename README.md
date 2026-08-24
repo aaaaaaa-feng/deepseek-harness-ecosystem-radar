@@ -69,20 +69,20 @@ README 以长期有效的项目说明为主，只保留一个每天更新的精�
 这一小段每天最多写入 `main` 一次，数据时点会明确标出。在线雷达仍然每小时更新，因此网页可能比 README 更新。
 
 <!-- RADAR_TOP10_START -->
-**数据时点：** `2026-08-23T16:45:51.788Z`　·　**观察窗口：** 1.1 小时
+**数据时点：** `2026-08-24T16:57:43.213Z`　·　**观察窗口：** 1 小时
 
 | 排名 | 项目 | 分类 | Stars | Forks | 窗口 Stars Δ | 关注分 |
 | ---: | --- | --- | ---: | ---: | ---: | ---: |
-| 1 | [anywhere-labs/deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) | 插件管理与生态工具 | 18868 | 919 | +22 | 388.22 |
-| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 其他实现型扩展 | 11835 | 1866 | +18 | 383.26 |
-| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 3729 | 111 | +2 | 311.5 |
-| 4 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 1973 | 133 | +11 | 294.49 |
-| 5 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 插件管理与生态工具 | 2001 | 105 | +15 | 291.86 |
-| 6 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 1628 | 52 | +4 | 276.56 |
-| 7 | [Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report](https://github.com/Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report) | 其他实现型扩展 | 1039 | 66 | 0 | 265.97 |
-| 8 | [zouyuxuan122/Deepseek-Harness-EAC](https://github.com/zouyuxuan122/Deepseek-Harness-EAC) | 桌面端与启动器 | 1195 | 42 | +2 | 264.45 |
-| 9 | [dsh-tauri-desk/deepseek-harness-desktop](https://github.com/dsh-tauri-desk/deepseek-harness-desktop) | 桌面端与启动器 | 994 | 60 | +1 | 263.41 |
-| 10 | [ysr666/dsh-vision-router](https://github.com/ysr666/dsh-vision-router) | 视觉与浏览器 | 942 | 40 | 0 | 256.6 |
+| 1 | [anywhere-labs/dsh-desktop](https://github.com/anywhere-labs/dsh-desktop) | 插件管理与生态工具 | 19625 | 956 | +11 | 389.93 |
+| 2 | [awesome-dsh-plugin/awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) | 其他实现型扩展 | 12221 | 1966 | +8 | 384.91 |
+| 3 | [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard) | 开发与质量工具 | 3743 | 113 | -1 | 311.84 |
+| 4 | [dataelement/dsh-desktop](https://github.com/dataelement/dsh-desktop) | 桌面端与启动器 | 2191 | 141 | +4 | 298.43 |
+| 5 | [dsh-market/dsh-market](https://github.com/dsh-market/dsh-market) | 插件管理与生态工具 | 2184 | 115 | +6 | 295.7 |
+| 6 | [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) | 界面与体验扩展 | 1671 | 52 | +3 | 277.35 |
+| 7 | [dsh-tauri-desk/deepseek-harness-desktop](https://github.com/dsh-tauri-desk/deepseek-harness-desktop) | 桌面端与启动器 | 1095 | 68 | +5 | 267.95 |
+| 8 | [zouyuxuan122/Deepseek-Harness-EAC](https://github.com/zouyuxuan122/Deepseek-Harness-EAC) | 桌面端与启动器 | 1260 | 45 | +3 | 266.93 |
+| 9 | [Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report](https://github.com/Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report) | 其他实现型扩展 | 1035 | 66 | +1 | 265.86 |
+| 10 | [xmanrui/dsh-im](https://github.com/xmanrui/dsh-im) | 渠道与模型接入 | 767 | 80 | +6 | 259.23 |
 <!-- RADAR_TOP10_END -->
 
 关注度只反映可公开复算的 GitHub 信号，不代表项目质量、安全性或真实用户数。[查看完整排名 →](https://deepseek-harness-ecosystem-radar.pages.dev/#ranking)
