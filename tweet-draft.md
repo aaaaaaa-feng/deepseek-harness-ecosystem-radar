@@ -2,14 +2,14 @@
 
 DeepSeek Harness 生态早期雷达更新：
 
-- 已确认观察项目：9981
-- 当前关注度第 1：anywhere-labs/dsh-desktop（19625 stars）
-- Stars 总量第一分类：插件管理与生态工具（27555 stars）
-- 1h 窗口动量：MeteorNOX/DeepSeek-Balance-Whale-Widget（+9 stars）
-- 最近创建项目：sunrisesong/dsh-launcher
-- 公开所在地（维护者账号）：国内 968 / 海外 205 / 未知 5750
-- 中文可读简介：5386/9981
-- 数据时点：2026-08-24T16:57:43.213Z
+- 已确认观察项目：10670
+- 当前关注度第 1：anywhere-labs/dsh-desktop（20151 stars）
+- Stars 总量第一分类：插件管理与生态工具（28727 stars）
+- 0.9h 窗口动量：Minglink/dsh-infinite-gen-2（+42 stars）
+- 最近创建项目：yang-cc/minimax-remaining-mcp
+- 公开所在地（维护者账号）：国内 1030 / 海外 224 / 未知 6121
+- 中文可读简介：5751/10670
+- 数据时点：2026-08-25T16:03:14.458Z
 
 https://deepseek-harness-ecosystem-radar.pages.dev/
 
