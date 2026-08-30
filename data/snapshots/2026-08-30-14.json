@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-08-30T12:57:29.359Z",
+  "snapshot_at": "2026-08-30T06:45:11.802Z",
   "source": "github-api",
   "projects": [
     {
@@ -53,11 +53,11 @@
     },
     {
       "repo": "01Virex/dsh-status-rotator",
-      "stars": 61,
-      "forks": 2,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T10:09:47Z",
-      "updated_at": "2026-08-30T10:10:24Z"
+      "stars": 59,
+      "forks": 1,
+      "open_issues": 2,
+      "pushed_at": "2026-08-30T05:49:01Z",
+      "updated_at": "2026-08-30T05:49:11Z"
     },
     {
       "repo": "0231071/llm-as-a-verifier",
@@ -596,14 +596,6 @@
       "updated_at": "2026-08-30T06:33:42Z"
     },
     {
-      "repo": "1321928757/dsh-plugin-skills",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:37:26Z",
-      "updated_at": "2026-08-30T09:45:13Z"
-    },
-    {
       "repo": "1321928757/dsh-prompt-polish",
       "stars": 1,
       "forks": 0,
@@ -765,11 +757,11 @@
     },
     {
       "repo": "1692775560/dsh-Mimir-Academic-research",
-      "stars": 129,
+      "stars": 124,
       "forks": 7,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:09:07Z",
-      "updated_at": "2026-08-30T12:50:07Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-28T12:51:25Z",
+      "updated_at": "2026-08-30T03:32:16Z"
     },
     {
       "repo": "1710782766/dsh-llm-vision",
@@ -1389,11 +1381,11 @@
     },
     {
       "repo": "240xu/verdict-engine",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T17:16:19Z",
-      "updated_at": "2026-08-28T11:01:09Z"
+      "updated_at": "2026-08-26T17:16:40Z"
     },
     {
       "repo": "241793/DSH-Win-GUI",
@@ -1413,11 +1405,11 @@
     },
     {
       "repo": "2439816947/DSH-Desktop",
-      "stars": 52,
+      "stars": 50,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:16:44Z",
-      "updated_at": "2026-08-30T12:15:58Z"
+      "pushed_at": "2026-08-24T20:20:43Z",
+      "updated_at": "2026-08-30T05:31:47Z"
     },
     {
       "repo": "24601dev/dsh-plugins",
@@ -1583,7 +1575,7 @@
       "repo": "2BingLing/dsh-market",
       "stars": 87,
       "forks": 3,
-      "open_issues": 5,
+      "open_issues": 3,
       "pushed_at": "2026-08-29T21:44:12Z",
       "updated_at": "2026-08-29T21:44:24Z"
     },
@@ -2028,14 +2020,6 @@
       "updated_at": "2026-08-19T14:26:14Z"
     },
     {
-      "repo": "618527/dsh-install-guard",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:08:49Z",
-      "updated_at": "2026-08-30T10:09:02Z"
-    },
-    {
       "repo": "642463401/DSHIDE",
       "stars": 3,
       "forks": 0,
@@ -2064,8 +2048,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T10:01:00Z",
-      "updated_at": "2026-08-29T10:01:49Z"
+      "pushed_at": "2026-08-24T09:16:29Z",
+      "updated_at": "2026-08-24T09:17:14Z"
     },
     {
       "repo": "67-68/dsh-plugins",
@@ -2090,22 +2074,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-24T17:14:02Z",
       "updated_at": "2026-08-24T17:16:54Z"
-    },
-    {
-      "repo": "6jeffr3y/dsh-burpsuite-mcp",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:34:23Z",
-      "updated_at": "2026-08-30T10:33:33Z"
-    },
-    {
-      "repo": "6jeffr3y/dsh-session-manager",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:18:11Z",
-      "updated_at": "2026-08-30T10:18:18Z"
     },
     {
       "repo": "6Mikao9/dsh-wsl-workspace",
@@ -2964,14 +2932,6 @@
       "updated_at": "2026-08-25T10:35:46Z"
     },
     {
-      "repo": "aa2246740/dsh-autoresearch",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T12:51:31Z",
-      "updated_at": "2026-08-30T12:51:58Z"
-    },
-    {
       "repo": "aa2246740/dsh-creator-mode-plus",
       "stars": 1,
       "forks": 0,
@@ -3357,11 +3317,11 @@
     },
     {
       "repo": "AbelKeithsun/dsh-question-nav",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T10:50:32Z",
-      "updated_at": "2026-08-30T10:50:53Z"
+      "pushed_at": "2026-08-25T13:06:34Z",
+      "updated_at": "2026-08-25T13:20:09Z"
     },
     {
       "repo": "abhishakenp/rlm",
@@ -3517,11 +3477,11 @@
     },
     {
       "repo": "acryldev/acryl",
-      "stars": 217,
+      "stars": 226,
       "forks": 24,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:34:49Z",
-      "updated_at": "2026-08-30T12:35:02Z"
+      "pushed_at": "2026-08-30T04:31:29Z",
+      "updated_at": "2026-08-30T04:31:38Z"
     },
     {
       "repo": "acryldev/acryldev.github.io",
@@ -3586,14 +3546,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-23T10:28:23Z",
       "updated_at": "2026-08-25T03:43:06Z"
-    },
-    {
-      "repo": "addozhang/dsh-discord",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:44:48Z",
-      "updated_at": "2026-08-30T12:45:10Z"
     },
     {
       "repo": "adgardelis/hermes-harness",
@@ -3821,11 +3773,11 @@
     },
     {
       "repo": "agent-earth/deepseek-harness-desktop",
-      "stars": 186,
+      "stars": 185,
       "forks": 12,
       "open_issues": 4,
       "pushed_at": "2026-08-25T04:05:35Z",
-      "updated_at": "2026-08-30T09:15:21Z"
+      "updated_at": "2026-08-30T00:43:32Z"
     },
     {
       "repo": "AgentBuff/dsh-whale-galaxy",
@@ -3917,11 +3869,11 @@
     },
     {
       "repo": "AgriciDaniel/deepseek-harness-brain",
-      "stars": 5,
+      "stars": 3,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-21T15:42:33Z",
-      "updated_at": "2026-08-28T10:04:59Z"
+      "updated_at": "2026-08-25T03:44:08Z"
     },
     {
       "repo": "AGSQ11/dsh-ai-council",
@@ -4224,8 +4176,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T08:46:31Z",
-      "updated_at": "2026-08-29T08:46:57Z"
+      "pushed_at": "2026-08-25T12:54:34Z",
+      "updated_at": "2026-08-25T13:04:12Z"
     },
     {
       "repo": "AiHeSa/ui-conversation-indexed",
@@ -4312,8 +4264,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T08:37:10Z",
-      "updated_at": "2026-08-30T08:37:21Z"
+      "pushed_at": "2026-08-21T08:06:32Z",
+      "updated_at": "2026-08-21T08:09:28Z"
     },
     {
       "repo": "AiLi1337/dsh-plugin-library-search",
@@ -4453,11 +4405,11 @@
     },
     {
       "repo": "Aisland-SJL/dsh-usage",
-      "stars": 68,
+      "stars": 66,
       "forks": 6,
       "open_issues": 0,
       "pushed_at": "2026-08-30T05:34:43Z",
-      "updated_at": "2026-08-30T11:30:15Z"
+      "updated_at": "2026-08-30T05:35:01Z"
     },
     {
       "repo": "aispin-dev/llm-as-a-Verifier-dsh",
@@ -4629,11 +4581,11 @@
     },
     {
       "repo": "Akimiya-z/codex-guard",
-      "stars": 96,
+      "stars": 91,
       "forks": 6,
       "open_issues": 0,
       "pushed_at": "2026-08-27T14:16:02Z",
-      "updated_at": "2026-08-30T10:31:09Z"
+      "updated_at": "2026-08-30T03:06:47Z"
     },
     {
       "repo": "AkimotoHayao/my-dsh-config",
@@ -4677,19 +4629,19 @@
     },
     {
       "repo": "AKS1st/dock-editor",
-      "stars": 3,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T19:40:47Z",
-      "updated_at": "2026-08-28T10:57:00Z"
+      "updated_at": "2026-08-25T03:43:25Z"
     },
     {
       "repo": "AKS1st/dock-files",
-      "stars": 4,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T15:18:53Z",
-      "updated_at": "2026-08-28T10:57:01Z"
+      "updated_at": "2026-08-26T15:20:58Z"
     },
     {
       "repo": "AKS1st/dock-git",
@@ -4701,19 +4653,19 @@
     },
     {
       "repo": "AKS1st/dock-images",
-      "stars": 3,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T19:40:52Z",
-      "updated_at": "2026-08-28T10:58:09Z"
+      "updated_at": "2026-08-25T03:43:29Z"
     },
     {
       "repo": "AKS1st/dock-markdown",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T19:40:56Z",
-      "updated_at": "2026-08-28T10:58:09Z"
+      "updated_at": "2026-08-25T03:43:30Z"
     },
     {
       "repo": "AKS1st/dock-media",
@@ -4909,11 +4861,11 @@
     },
     {
       "repo": "alaxrpg/dsh-llm-approve-for-me",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T01:21:39Z",
-      "updated_at": "2026-08-28T11:02:07Z"
+      "pushed_at": "2026-08-26T09:41:56Z",
+      "updated_at": "2026-08-26T08:04:25Z"
     },
     {
       "repo": "alaxrpg/dsh-subagent-route-badges",
@@ -5701,11 +5653,11 @@
     },
     {
       "repo": "amlyczz/dsh-lark-link",
-      "stars": 31,
+      "stars": 28,
       "forks": 6,
       "open_issues": 0,
       "pushed_at": "2026-08-25T04:11:54Z",
-      "updated_at": "2026-08-30T11:50:09Z"
+      "updated_at": "2026-08-26T08:27:05Z"
     },
     {
       "repo": "Amnesia-accompany/deepseek-harness-client",
@@ -6520,16 +6472,16 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T05:26:44Z",
-      "updated_at": "2026-08-30T05:26:47Z"
+      "pushed_at": "2026-08-26T01:59:49Z",
+      "updated_at": "2026-08-26T02:00:28Z"
     },
     {
       "repo": "anysearch-team/anysearch-dsh",
-      "stars": 364,
+      "stars": 352,
       "forks": 7,
       "open_issues": 0,
       "pushed_at": "2026-08-26T06:25:54Z",
-      "updated_at": "2026-08-30T12:23:40Z"
+      "updated_at": "2026-08-30T06:43:00Z"
     },
     {
       "repo": "anyuezou/bespoke-figures",
@@ -6565,11 +6517,11 @@
     },
     {
       "repo": "anywhere-labs/dsh-desktop",
-      "stars": 22003,
-      "forks": 1077,
-      "open_issues": 285,
-      "pushed_at": "2026-08-30T12:16:02Z",
-      "updated_at": "2026-08-30T12:53:06Z"
+      "stars": 21923,
+      "forks": 1073,
+      "open_issues": 282,
+      "pushed_at": "2026-08-29T06:37:10Z",
+      "updated_at": "2026-08-30T06:39:32Z"
     },
     {
       "repo": "anywhere-labs/framefactory-plugin",
@@ -6754,14 +6706,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-29T16:57:05Z",
       "updated_at": "2026-08-29T16:58:12Z"
-    },
-    {
-      "repo": "aplainjane/qq_to_deepseekharness",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:54:22Z",
-      "updated_at": "2026-08-30T12:54:50Z"
     },
     {
       "repo": "apodemakeles/dsh-gui",
@@ -7517,11 +7461,11 @@
     },
     {
       "repo": "ateen18/dsh-plugin-security-review",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-24T02:34:28Z",
-      "updated_at": "2026-08-28T11:02:08Z"
+      "updated_at": "2026-08-24T02:36:24Z"
     },
     {
       "repo": "atesahmet0/dh-workspace",
@@ -7901,19 +7845,19 @@
     },
     {
       "repo": "awesome-dsh-plugin/awesome-dsh-plugin",
-      "stars": 13654,
-      "forks": 2354,
-      "open_issues": 345,
-      "pushed_at": "2026-08-30T09:14:38Z",
-      "updated_at": "2026-08-30T12:55:12Z"
+      "stars": 13583,
+      "forks": 2337,
+      "open_issues": 319,
+      "pushed_at": "2026-08-30T05:06:27Z",
+      "updated_at": "2026-08-30T06:43:43Z"
     },
     {
       "repo": "awesome-dsh-plugin/dsh-find-plugin",
-      "stars": 105,
+      "stars": 104,
       "forks": 3,
       "open_issues": 4,
       "pushed_at": "2026-08-19T05:24:43Z",
-      "updated_at": "2026-08-30T12:36:01Z"
+      "updated_at": "2026-08-29T17:15:08Z"
     },
     {
       "repo": "AwesomeHou/dsh-doudizhu",
@@ -8333,11 +8277,11 @@
     },
     {
       "repo": "baihejiangnan/deepseek-harness-desktop",
-      "stars": 47,
+      "stars": 20,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T11:33:25Z",
-      "updated_at": "2026-08-30T08:22:06Z"
+      "updated_at": "2026-08-26T17:09:23Z"
     },
     {
       "repo": "baihejiangnan/dsh-plugin-pack",
@@ -8492,14 +8436,6 @@
       "updated_at": "2026-08-25T09:46:29Z"
     },
     {
-      "repo": "bainianling/deepseek-harness-plus",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:42:34Z",
-      "updated_at": "2026-08-30T12:43:25Z"
-    },
-    {
       "repo": "bainianling/dsh-jailbreak-mode",
       "stars": 3,
       "forks": 0,
@@ -8549,11 +8485,11 @@
     },
     {
       "repo": "Baisbt/dsh-GreaterClarity-plugin",
-      "stars": 3,
+      "stars": 1,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-25T09:23:19Z",
-      "updated_at": "2026-08-28T10:58:10Z"
+      "updated_at": "2026-08-25T09:24:28Z"
     },
     {
       "repo": "baixianger/dsh-bridge",
@@ -8821,11 +8757,11 @@
     },
     {
       "repo": "BaronCyrus/dsh-ugui-preset",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T10:10:19Z",
-      "updated_at": "2026-08-28T12:36:27Z"
+      "updated_at": "2026-08-26T10:17:11Z"
     },
     {
       "repo": "BarrierFly/apx-watchdog",
@@ -8968,8 +8904,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T21:21:19Z",
-      "updated_at": "2026-08-27T21:21:28Z"
+      "pushed_at": "2026-08-26T13:47:57Z",
+      "updated_at": "2026-08-26T13:56:28Z"
     },
     {
       "repo": "Because66666/dsh-desktop-pet",
@@ -9118,7 +9054,7 @@
     {
       "repo": "beiyege-01/dsh-voice-ai-girlfriend",
       "stars": 48,
-      "forks": 13,
+      "forks": 12,
       "open_issues": 0,
       "pushed_at": "2026-08-22T20:22:51Z",
       "updated_at": "2026-08-29T08:43:23Z"
@@ -9183,8 +9119,8 @@
       "repo": "Bene-2020/plane-dsh-plugin",
       "stars": 0,
       "forks": 0,
-      "open_issues": 7,
-      "pushed_at": "2026-08-28T02:17:01Z",
+      "open_issues": 5,
+      "pushed_at": "2026-08-21T08:14:32Z",
       "updated_at": "2026-08-21T08:05:32Z"
     },
     {
@@ -9282,14 +9218,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-29T14:28:21Z",
       "updated_at": "2026-08-29T14:29:36Z"
-    },
-    {
-      "repo": "benz-ai-x/dsh-session-graph",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:56:10Z",
-      "updated_at": "2026-08-30T11:55:01Z"
     },
     {
       "repo": "BENZEMA216/trading-console",
@@ -9429,11 +9357,11 @@
     },
     {
       "repo": "BettyXu2001/how-deepseek-harness-works",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T16:59:05Z",
-      "updated_at": "2026-08-28T08:17:02Z"
+      "updated_at": "2026-08-23T16:59:24Z"
     },
     {
       "repo": "BEwellScilla/DeepseekHarness-right-click-open",
@@ -9493,11 +9421,11 @@
     },
     {
       "repo": "BigBlueBaby/codex2dsh",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-28T01:58:33Z",
-      "updated_at": "2026-08-28T11:01:42Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-26T10:03:56Z",
+      "updated_at": "2026-08-26T10:11:58Z"
     },
     {
       "repo": "bigcat95/dsh-tool-ocr",
@@ -9922,14 +9850,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-27T17:36:49Z",
       "updated_at": "2026-08-27T17:47:03Z"
-    },
-    {
-      "repo": "BlackPearl-AI/BlackPearl",
-      "stars": 3,
-      "forks": 1,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:51:22Z",
-      "updated_at": "2026-08-30T12:51:54Z"
     },
     {
       "repo": "blackteaYES/dsh-thinking-levels-settings",
@@ -10453,11 +10373,11 @@
     },
     {
       "repo": "bowang-lab/dsh-medomni",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T21:17:19Z",
-      "updated_at": "2026-08-28T21:17:39Z"
+      "pushed_at": "2026-08-22T19:25:14Z",
+      "updated_at": "2026-08-26T02:49:51Z"
     },
     {
       "repo": "bowen507/dsh-whale-switch",
@@ -10469,11 +10389,11 @@
     },
     {
       "repo": "bowenliang123/dsh-context",
-      "stars": 1178,
-      "forks": 31,
+      "stars": 1171,
+      "forks": 30,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T10:18:19Z",
-      "updated_at": "2026-08-30T12:43:37Z"
+      "pushed_at": "2026-08-29T14:41:38Z",
+      "updated_at": "2026-08-30T05:30:44Z"
     },
     {
       "repo": "bowenliang123/dsh-plugin-checker",
@@ -10592,8 +10512,8 @@
       "stars": 152,
       "forks": 7,
       "open_issues": 5,
-      "pushed_at": "2026-08-30T12:07:36Z",
-      "updated_at": "2026-08-30T12:08:12Z"
+      "pushed_at": "2026-08-30T05:34:46Z",
+      "updated_at": "2026-08-30T05:35:21Z"
     },
     {
       "repo": "Brain2nd/DSH-AutoLab",
@@ -10765,11 +10685,11 @@
     },
     {
       "repo": "bruc3van/awesome-dsh-plugin",
-      "stars": 300,
+      "stars": 299,
       "forks": 51,
       "open_issues": 0,
       "pushed_at": "2026-08-30T04:25:58Z",
-      "updated_at": "2026-08-30T10:47:17Z"
+      "updated_at": "2026-08-30T05:39:19Z"
     },
     {
       "repo": "bruc3van/dsh-desktop-safe-market",
@@ -10799,9 +10719,9 @@
       "repo": "BruceLoveLee000/tokens-as-parameters",
       "stars": 0,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-28T17:25:17Z",
-      "updated_at": "2026-08-28T17:34:08Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T16:12:59Z",
+      "updated_at": "2026-08-26T16:29:53Z"
     },
     {
       "repo": "brunodantas/sdlc-harness",
@@ -10949,11 +10869,11 @@
     },
     {
       "repo": "bugmaker2/dsh-plugin-template",
-      "stars": 70,
+      "stars": 66,
       "forks": 1,
       "open_issues": 1,
       "pushed_at": "2026-08-27T04:58:58Z",
-      "updated_at": "2026-08-30T11:37:56Z"
+      "updated_at": "2026-08-30T04:44:17Z"
     },
     {
       "repo": "buguoshixc/dsh-user-message-navigator",
@@ -11045,11 +10965,11 @@
     },
     {
       "repo": "Buzzso/dsh-sev",
-      "stars": 85,
+      "stars": 78,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-27T12:57:16Z",
-      "updated_at": "2026-08-30T12:52:24Z"
+      "updated_at": "2026-08-30T06:15:17Z"
     },
     {
       "repo": "bw448/JARVIS-LOCAL",
@@ -12392,8 +12312,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 11,
-      "pushed_at": "2026-08-29T14:52:10Z",
-      "updated_at": "2026-08-29T14:53:03Z"
+      "pushed_at": "2026-08-25T13:27:13Z",
+      "updated_at": "2026-08-25T13:36:50Z"
     },
     {
       "repo": "Chang-Tong/dsh-import-agents",
@@ -12549,11 +12469,11 @@
     },
     {
       "repo": "ChaoMixian/dsh2shell",
-      "stars": 48,
-      "forks": 13,
+      "stars": 47,
+      "forks": 12,
       "open_issues": 0,
       "pushed_at": "2026-08-22T15:06:45Z",
-      "updated_at": "2026-08-30T12:43:38Z"
+      "updated_at": "2026-08-27T17:33:39Z"
     },
     {
       "repo": "chaos-03x/dsh-agy",
@@ -12797,11 +12717,11 @@
     },
     {
       "repo": "chenbin-dev/dsh-scan-mcp",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T11:05:30Z",
-      "updated_at": "2026-08-28T11:00:01Z"
+      "updated_at": "2026-08-26T11:06:04Z"
     },
     {
       "repo": "chenchangzhong/oh-my-dsh-ui",
@@ -13396,14 +13316,6 @@
       "updated_at": "2026-08-19T02:58:17Z"
     },
     {
-      "repo": "chenyangcun/dsh-command-palette",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:13:52Z",
-      "updated_at": "2026-08-30T11:13:56Z"
-    },
-    {
       "repo": "chenyangcun/dsh-fixed-new-session-model",
       "stars": 0,
       "forks": 0,
@@ -13805,11 +13717,11 @@
     },
     {
       "repo": "chokwinlee/deepseek-harness-desktop",
-      "stars": 128,
+      "stars": 125,
       "forks": 1,
       "open_issues": 13,
       "pushed_at": "2026-08-28T18:05:38Z",
-      "updated_at": "2026-08-30T11:57:32Z"
+      "updated_at": "2026-08-30T06:10:18Z"
     },
     {
       "repo": "chongyangdu2008-cyrus/dsh-subagent-inspector",
@@ -13888,8 +13800,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T11:15:57Z",
-      "updated_at": "2026-08-28T11:16:31Z"
+      "pushed_at": "2026-08-26T07:32:05Z",
+      "updated_at": "2026-08-26T07:32:33Z"
     },
     {
       "repo": "ChrisWBurt-2020/dsh-private",
@@ -14133,11 +14045,11 @@
     },
     {
       "repo": "cilis/dsh-tauri-launcher",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T06:37:59Z",
-      "updated_at": "2026-08-30T09:38:54Z"
+      "pushed_at": "2026-08-26T08:21:38Z",
+      "updated_at": "2026-08-26T08:22:56Z"
     },
     {
       "repo": "cinderzhan/dsh-plugin-dew",
@@ -14389,11 +14301,11 @@
     },
     {
       "repo": "Clarklevis1995/dsh-mobile",
-      "stars": 60,
+      "stars": 56,
       "forks": 6,
       "open_issues": 5,
-      "pushed_at": "2026-08-30T11:56:20Z",
-      "updated_at": "2026-08-30T12:43:54Z"
+      "pushed_at": "2026-08-28T15:24:33Z",
+      "updated_at": "2026-08-30T03:57:46Z"
     },
     {
       "repo": "Clarklevis1995/dsh-plugin-mobile-gateway",
@@ -14845,11 +14757,11 @@
     },
     {
       "repo": "cocode-agency/cocode",
-      "stars": 162,
+      "stars": 161,
       "forks": 37,
       "open_issues": 2,
       "pushed_at": "2026-08-29T16:56:49Z",
-      "updated_at": "2026-08-30T06:47:23Z"
+      "updated_at": "2026-08-29T16:57:01Z"
     },
     {
       "repo": "cocofhu/anime-find",
@@ -15104,8 +15016,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T02:32:23Z",
-      "updated_at": "2026-08-30T02:32:13Z"
+      "pushed_at": "2026-08-26T12:34:10Z",
+      "updated_at": "2026-08-26T12:39:57Z"
     },
     {
       "repo": "cofy-x/dsh-console",
@@ -15413,11 +15325,11 @@
     },
     {
       "repo": "cpj-dev/dsh-plugin-cc",
-      "stars": 106,
+      "stars": 101,
       "forks": 0,
       "open_issues": 3,
       "pushed_at": "2026-08-27T12:59:17Z",
-      "updated_at": "2026-08-30T11:56:23Z"
+      "updated_at": "2026-08-30T02:27:58Z"
     },
     {
       "repo": "cpt-kenvie/EmotionPet",
@@ -15549,11 +15461,11 @@
     },
     {
       "repo": "CREAIT-nl/dsh-plugins",
-      "stars": 5,
+      "stars": 3,
       "forks": 1,
       "open_issues": 1,
       "pushed_at": "2026-08-26T08:46:22Z",
-      "updated_at": "2026-08-29T20:24:21Z"
+      "updated_at": "2026-08-26T08:44:15Z"
     },
     {
       "repo": "creativedswork/dsh-expmem",
@@ -16576,7 +16488,7 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T21:53:46Z",
+      "pushed_at": "2026-08-21T15:38:58Z",
       "updated_at": "2026-08-21T15:41:01Z"
     },
     {
@@ -16688,16 +16600,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T12:59:03Z",
-      "updated_at": "2026-08-28T13:02:21Z"
-    },
-    {
-      "repo": "daodishisha28/dsh-sidechat-plugin",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:41:20Z",
-      "updated_at": "2026-08-30T11:41:39Z"
+      "pushed_at": "2026-08-23T08:19:51Z",
+      "updated_at": "2026-08-25T03:40:14Z"
     },
     {
       "repo": "daoing/dsh-daoing-memory",
@@ -16853,11 +16757,11 @@
     },
     {
       "repo": "dataelement/dsh-desktop",
-      "stars": 3287,
+      "stars": 3240,
       "forks": 186,
-      "open_issues": 53,
-      "pushed_at": "2026-08-30T12:15:59Z",
-      "updated_at": "2026-08-30T12:53:16Z"
+      "open_issues": 50,
+      "pushed_at": "2026-08-30T03:07:35Z",
+      "updated_at": "2026-08-30T06:35:01Z"
     },
     {
       "repo": "dataelement/dsh-plugin-coaligne",
@@ -17293,11 +17197,11 @@
     },
     {
       "repo": "DDDMUC/dsh-free-search",
-      "stars": 85,
+      "stars": 83,
       "forks": 5,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-28T18:56:54Z",
-      "updated_at": "2026-08-30T12:28:58Z"
+      "updated_at": "2026-08-29T15:15:15Z"
     },
     {
       "repo": "DDDMUC/dsh-preset-workbench",
@@ -17669,11 +17573,11 @@
     },
     {
       "repo": "deepseek-desktop/deepseek-desktop",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:21:26Z",
-      "updated_at": "2026-08-30T12:21:30Z"
+      "pushed_at": "2026-08-26T18:05:24Z",
+      "updated_at": "2026-08-26T18:06:08Z"
     },
     {
       "repo": "deepseek-dsh/dsh-desktop",
@@ -18093,11 +17997,11 @@
     },
     {
       "repo": "Devin-AXIS/deepseek-design",
-      "stars": 610,
+      "stars": 609,
       "forks": 140,
       "open_issues": 4,
-      "pushed_at": "2026-08-30T11:49:38Z",
-      "updated_at": "2026-08-30T11:49:52Z"
+      "pushed_at": "2026-08-28T07:12:44Z",
+      "updated_at": "2026-08-30T03:27:37Z"
     },
     {
       "repo": "devloom1024/dsh-acp-gateway",
@@ -18152,8 +18056,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T02:34:43Z",
-      "updated_at": "2026-08-27T02:36:01Z"
+      "pushed_at": "2026-08-26T02:21:43Z",
+      "updated_at": "2026-08-26T02:22:39Z"
     },
     {
       "repo": "DevViking-Persike/dsh-subscriptions",
@@ -18240,8 +18144,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T16:40:30Z",
-      "updated_at": "2026-08-29T16:41:22Z"
+      "pushed_at": "2026-08-26T03:08:09Z",
+      "updated_at": "2026-08-26T03:08:23Z"
     },
     {
       "repo": "dhicoc/dsh-chinese-traditional-wisdom-skill",
@@ -18341,11 +18245,11 @@
     },
     {
       "repo": "DIAG5/dsh-better-input",
-      "stars": 19,
-      "forks": 4,
+      "stars": 14,
+      "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T08:39:41Z",
-      "updated_at": "2026-08-30T12:35:11Z"
+      "pushed_at": "2026-08-26T12:41:07Z",
+      "updated_at": "2026-08-26T13:22:53Z"
     },
     {
       "repo": "diamondfsd/deepseek-harness-desktop",
@@ -18426,14 +18330,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-29T18:34:01Z",
       "updated_at": "2026-08-29T18:34:06Z"
-    },
-    {
-      "repo": "difimim/dsh-voice-input-npm",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:07:22Z",
-      "updated_at": "2026-08-30T11:44:40Z"
     },
     {
       "repo": "digital-duck/dsh-workspaces",
@@ -18693,11 +18589,11 @@
     },
     {
       "repo": "discoverhubgroup/product-daily-rank",
-      "stars": 107,
-      "forks": 7,
+      "stars": 105,
+      "forks": 6,
       "open_issues": 0,
       "pushed_at": "2026-08-30T00:00:06Z",
-      "updated_at": "2026-08-30T10:47:26Z"
+      "updated_at": "2026-08-30T05:41:21Z"
     },
     {
       "repo": "DJ1667/dsh-pluging-ui-settings-custom-headers",
@@ -19037,11 +18933,11 @@
     },
     {
       "repo": "Dominic789654/awesome-deepseek-harness",
-      "stars": 207,
+      "stars": 206,
       "forks": 138,
-      "open_issues": 6,
-      "pushed_at": "2026-08-30T12:37:51Z",
-      "updated_at": "2026-08-30T09:05:16Z"
+      "open_issues": 5,
+      "pushed_at": "2026-08-30T06:01:50Z",
+      "updated_at": "2026-08-30T06:02:08Z"
     },
     {
       "repo": "domitor-syh/dsh-ui-skin-switcher",
@@ -19613,19 +19509,19 @@
     },
     {
       "repo": "dream-num/dsh-univer-office",
-      "stars": 201,
+      "stars": 200,
       "forks": 19,
       "open_issues": 4,
       "pushed_at": "2026-08-27T03:28:54Z",
-      "updated_at": "2026-08-30T12:39:27Z"
+      "updated_at": "2026-08-30T06:34:20Z"
     },
     {
       "repo": "dream12347/dsh-session-manager",
-      "stars": 55,
+      "stars": 54,
       "forks": 3,
       "open_issues": 2,
       "pushed_at": "2026-08-27T16:20:38Z",
-      "updated_at": "2026-08-30T08:23:30Z"
+      "updated_at": "2026-08-29T15:29:08Z"
     },
     {
       "repo": "Dream5205/dsh-desktop",
@@ -19760,8 +19656,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T07:23:12Z",
-      "updated_at": "2026-08-29T07:23:27Z"
+      "pushed_at": "2026-08-26T03:54:24Z",
+      "updated_at": "2026-08-26T03:54:47Z"
     },
     {
       "repo": "DroganC/dsh-catl-plugins",
@@ -19917,11 +19813,11 @@
     },
     {
       "repo": "dsh-market/dsh-market",
-      "stars": 2814,
-      "forks": 151,
-      "open_issues": 22,
-      "pushed_at": "2026-08-30T09:17:21Z",
-      "updated_at": "2026-08-30T12:44:58Z"
+      "stars": 2792,
+      "forks": 150,
+      "open_issues": 23,
+      "pushed_at": "2026-08-30T05:11:20Z",
+      "updated_at": "2026-08-30T06:43:14Z"
     },
     {
       "repo": "dsh-mixxed/dsh-client-ui-settings-skills",
@@ -20077,11 +19973,11 @@
     },
     {
       "repo": "dsh-tauri-desk/deepseek-harness-desktop",
-      "stars": 1417,
+      "stars": 1402,
       "forks": 89,
-      "open_issues": 26,
-      "pushed_at": "2026-08-30T08:22:55Z",
-      "updated_at": "2026-08-30T12:56:21Z"
+      "open_issues": 25,
+      "pushed_at": "2026-08-30T05:40:36Z",
+      "updated_at": "2026-08-30T06:10:55Z"
     },
     {
       "repo": "dsh-tauri-desk/deepseek-harness-pkg",
@@ -20141,11 +20037,11 @@
     },
     {
       "repo": "dsheval/dsh-top100",
-      "stars": 157,
+      "stars": 149,
       "forks": 3,
       "open_issues": 0,
       "pushed_at": "2026-08-29T10:01:01Z",
-      "updated_at": "2026-08-30T12:51:36Z"
+      "updated_at": "2026-08-30T06:35:06Z"
     },
     {
       "repo": "dshflash/DSHGUI",
@@ -20221,11 +20117,11 @@
     },
     {
       "repo": "dshplugin/dsh-plugin-hub",
-      "stars": 72,
-      "forks": 9,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T07:03:05Z",
-      "updated_at": "2026-08-30T10:34:15Z"
+      "stars": 71,
+      "forks": 8,
+      "open_issues": 0,
+      "pushed_at": "2026-08-29T13:59:18Z",
+      "updated_at": "2026-08-29T13:59:21Z"
     },
     {
       "repo": "dshworks/.github",
@@ -20445,11 +20341,11 @@
     },
     {
       "repo": "dundunhan/dsh-video-lens",
-      "stars": 86,
+      "stars": 83,
       "forks": 2,
       "open_issues": 0,
       "pushed_at": "2026-08-18T17:39:33Z",
-      "updated_at": "2026-08-30T11:45:25Z"
+      "updated_at": "2026-08-30T06:10:23Z"
     },
     {
       "repo": "dungnt1312/mini-dsh",
@@ -20645,11 +20541,11 @@
     },
     {
       "repo": "dylanzhangzx/dknowc-dsh",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-26T01:53:01Z",
-      "updated_at": "2026-08-28T05:45:50Z"
+      "updated_at": "2026-08-26T01:53:32Z"
     },
     {
       "repo": "dymwan/serenity-ai",
@@ -20693,11 +20589,11 @@
     },
     {
       "repo": "e2mcc/dsh-popout-sidebar",
-      "stars": 164,
+      "stars": 154,
       "forks": 2,
       "open_issues": 1,
       "pushed_at": "2026-08-20T16:51:38Z",
-      "updated_at": "2026-08-30T12:45:33Z"
+      "updated_at": "2026-08-30T03:13:27Z"
     },
     {
       "repo": "EachSheep/dsh-mario-pixel-skin",
@@ -20809,7 +20705,7 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T13:15:34Z",
-      "updated_at": "2026-08-28T06:57:20Z"
+      "updated_at": "2026-08-25T03:45:02Z"
     },
     {
       "repo": "EasyTZ/Deepseek-Harness-Desktop",
@@ -21010,22 +20906,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-19T20:04:30Z",
       "updated_at": "2026-08-19T20:07:26Z"
-    },
-    {
-      "repo": "Edge-Echo/dsh-netassist",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:21:34Z",
-      "updated_at": "2026-08-30T10:22:41Z"
-    },
-    {
-      "repo": "Edge-Echo/dsh-win-toolkit",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:22:56Z",
-      "updated_at": "2026-08-30T10:23:14Z"
     },
     {
       "repo": "edge-sky/dsh-oauth-adapter",
@@ -21285,11 +21165,11 @@
     },
     {
       "repo": "Electricitysheep/dsh-handbook",
-      "stars": 709,
+      "stars": 704,
       "forks": 32,
       "open_issues": 1,
       "pushed_at": "2026-08-22T08:57:27Z",
-      "updated_at": "2026-08-30T12:55:44Z"
+      "updated_at": "2026-08-30T01:35:35Z"
     },
     {
       "repo": "elegymythos/exam-paper-plugin",
@@ -21453,11 +21333,11 @@
     },
     {
       "repo": "elysia395/dsh-wallpaper-engine",
-      "stars": 211,
+      "stars": 210,
       "forks": 21,
       "open_issues": 6,
       "pushed_at": "2026-08-27T14:29:20Z",
-      "updated_at": "2026-08-30T12:53:40Z"
+      "updated_at": "2026-08-30T06:31:25Z"
     },
     {
       "repo": "Elysiaqwq/dsh-ccswitch",
@@ -22220,14 +22100,6 @@
       "updated_at": "2026-08-28T18:36:02Z"
     },
     {
-      "repo": "Exception-H/dsh-gpt56-ptc",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:47:00Z",
-      "updated_at": "2026-08-30T12:44:24Z"
-    },
-    {
       "repo": "ExElectron/dsh-gov-portal",
       "stars": 37,
       "forks": 4,
@@ -22576,8 +22448,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T06:39:13Z",
-      "updated_at": "2026-08-30T06:39:16Z"
+      "pushed_at": "2026-08-20T13:44:43Z",
+      "updated_at": "2026-08-26T07:37:07Z"
     },
     {
       "repo": "fan56/dsh-feishu",
@@ -22632,8 +22504,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T06:39:51Z",
-      "updated_at": "2026-08-30T06:40:16Z"
+      "pushed_at": "2026-08-26T03:30:24Z",
+      "updated_at": "2026-08-26T03:30:51Z"
     },
     {
       "repo": "fan969690/dsh-web-plugins",
@@ -23164,14 +23036,6 @@
       "updated_at": "2026-08-27T12:45:19Z"
     },
     {
-      "repo": "Felixazuray/dsh-plugin-loading-tests",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:27:37Z",
-      "updated_at": "2026-08-30T10:27:43Z"
-    },
-    {
       "repo": "felixzhang-glitch/dsh-panel",
       "stars": 1,
       "forks": 0,
@@ -23525,11 +23389,11 @@
     },
     {
       "repo": "fightingFirefox/dsh-glm-vision",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T10:37:56Z",
-      "updated_at": "2026-08-30T10:38:08Z"
+      "pushed_at": "2026-08-21T07:12:24Z",
+      "updated_at": "2026-08-25T03:46:39Z"
     },
     {
       "repo": "FightingThrones/dsh-multi-version",
@@ -23629,11 +23493,11 @@
     },
     {
       "repo": "Fish121380/auto-mouse",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T07:31:49Z",
-      "updated_at": "2026-08-28T11:00:07Z"
+      "updated_at": "2026-08-25T03:42:40Z"
     },
     {
       "repo": "FishBottle7/opencode2dsh",
@@ -23676,14 +23540,6 @@
       "updated_at": "2026-08-17T05:57:39Z"
     },
     {
-      "repo": "fishOfOUC/dsh-stop",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:40:48Z",
-      "updated_at": "2026-08-30T12:41:14Z"
-    },
-    {
       "repo": "fishOfOUC/plugin-ui-controls",
       "stars": 0,
       "forks": 0,
@@ -23693,11 +23549,11 @@
     },
     {
       "repo": "Fishquito7/dsh-skill-mcp-panel",
-      "stars": 111,
+      "stars": 112,
       "forks": 13,
       "open_issues": 4,
       "pushed_at": "2026-08-18T05:43:14Z",
-      "updated_at": "2026-08-30T12:22:24Z"
+      "updated_at": "2026-08-30T06:20:01Z"
     },
     {
       "repo": "Fishsb/dsh-prompt-enhancer",
@@ -23791,7 +23647,7 @@
       "repo": "FlashingChen/dsh-desktop-hub",
       "stars": 58,
       "forks": 8,
-      "open_issues": 4,
+      "open_issues": 3,
       "pushed_at": "2026-08-28T15:10:23Z",
       "updated_at": "2026-08-30T04:01:30Z"
     },
@@ -23901,11 +23757,11 @@
     },
     {
       "repo": "flizzywine/dsh-tavern",
-      "stars": 61,
+      "stars": 59,
       "forks": 8,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T08:53:30Z",
-      "updated_at": "2026-08-30T12:48:50Z"
+      "pushed_at": "2026-08-29T22:10:01Z",
+      "updated_at": "2026-08-29T22:11:36Z"
     },
     {
       "repo": "flluhaoran/dsh-plugin-account-balance",
@@ -24551,7 +24407,7 @@
       "repo": "franksong2702/dsh-codex-connect",
       "stars": 64,
       "forks": 23,
-      "open_issues": 5,
+      "open_issues": 4,
       "pushed_at": "2026-08-29T14:38:43Z",
       "updated_at": "2026-08-29T14:36:09Z"
     },
@@ -24668,20 +24524,20 @@
       "updated_at": "2026-08-25T03:43:01Z"
     },
     {
-      "repo": "freedomkk-qfeng/dsh-oidc",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 2,
-      "pushed_at": "2026-08-30T11:24:19Z",
-      "updated_at": "2026-08-30T11:33:38Z"
-    },
-    {
       "repo": "FreeFunk/deepseek-harness-desktop-app",
       "stars": 0,
       "forks": 0,
       "open_issues": 7,
       "pushed_at": "2026-08-24T12:49:35Z",
       "updated_at": "2026-08-24T19:13:24Z"
+    },
+    {
+      "repo": "freeoption/dsh-tool-browser",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T15:35:08Z",
+      "updated_at": "2026-08-26T02:02:31Z"
     },
     {
       "repo": "freespace8/dsh-plugins",
@@ -24901,11 +24757,11 @@
     },
     {
       "repo": "fufankeji/deepseek-harness-studio",
-      "stars": 571,
-      "forks": 57,
+      "stars": 567,
+      "forks": 56,
       "open_issues": 0,
       "pushed_at": "2026-08-27T08:21:17Z",
-      "updated_at": "2026-08-30T11:43:45Z"
+      "updated_at": "2026-08-30T05:39:56Z"
     },
     {
       "repo": "fufengyuan/dsh-council",
@@ -25053,19 +24909,11 @@
     },
     {
       "repo": "FuRongJun-1999/dsh-memory",
-      "stars": 75,
-      "forks": 2,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:58:04Z",
-      "updated_at": "2026-08-30T12:14:44Z"
-    },
-    {
-      "repo": "fusang991/dsh-plugin-feishu-bridge",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T07:12:56Z",
-      "updated_at": "2026-08-30T07:13:18Z"
+      "stars": 71,
+      "forks": 1,
+      "open_issues": 2,
+      "pushed_at": "2026-08-29T20:29:59Z",
+      "updated_at": "2026-08-30T06:27:47Z"
     },
     {
       "repo": "FUSU123fusu/dsh-tui-herdr",
@@ -25112,8 +24960,8 @@
       "stars": 5,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T12:39:53Z",
-      "updated_at": "2026-08-27T12:43:30Z"
+      "pushed_at": "2026-08-23T08:40:31Z",
+      "updated_at": "2026-08-25T03:47:25Z"
     },
     {
       "repo": "FuWenLianggit/dsh-session-bridge",
@@ -26056,16 +25904,16 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 5,
-      "pushed_at": "2026-08-29T17:28:58Z",
-      "updated_at": "2026-08-29T17:29:05Z"
+      "pushed_at": "2026-08-24T10:26:43Z",
+      "updated_at": "2026-08-24T10:30:00Z"
     },
     {
       "repo": "GGBond2424648901/deep-whale-day-night-theme",
-      "stars": 109,
+      "stars": 108,
       "forks": 6,
       "open_issues": 5,
       "pushed_at": "2026-08-19T10:14:58Z",
-      "updated_at": "2026-08-30T10:30:01Z"
+      "updated_at": "2026-08-29T09:15:07Z"
     },
     {
       "repo": "GGigHub/dsh-launcher",
@@ -26536,8 +26384,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T21:20:36Z",
-      "updated_at": "2026-08-29T21:20:42Z"
+      "pushed_at": "2026-08-26T18:05:05Z",
+      "updated_at": "2026-08-26T18:05:38Z"
     },
     {
       "repo": "glangzh/dsh-advisor",
@@ -26693,11 +26541,11 @@
     },
     {
       "repo": "Godners-Code/dao-zang-skill",
-      "stars": 1,
+      "stars": 0,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T02:05:02Z",
-      "updated_at": "2026-08-28T11:00:58Z"
+      "pushed_at": "2026-08-26T01:34:29Z",
+      "updated_at": "2026-08-26T01:34:40Z"
     },
     {
       "repo": "goecho/dsh-generation",
@@ -26722,22 +26570,6 @@
       "open_issues": 1,
       "pushed_at": "2026-08-26T12:05:01Z",
       "updated_at": "2026-08-28T09:40:31Z"
-    },
-    {
-      "repo": "goldgish/dsh-gamepad-approval",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:15:29Z",
-      "updated_at": "2026-08-30T12:16:22Z"
-    },
-    {
-      "repo": "GoldVelen/DuraSH",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:18:20Z",
-      "updated_at": "2026-08-30T12:31:46Z"
     },
     {
       "repo": "golitter/dsh-deepseek-billing",
@@ -26944,16 +26776,16 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T18:31:22Z",
-      "updated_at": "2026-08-26T18:37:51Z"
+      "pushed_at": "2026-08-26T17:54:50Z",
+      "updated_at": "2026-08-26T17:59:29Z"
     },
     {
       "repo": "GooDAnDReaDY/dsh-grok-xsearch",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T11:07:15Z",
-      "updated_at": "2026-08-28T11:07:19Z"
+      "pushed_at": "2026-08-25T16:11:09Z",
+      "updated_at": "2026-08-25T16:22:52Z"
     },
     {
       "repo": "GooDAnDReaDY/dsh-im-hub-media",
@@ -27056,8 +26888,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T10:55:47Z",
-      "updated_at": "2026-08-28T10:56:02Z"
+      "pushed_at": "2026-08-25T10:54:32Z",
+      "updated_at": "2026-08-25T10:54:59Z"
     },
     {
       "repo": "GoodLoongStudio/TuringDesk",
@@ -27205,11 +27037,11 @@
     },
     {
       "repo": "GraySilver/dsh-evolve-modes",
-      "stars": 175,
+      "stars": 174,
       "forks": 8,
       "open_issues": 1,
       "pushed_at": "2026-08-26T13:53:10Z",
-      "updated_at": "2026-08-30T10:31:57Z"
+      "updated_at": "2026-08-30T03:09:27Z"
     },
     {
       "repo": "GreatV/oardsh",
@@ -27344,8 +27176,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T19:34:18Z",
-      "updated_at": "2026-08-26T19:46:51Z"
+      "pushed_at": "2026-08-26T18:06:07Z",
+      "updated_at": "2026-08-26T17:48:07Z"
     },
     {
       "repo": "guangxiangwu6-cmd/dsh-llm-failover",
@@ -27413,11 +27245,11 @@
     },
     {
       "repo": "gugu123a/dsh-tool-see-image",
-      "stars": 5,
+      "stars": 4,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T12:58:25Z",
-      "updated_at": "2026-08-29T12:58:39Z"
+      "pushed_at": "2026-08-20T03:53:34Z",
+      "updated_at": "2026-08-20T03:54:32Z"
     },
     {
       "repo": "GuGuGuGun/dsh_desktop_plugin",
@@ -27701,11 +27533,11 @@
     },
     {
       "repo": "guyuefangyuanl/dsh-memory",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-21T15:30:50Z",
-      "updated_at": "2026-08-27T03:46:05Z"
+      "updated_at": "2026-08-26T15:18:21Z"
     },
     {
       "repo": "gwsbhqt/dsh-insight",
@@ -28088,16 +27920,16 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T10:25:02Z",
-      "updated_at": "2026-08-28T10:26:38Z"
+      "pushed_at": "2026-08-25T02:08:17Z",
+      "updated_at": "2026-08-25T02:08:30Z"
     },
     {
       "repo": "HackSing/dsh-plugins",
-      "stars": 7,
+      "stars": 6,
       "forks": 2,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:50:44Z",
-      "updated_at": "2026-08-30T11:50:47Z"
+      "pushed_at": "2026-08-26T10:49:05Z",
+      "updated_at": "2026-08-26T10:53:52Z"
     },
     {
       "repo": "HackSpeak/QVD-2026-57410",
@@ -28161,7 +27993,7 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-15T20:02:43Z",
-      "updated_at": "2026-08-28T01:27:13Z"
+      "updated_at": "2026-08-15T20:02:58Z"
     },
     {
       "repo": "haifeiWu/dsh-computer-use",
@@ -28232,8 +28064,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T01:08:19Z",
-      "updated_at": "2026-08-29T01:08:21Z"
+      "pushed_at": "2026-08-18T05:39:06Z",
+      "updated_at": "2026-08-25T04:57:21Z"
     },
     {
       "repo": "haiweizhao27/dsh-usage-widget",
@@ -28245,11 +28077,11 @@
     },
     {
       "repo": "haiziyao/dsh-vision-mix",
-      "stars": 4,
-      "forks": 1,
+      "stars": 3,
+      "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-16T06:56:09Z",
-      "updated_at": "2026-08-29T07:01:38Z"
+      "updated_at": "2026-08-25T04:57:24Z"
     },
     {
       "repo": "hajimilvdou/dsh-storecloud",
@@ -28258,14 +28090,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-18T07:17:50Z",
       "updated_at": "2026-08-18T07:18:32Z"
-    },
-    {
-      "repo": "hajimimaodie8/BetterGold",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:57Z",
-      "updated_at": "2026-08-30T12:54:20Z"
     },
     {
       "repo": "Hakimee617/astrbot_plugin_vision_router",
@@ -28285,11 +28109,11 @@
     },
     {
       "repo": "halosb/dsh-bg-beautify",
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-17T05:37:24Z",
-      "updated_at": "2026-08-28T05:30:03Z"
+      "updated_at": "2026-08-25T04:57:31Z"
     },
     {
       "repo": "halykoss/Sem-Search",
@@ -28301,11 +28125,11 @@
     },
     {
       "repo": "Han-1413141/dsh-cost-meter",
-      "stars": 224,
+      "stars": 223,
       "forks": 18,
       "open_issues": 1,
       "pushed_at": "2026-08-29T04:50:27Z",
-      "updated_at": "2026-08-30T10:51:37Z"
+      "updated_at": "2026-08-30T06:19:44Z"
     },
     {
       "repo": "Han-1413141/dsh-sticky-disclosure",
@@ -28317,19 +28141,11 @@
     },
     {
       "repo": "Han-Yao94/dsh-session-toolkit",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T07:35:22Z",
-      "updated_at": "2026-08-30T07:35:32Z"
-    },
-    {
-      "repo": "han-yi794/dsh-web-llm-deepseek-web",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:32Z",
-      "updated_at": "2026-08-30T11:47:52Z"
+      "pushed_at": "2026-08-26T03:26:58Z",
+      "updated_at": "2026-08-26T03:27:57Z"
     },
     {
       "repo": "HananFish/dsh-pet",
@@ -28392,8 +28208,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T08:11:35Z",
-      "updated_at": "2026-08-28T08:14:14Z"
+      "pushed_at": "2026-08-19T00:59:48Z",
+      "updated_at": "2026-08-20T02:37:09Z"
     },
     {
       "repo": "Haniubub/seo-toolkit",
@@ -28437,19 +28253,19 @@
     },
     {
       "repo": "Hanmiao33/dsh-bubble-explain",
-      "stars": 6,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T13:00:16Z",
-      "updated_at": "2026-08-29T08:43:15Z"
+      "updated_at": "2026-08-25T13:08:31Z"
     },
     {
       "repo": "Hann428/dsh-usage-dashboard",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-24T10:49:43Z",
-      "updated_at": "2026-08-28T10:58:56Z"
+      "updated_at": "2026-08-25T03:45:16Z"
     },
     {
       "repo": "HanneLEE/dsh-agent-state",
@@ -28477,11 +28293,11 @@
     },
     {
       "repo": "hanshenmesen/dsh-turn-delete",
-      "stars": 106,
+      "stars": 105,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-18T04:37:17Z",
-      "updated_at": "2026-08-30T07:48:50Z"
+      "updated_at": "2026-08-28T21:40:14Z"
     },
     {
       "repo": "Hantking/-ocellis-harness-",
@@ -28519,7 +28335,7 @@
       "repo": "HanZephyr/dsh-generalized-skills",
       "stars": 0,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-24T07:05:28Z",
       "updated_at": "2026-08-24T07:06:31Z"
     },
@@ -28533,11 +28349,11 @@
     },
     {
       "repo": "hanzhangzzz/dsh-diagram",
-      "stars": 8,
-      "forks": 1,
+      "stars": 4,
+      "forks": 2,
       "open_issues": 1,
       "pushed_at": "2026-08-24T08:36:45Z",
-      "updated_at": "2026-08-29T08:03:13Z"
+      "updated_at": "2026-08-26T08:13:35Z"
     },
     {
       "repo": "HanzhiOvO/deepseek-harness-shell",
@@ -28622,7 +28438,7 @@
     {
       "repo": "haoku123/dsh-voice",
       "stars": 5,
-      "forks": 4,
+      "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-23T12:37:09Z",
       "updated_at": "2026-08-25T05:20:47Z"
@@ -28696,40 +28512,40 @@
       "stars": 7,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:19Z",
-      "updated_at": "2026-08-30T11:47:34Z"
+      "pushed_at": "2026-08-26T10:15:33Z",
+      "updated_at": "2026-08-26T10:28:30Z"
     },
     {
       "repo": "HaoyueQin/dsh-better-reasoning-effort",
-      "stars": 8,
+      "stars": 5,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:00Z",
-      "updated_at": "2026-08-30T11:47:16Z"
+      "pushed_at": "2026-08-26T08:59:06Z",
+      "updated_at": "2026-08-26T10:28:57Z"
     },
     {
       "repo": "HaoyueQin/dsh-deepseek-monitor",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:04Z",
-      "updated_at": "2026-08-30T11:47:18Z"
+      "pushed_at": "2026-08-26T08:06:32Z",
+      "updated_at": "2026-08-26T08:11:49Z"
     },
     {
       "repo": "HaoyueQin/dsh-diff-stat",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:08Z",
-      "updated_at": "2026-08-30T11:48:00Z"
+      "pushed_at": "2026-08-26T10:21:51Z",
+      "updated_at": "2026-08-26T10:10:55Z"
     },
     {
       "repo": "HaoyueQin/dsh-usage-statistics-panel",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:47:12Z",
-      "updated_at": "2026-08-30T11:47:50Z"
+      "pushed_at": "2026-08-26T07:22:24Z",
+      "updated_at": "2026-08-26T07:22:36Z"
     },
     {
       "repo": "haozheou/dsh-discipline-guard",
@@ -28750,7 +28566,7 @@
     {
       "repo": "happpsee/dsh-desktop-app",
       "stars": 1,
-      "forks": 1,
+      "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-16T07:40:07Z",
       "updated_at": "2026-08-25T04:58:18Z"
@@ -28760,7 +28576,7 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 11,
-      "pushed_at": "2026-08-28T00:50:51Z",
+      "pushed_at": "2026-08-26T08:50:39Z",
       "updated_at": "2026-08-16T11:23:00Z"
     },
     {
@@ -28784,32 +28600,32 @@
       "stars": 8,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-29T05:06:21Z",
-      "updated_at": "2026-08-29T05:53:54Z"
+      "pushed_at": "2026-08-26T03:24:27Z",
+      "updated_at": "2026-08-26T03:24:35Z"
     },
     {
       "repo": "hardcandydemoralisation573/dsh-xiaoyao-skins",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T04:56:18Z",
-      "updated_at": "2026-08-30T04:56:47Z"
+      "pushed_at": "2026-08-26T17:47:39Z",
+      "updated_at": "2026-08-26T17:47:57Z"
     },
     {
       "repo": "hardness1020/learn-deepseek-harness",
-      "stars": 26,
+      "stars": 22,
       "forks": 3,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T18:46:14Z",
-      "updated_at": "2026-08-29T12:07:22Z"
+      "pushed_at": "2026-08-24T21:33:55Z",
+      "updated_at": "2026-08-26T09:09:21Z"
     },
     {
       "repo": "harismuna5268/DSH-Desktop",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T07:23:01Z",
-      "updated_at": "2026-08-29T07:23:11Z"
+      "pushed_at": "2026-08-26T03:54:13Z",
+      "updated_at": "2026-08-26T03:54:40Z"
     },
     {
       "repo": "Harlock-Space-Pirate/solana-re-cyber-kit",
@@ -28896,15 +28712,15 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T06:47:00Z",
-      "updated_at": "2026-08-30T06:47:31Z"
+      "pushed_at": "2026-08-26T02:44:51Z",
+      "updated_at": "2026-08-26T02:47:46Z"
     },
     {
       "repo": "harry-ma-qiang/tenon",
       "stars": 1,
       "forks": 0,
       "open_issues": 11,
-      "pushed_at": "2026-08-29T03:04:01Z",
+      "pushed_at": "2026-08-22T12:33:32Z",
       "updated_at": "2026-08-24T19:42:54Z"
     },
     {
@@ -28960,8 +28776,8 @@
       "stars": 3,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T15:41:39Z",
-      "updated_at": "2026-08-28T15:48:58Z"
+      "pushed_at": "2026-08-15T08:56:43Z",
+      "updated_at": "2026-08-15T08:56:49Z"
     },
     {
       "repo": "Harvey-Wen/RamifyPlugin",
@@ -29000,8 +28816,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T07:18:16Z",
-      "updated_at": "2026-08-29T07:18:20Z"
+      "pushed_at": "2026-08-18T18:41:13Z",
+      "updated_at": "2026-08-18T18:43:29Z"
     },
     {
       "repo": "Harzva/dsh-plugin-registry",
@@ -29053,11 +28869,11 @@
     },
     {
       "repo": "hatsuyuki0103/oh-my-deepseek-harness",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T14:27:40Z",
-      "updated_at": "2026-08-29T12:55:15Z"
+      "pushed_at": "2026-08-17T07:05:00Z",
+      "updated_at": "2026-08-25T03:40:12Z"
     },
     {
       "repo": "hatter123/dsh-ai-teacher",
@@ -29152,7 +28968,7 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-28T06:12:40Z",
+      "pushed_at": "2026-08-21T07:49:13Z",
       "updated_at": "2026-08-21T07:44:29Z"
     },
     {
@@ -29168,7 +28984,7 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T19:13:38Z",
+      "pushed_at": "2026-08-15T09:12:19Z",
       "updated_at": "2026-08-15T09:12:36Z"
     },
     {
@@ -29176,8 +28992,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T08:02:52Z",
-      "updated_at": "2026-08-30T08:03:03Z"
+      "pushed_at": "2026-08-22T11:59:47Z",
+      "updated_at": "2026-08-24T19:03:47Z"
     },
     {
       "repo": "HBrocade/dsh-krill",
@@ -29216,8 +29032,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T08:20:33Z",
-      "updated_at": "2026-08-28T08:21:12Z"
+      "pushed_at": "2026-08-21T08:56:25Z",
+      "updated_at": "2026-08-21T08:56:29Z"
     },
     {
       "repo": "healing1/dsh-balance-meter",
@@ -29256,8 +29072,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:49:16Z",
-      "updated_at": "2026-08-30T11:49:32Z"
+      "pushed_at": "2026-08-25T04:08:35Z",
+      "updated_at": "2026-08-25T04:08:42Z"
     },
     {
       "repo": "HeathHe/dsh-model-search",
@@ -29296,8 +29112,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T10:05:57Z",
-      "updated_at": "2026-08-27T10:16:42Z"
+      "pushed_at": "2026-08-21T06:10:01Z",
+      "updated_at": "2026-08-21T09:20:04Z"
     },
     {
       "repo": "Hefulalala/dsh-remote-workspace",
@@ -29341,11 +29157,11 @@
     },
     {
       "repo": "heiheiha798/dsh-plugin-subagent-delete",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T07:41:37Z",
-      "updated_at": "2026-08-28T10:59:34Z"
+      "updated_at": "2026-08-25T03:40:30Z"
     },
     {
       "repo": "hejiahang0001-oss/dsh-desktop",
@@ -29384,8 +29200,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T13:56:00Z",
-      "updated_at": "2026-08-28T14:00:29Z"
+      "pushed_at": "2026-08-23T06:40:17Z",
+      "updated_at": "2026-08-25T03:40:33Z"
     },
     {
       "repo": "helibeiqi/dsh-context-aware-search",
@@ -29393,15 +29209,15 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T06:40:32Z",
-      "updated_at": "2026-08-28T13:57:08Z"
+      "updated_at": "2026-08-23T06:40:38Z"
     },
     {
       "repo": "helibeiqi/dsh-cordis-universal-adapter",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T13:56:14Z",
-      "updated_at": "2026-08-28T14:00:27Z"
+      "pushed_at": "2026-08-23T06:40:22Z",
+      "updated_at": "2026-08-23T06:41:18Z"
     },
     {
       "repo": "helibeiqi/dsh-ecosystem",
@@ -29416,7 +29232,7 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T13:56:37Z",
+      "pushed_at": "2026-08-23T06:58:25Z",
       "updated_at": "2026-08-23T06:58:30Z"
     },
     {
@@ -29440,8 +29256,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T06:07:11Z",
-      "updated_at": "2026-08-28T05:53:09Z"
+      "pushed_at": "2026-08-23T06:37:10Z",
+      "updated_at": "2026-08-23T06:37:29Z"
     },
     {
       "repo": "helibeiqi/dsh-memory-projection",
@@ -29456,16 +29272,16 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-28T13:56:21Z",
-      "updated_at": "2026-08-28T13:58:41Z"
+      "pushed_at": "2026-08-22T13:53:32Z",
+      "updated_at": "2026-08-25T03:40:35Z"
     },
     {
       "repo": "helibeiqi/dsh-time-travel",
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T06:14:34Z",
-      "updated_at": "2026-08-28T06:16:50Z"
+      "pushed_at": "2026-08-23T06:40:13Z",
+      "updated_at": "2026-08-25T03:40:36Z"
     },
     {
       "repo": "hellcworld/FreeToken",
@@ -29474,6 +29290,22 @@
       "open_issues": 0,
       "pushed_at": "2026-08-28T00:08:02Z",
       "updated_at": "2026-08-28T00:08:15Z"
+    },
+    {
+      "repo": "Hello-Lv-tu/dafeiyu-preset",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-17T17:45:48Z",
+      "updated_at": "2026-08-17T17:49:34Z"
+    },
+    {
+      "repo": "Hello-Lv-tu/dsh-session-recall",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-17T17:45:40Z",
+      "updated_at": "2026-08-17T17:49:05Z"
     },
     {
       "repo": "hellofuture2068/dsh-simple-view",
@@ -29496,8 +29328,8 @@
       "stars": 11,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T08:49:30Z",
-      "updated_at": "2026-08-30T08:49:34Z"
+      "pushed_at": "2026-08-26T16:13:11Z",
+      "updated_at": "2026-08-26T16:13:30Z"
     },
     {
       "repo": "HelloJiada/dsh-experimental-agent-team-web",
@@ -29597,11 +29429,11 @@
     },
     {
       "repo": "helloxkk/dsh-scope",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-16T18:44:21Z",
-      "updated_at": "2026-08-29T18:10:23Z"
+      "updated_at": "2026-08-25T17:47:16Z"
     },
     {
       "repo": "helsome/dsh-content",
@@ -29726,10 +29558,10 @@
     {
       "repo": "Herdeny/awesome-dsh-plugins-2026",
       "stars": 7,
-      "forks": 3,
-      "open_issues": 3,
-      "pushed_at": "2026-08-29T19:08:17Z",
-      "updated_at": "2026-08-29T19:08:48Z"
+      "forks": 2,
+      "open_issues": 1,
+      "pushed_at": "2026-08-26T00:27:31Z",
+      "updated_at": "2026-08-26T00:27:48Z"
     },
     {
       "repo": "Herdeny/dsh-qc",
@@ -29805,19 +29637,19 @@
     },
     {
       "repo": "hexingyuofficial/xy-deepseek-pet",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T18:34:58Z",
-      "updated_at": "2026-08-27T07:46:50Z"
+      "updated_at": "2026-08-23T18:35:14Z"
     },
     {
       "repo": "HeyBobChan/canon-deepseek-harness-plugin",
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T15:59:48Z",
-      "updated_at": "2026-08-29T16:00:11Z"
+      "pushed_at": "2026-08-23T16:42:48Z",
+      "updated_at": "2026-08-25T03:45:43Z"
     },
     {
       "repo": "heyxin-68/dsh-workbuddy",
@@ -29839,17 +29671,17 @@
       "repo": "hezhongtang/dsh-update-copilot",
       "stars": 1,
       "forks": 1,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T07:08:09Z",
-      "updated_at": "2026-08-30T12:54:23Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-25T05:18:05Z",
+      "updated_at": "2026-08-25T05:18:36Z"
     },
     {
       "repo": "hg1048596-pixel/dsh-recall-unread",
-      "stars": 108,
+      "stars": 103,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-19T17:10:35Z",
-      "updated_at": "2026-08-30T12:19:52Z"
+      "updated_at": "2026-08-30T06:25:26Z"
     },
     {
       "repo": "hgl-pong/dsh-config-plugins",
@@ -29925,11 +29757,11 @@
     },
     {
       "repo": "hhhh124hhhh/cocos-extensions",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T01:09:39Z",
-      "updated_at": "2026-08-29T10:27:43Z"
+      "updated_at": "2026-08-26T00:23:16Z"
     },
     {
       "repo": "hhhh124hhhh/godot-extensions",
@@ -29982,7 +29814,7 @@
     {
       "repo": "hi-wenw/dsh-telegram-channel",
       "stars": 10,
-      "forks": 10,
+      "forks": 9,
       "open_issues": 0,
       "pushed_at": "2026-08-18T10:27:32Z",
       "updated_at": "2026-08-24T02:23:31Z"
@@ -30029,11 +29861,11 @@
     },
     {
       "repo": "highland0971/dsh-native-memory",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-16T00:34:11Z",
-      "updated_at": "2026-08-27T19:07:35Z"
+      "updated_at": "2026-08-25T03:40:56Z"
     },
     {
       "repo": "hilariouhiss/dsh-hiss-plugins",
@@ -30061,19 +29893,19 @@
     },
     {
       "repo": "Hilbert-beinghappy/seektty",
-      "stars": 122,
+      "stars": 121,
       "forks": 6,
       "open_issues": 9,
-      "pushed_at": "2026-08-30T10:06:00Z",
-      "updated_at": "2026-08-30T10:55:40Z"
+      "pushed_at": "2026-08-30T03:17:16Z",
+      "updated_at": "2026-08-30T03:16:49Z"
     },
     {
       "repo": "hili986/dshpack",
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T03:48:09Z",
-      "updated_at": "2026-08-29T03:48:24Z"
+      "pushed_at": "2026-08-19T20:43:35Z",
+      "updated_at": "2026-08-25T03:40:57Z"
     },
     {
       "repo": "hinayoung23/dsh-cordis-plugin-kit",
@@ -30168,8 +30000,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T21:06:25Z",
-      "updated_at": "2026-08-27T21:07:15Z"
+      "pushed_at": "2026-08-26T13:23:30Z",
+      "updated_at": "2026-08-26T13:39:27Z"
     },
     {
       "repo": "hitlic/playboy",
@@ -30269,11 +30101,11 @@
     },
     {
       "repo": "hjxcloud-tech/dsh-harness",
-      "stars": 17,
+      "stars": 14,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T06:42:36Z",
-      "updated_at": "2026-08-30T02:49:36Z"
+      "pushed_at": "2026-08-26T08:02:32Z",
+      "updated_at": "2026-08-26T09:17:28Z"
     },
     {
       "repo": "HJYE0708/dsh-client-ui-archives",
@@ -30288,16 +30120,16 @@
       "stars": 3,
       "forks": 1,
       "open_issues": 2,
-      "pushed_at": "2026-08-28T10:51:01Z",
-      "updated_at": "2026-08-28T10:51:01Z"
+      "pushed_at": "2026-08-16T19:41:15Z",
+      "updated_at": "2026-08-25T03:41:04Z"
     },
     {
       "repo": "hlj-dsh-plugin/dsh-compaction-tail",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T01:28:49Z",
-      "updated_at": "2026-08-28T01:28:58Z"
+      "pushed_at": "2026-08-23T06:53:13Z",
+      "updated_at": "2026-08-23T06:53:25Z"
     },
     {
       "repo": "hlj-dsh-plugin/dsh-idea-sync",
@@ -30340,14 +30172,6 @@
       "updated_at": "2026-08-15T14:39:42Z"
     },
     {
-      "repo": "hmlyx/dsh-memory",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:49:30Z",
-      "updated_at": "2026-08-30T11:50:09Z"
-    },
-    {
       "repo": "hmlyx/dsh-notify",
       "stars": 0,
       "forks": 0,
@@ -30376,8 +30200,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T00:49:41Z",
-      "updated_at": "2026-08-30T00:49:49Z"
+      "pushed_at": "2026-08-24T15:47:10Z",
+      "updated_at": "2026-08-24T15:51:43Z"
     },
     {
       "repo": "hnwangjy/DeepSeek-Harness-launcher",
@@ -30429,11 +30253,11 @@
     },
     {
       "repo": "HokkaidoCOLA/dsh-audio-dagou",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-24T15:45:44Z",
-      "updated_at": "2026-08-28T05:20:38Z"
+      "updated_at": "2026-08-24T15:55:54Z"
     },
     {
       "repo": "HokkaidoCOLA/dsh-night-greeting",
@@ -30480,8 +30304,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T07:23:10Z",
-      "updated_at": "2026-08-29T07:23:21Z"
+      "pushed_at": "2026-08-26T03:54:28Z",
+      "updated_at": "2026-08-26T03:55:07Z"
     },
     {
       "repo": "HomoLand/dsh-remote-access-patch",
@@ -30521,15 +30345,15 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T18:29:30Z",
-      "updated_at": "2026-08-29T02:27:29Z"
+      "updated_at": "2026-08-26T14:44:10Z"
     },
     {
       "repo": "HongMing-Huang/dsh-file-upload",
-      "stars": 20,
-      "forks": 6,
-      "open_issues": 6,
+      "stars": 18,
+      "forks": 5,
+      "open_issues": 5,
       "pushed_at": "2026-08-19T15:41:38Z",
-      "updated_at": "2026-08-27T15:02:01Z"
+      "updated_at": "2026-08-26T14:14:18Z"
     },
     {
       "repo": "hongsantu/dsh-personalization",
@@ -30550,10 +30374,10 @@
     {
       "repo": "hongyue0721/dsh-kimicode-swarm",
       "stars": 3,
-      "forks": 1,
+      "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T05:07:06Z",
-      "updated_at": "2026-08-28T05:44:15Z"
+      "pushed_at": "2026-08-23T13:31:24Z",
+      "updated_at": "2026-08-26T04:17:50Z"
     },
     {
       "repo": "HongzhongL/dsh-grayprint",
@@ -30629,11 +30453,11 @@
     },
     {
       "repo": "Hopcos/Next-Chats",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T00:34:52Z",
-      "updated_at": "2026-08-29T00:34:57Z"
+      "pushed_at": "2026-08-25T10:11:26Z",
+      "updated_at": "2026-08-26T05:39:47Z"
     },
     {
       "repo": "Hope-Phenom/dsh-desktop-tray",
@@ -30645,11 +30469,11 @@
     },
     {
       "repo": "Hope2333/deepseek-harness-termux",
-      "stars": 2,
-      "forks": 1,
+      "stars": 1,
+      "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T09:31:43Z",
-      "updated_at": "2026-08-27T09:36:43Z"
+      "pushed_at": "2026-08-21T07:53:11Z",
+      "updated_at": "2026-08-26T12:42:01Z"
     },
     {
       "repo": "horizon105457/tsstream",
@@ -30677,27 +30501,27 @@
     },
     {
       "repo": "HorusJiang/dsh-map-tools",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T03:13:49Z",
-      "updated_at": "2026-08-28T11:00:08Z"
+      "updated_at": "2026-08-25T03:45:56Z"
     },
     {
       "repo": "Hoshino-Yumetsuki/dsh-onebot",
       "stars": 3,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T06:06:29Z",
-      "updated_at": "2026-08-29T06:06:44Z"
+      "pushed_at": "2026-08-20T07:48:02Z",
+      "updated_at": "2026-08-23T23:50:08Z"
     },
     {
       "repo": "Hoshino-Yumetsuki/dsh-satori",
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T06:08:58Z",
-      "updated_at": "2026-08-29T06:09:22Z"
+      "pushed_at": "2026-08-20T07:47:50Z",
+      "updated_at": "2026-08-25T03:45:57Z"
     },
     {
       "repo": "hotpot-labs/dsh-version-plugin",
@@ -30708,12 +30532,12 @@
       "updated_at": "2026-08-29T08:45:53Z"
     },
     {
-      "repo": "Hou-DL/dsh-token-pulse",
-      "stars": 2,
+      "repo": "Hou-DL/dsh-token-heatmap",
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T10:26:59Z",
-      "updated_at": "2026-08-30T10:19:50Z"
+      "pushed_at": "2026-08-26T10:03:32Z",
+      "updated_at": "2026-08-26T10:14:07Z"
     },
     {
       "repo": "houyanchao/deepseek-harness-desktop",
@@ -30725,11 +30549,11 @@
     },
     {
       "repo": "houyanchao/dsh-timeline",
-      "stars": 27,
+      "stars": 24,
       "forks": 0,
-      "open_issues": 2,
+      "open_issues": 3,
       "pushed_at": "2026-08-20T14:42:08Z",
-      "updated_at": "2026-08-30T09:28:47Z"
+      "updated_at": "2026-08-26T08:35:35Z"
     },
     {
       "repo": "howarddong711/dsh-plugin-manager",
@@ -30768,8 +30592,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 13,
-      "pushed_at": "2026-08-30T11:51:45Z",
-      "updated_at": "2026-08-30T11:51:56Z"
+      "pushed_at": "2026-08-26T13:15:03Z",
+      "updated_at": "2026-08-26T13:22:21Z"
     },
     {
       "repo": "HOWILLMAKEIT/football-mcp",
@@ -30781,11 +30605,11 @@
     },
     {
       "repo": "howmp/dsh-pentest",
-      "stars": 326,
-      "forks": 39,
+      "stars": 322,
+      "forks": 38,
       "open_issues": 1,
       "pushed_at": "2026-08-24T04:12:22Z",
-      "updated_at": "2026-08-30T12:49:12Z"
+      "updated_at": "2026-08-30T02:23:46Z"
     },
     {
       "repo": "hoyyang/dsh-image-gen",
@@ -30816,16 +30640,16 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T05:15:32Z",
-      "updated_at": "2026-08-30T05:15:37Z"
+      "pushed_at": "2026-08-24T16:05:16Z",
+      "updated_at": "2026-08-25T03:41:15Z"
     },
     {
       "repo": "HQ1995/deepseek-code",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T04:18:45Z",
-      "updated_at": "2026-08-30T04:18:49Z"
+      "pushed_at": "2026-08-26T07:45:30Z",
+      "updated_at": "2026-08-26T07:46:48Z"
     },
     {
       "repo": "HQfire/dsh-desktop",
@@ -30848,8 +30672,8 @@
       "stars": 3,
       "forks": 1,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T12:01:41Z",
-      "updated_at": "2026-08-30T12:02:24Z"
+      "pushed_at": "2026-08-26T13:27:41Z",
+      "updated_at": "2026-08-26T13:43:42Z"
     },
     {
       "repo": "hrhgit/dsh-model-manager",
@@ -30983,7 +30807,7 @@
       "repo": "Hua1Q1nG/dsh-hindsight-local-optimize",
       "stars": 2,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-20T17:53:42Z",
       "updated_at": "2026-08-26T09:58:50Z"
     },
@@ -30997,19 +30821,19 @@
     },
     {
       "repo": "huabai-flowerwhite/dsh-plugin-design",
-      "stars": 5,
+      "stars": 4,
       "forks": 0,
-      "open_issues": 2,
-      "pushed_at": "2026-08-29T17:34:01Z",
-      "updated_at": "2026-08-29T17:34:13Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-26T13:43:07Z",
+      "updated_at": "2026-08-26T13:51:55Z"
     },
     {
       "repo": "huabai-flowerwhite/dsh-plugin-manager",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T17:48:04Z",
-      "updated_at": "2026-08-29T17:48:09Z"
+      "pushed_at": "2026-08-21T02:02:03Z",
+      "updated_at": "2026-08-25T03:41:20Z"
     },
     {
       "repo": "Huachang711/DS-Duopupil-Qwen-WindowsOCR",
@@ -31022,18 +30846,18 @@
     {
       "repo": "huahai0202/dsh-better-archive",
       "stars": 9,
-      "forks": 3,
+      "forks": 2,
       "open_issues": 1,
-      "pushed_at": "2026-08-28T13:07:55Z",
-      "updated_at": "2026-08-28T13:09:34Z"
+      "pushed_at": "2026-08-18T07:59:28Z",
+      "updated_at": "2026-08-25T14:39:03Z"
     },
     {
       "repo": "huahai0202/dsh-plugin-manager",
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T13:08:22Z",
-      "updated_at": "2026-08-28T13:10:49Z"
+      "pushed_at": "2026-08-18T07:59:28Z",
+      "updated_at": "2026-08-18T08:00:49Z"
     },
     {
       "repo": "huajin4379/Mimir",
@@ -31188,19 +31012,11 @@
       "updated_at": "2026-08-25T01:09:02Z"
     },
     {
-      "repo": "HuanLinOTO/dsh-plugin-better-glob",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:57:50Z",
-      "updated_at": "2026-08-30T12:26:40Z"
-    },
-    {
       "repo": "HuanLinOTO/dsh-plugin-better-locale",
       "stars": 1,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-28T09:16:01Z",
+      "open_issues": 0,
+      "pushed_at": "2026-08-23T09:52:04Z",
       "updated_at": "2026-08-23T09:55:19Z"
     },
     {
@@ -31215,24 +31031,24 @@
       "repo": "HuanLinOTO/dsh-plugin-input-history",
       "stars": 0,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-27T21:17:01Z",
-      "updated_at": "2026-08-28T08:19:13Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-23T09:35:18Z",
+      "updated_at": "2026-08-23T09:36:25Z"
     },
     {
       "repo": "HuanLinOTO/dsh-plugin-mcp-manager",
       "stars": 4,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-27T19:08:07Z",
+      "open_issues": 0,
+      "pushed_at": "2026-08-23T09:35:09Z",
       "updated_at": "2026-08-23T09:35:28Z"
     },
     {
       "repo": "HuanLinOTO/dsh-plugin-merge-tool-calls",
       "stars": 7,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-27T19:31:29Z",
+      "open_issues": 0,
+      "pushed_at": "2026-08-23T09:35:22Z",
       "updated_at": "2026-08-23T09:35:37Z"
     },
     {
@@ -31300,28 +31116,28 @@
       "updated_at": "2026-08-24T12:49:07Z"
     },
     {
-      "repo": "huaxiren6/DSH-EmailReader",
-      "stars": 2,
+      "repo": "huaxiren6/dsh-email-reader",
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T13:53:58Z",
-      "updated_at": "2026-08-28T11:00:10Z"
+      "pushed_at": "2026-08-20T20:57:17Z",
+      "updated_at": "2026-08-25T03:41:31Z"
     },
     {
-      "repo": "huaxiren6/DSH-QrPairing",
+      "repo": "huaxiren6/dsh-remote-qr-button",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T13:41:57Z",
-      "updated_at": "2026-08-27T13:55:29Z"
+      "pushed_at": "2026-08-20T19:44:49Z",
+      "updated_at": "2026-08-20T19:48:54Z"
     },
     {
-      "repo": "huaxiren6/DSH-SmsWebhook",
-      "stars": 2,
+      "repo": "huaxiren6/dsh-sms-webhook",
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T13:54:01Z",
-      "updated_at": "2026-08-28T11:00:10Z"
+      "pushed_at": "2026-08-20T19:44:57Z",
+      "updated_at": "2026-08-25T03:41:32Z"
     },
     {
       "repo": "huazhiliange/dsh-share-page",
@@ -31367,9 +31183,9 @@
       "repo": "HuChundong/HamsterHQ",
       "stars": 6,
       "forks": 2,
-      "open_issues": 0,
-      "pushed_at": "2026-08-29T21:12:56Z",
-      "updated_at": "2026-08-29T21:13:08Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-26T17:20:35Z",
+      "updated_at": "2026-08-26T14:14:25Z"
     },
     {
       "repo": "huchunlinnk/deepseek-desktop",
@@ -31389,11 +31205,11 @@
     },
     {
       "repo": "huermi/dsh-deepseek-web-adapter",
-      "stars": 7,
-      "forks": 3,
+      "stars": 5,
+      "forks": 2,
       "open_issues": 0,
       "pushed_at": "2026-08-15T09:57:56Z",
-      "updated_at": "2026-08-27T13:12:58Z"
+      "updated_at": "2026-08-26T11:18:49Z"
     },
     {
       "repo": "huermi/dsh-JEPA-adapter",
@@ -31405,11 +31221,11 @@
     },
     {
       "repo": "hufeide/dsh-sidebar-assistant",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T10:31:50Z",
-      "updated_at": "2026-08-28T10:58:22Z"
+      "updated_at": "2026-08-25T03:41:39Z"
     },
     {
       "repo": "hugoyoung1228/dsh-language-tutor",
@@ -31509,11 +31325,11 @@
     },
     {
       "repo": "hundan2015/omp-dsh-minimal",
-      "stars": 3,
+      "stars": 2,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-24T11:41:13Z",
-      "updated_at": "2026-08-29T15:49:02Z"
+      "updated_at": "2026-08-24T11:44:56Z"
     },
     {
       "repo": "huntdier/dsh-open-plugins",
@@ -32352,8 +32168,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T07:15:55Z",
-      "updated_at": "2026-08-29T07:16:56Z"
+      "pushed_at": "2026-08-26T06:01:32Z",
+      "updated_at": "2026-08-26T06:02:14Z"
     },
     {
       "repo": "ideasir/dsh-skinskin",
@@ -32386,14 +32202,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-27T19:17:33Z",
       "updated_at": "2026-08-27T19:16:41Z"
-    },
-    {
-      "repo": "Idreamxkl/dsh-conversation-flat",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:50:46Z",
-      "updated_at": "2026-08-30T12:51:10Z"
     },
     {
       "repo": "ievenight/dsh-plugin",
@@ -32506,14 +32314,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-23T14:35:25Z",
       "updated_at": "2026-08-23T18:44:37Z"
-    },
-    {
-      "repo": "iimaguest/dsh-contradictions-indicator",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:03:33Z",
-      "updated_at": "2026-08-30T11:03:47Z"
     },
     {
       "repo": "iimaguest/phone-tunnel-pool",
@@ -32797,11 +32597,11 @@
     },
     {
       "repo": "imsai-sh/awesome-deepseek-harness-plugins",
-      "stars": 205,
-      "forks": 152,
-      "open_issues": 18,
-      "pushed_at": "2026-08-30T12:51:44Z",
-      "updated_at": "2026-08-30T12:52:08Z"
+      "stars": 203,
+      "forks": 151,
+      "open_issues": 17,
+      "pushed_at": "2026-08-30T01:53:04Z",
+      "updated_at": "2026-08-30T01:53:19Z"
     },
     {
       "repo": "imsai-sh/dsh-1024store",
@@ -33408,8 +33208,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T18:56:25Z",
-      "updated_at": "2026-08-29T06:07:56Z"
+      "pushed_at": "2026-08-26T16:32:51Z",
+      "updated_at": "2026-08-26T16:32:57Z"
     },
     {
       "repo": "ivanon/dsh-dev-crew",
@@ -33636,14 +33436,6 @@
       "updated_at": "2026-08-17T02:18:58Z"
     },
     {
-      "repo": "JackAIStudio/dsh-gemini-oauth",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:54:43Z",
-      "updated_at": "2026-08-30T12:54:47Z"
-    },
-    {
       "repo": "JackAIStudio/dsh-grok-oauth",
       "stars": 0,
       "forks": 0,
@@ -33664,8 +33456,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-28T04:16:37Z",
-      "updated_at": "2026-08-28T04:17:02Z"
+      "pushed_at": "2026-08-24T10:07:34Z",
+      "updated_at": "2026-08-24T10:14:26Z"
     },
     {
       "repo": "jackchenjiufu/simpleseek",
@@ -33832,8 +33624,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T11:20:08Z",
-      "updated_at": "2026-08-29T11:20:18Z"
+      "pushed_at": "2026-08-22T12:58:12Z",
+      "updated_at": "2026-08-25T03:47:08Z"
     },
     {
       "repo": "JacoboJin/dsh-skin-bd2-yustia",
@@ -33845,11 +33637,11 @@
     },
     {
       "repo": "jacujay/dsh-model-balance",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-20T01:53:01Z",
-      "updated_at": "2026-08-28T10:58:57Z"
+      "updated_at": "2026-08-25T03:43:37Z"
     },
     {
       "repo": "jadehare/dsh-model-controller",
@@ -33973,11 +33765,11 @@
     },
     {
       "repo": "JanEickholt/dsh-inline-diff",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T09:26:46Z",
-      "updated_at": "2026-08-28T10:58:24Z"
+      "pushed_at": "2026-08-26T17:05:30Z",
+      "updated_at": "2026-08-26T16:59:24Z"
     },
     {
       "repo": "Jannchie/dsh-artifact",
@@ -34576,8 +34368,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T02:21:39Z",
-      "updated_at": "2026-08-27T02:21:47Z"
+      "pushed_at": "2026-08-26T15:26:42Z",
+      "updated_at": "2026-08-26T15:41:01Z"
     },
     {
       "repo": "jerryjiao/dsh-wewrite",
@@ -34624,8 +34416,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T04:33:23Z",
-      "updated_at": "2026-08-27T04:31:00Z"
+      "pushed_at": "2026-08-26T06:29:18Z",
+      "updated_at": "2026-08-26T06:24:21Z"
     },
     {
       "repo": "Jescoi/dsh-balance-bubble",
@@ -34806,7 +34598,7 @@
     {
       "repo": "JiamingZang/dsh-llm-qodersdk",
       "stars": 4,
-      "forks": 3,
+      "forks": 2,
       "open_issues": 2,
       "pushed_at": "2026-08-19T15:30:55Z",
       "updated_at": "2026-08-26T06:55:36Z"
@@ -34829,11 +34621,11 @@
     },
     {
       "repo": "jianchuanqi/global-lca-asset",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T15:25:59Z",
-      "updated_at": "2026-08-27T17:26:52Z"
+      "updated_at": "2026-08-26T15:30:59Z"
     },
     {
       "repo": "jiang068/dsh-mineru-plugin",
@@ -34872,8 +34664,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T08:44:08Z",
-      "updated_at": "2026-08-27T08:49:29Z"
+      "pushed_at": "2026-08-26T18:04:00Z",
+      "updated_at": "2026-08-26T18:05:16Z"
     },
     {
       "repo": "jiangchuangege/dsh-local-llm-turbo",
@@ -34888,8 +34680,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T09:51:14Z",
-      "updated_at": "2026-08-27T10:02:12Z"
+      "pushed_at": "2026-08-26T17:47:25Z",
+      "updated_at": "2026-08-26T17:50:36Z"
     },
     {
       "repo": "jiangchuangege/xiaojiao-harness",
@@ -35162,14 +34954,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-26T08:25:31Z",
       "updated_at": "2026-08-26T08:28:01Z"
-    },
-    {
-      "repo": "jiayu6153-gif/dsh-desktop",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:54:40Z",
-      "updated_at": "2026-08-30T12:54:31Z"
     },
     {
       "repo": "JiayuuWang/dsh-files-panel",
@@ -35461,11 +35245,11 @@
     },
     {
       "repo": "jing-hy/picturereader",
-      "stars": 35,
+      "stars": 34,
       "forks": 4,
-      "open_issues": 0,
-      "pushed_at": "2026-08-27T13:31:38Z",
-      "updated_at": "2026-08-27T13:44:32Z"
+      "open_issues": 3,
+      "pushed_at": "2026-08-25T10:16:33Z",
+      "updated_at": "2026-08-25T16:34:19Z"
     },
     {
       "repo": "jinganwushideng/deepseek-harness-desktop",
@@ -35512,8 +35296,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T08:59:02Z",
-      "updated_at": "2026-08-27T09:06:28Z"
+      "pushed_at": "2026-08-19T01:51:35Z",
+      "updated_at": "2026-08-25T03:47:53Z"
     },
     {
       "repo": "jingshang12/dsh-web-quick-launcher",
@@ -35653,11 +35437,11 @@
     },
     {
       "repo": "jinsiyu/dsh-safemode-profile",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-19T15:22:28Z",
-      "updated_at": "2026-08-28T11:00:11Z"
+      "updated_at": "2026-08-25T03:44:44Z"
     },
     {
       "repo": "jinsiyu/dsh-webproxy-router-plugin",
@@ -35832,8 +35616,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T21:17:32Z",
-      "updated_at": "2026-08-29T21:17:50Z"
+      "pushed_at": "2026-08-23T16:38:50Z",
+      "updated_at": "2026-08-23T16:39:09Z"
     },
     {
       "repo": "JJ704sd/DSH-sharing",
@@ -36080,8 +35864,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T14:44:20Z",
-      "updated_at": "2026-08-28T14:44:36Z"
+      "pushed_at": "2026-08-26T18:02:23Z",
+      "updated_at": "2026-08-26T18:03:33Z"
     },
     {
       "repo": "joao-paulo-santos/dsh-granular-prompt",
@@ -36096,8 +35880,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T14:58:16Z",
-      "updated_at": "2026-08-28T15:05:41Z"
+      "pushed_at": "2026-08-26T17:58:40Z",
+      "updated_at": "2026-08-26T18:03:21Z"
     },
     {
       "repo": "joao-paulo-santos/dsh-md-view",
@@ -36156,14 +35940,6 @@
       "updated_at": "2026-08-28T12:40:29Z"
     },
     {
-      "repo": "JochenYang/dsh-remote",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:02:25Z",
-      "updated_at": "2026-08-30T12:03:07Z"
-    },
-    {
       "repo": "jockiller/dsh-launcher",
       "stars": 0,
       "forks": 0,
@@ -36210,14 +35986,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-24T10:20:39Z",
       "updated_at": "2026-08-25T07:09:22Z"
-    },
-    {
-      "repo": "Joewhoa/dsh-roam",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:51:46Z",
-      "updated_at": "2026-08-30T12:51:49Z"
     },
     {
       "repo": "Joey-Tong/dsh-pulse",
@@ -36541,11 +36309,11 @@
     },
     {
       "repo": "JohnXu22786/net-debug",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 4,
       "pushed_at": "2026-08-20T07:30:00Z",
-      "updated_at": "2026-08-28T11:00:15Z"
+      "updated_at": "2026-08-20T07:29:10Z"
     },
     {
       "repo": "JohnXu22786/rss-digest",
@@ -36565,11 +36333,11 @@
     },
     {
       "repo": "JohnXu22786/semantic-search",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 5,
-      "pushed_at": "2026-08-27T18:14:27Z",
-      "updated_at": "2026-08-28T11:00:16Z"
+      "pushed_at": "2026-08-20T18:15:41Z",
+      "updated_at": "2026-08-20T07:37:41Z"
     },
     {
       "repo": "JohnXu22786/subtitle-studio",
@@ -36852,14 +36620,6 @@
       "updated_at": "2026-08-18T18:43:08Z"
     },
     {
-      "repo": "jonestark12138/deepseek-harness-source-learning",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:52:21Z",
-      "updated_at": "2026-08-30T12:52:46Z"
-    },
-    {
       "repo": "jonnycafong/office-farmer-emoji",
       "stars": 1,
       "forks": 0,
@@ -37116,6 +36876,14 @@
       "updated_at": "2026-08-26T21:21:56Z"
     },
     {
+      "repo": "Jstn-1g/dsh-guarded-live-voice",
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T02:51:47Z",
+      "updated_at": "2026-08-26T02:53:29Z"
+    },
+    {
       "repo": "Jstn-1g/dsh-live-voice",
       "stars": 0,
       "forks": 0,
@@ -37248,8 +37016,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T06:55:45Z",
-      "updated_at": "2026-08-28T06:55:47Z"
+      "pushed_at": "2026-08-19T15:48:25Z",
+      "updated_at": "2026-08-25T04:44:19Z"
     },
     {
       "repo": "JunguangJiang/dsh-lark-channel",
@@ -37280,8 +37048,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T11:26:34Z",
-      "updated_at": "2026-08-30T11:26:38Z"
+      "pushed_at": "2026-08-25T12:09:18Z",
+      "updated_at": "2026-08-25T12:18:02Z"
     },
     {
       "repo": "Junkrat9527/dsh-autovision",
@@ -37484,14 +37252,6 @@
       "updated_at": "2026-08-29T15:19:49Z"
     },
     {
-      "repo": "jwilson411/dsh-otel",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:14:36Z",
-      "updated_at": "2026-08-30T10:14:56Z"
-    },
-    {
       "repo": "jwilson411/dsh-plugin-kit",
       "stars": 0,
       "forks": 0,
@@ -37640,8 +37400,8 @@
       "stars": 0,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T13:49:48Z",
-      "updated_at": "2026-08-29T13:50:06Z"
+      "pushed_at": "2026-08-23T05:44:29Z",
+      "updated_at": "2026-08-23T05:44:35Z"
     },
     {
       "repo": "JZQiang/dsh-video-skin",
@@ -37666,14 +37426,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-27T14:55:05Z",
       "updated_at": "2026-08-27T15:18:31Z"
-    },
-    {
-      "repo": "K1213213/Orbit-Runtime",
-      "stars": 2,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:46:23Z",
-      "updated_at": "2026-08-30T12:46:48Z"
     },
     {
       "repo": "k12u/dsh-web-search-xai",
@@ -37834,14 +37586,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-23T03:46:35Z",
       "updated_at": "2026-08-25T04:45:05Z"
-    },
-    {
-      "repo": "Kaiji-Z/dsh-plugin-warroom",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:18:04Z",
-      "updated_at": "2026-08-30T12:18:35Z"
     },
     {
       "repo": "kaijia323/create-dsh-plugin",
@@ -38101,11 +37845,11 @@
     },
     {
       "repo": "kanghelyu/dsh-deepseek-flow",
-      "stars": 59,
+      "stars": 60,
       "forks": 4,
       "open_issues": 1,
       "pushed_at": "2026-08-19T15:49:27Z",
-      "updated_at": "2026-08-30T08:24:35Z"
+      "updated_at": "2026-08-29T13:30:17Z"
     },
     {
       "repo": "kangjinghang/dsh-xueqiu",
@@ -38146,14 +37890,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-16T12:58:53Z",
       "updated_at": "2026-08-16T12:59:07Z"
-    },
-    {
-      "repo": "KannaKuron/dsh-better-workspace",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:37:52Z",
-      "updated_at": "2026-08-30T12:38:21Z"
     },
     {
       "repo": "KannaKuron/dsh-gitbash-shell",
@@ -38461,11 +38197,11 @@
     },
     {
       "repo": "kelai141/dsh-mobile-apk",
-      "stars": 280,
-      "forks": 27,
+      "stars": 278,
+      "forks": 28,
       "open_issues": 5,
       "pushed_at": "2026-08-30T01:24:19Z",
-      "updated_at": "2026-08-30T08:15:03Z"
+      "updated_at": "2026-08-30T05:30:10Z"
     },
     {
       "repo": "kelai141/dsh-shell-termux",
@@ -38980,6 +38716,14 @@
       "updated_at": "2026-08-28T03:21:31Z"
     },
     {
+      "repo": "kiligzzz/dsh-capability-manager",
+      "stars": 2,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-22T07:43:36Z",
+      "updated_at": "2026-08-25T03:46:23Z"
+    },
+    {
       "repo": "kiligzzz/dsh-session-archive",
       "stars": 1,
       "forks": 0,
@@ -38994,14 +38738,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-22T11:04:54Z",
       "updated_at": "2026-08-22T11:04:59Z"
-    },
-    {
-      "repo": "kiligzzz/dsh-skill-mcp-manager",
-      "stars": 2,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:31:51Z",
-      "updated_at": "2026-08-30T09:31:49Z"
     },
     {
       "repo": "killertux/dsh-clemento-worktree",
@@ -39165,19 +38901,19 @@
     },
     {
       "repo": "kingOfSoySauce/dsh-liang-skin",
-      "stars": 150,
+      "stars": 149,
       "forks": 9,
       "open_issues": 3,
       "pushed_at": "2026-08-21T03:23:04Z",
-      "updated_at": "2026-08-30T11:36:33Z"
+      "updated_at": "2026-08-30T03:01:14Z"
     },
     {
       "repo": "kingOfSoySauce/dsh-skin-market",
-      "stars": 109,
+      "stars": 106,
       "forks": 12,
       "open_issues": 1,
       "pushed_at": "2026-08-30T04:39:55Z",
-      "updated_at": "2026-08-30T11:37:00Z"
+      "updated_at": "2026-08-30T04:54:07Z"
     },
     {
       "repo": "kingselyjoe/awesome-dsh-list",
@@ -39384,8 +39120,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T19:14:04Z",
-      "updated_at": "2026-08-26T19:57:37Z"
+      "pushed_at": "2026-08-26T18:00:17Z",
+      "updated_at": "2026-08-26T18:01:02Z"
     },
     {
       "repo": "kivensteven8-eng/dsh-file-download",
@@ -39421,11 +39157,11 @@
     },
     {
       "repo": "kk3ya03-star/dsh-lcx-codex",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T10:59:39Z",
-      "updated_at": "2026-08-29T11:00:27Z"
+      "pushed_at": "2026-08-25T13:03:15Z",
+      "updated_at": "2026-08-25T09:44:40Z"
     },
     {
       "repo": "kkaktus463/dsh-desktop",
@@ -39552,8 +39288,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T11:44:22Z",
-      "updated_at": "2026-08-28T11:45:53Z"
+      "pushed_at": "2026-08-19T16:20:36Z",
+      "updated_at": "2026-08-20T16:49:14Z"
     },
     {
       "repo": "Klukai-416-Clukay/dsh-skill-curator",
@@ -39730,14 +39466,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-29T15:53:31Z",
       "updated_at": "2026-08-29T15:53:41Z"
-    },
-    {
-      "repo": "kober-basket/dsh-cachescope",
-      "stars": 2,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:24:11Z",
-      "updated_at": "2026-08-30T12:24:31Z"
     },
     {
       "repo": "Kogisune/dsh-skin-koi-pond",
@@ -40061,11 +39789,11 @@
     },
     {
       "repo": "kriskite/dsh-network-proxy",
-      "stars": 6,
+      "stars": 4,
       "forks": 1,
       "open_issues": 1,
       "pushed_at": "2026-08-19T03:14:52Z",
-      "updated_at": "2026-08-28T13:14:23Z"
+      "updated_at": "2026-08-25T20:18:12Z"
     },
     {
       "repo": "kriskwok/dsh-feishu-gateway",
@@ -40122,6 +39850,22 @@
       "open_issues": 0,
       "pushed_at": "2026-08-24T17:56:08Z",
       "updated_at": "2026-08-24T18:00:39Z"
+    },
+    {
+      "repo": "krystal-cao/deepseek-harness-desktop",
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T10:23:26Z",
+      "updated_at": "2026-08-25T08:41:43Z"
+    },
+    {
+      "repo": "krystal-cao/deepseek-harness-swift",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T01:46:34Z",
+      "updated_at": "2026-08-26T01:47:08Z"
     },
     {
       "repo": "ks9319/ai-stack-launcher",
@@ -40476,6 +40220,14 @@
       "updated_at": "2026-08-15T11:21:53Z"
     },
     {
+      "repo": "Kyriewang798/DSHWebUI-plugin-workflow-canvas",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T09:24:56Z",
+      "updated_at": "2026-08-25T09:26:54Z"
+    },
+    {
       "repo": "Kytolly/dsh-evolve-in-git",
       "stars": 3,
       "forks": 0,
@@ -40668,14 +40420,6 @@
       "updated_at": "2026-08-18T01:53:48Z"
     },
     {
-      "repo": "lament-z/dsh-bridge-gateway",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:12Z",
-      "updated_at": "2026-08-30T12:53:39Z"
-    },
-    {
       "repo": "lammarco86/dsh-plugin-chatgpt-crash-fix",
       "stars": 1,
       "forks": 0,
@@ -40685,27 +40429,11 @@
     },
     {
       "repo": "lamost423/dsh-maze",
-      "stars": 58,
+      "stars": 57,
       "forks": 3,
       "open_issues": 1,
       "pushed_at": "2026-08-29T14:23:40Z",
-      "updated_at": "2026-08-30T09:32:18Z"
-    },
-    {
-      "repo": "LamplitIsles/dsh-companion",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:42:31Z",
-      "updated_at": "2026-08-30T11:53:47Z"
-    },
-    {
-      "repo": "LamplitIsles/kepos-tts",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:09:49Z",
-      "updated_at": "2026-08-30T10:10:45Z"
+      "updated_at": "2026-08-29T14:22:56Z"
     },
     {
       "repo": "Lan-Feng-1010/deepseek-harness-external-trajectory-monitor",
@@ -40965,11 +40693,11 @@
     },
     {
       "repo": "Laplace-bit/dsh-smooth-stream",
-      "stars": 62,
+      "stars": 61,
       "forks": 7,
       "open_issues": 2,
       "pushed_at": "2026-08-26T08:25:46Z",
-      "updated_at": "2026-08-30T09:31:04Z"
+      "updated_at": "2026-08-28T18:46:29Z"
     },
     {
       "repo": "LaplaceYoung/dsh-directorx",
@@ -41352,8 +41080,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-27T07:24:33Z",
-      "updated_at": "2026-08-27T07:24:34Z"
+      "pushed_at": "2026-08-22T13:48:27Z",
+      "updated_at": "2026-08-22T13:47:10Z"
     },
     {
       "repo": "LCYLYM/dsh-plugin-compat-guardian",
@@ -41629,11 +41357,11 @@
     },
     {
       "repo": "leenkcool/Blue-Whale-Harness",
-      "stars": 187,
+      "stars": 186,
       "forks": 70,
       "open_issues": 0,
       "pushed_at": "2026-08-29T05:10:47Z",
-      "updated_at": "2026-08-30T06:52:30Z"
+      "updated_at": "2026-08-29T17:31:14Z"
     },
     {
       "repo": "leeshuhang/task-widget",
@@ -41829,11 +41557,11 @@
     },
     {
       "repo": "lencx/Minke",
-      "stars": 585,
+      "stars": 582,
       "forks": 65,
       "open_issues": 5,
       "pushed_at": "2026-08-26T11:12:47Z",
-      "updated_at": "2026-08-30T12:55:22Z"
+      "updated_at": "2026-08-30T03:46:51Z"
     },
     {
       "repo": "lengduan/dsh-815-skin",
@@ -42501,11 +42229,11 @@
     },
     {
       "repo": "LHKong7/dsh-browser-runtime",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T17:39:46Z",
-      "updated_at": "2026-08-27T17:52:48Z"
+      "pushed_at": "2026-08-26T16:40:32Z",
+      "updated_at": "2026-08-26T16:45:35Z"
     },
     {
       "repo": "lht12345678/dsh-plugin-auditor",
@@ -42653,11 +42381,11 @@
     },
     {
       "repo": "liangchen-harold/local-dsh",
-      "stars": 2,
+      "stars": 1,
       "forks": 1,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T12:52:13Z",
-      "updated_at": "2026-08-30T12:52:42Z"
+      "pushed_at": "2026-08-26T15:23:00Z",
+      "updated_at": "2026-08-26T16:05:43Z"
     },
     {
       "repo": "LiangChen-lky/dsh-pet-plugin",
@@ -42701,11 +42429,11 @@
     },
     {
       "repo": "liangmianya/dsh-synapse",
-      "stars": 257,
+      "stars": 252,
       "forks": 32,
       "open_issues": 18,
       "pushed_at": "2026-08-26T13:12:24Z",
-      "updated_at": "2026-08-30T12:40:41Z"
+      "updated_at": "2026-08-29T23:13:31Z"
     },
     {
       "repo": "liangshen68/FreeTokenHalo",
@@ -42846,8 +42574,8 @@
     {
       "repo": "libukai/awesome-deepseek-harness",
       "stars": 217,
-      "forks": 62,
-      "open_issues": 54,
+      "forks": 61,
+      "open_issues": 53,
       "pushed_at": "2026-08-28T02:20:46Z",
       "updated_at": "2026-08-30T03:11:36Z"
     },
@@ -42912,8 +42640,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T02:41:11Z",
-      "updated_at": "2026-08-29T02:41:24Z"
+      "pushed_at": "2026-08-26T17:49:50Z",
+      "updated_at": "2026-08-26T17:56:20Z"
     },
     {
       "repo": "licn9901-arch/deepseek-harness-desktop",
@@ -43069,11 +42797,11 @@
     },
     {
       "repo": "liguobao/dsh-desktop",
-      "stars": 26,
-      "forks": 7,
+      "stars": 25,
+      "forks": 6,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T17:50:47Z",
-      "updated_at": "2026-08-29T17:50:50Z"
+      "pushed_at": "2026-08-26T06:09:07Z",
+      "updated_at": "2026-08-26T06:09:47Z"
     },
     {
       "repo": "liguobao/dsh-file-viewer",
@@ -43815,9 +43543,9 @@
       "repo": "LingYzh/dsh-electron-desktop",
       "stars": 0,
       "forks": 0,
-      "open_issues": 11,
-      "pushed_at": "2026-08-27T00:49:40Z",
-      "updated_at": "2026-08-27T00:47:23Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T18:01:17Z",
+      "updated_at": "2026-08-26T18:02:12Z"
     },
     {
       "repo": "linhut/dsh-manager",
@@ -44141,11 +43869,11 @@
     },
     {
       "repo": "lire1131/dsh-undo-savepoint",
-      "stars": 138,
+      "stars": 136,
       "forks": 6,
       "open_issues": 0,
       "pushed_at": "2026-08-28T19:21:54Z",
-      "updated_at": "2026-08-30T08:19:07Z"
+      "updated_at": "2026-08-30T02:04:46Z"
     },
     {
       "repo": "LisaArt5571/Zest",
@@ -44336,8 +44064,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T05:54:48Z",
-      "updated_at": "2026-08-28T01:36:44Z"
+      "pushed_at": "2026-08-21T05:18:53Z",
+      "updated_at": "2026-08-25T03:41:48Z"
     },
     {
       "repo": "LittleBlackTong/dsh-plugin-heartbeat",
@@ -44349,11 +44077,11 @@
     },
     {
       "repo": "LittleBlackTong/dsh-plugin-memory",
-      "stars": 4,
-      "forks": 1,
+      "stars": 3,
+      "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-24T06:11:42Z",
-      "updated_at": "2026-08-30T10:35:52Z"
+      "updated_at": "2026-08-26T03:18:19Z"
     },
     {
       "repo": "Littlebox-Logic/atcc",
@@ -44405,11 +44133,11 @@
     },
     {
       "repo": "Liu-Bot24/dsh-tunnel-client",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T05:17:30Z",
-      "updated_at": "2026-08-28T16:32:17Z"
+      "pushed_at": "2026-08-26T07:44:55Z",
+      "updated_at": "2026-08-26T07:46:13Z"
     },
     {
       "repo": "Liu-ZA-81/dsh-theme-firefly",
@@ -44656,8 +44384,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T10:06:53Z",
-      "updated_at": "2026-08-27T10:12:21Z"
+      "pushed_at": "2026-08-26T10:39:49Z",
+      "updated_at": "2026-08-26T10:45:25Z"
     },
     {
       "repo": "liusheldon238/deepseek-harness-macos",
@@ -44992,8 +44720,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T15:05:44Z",
-      "updated_at": "2026-08-29T15:06:56Z"
+      "pushed_at": "2026-08-26T16:45:02Z",
+      "updated_at": "2026-08-26T16:45:32Z"
     },
     {
       "repo": "LJH-snow/dsh-tool-monitoring",
@@ -45004,28 +44732,12 @@
       "updated_at": "2026-08-29T16:52:15Z"
     },
     {
-      "repo": "LJH-snow/dsh-tool-notion",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:32:30Z",
-      "updated_at": "2026-08-30T10:32:45Z"
-    },
-    {
       "repo": "LJH-snow/dsh-tool-sentry",
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T16:48:46Z",
       "updated_at": "2026-08-26T17:07:24Z"
-    },
-    {
-      "repo": "LJH-snow/dsh-tool-slack",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:23:58Z",
-      "updated_at": "2026-08-30T12:24:03Z"
     },
     {
       "repo": "ljlj7149-cloud/dsh-cognitio",
@@ -45480,8 +45192,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T04:19:57Z",
-      "updated_at": "2026-08-30T04:20:37Z"
+      "pushed_at": "2026-08-26T09:40:41Z",
+      "updated_at": "2026-08-26T09:41:44Z"
     },
     {
       "repo": "logebyones/dsh-api-router-notes",
@@ -45916,20 +45628,12 @@
       "updated_at": "2026-08-29T06:10:05Z"
     },
     {
-      "repo": "lovaxi/Thinktime_Plugin_DSH",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:06:30Z",
-      "updated_at": "2026-08-30T12:07:17Z"
-    },
-    {
       "repo": "lovedheart/dsh-plugin-codegraph",
-      "stars": 3,
+      "stars": 2,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-21T12:24:09Z",
-      "updated_at": "2026-08-30T10:22:33Z"
+      "updated_at": "2026-08-21T12:27:01Z"
     },
     {
       "repo": "lovedheart/dsh-plugin-reme",
@@ -46048,8 +45752,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T17:10:32Z",
-      "updated_at": "2026-08-28T17:15:00Z"
+      "pushed_at": "2026-08-25T15:40:11Z",
+      "updated_at": "2026-08-25T15:55:44Z"
     },
     {
       "repo": "lovezi0/dsh-web-noOpenBrowser",
@@ -46064,8 +45768,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T08:42:06Z",
-      "updated_at": "2026-08-28T08:41:23Z"
+      "pushed_at": "2026-08-22T02:52:53Z",
+      "updated_at": "2026-08-25T03:41:46Z"
     },
     {
       "repo": "lovstudio/dsh-llm-config",
@@ -46218,14 +45922,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-21T13:31:01Z",
       "updated_at": "2026-08-21T13:46:38Z"
-    },
-    {
-      "repo": "Lsc-91-69/dsh-brain-compaction",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:44:04Z",
-      "updated_at": "2026-08-30T12:17:40Z"
     },
     {
       "repo": "Lsc-91-69/dsh-task-scheduler",
@@ -46493,11 +46189,11 @@
     },
     {
       "repo": "LucienLL/dsh-plugin-proxy",
-      "stars": 4,
+      "stars": 1,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-26T15:24:54Z",
-      "updated_at": "2026-08-29T05:58:43Z"
+      "updated_at": "2026-08-26T15:38:20Z"
     },
     {
       "repo": "LucienLL/dsh-service-watchdog",
@@ -46780,14 +46476,6 @@
       "updated_at": "2026-08-17T05:36:06Z"
     },
     {
-      "repo": "lunarmoon26/dsh-adaptive-loop",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:16:14Z",
-      "updated_at": "2026-08-30T10:12:14Z"
-    },
-    {
       "repo": "lunarmoon26/harness-alchemist",
       "stars": 0,
       "forks": 0,
@@ -46900,14 +46588,6 @@
       "updated_at": "2026-08-21T05:51:39Z"
     },
     {
-      "repo": "luomeii/dsh-review-squad",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:48:01Z",
-      "updated_at": "2026-08-30T08:48:08Z"
-    },
-    {
       "repo": "luomious/deepseek-harness-desktop",
       "stars": 1,
       "forks": 0,
@@ -46968,8 +46648,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T01:40:36Z",
-      "updated_at": "2026-08-27T01:40:40Z"
+      "pushed_at": "2026-08-26T15:36:29Z",
+      "updated_at": "2026-08-26T15:43:53Z"
     },
     {
       "repo": "lurejewel/dsh-usage-plugin",
@@ -47053,11 +46733,11 @@
     },
     {
       "repo": "luvcie/dsh-plugin-conjure",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T20:47:49Z",
-      "updated_at": "2026-08-27T20:48:31Z"
+      "pushed_at": "2026-08-26T17:31:28Z",
+      "updated_at": "2026-08-26T17:38:58Z"
     },
     {
       "repo": "luweiyabo/dsh-whale-pet",
@@ -47234,22 +46914,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-22T15:25:49Z",
       "updated_at": "2026-08-22T15:26:16Z"
-    },
-    {
-      "repo": "lvtu-dsh/dafeiyu-preset",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-17T17:45:48Z",
-      "updated_at": "2026-08-29T09:37:32Z"
-    },
-    {
-      "repo": "lvtu-dsh/dsh-session-recall",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-17T17:45:40Z",
-      "updated_at": "2026-08-29T09:37:23Z"
     },
     {
       "repo": "lvxinrong/dsh-archscope",
@@ -47487,9 +47151,9 @@
       "repo": "ly028716/dsh-kb-daily",
       "stars": 0,
       "forks": 0,
-      "open_issues": 5,
-      "pushed_at": "2026-08-30T09:59:32Z",
-      "updated_at": "2026-08-30T10:00:19Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T09:35:01Z",
+      "updated_at": "2026-08-25T09:37:00Z"
     },
     {
       "repo": "ly028716/dsh-memory-plugin",
@@ -47589,19 +47253,19 @@
     },
     {
       "repo": "lyming99/wenzwork",
-      "stars": 25,
-      "forks": 7,
+      "stars": 4,
+      "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T10:07:56Z",
-      "updated_at": "2026-08-30T10:47:52Z"
+      "pushed_at": "2026-08-26T17:29:47Z",
+      "updated_at": "2026-08-26T17:42:18Z"
     },
     {
       "repo": "lyming99/wenzwork_web",
-      "stars": 1,
-      "forks": 1,
+      "stars": 0,
+      "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T09:55:29Z",
-      "updated_at": "2026-08-29T09:56:51Z"
+      "pushed_at": "2026-08-26T18:03:37Z",
+      "updated_at": "2026-08-26T17:32:34Z"
     },
     {
       "repo": "Lynixenn/dsh-balance-meter",
@@ -47741,11 +47405,11 @@
     },
     {
       "repo": "Lzh3070/dsh-file-review-tab",
-      "stars": 16,
-      "forks": 2,
-      "open_issues": 5,
-      "pushed_at": "2026-08-30T01:35:41Z",
-      "updated_at": "2026-08-30T01:35:48Z"
+      "stars": 12,
+      "forks": 1,
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T08:15:14Z",
+      "updated_at": "2026-08-26T08:36:10Z"
     },
     {
       "repo": "Lzh3070/dsh-search-hub",
@@ -47914,14 +47578,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-21T10:21:47Z",
       "updated_at": "2026-08-27T10:34:25Z"
-    },
-    {
-      "repo": "m1khal3v/dsh-tool-codegraph",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:48:24Z",
-      "updated_at": "2026-08-30T08:48:39Z"
     },
     {
       "repo": "M1ssbe4r/PocketCode",
@@ -48276,14 +47932,6 @@
       "updated_at": "2026-08-18T08:17:20Z"
     },
     {
-      "repo": "manhoolee/hoosland-visual-workbench",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:43:16Z",
-      "updated_at": "2026-08-30T12:45:47Z"
-    },
-    {
       "repo": "mannixS/DSH-Desktop",
       "stars": 1,
       "forks": 0,
@@ -48453,11 +48101,11 @@
     },
     {
       "repo": "MarcoG-h/DSH-Launcher",
-      "stars": 181,
+      "stars": 178,
       "forks": 4,
-      "open_issues": 2,
+      "open_issues": 1,
       "pushed_at": "2026-08-30T05:57:57Z",
-      "updated_at": "2026-08-30T11:25:28Z"
+      "updated_at": "2026-08-30T05:58:06Z"
     },
     {
       "repo": "marcon0203/dsh-desktop",
@@ -48501,11 +48149,11 @@
     },
     {
       "repo": "MaRi23333/dsh-subagent-library",
-      "stars": 3,
-      "forks": 1,
+      "stars": 1,
+      "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T14:19:12Z",
-      "updated_at": "2026-08-29T07:27:41Z"
+      "pushed_at": "2026-08-25T06:21:33Z",
+      "updated_at": "2026-08-25T06:22:53Z"
     },
     {
       "repo": "mariGoIds/dsh-lan-proxy",
@@ -48559,9 +48207,9 @@
       "repo": "marius-patrik/dsh-stack",
       "stars": 1,
       "forks": 0,
-      "open_issues": 89,
-      "pushed_at": "2026-08-30T12:38:07Z",
-      "updated_at": "2026-08-29T19:47:48Z"
+      "open_issues": 25,
+      "pushed_at": "2026-08-26T18:03:19Z",
+      "updated_at": "2026-08-26T17:42:24Z"
     },
     {
       "repo": "marketleonai-del/codex-deepseek-partner",
@@ -48762,14 +48410,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-27T09:31:12Z",
       "updated_at": "2026-08-27T09:39:05Z"
-    },
-    {
-      "repo": "masquerator-coder/dsh-memory",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:52:41Z",
-      "updated_at": "2026-08-30T12:52:37Z"
     },
     {
       "repo": "master1Sun/dsh-prompt-library",
@@ -49045,11 +48685,11 @@
     },
     {
       "repo": "maxmilian/dsh-forge",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T09:03:34Z",
-      "updated_at": "2026-08-28T11:01:28Z"
+      "updated_at": "2026-08-25T09:06:46Z"
     },
     {
       "repo": "maxmilian/dsh-grafana-query",
@@ -49077,11 +48717,11 @@
     },
     {
       "repo": "maxmilian/dsh-sonarqube",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T09:21:55Z",
-      "updated_at": "2026-08-28T11:02:11Z"
+      "updated_at": "2026-08-25T09:26:10Z"
     },
     {
       "repo": "maxsaltshen/dsh-plugin-sources",
@@ -49808,8 +49448,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T15:25:53Z",
-      "updated_at": "2026-08-29T15:26:01Z"
+      "pushed_at": "2026-08-22T00:28:56Z",
+      "updated_at": "2026-08-22T00:29:09Z"
     },
     {
       "repo": "Metahumanz/DeepSeekHarness-DesktopShell",
@@ -49861,11 +49501,11 @@
     },
     {
       "repo": "MeteorNOX/DeepSeek-Balance-Whale-Widget",
-      "stars": 1367,
+      "stars": 1344,
       "forks": 48,
       "open_issues": 21,
       "pushed_at": "2026-08-24T17:14:19Z",
-      "updated_at": "2026-08-30T12:39:45Z"
+      "updated_at": "2026-08-30T06:37:08Z"
     },
     {
       "repo": "metercai/aimail-sdk-ts",
@@ -50040,8 +49680,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T11:56:18Z",
-      "updated_at": "2026-08-29T11:59:38Z"
+      "pushed_at": "2026-08-24T12:02:09Z",
+      "updated_at": "2026-08-24T12:02:49Z"
     },
     {
       "repo": "miaoxintechnology/dsh-workbuddy-files",
@@ -50429,11 +50069,11 @@
     },
     {
       "repo": "Minglink/dsh-infinite-gen-2",
-      "stars": 646,
+      "stars": 635,
       "forks": 32,
       "open_issues": 5,
       "pushed_at": "2026-08-26T06:27:28Z",
-      "updated_at": "2026-08-30T11:10:43Z"
+      "updated_at": "2026-08-30T06:01:30Z"
     },
     {
       "repo": "Minglink/dsh-plugin-agent-workflow",
@@ -50458,14 +50098,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-21T09:58:15Z",
       "updated_at": "2026-08-21T09:58:19Z"
-    },
-    {
-      "repo": "MingMaple/study-coach",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:58:35Z",
-      "updated_at": "2026-08-30T10:08:35Z"
     },
     {
       "repo": "MingoZhou/dsh-replay",
@@ -50536,8 +50168,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T02:52:55Z",
-      "updated_at": "2026-08-30T02:53:15Z"
+      "pushed_at": "2026-08-21T08:24:40Z",
+      "updated_at": "2026-08-24T14:10:12Z"
     },
     {
       "repo": "Minokun/dsh-supawriter",
@@ -51301,11 +50933,11 @@
     },
     {
       "repo": "modusensus/dsh-mneme",
-      "stars": 66,
+      "stars": 65,
       "forks": 4,
-      "open_issues": 7,
+      "open_issues": 5,
       "pushed_at": "2026-08-29T15:18:00Z",
-      "updated_at": "2026-08-30T10:21:50Z"
+      "updated_at": "2026-08-30T01:40:14Z"
     },
     {
       "repo": "Moeblack/dsh-preset-kit",
@@ -51520,8 +51152,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T03:54:09Z",
-      "updated_at": "2026-08-27T03:55:05Z"
+      "pushed_at": "2026-08-24T19:40:50Z",
+      "updated_at": "2026-08-26T00:28:07Z"
     },
     {
       "repo": "monotykamary/dsh-tool-repair",
@@ -52117,11 +51749,11 @@
     },
     {
       "repo": "mozhuanzuojing/dsh-liangwengu",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 1,
       "pushed_at": "2026-08-20T02:00:25Z",
-      "updated_at": "2026-08-28T02:08:45Z"
+      "updated_at": "2026-08-25T03:45:35Z"
     },
     {
       "repo": "mozhuanzuojing/dsh-voice-input",
@@ -52949,11 +52581,11 @@
     },
     {
       "repo": "myYangyunfan/dsh_desktop",
-      "stars": 610,
+      "stars": 607,
       "forks": 30,
-      "open_issues": 6,
+      "open_issues": 5,
       "pushed_at": "2026-08-29T15:30:33Z",
-      "updated_at": "2026-08-30T09:41:42Z"
+      "updated_at": "2026-08-30T06:39:06Z"
     },
     {
       "repo": "myzane678/dsh-ide-layout",
@@ -53293,11 +52925,11 @@
     },
     {
       "repo": "NanmiCoder/dsh-auto-mode",
-      "stars": 139,
+      "stars": 137,
       "forks": 4,
       "open_issues": 7,
       "pushed_at": "2026-08-22T08:40:32Z",
-      "updated_at": "2026-08-30T10:01:05Z"
+      "updated_at": "2026-08-30T02:38:09Z"
     },
     {
       "repo": "NanmiCoder/dsh-plugin-market",
@@ -54341,11 +53973,11 @@
     },
     {
       "repo": "ningbainb/deepseek-harness-desktop",
-      "stars": 243,
+      "stars": 241,
       "forks": 10,
-      "open_issues": 9,
+      "open_issues": 8,
       "pushed_at": "2026-08-28T11:28:29Z",
-      "updated_at": "2026-08-30T10:47:02Z"
+      "updated_at": "2026-08-30T06:13:47Z"
     },
     {
       "repo": "ningbonb/dsh-client-ui-brand",
@@ -55029,11 +54661,11 @@
     },
     {
       "repo": "Noob-stupid/dsh-plugin-hub",
-      "stars": 75,
+      "stars": 74,
       "forks": 8,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T10:48:33Z",
-      "updated_at": "2026-08-30T10:48:59Z"
+      "pushed_at": "2026-08-30T03:49:59Z",
+      "updated_at": "2026-08-30T03:58:15Z"
     },
     {
       "repo": "NormalTable5801/dsh_manager",
@@ -55301,11 +54933,11 @@
     },
     {
       "repo": "Nwflower/dsh-chat-import",
-      "stars": 125,
+      "stars": 122,
       "forks": 16,
       "open_issues": 0,
       "pushed_at": "2026-08-29T16:04:24Z",
-      "updated_at": "2026-08-30T12:00:24Z"
+      "updated_at": "2026-08-29T21:33:15Z"
     },
     {
       "repo": "Nwflower/dsh-weneed",
@@ -55477,11 +55109,11 @@
     },
     {
       "repo": "OBdangshang07/DSH_Creative_Workshop",
-      "stars": 60,
+      "stars": 59,
       "forks": 0,
       "open_issues": 1,
       "pushed_at": "2026-08-20T08:43:34Z",
-      "updated_at": "2026-08-30T08:37:26Z"
+      "updated_at": "2026-08-26T07:57:44Z"
     },
     {
       "repo": "OBdangshang07/dsh-craft-ui",
@@ -55637,11 +55269,11 @@
     },
     {
       "repo": "oil-oil/dsh-oil-creator",
-      "stars": 167,
+      "stars": 166,
       "forks": 31,
       "open_issues": 3,
       "pushed_at": "2026-08-20T00:40:08Z",
-      "updated_at": "2026-08-30T07:55:38Z"
+      "updated_at": "2026-08-30T04:17:00Z"
     },
     {
       "repo": "oil-oil/dsh-vision",
@@ -55748,22 +55380,6 @@
       "updated_at": "2026-08-25T12:31:05Z"
     },
     {
-      "repo": "Oliver0804/dsh-local-mcp-sync",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:22:41Z",
-      "updated_at": "2026-08-30T09:23:50Z"
-    },
-    {
-      "repo": "Oliver0804/dsh-openrouter-monitor",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:22:10Z",
-      "updated_at": "2026-08-30T09:22:58Z"
-    },
-    {
       "repo": "Oliver0804/dsh-vision-router",
       "stars": 0,
       "forks": 0,
@@ -55786,14 +55402,6 @@
       "open_issues": 4,
       "pushed_at": "2026-08-29T00:31:03Z",
       "updated_at": "2026-08-29T00:31:13Z"
-    },
-    {
-      "repo": "Olympianz/dsh-deploy-master",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:01:22Z",
-      "updated_at": "2026-08-30T09:01:35Z"
     },
     {
       "repo": "Olympianz/dsh-github-sidebar",
@@ -55869,16 +55477,16 @@
     },
     {
       "repo": "omdsh-dev/dsh-genui",
-      "stars": 371,
-      "forks": 36,
-      "open_issues": 1,
+      "stars": 369,
+      "forks": 35,
+      "open_issues": 0,
       "pushed_at": "2026-08-29T14:38:30Z",
-      "updated_at": "2026-08-30T11:26:08Z"
+      "updated_at": "2026-08-30T05:43:28Z"
     },
     {
       "repo": "omdsh-dev/dsh-lark",
       "stars": 48,
-      "forks": 11,
+      "forks": 10,
       "open_issues": 10,
       "pushed_at": "2026-08-19T09:02:20Z",
       "updated_at": "2026-08-29T06:35:09Z"
@@ -56495,9 +56103,9 @@
       "repo": "openma-ai/Martty",
       "stars": 65,
       "forks": 4,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T11:10:48Z",
-      "updated_at": "2026-08-30T11:13:36Z"
+      "open_issues": 2,
+      "pushed_at": "2026-08-30T01:41:09Z",
+      "updated_at": "2026-08-30T01:41:31Z"
     },
     {
       "repo": "OpenNekoPaw/codex-dsh-web",
@@ -57413,11 +57021,11 @@
     },
     {
       "repo": "PC2005-cloud/dsh-pet",
-      "stars": 481,
+      "stars": 475,
       "forks": 31,
       "open_issues": 15,
       "pushed_at": "2026-08-29T16:12:52Z",
-      "updated_at": "2026-08-30T12:14:09Z"
+      "updated_at": "2026-08-30T05:38:44Z"
     },
     {
       "repo": "PC2005-cloud/dsh-swiss-army",
@@ -57600,8 +57208,8 @@
       "stars": 81,
       "forks": 24,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T07:35:12Z",
-      "updated_at": "2026-08-30T07:36:08Z"
+      "pushed_at": "2026-08-27T06:52:37Z",
+      "updated_at": "2026-08-30T00:33:10Z"
     },
     {
       "repo": "penglai-doll/dsh-mcp-manager",
@@ -57749,11 +57357,11 @@
     },
     {
       "repo": "PensiveFei/dsh-secure-audit",
-      "stars": 66,
+      "stars": 62,
       "forks": 3,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:12:42Z",
-      "updated_at": "2026-08-30T12:31:57Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-30T02:16:45Z",
+      "updated_at": "2026-08-30T05:17:49Z"
     },
     {
       "repo": "PensiveFei/dsh-voice-scribe",
@@ -57829,11 +57437,11 @@
     },
     {
       "repo": "PerryLink/dsh-auto-review",
-      "stars": 120,
+      "stars": 119,
       "forks": 1,
       "open_issues": 3,
-      "pushed_at": "2026-08-30T12:48:48Z",
-      "updated_at": "2026-08-30T12:49:02Z"
+      "pushed_at": "2026-08-30T06:31:55Z",
+      "updated_at": "2026-08-30T06:32:15Z"
     },
     {
       "repo": "PerryLink/dsh-background-agents",
@@ -57981,11 +57589,11 @@
     },
     {
       "repo": "PerryLink/dsh-memento",
-      "stars": 75,
+      "stars": 74,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-30T06:32:17Z",
-      "updated_at": "2026-08-30T07:02:42Z"
+      "updated_at": "2026-08-30T06:32:25Z"
     },
     {
       "repo": "PerryLink/dsh-observe",
@@ -58005,11 +57613,11 @@
     },
     {
       "repo": "PerryLink/dsh-permission-rules",
-      "stars": 71,
+      "stars": 69,
       "forks": 2,
-      "open_issues": 4,
-      "pushed_at": "2026-08-30T08:21:24Z",
-      "updated_at": "2026-08-30T09:19:32Z"
+      "open_issues": 5,
+      "pushed_at": "2026-08-30T06:32:06Z",
+      "updated_at": "2026-08-30T06:32:18Z"
     },
     {
       "repo": "PerryLink/dsh-plugin-certification",
@@ -58309,11 +57917,11 @@
     },
     {
       "repo": "Phant0Meow/dsh-meow-memory",
-      "stars": 61,
+      "stars": 60,
       "forks": 3,
-      "open_issues": 4,
-      "pushed_at": "2026-08-30T09:16:10Z",
-      "updated_at": "2026-08-30T12:11:06Z"
+      "open_issues": 5,
+      "pushed_at": "2026-08-30T01:52:24Z",
+      "updated_at": "2026-08-30T01:52:50Z"
     },
     {
       "repo": "Phant0Meow/dsh-meow-smooth",
@@ -58330,14 +57938,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-20T14:46:46Z",
       "updated_at": "2026-08-20T14:58:50Z"
-    },
-    {
-      "repo": "phantomSuying/dsh-module-driven-develop",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T07:44:53Z",
-      "updated_at": "2026-08-30T07:44:57Z"
     },
     {
       "repo": "pharaohnie/dsh-context-mode",
@@ -58693,11 +58293,11 @@
     },
     {
       "repo": "PivotStackIntelligence/dsh-github",
-      "stars": 72,
+      "stars": 69,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T09:18:40Z",
-      "updated_at": "2026-08-30T10:49:24Z"
+      "updated_at": "2026-08-30T04:16:00Z"
     },
     {
       "repo": "pixelieee/dsh-lol-client",
@@ -59005,11 +58605,11 @@
     },
     {
       "repo": "PolinniZhong/dsh-omi-voice",
-      "stars": 75,
+      "stars": 74,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-28T06:41:49Z",
-      "updated_at": "2026-08-30T12:00:31Z"
+      "updated_at": "2026-08-30T05:59:13Z"
     },
     {
       "repo": "PolinniZhong/dsh-personal-center",
@@ -59277,11 +58877,11 @@
     },
     {
       "repo": "proteus-evolve/Proteus",
-      "stars": 78,
+      "stars": 76,
       "forks": 9,
       "open_issues": 2,
       "pushed_at": "2026-08-28T14:52:08Z",
-      "updated_at": "2026-08-30T08:59:34Z"
+      "updated_at": "2026-08-30T03:23:41Z"
     },
     {
       "repo": "protoctistmoses143/dsh-docs",
@@ -59733,11 +59333,11 @@
     },
     {
       "repo": "QCYTSN/dsh-dafeiyu",
-      "stars": 279,
+      "stars": 275,
       "forks": 28,
       "open_issues": 8,
       "pushed_at": "2026-08-29T10:45:35Z",
-      "updated_at": "2026-08-30T10:29:42Z"
+      "updated_at": "2026-08-30T02:35:58Z"
     },
     {
       "repo": "qdlx2000/feishu-bridge",
@@ -59837,11 +59437,11 @@
     },
     {
       "repo": "qiannianhuanxiang/DSHA",
-      "stars": 334,
+      "stars": 329,
       "forks": 23,
-      "open_issues": 7,
+      "open_issues": 6,
       "pushed_at": "2026-08-29T16:35:57Z",
-      "updated_at": "2026-08-30T12:01:59Z"
+      "updated_at": "2026-08-30T03:48:30Z"
     },
     {
       "repo": "qianshe/dsh-assistant-optimization",
@@ -60082,158 +59682,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-30T06:10:13Z",
       "updated_at": "2026-08-30T06:10:13Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-auto-translate",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:56:37Z",
-      "updated_at": "2026-08-30T12:56:55Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-blog-engine",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:57Z",
-      "updated_at": "2026-08-30T12:53:57Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-color-palette",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:11Z",
-      "updated_at": "2026-08-30T12:38:40Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-commit-lint",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:13Z",
-      "updated_at": "2026-08-30T12:38:18Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-coverage-tracker",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:47:49Z",
-      "updated_at": "2026-08-30T12:48:14Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-cron-manager",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:00Z",
-      "updated_at": "2026-08-30T12:53:09Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-data-profiling",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:56:11Z",
-      "updated_at": "2026-08-30T12:56:42Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-i18n-manager",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:56:19Z",
-      "updated_at": "2026-08-30T12:56:54Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-json-yaml-converter",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:11Z",
-      "updated_at": "2026-08-30T12:38:22Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-license-checker",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:47:49Z",
-      "updated_at": "2026-08-30T12:48:07Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-lint-config",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:13Z",
-      "updated_at": "2026-08-30T12:38:37Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-log-viewer",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:52:37Z",
-      "updated_at": "2026-08-30T12:52:56Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-markdown-preview",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:11Z",
-      "updated_at": "2026-08-30T12:38:36Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-mock-server",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:12Z",
-      "updated_at": "2026-08-30T12:38:33Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-prometheus",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:52:37Z",
-      "updated_at": "2026-08-30T12:53:05Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-regex-playground",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:38:11Z",
-      "updated_at": "2026-08-30T12:38:35Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-seo-tool",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:51Z",
-      "updated_at": "2026-08-30T12:53:52Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-status-page",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:52:37Z",
-      "updated_at": "2026-08-30T12:52:45Z"
-    },
-    {
-      "repo": "qingshanjiluo/dsh-test-generator",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:47:49Z",
-      "updated_at": "2026-08-30T12:48:01Z"
     },
     {
       "repo": "qingshanyuluo/dsh-mobile-ux",
@@ -61098,22 +60546,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-24T14:01:07Z",
       "updated_at": "2026-08-24T14:10:15Z"
-    },
-    {
-      "repo": "QWE13-ART/dsh-skill-folder",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:34:41Z",
-      "updated_at": "2026-08-30T09:34:45Z"
-    },
-    {
-      "repo": "QWE13-ART/dsh-tool-folder",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:12:38Z",
-      "updated_at": "2026-08-30T10:12:49Z"
     },
     {
       "repo": "qwe225380/dsh-omni-router",
@@ -62092,14 +61524,6 @@
       "updated_at": "2026-08-18T20:38:08Z"
     },
     {
-      "repo": "reedflame40224/vcp-memo",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:41:31Z",
-      "updated_at": "2026-08-30T10:41:55Z"
-    },
-    {
       "repo": "Reedphoto3/dsh-outline-plugin",
       "stars": 1,
       "forks": 0,
@@ -62334,10 +61758,10 @@
     {
       "repo": "RevolutionLA/dsh-dream-skin",
       "stars": 129,
-      "forks": 11,
+      "forks": 12,
       "open_issues": 3,
-      "pushed_at": "2026-08-30T09:12:33Z",
-      "updated_at": "2026-08-30T09:13:38Z"
+      "pushed_at": "2026-08-30T04:04:43Z",
+      "updated_at": "2026-08-30T04:05:03Z"
     },
     {
       "repo": "RexCoding-Yu/dsh-project-manager",
@@ -62677,11 +62101,11 @@
     },
     {
       "repo": "rison114514/dsh-endfield-ui",
-      "stars": 50,
+      "stars": 49,
       "forks": 3,
       "open_issues": 3,
       "pushed_at": "2026-08-24T15:48:10Z",
-      "updated_at": "2026-08-30T10:00:20Z"
+      "updated_at": "2026-08-30T05:04:42Z"
     },
     {
       "repo": "rison114514/dsh-image-understanding",
@@ -62786,14 +62210,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-25T22:40:33Z",
       "updated_at": "2026-08-25T22:40:09Z"
-    },
-    {
-      "repo": "robin-dd/dsh-keep-awake",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:50:12Z",
-      "updated_at": "2026-08-30T10:50:23Z"
     },
     {
       "repo": "robomotionio/go-deepseek",
@@ -64053,11 +63469,11 @@
     },
     {
       "repo": "sandbaseai/deepseek-harness-handbook",
-      "stars": 94,
+      "stars": 91,
       "forks": 14,
-      "open_issues": 4,
-      "pushed_at": "2026-08-30T08:00:58Z",
-      "updated_at": "2026-08-30T11:59:22Z"
+      "open_issues": 3,
+      "pushed_at": "2026-08-30T06:22:04Z",
+      "updated_at": "2026-08-30T06:22:54Z"
     },
     {
       "repo": "sandbaseai/dsh-kit",
@@ -64245,11 +63661,11 @@
     },
     {
       "repo": "saya-ch/dsh-mobile",
-      "stars": 178,
+      "stars": 177,
       "forks": 9,
-      "open_issues": 9,
-      "pushed_at": "2026-08-30T07:53:28Z",
-      "updated_at": "2026-08-30T11:33:12Z"
+      "open_issues": 10,
+      "pushed_at": "2026-08-30T06:32:21Z",
+      "updated_at": "2026-08-30T04:08:55Z"
     },
     {
       "repo": "SayHiToYoung/dsh-pet-linked",
@@ -64629,11 +64045,11 @@
     },
     {
       "repo": "SeaOf0/dsh-redteam-model",
-      "stars": 118,
+      "stars": 117,
       "forks": 20,
       "open_issues": 0,
       "pushed_at": "2026-08-29T08:11:27Z",
-      "updated_at": "2026-08-30T07:23:53Z"
+      "updated_at": "2026-08-30T06:33:58Z"
     },
     {
       "repo": "seashapeland/dsh-desktop",
@@ -64933,11 +64349,11 @@
     },
     {
       "repo": "seriousz158/dsh-memory",
-      "stars": 141,
+      "stars": 137,
       "forks": 2,
       "open_issues": 5,
       "pushed_at": "2026-08-26T07:24:45Z",
-      "updated_at": "2026-08-30T12:50:47Z"
+      "updated_at": "2026-08-30T04:01:13Z"
     },
     {
       "repo": "sesori-ai/sesori-deepseek-acp",
@@ -65279,9 +64695,9 @@
       "repo": "shanliuling/dsh-image-gen",
       "stars": 279,
       "forks": 17,
-      "open_issues": 6,
-      "pushed_at": "2026-08-30T10:34:21Z",
-      "updated_at": "2026-08-30T10:34:41Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-28T10:00:57Z",
+      "updated_at": "2026-08-30T01:08:35Z"
     },
     {
       "repo": "shantanugoel/dsh-web-degoog",
@@ -65317,11 +64733,11 @@
     },
     {
       "repo": "shaobeichen/dsh-pocket",
-      "stars": 823,
-      "forks": 43,
+      "stars": 814,
+      "forks": 42,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:30:36Z",
-      "updated_at": "2026-08-30T12:48:06Z"
+      "pushed_at": "2026-08-30T05:27:19Z",
+      "updated_at": "2026-08-30T06:28:48Z"
     },
     {
       "repo": "shaodushu/dsh-weixin-gateway",
@@ -65378,14 +64794,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-22T13:00:36Z",
       "updated_at": "2026-08-25T20:29:15Z"
-    },
-    {
-      "repo": "shaomingbo/dsh-token-usage",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:54:37Z",
-      "updated_at": "2026-08-30T12:54:59Z"
     },
     {
       "repo": "shaomingbo/dsh-visualization",
@@ -65605,11 +65013,11 @@
     },
     {
       "repo": "shengsheng90/DSH-taskboard",
-      "stars": 217,
+      "stars": 212,
       "forks": 7,
       "open_issues": 1,
       "pushed_at": "2026-08-22T07:59:16Z",
-      "updated_at": "2026-08-30T12:12:49Z"
+      "updated_at": "2026-08-30T05:49:59Z"
     },
     {
       "repo": "shengshifantang/dsh-evidence-arena",
@@ -67229,11 +66637,11 @@
     },
     {
       "repo": "skymecode/deepseek-harness-for-vscode",
-      "stars": 113,
+      "stars": 110,
       "forks": 5,
       "open_issues": 2,
       "pushed_at": "2026-08-29T19:20:15Z",
-      "updated_at": "2026-08-30T12:16:07Z"
+      "updated_at": "2026-08-30T06:13:41Z"
     },
     {
       "repo": "skymecode/dsh-bgm",
@@ -67453,11 +66861,11 @@
     },
     {
       "repo": "Small-tailqwq/dsh-deep-whale",
-      "stars": 1830,
+      "stars": 1826,
       "forks": 54,
-      "open_issues": 19,
-      "pushed_at": "2026-08-30T12:49:44Z",
-      "updated_at": "2026-08-30T10:53:48Z"
+      "open_issues": 16,
+      "pushed_at": "2026-08-30T04:45:40Z",
+      "updated_at": "2026-08-30T06:40:31Z"
     },
     {
       "repo": "Smalldy/godot-bridge",
@@ -69452,14 +68860,6 @@
       "updated_at": "2026-08-26T13:32:58Z"
     },
     {
-      "repo": "steven-ngle/dsh-elden",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:30:35Z",
-      "updated_at": "2026-08-30T10:32:39Z"
-    },
-    {
       "repo": "SteveTanSaMa/DSH-Studio",
       "stars": 1,
       "forks": 0,
@@ -69964,20 +69364,12 @@
       "updated_at": "2026-08-25T10:34:26Z"
     },
     {
-      "repo": "summer-521/deepseek-harness-desktop",
-      "stars": 2,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-28T07:24:44Z",
-      "updated_at": "2026-08-28T07:58:42Z"
-    },
-    {
       "repo": "summer-521/deepseek-harness-swift",
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:07:43Z",
-      "updated_at": "2026-08-30T12:08:29Z"
+      "pushed_at": "2026-08-29T11:13:02Z",
+      "updated_at": "2026-08-29T11:14:45Z"
     },
     {
       "repo": "summer-hub/AutoTestAgent",
@@ -69989,11 +69381,11 @@
     },
     {
       "repo": "summer1238/dsh-remote-web-gateway",
-      "stars": 162,
+      "stars": 161,
       "forks": 7,
       "open_issues": 0,
       "pushed_at": "2026-08-28T11:00:58Z",
-      "updated_at": "2026-08-30T11:43:56Z"
+      "updated_at": "2026-08-30T03:02:19Z"
     },
     {
       "repo": "SummerSec/dsh-web-auth",
@@ -70378,14 +69770,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-21T16:50:45Z",
       "updated_at": "2026-08-21T16:52:44Z"
-    },
-    {
-      "repo": "SuperMate-Ai/dsh-im-wecom",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:07:08Z",
-      "updated_at": "2026-08-30T11:07:48Z"
     },
     {
       "repo": "SuperPaiGu/dsh-conversation-outline",
@@ -70970,14 +70354,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-24T15:14:34Z",
       "updated_at": "2026-08-24T15:23:17Z"
-    },
-    {
-      "repo": "sysit/dsh-remote-access",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:11:09Z",
-      "updated_at": "2026-08-30T12:11:44Z"
     },
     {
       "repo": "syxscott/dsh-memory",
@@ -71629,11 +71005,11 @@
     },
     {
       "repo": "Tasihi89/dsh-talk-map",
-      "stars": 61,
+      "stars": 60,
       "forks": 9,
       "open_issues": 6,
       "pushed_at": "2026-08-23T13:59:19Z",
-      "updated_at": "2026-08-30T08:26:08Z"
+      "updated_at": "2026-08-29T06:20:40Z"
     },
     {
       "repo": "Tastelessor/dsh-usage-stats",
@@ -72162,14 +71538,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-16T07:01:13Z",
       "updated_at": "2026-08-25T03:43:37Z"
-    },
-    {
-      "repo": "TheD666/dsh-plugins",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T07:02:55Z",
-      "updated_at": "2026-08-30T07:03:15Z"
     },
     {
       "repo": "Thedeergod666/dsh-musage",
@@ -72718,7 +72086,7 @@
     {
       "repo": "Tiger3807861189/DeepSeek-V4-J-Space-Capability-Realization-Report",
       "stars": 1035,
-      "forks": 64,
+      "forks": 65,
       "open_issues": 13,
       "pushed_at": "2026-08-23T07:25:39Z",
       "updated_at": "2026-08-30T02:24:15Z"
@@ -73029,11 +72397,11 @@
     },
     {
       "repo": "titanwings/dsh-automation",
-      "stars": 84,
+      "stars": 85,
       "forks": 9,
       "open_issues": 6,
       "pushed_at": "2026-08-23T19:19:30Z",
-      "updated_at": "2026-08-30T11:31:58Z"
+      "updated_at": "2026-08-29T12:39:45Z"
     },
     {
       "repo": "titxue/dsh-desktop",
@@ -73598,8 +72966,8 @@
     {
       "repo": "Totoro-qaq/dsh-plugin-bridge",
       "stars": 163,
-      "forks": 11,
-      "open_issues": 1,
+      "forks": 10,
+      "open_issues": 0,
       "pushed_at": "2026-08-29T19:33:54Z",
       "updated_at": "2026-08-29T11:14:43Z"
     },
@@ -73930,14 +73298,6 @@
       "open_issues": 1,
       "pushed_at": "2026-08-18T18:58:19Z",
       "updated_at": "2026-08-25T03:44:19Z"
-    },
-    {
-      "repo": "trueRISCOacnt/maa-dsh-skill",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T10:48:14Z",
-      "updated_at": "2026-08-30T11:10:21Z"
     },
     {
       "repo": "trungtaottn/dsh-file-pane",
@@ -79781,11 +79141,11 @@
     },
     {
       "repo": "UNLINEARITY/dsh-code",
-      "stars": 32,
+      "stars": 30,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T16:02:08Z",
-      "updated_at": "2026-08-29T16:02:26Z"
+      "pushed_at": "2026-08-22T04:28:26Z",
+      "updated_at": "2026-08-26T04:04:19Z"
     },
     {
       "repo": "unpain/dsh-skin-mari",
@@ -80125,11 +79485,11 @@
     },
     {
       "repo": "V1ki/dsh-plugin-subscriptions",
-      "stars": 299,
+      "stars": 297,
       "forks": 33,
       "open_issues": 11,
       "pushed_at": "2026-08-29T06:55:15Z",
-      "updated_at": "2026-08-30T11:42:08Z"
+      "updated_at": "2026-08-29T15:01:09Z"
     },
     {
       "repo": "v587d/capital-generation",
@@ -80461,11 +79821,11 @@
     },
     {
       "repo": "Victor-770/dsh-commandcode-provider",
-      "stars": 8,
+      "stars": 7,
       "forks": 1,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-15T09:21:47Z",
-      "updated_at": "2026-08-29T10:58:27Z"
+      "updated_at": "2026-08-25T09:32:02Z"
     },
     {
       "repo": "Victor-770/dsh-reminder",
@@ -80533,11 +79893,11 @@
     },
     {
       "repo": "victorzhong0110/dsh-outcome-loop",
-      "stars": 3,
+      "stars": 2,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-20T00:45:38Z",
-      "updated_at": "2026-08-28T11:01:20Z"
+      "updated_at": "2026-08-25T03:47:50Z"
     },
     {
       "repo": "viethoang35/dsh-chat-bridge",
@@ -80669,11 +80029,11 @@
     },
     {
       "repo": "vinoth4v/dsh-tool-council",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-15T22:02:09Z",
-      "updated_at": "2026-08-29T15:04:01Z"
+      "updated_at": "2026-08-15T22:02:30Z"
     },
     {
       "repo": "vINyLogY/dsh-bluebubbles",
@@ -80757,11 +80117,11 @@
     },
     {
       "repo": "Vithrive/Deepseek-Harness-for-VS-Code",
-      "stars": 11,
+      "stars": 10,
       "forks": 1,
       "open_issues": 6,
       "pushed_at": "2026-08-24T10:55:57Z",
-      "updated_at": "2026-08-28T01:46:24Z"
+      "updated_at": "2026-08-25T06:05:52Z"
     },
     {
       "repo": "Vithrive/dsh-plugins-manage",
@@ -80880,24 +80240,24 @@
       "stars": 10,
       "forks": 3,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T06:47:20Z",
-      "updated_at": "2026-08-30T06:47:53Z"
+      "pushed_at": "2026-08-22T14:25:18Z",
+      "updated_at": "2026-08-25T03:45:17Z"
     },
     {
       "repo": "vocsong/deepseek-harness-portal",
       "stars": 1,
-      "forks": 1,
+      "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-18T14:03:32Z",
       "updated_at": "2026-08-18T14:07:47Z"
     },
     {
       "repo": "void2anything/dsh-qingagent",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-26T14:29:05Z",
-      "updated_at": "2026-08-28T11:00:55Z"
+      "updated_at": "2026-08-26T14:56:26Z"
     },
     {
       "repo": "VoidX0/deepseek-harness-image",
@@ -80936,16 +80296,16 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T07:35:12Z",
-      "updated_at": "2026-08-27T07:38:46Z"
+      "pushed_at": "2026-08-21T07:55:14Z",
+      "updated_at": "2026-08-21T07:56:38Z"
     },
     {
-      "repo": "Voyage-He/dsh-background-image",
+      "repo": "Voyage-He/dsh-plugin-background-image",
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-16T13:40:01Z",
-      "updated_at": "2026-08-28T13:47:13Z"
+      "updated_at": "2026-08-25T03:45:19Z"
     },
     {
       "repo": "vpertj/deepseek-harness-desktop",
@@ -80990,10 +80350,10 @@
     {
       "repo": "vvlife/awesome-deepseek-harness-plugins",
       "stars": 8,
-      "forks": 19,
+      "forks": 18,
       "open_issues": 2,
-      "pushed_at": "2026-08-30T09:18:30Z",
-      "updated_at": "2026-08-30T09:18:35Z"
+      "pushed_at": "2026-08-26T12:43:44Z",
+      "updated_at": "2026-08-26T12:45:45Z"
     },
     {
       "repo": "vvlife/deepseek-harness-desktop",
@@ -81008,8 +80368,8 @@
       "stars": 5,
       "forks": 2,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T09:20:08Z",
-      "updated_at": "2026-08-30T09:20:10Z"
+      "pushed_at": "2026-08-26T04:09:55Z",
+      "updated_at": "2026-08-26T04:10:21Z"
     },
     {
       "repo": "vvnocode/claude.md",
@@ -81024,8 +80384,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T09:36:29Z",
-      "updated_at": "2026-08-29T09:36:32Z"
+      "pushed_at": "2026-08-23T09:12:57Z",
+      "updated_at": "2026-08-23T09:09:10Z"
     },
     {
       "repo": "W117C/dsh-memory",
@@ -81077,11 +80437,11 @@
     },
     {
       "repo": "w2112515/dsh-plugin-marketplace",
-      "stars": 15,
+      "stars": 14,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-27T12:37:45Z",
-      "updated_at": "2026-08-30T12:41:08Z"
+      "pushed_at": "2026-08-18T15:58:03Z",
+      "updated_at": "2026-08-25T03:48:10Z"
     },
     {
       "repo": "w2112515/dsh-remote-android",
@@ -81197,11 +80557,11 @@
     },
     {
       "repo": "walkinglabs/awesome-deepseek-harness-plugins",
-      "stars": 17,
-      "forks": 20,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T01:01:42Z",
-      "updated_at": "2026-08-30T01:02:01Z"
+      "stars": 14,
+      "forks": 18,
+      "open_issues": 2,
+      "pushed_at": "2026-08-25T01:05:52Z",
+      "updated_at": "2026-08-26T14:28:07Z"
     },
     {
       "repo": "walkzzz/dsh-plugin-blender-3d",
@@ -81224,8 +80584,8 @@
       "stars": 8,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T09:34:08Z",
-      "updated_at": "2026-08-29T09:23:29Z"
+      "pushed_at": "2026-08-26T14:59:51Z",
+      "updated_at": "2026-08-26T15:12:03Z"
     },
     {
       "repo": "WAlucktechniqueAN/dsh-setting-layout",
@@ -81256,8 +80616,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 1,
-      "pushed_at": "2026-08-28T04:13:31Z",
-      "updated_at": "2026-08-28T04:14:28Z"
+      "pushed_at": "2026-08-23T14:30:37Z",
+      "updated_at": "2026-08-23T14:20:54Z"
     },
     {
       "repo": "Wanbinyu/dsh-billing",
@@ -81312,8 +80672,8 @@
       "stars": 1,
       "forks": 1,
       "open_issues": 1,
-      "pushed_at": "2026-08-30T07:59:40Z",
-      "updated_at": "2026-08-30T08:00:13Z"
+      "pushed_at": "2026-08-26T08:44:09Z",
+      "updated_at": "2026-08-26T08:45:24Z"
     },
     {
       "repo": "wandanan/ai-composer",
@@ -81343,9 +80703,9 @@
       "repo": "wang-22-code/dsh-qqbot-bridge",
       "stars": 4,
       "forks": 1,
-      "open_issues": 4,
-      "pushed_at": "2026-08-30T11:43:20Z",
-      "updated_at": "2026-08-27T05:22:17Z"
+      "open_issues": 3,
+      "pushed_at": "2026-08-23T11:43:28Z",
+      "updated_at": "2026-08-25T03:48:20Z"
     },
     {
       "repo": "wang-bool/visual-review",
@@ -81376,16 +80736,16 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T06:11:06Z",
-      "updated_at": "2026-08-29T06:12:11Z"
+      "pushed_at": "2026-08-24T15:18:09Z",
+      "updated_at": "2026-08-24T15:27:23Z"
     },
     {
       "repo": "wang-junjian/spritely",
       "stars": 3,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T02:13:28Z",
-      "updated_at": "2026-08-30T02:13:37Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-24T05:42:15Z",
+      "updated_at": "2026-08-25T11:00:39Z"
     },
     {
       "repo": "wang-kaopu/dsh-cordis-devtools",
@@ -81464,8 +80824,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-26T17:09:45Z",
-      "updated_at": "2026-08-26T17:10:04Z"
+      "pushed_at": "2026-08-26T15:50:29Z",
+      "updated_at": "2026-08-26T15:48:39Z"
     },
     {
       "repo": "wang-xudong/dsh-plugin-undo",
@@ -81512,8 +80872,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T05:42:37Z",
-      "updated_at": "2026-08-27T05:46:12Z"
+      "pushed_at": "2026-08-23T11:15:53Z",
+      "updated_at": "2026-08-23T11:17:28Z"
     },
     {
       "repo": "wangbaoyi/dsh-vscode-ui",
@@ -81538,14 +80898,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-27T15:39:42Z",
       "updated_at": "2026-08-28T11:00:31Z"
-    },
-    {
-      "repo": "wanggelie680-byte/deepseek-harness-gate",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:33Z",
-      "updated_at": "2026-08-30T12:46:02Z"
     },
     {
       "repo": "wanghehe123/dsh-cite",
@@ -81597,11 +80949,11 @@
     },
     {
       "repo": "wangkaxds/dsh-aurora-wallpaper",
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-22T13:21:07Z",
-      "updated_at": "2026-08-28T05:28:55Z"
+      "updated_at": "2026-08-25T03:48:34Z"
     },
     {
       "repo": "wangkaxds/we-scene",
@@ -81616,8 +80968,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T16:23:31Z",
-      "updated_at": "2026-08-27T16:40:51Z"
+      "pushed_at": "2026-08-24T13:58:30Z",
+      "updated_at": "2026-08-24T14:03:38Z"
     },
     {
       "repo": "wanglaixiang-cyber/dsh-composer-scroll-hide",
@@ -81640,8 +80992,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T12:27:29Z",
-      "updated_at": "2026-08-27T12:30:05Z"
+      "pushed_at": "2026-08-25T03:03:23Z",
+      "updated_at": "2026-08-25T03:04:12Z"
     },
     {
       "repo": "wangning19940904/dsh-llm-wiki",
@@ -81672,8 +81024,8 @@
       "stars": 5,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T09:53:08Z",
-      "updated_at": "2026-08-30T09:53:17Z"
+      "pushed_at": "2026-08-26T15:55:00Z",
+      "updated_at": "2026-08-26T15:55:05Z"
     },
     {
       "repo": "wangteng2/dsh-chat-mini-games",
@@ -81701,11 +81053,11 @@
     },
     {
       "repo": "wangwei-wade/dsh-quote-annotate",
-      "stars": 5,
+      "stars": 2,
       "forks": 2,
       "open_issues": 2,
       "pushed_at": "2026-08-15T05:09:18Z",
-      "updated_at": "2026-08-29T08:24:15Z"
+      "updated_at": "2026-08-24T23:53:40Z"
     },
     {
       "repo": "WangWindow/dsh-desktop",
@@ -81925,11 +81277,11 @@
     },
     {
       "repo": "warm-flame-core/new-project-init",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-25T07:22:49Z",
-      "updated_at": "2026-08-29T14:18:36Z"
+      "updated_at": "2026-08-25T07:24:10Z"
     },
     {
       "repo": "warment/deepseek-harness-locale-ru",
@@ -81991,8 +81343,8 @@
       "repo": "WaterMelonKnight/CIRelay",
       "stars": 1,
       "forks": 0,
-      "open_issues": 1,
-      "pushed_at": "2026-08-30T12:56:10Z",
+      "open_issues": 0,
+      "pushed_at": "2026-08-26T05:39:20Z",
       "updated_at": "2026-08-26T05:35:23Z"
     },
     {
@@ -82013,11 +81365,11 @@
     },
     {
       "repo": "Waverly-W/dsh-scratchpad",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T09:41:37Z",
-      "updated_at": "2026-08-28T10:58:44Z"
+      "updated_at": "2026-08-25T03:46:13Z"
     },
     {
       "repo": "WaveSpeedAI/wavespeed-dsh-skill",
@@ -82032,8 +81384,8 @@
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T10:37:59Z",
-      "updated_at": "2026-08-28T10:38:49Z"
+      "pushed_at": "2026-08-26T13:10:52Z",
+      "updated_at": "2026-08-26T13:20:38Z"
     },
     {
       "repo": "wayne0201/agent-harness-docs",
@@ -82101,11 +81453,11 @@
     },
     {
       "repo": "web-casa/DeepSeek-Harness-Desktop",
-      "stars": 101,
+      "stars": 99,
       "forks": 3,
       "open_issues": 3,
       "pushed_at": "2026-08-29T10:56:18Z",
-      "updated_at": "2026-08-30T12:27:40Z"
+      "updated_at": "2026-08-30T05:08:13Z"
     },
     {
       "repo": "web-casa/DeepSeek-Harness-Marketplace-Cordis",
@@ -82128,8 +81480,8 @@
       "stars": 4,
       "forks": 2,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T09:32:34Z",
-      "updated_at": "2026-08-30T09:34:02Z"
+      "pushed_at": "2026-08-21T10:28:02Z",
+      "updated_at": "2026-08-25T05:07:55Z"
     },
     {
       "repo": "webkong/dsh-plugin-sidebar",
@@ -82141,11 +81493,11 @@
     },
     {
       "repo": "webkubor/dsh-bloom-theme",
-      "stars": 17,
+      "stars": 13,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-24T12:37:21Z",
-      "updated_at": "2026-08-29T03:31:19Z"
+      "updated_at": "2026-08-25T05:07:59Z"
     },
     {
       "repo": "webkubor/dsh-mirror",
@@ -82177,7 +81529,7 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-18T10:06:06Z",
-      "updated_at": "2026-08-29T04:52:09Z"
+      "updated_at": "2026-08-25T05:08:06Z"
     },
     {
       "repo": "wegohub/deepseek-harness-plugin",
@@ -82240,8 +81592,8 @@
       "stars": 175,
       "forks": 32,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T09:03:38Z",
-      "updated_at": "2026-08-30T09:04:46Z"
+      "pushed_at": "2026-08-29T16:32:22Z",
+      "updated_at": "2026-08-29T23:14:18Z"
     },
     {
       "repo": "weijianguizhou/dsh-matlab",
@@ -82317,11 +81669,11 @@
     },
     {
       "repo": "weiwei966/awesome-ai-harness",
-      "stars": 178,
+      "stars": 176,
       "forks": 3,
       "open_issues": 0,
       "pushed_at": "2026-08-19T03:04:50Z",
-      "updated_at": "2026-08-30T09:15:54Z"
+      "updated_at": "2026-08-30T04:26:18Z"
     },
     {
       "repo": "Weixi138/dsh-custom-background",
@@ -82383,17 +81735,17 @@
       "repo": "welsione/dsh-mmx-bridge",
       "stars": 10,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-21T05:57:05Z",
-      "updated_at": "2026-08-30T02:25:32Z"
+      "updated_at": "2026-08-25T06:29:25Z"
     },
     {
       "repo": "welsione/dsh-model-router",
       "stars": 2,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T10:32:41Z",
-      "updated_at": "2026-08-27T10:35:15Z"
+      "pushed_at": "2026-08-26T07:06:53Z",
+      "updated_at": "2026-08-26T07:07:27Z"
     },
     {
       "repo": "welsione/dsh-plugin-developer",
@@ -82429,11 +81781,11 @@
     },
     {
       "repo": "wenbin-wb/dsh-bridge",
-      "stars": 101,
+      "stars": 99,
       "forks": 2,
-      "open_issues": 16,
-      "pushed_at": "2026-08-30T11:17:43Z",
-      "updated_at": "2026-08-30T11:17:53Z"
+      "open_issues": 17,
+      "pushed_at": "2026-08-27T05:44:52Z",
+      "updated_at": "2026-08-30T05:20:37Z"
     },
     {
       "repo": "wenbobodley/dsh-guandan",
@@ -82472,8 +81824,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T11:28:43Z",
-      "updated_at": "2026-08-28T11:28:47Z"
+      "pushed_at": "2026-08-26T15:38:59Z",
+      "updated_at": "2026-08-26T15:45:32Z"
     },
     {
       "repo": "wenhao4126/dsh-herdr",
@@ -82493,11 +81845,11 @@
     },
     {
       "repo": "WenhongPan/dsh-projects",
-      "stars": 5,
+      "stars": 4,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T14:45:45Z",
-      "updated_at": "2026-08-28T09:25:23Z"
+      "pushed_at": "2026-08-17T18:44:10Z",
+      "updated_at": "2026-08-26T15:35:54Z"
     },
     {
       "repo": "wenliang9527/dsh-eye",
@@ -82540,14 +81892,6 @@
       "updated_at": "2026-08-19T03:46:54Z"
     },
     {
-      "repo": "wenyixiaoqingnian/ds-mobile-skin",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T11:04:28Z",
-      "updated_at": "2026-08-30T11:04:43Z"
-    },
-    {
       "repo": "wenyixiaoqingnian/screenshot-review",
       "stars": 0,
       "forks": 0,
@@ -82557,19 +81901,19 @@
     },
     {
       "repo": "wenzetan/dsh-llm-newapi",
-      "stars": 7,
-      "forks": 1,
-      "open_issues": 2,
+      "stars": 6,
+      "forks": 0,
+      "open_issues": 1,
       "pushed_at": "2026-08-18T03:19:27Z",
-      "updated_at": "2026-08-29T03:09:45Z"
+      "updated_at": "2026-08-25T05:39:59Z"
     },
     {
       "repo": "wenzetan/dsh-quota-panel",
-      "stars": 8,
+      "stars": 6,
       "forks": 3,
-      "open_issues": 2,
-      "pushed_at": "2026-08-28T09:29:17Z",
-      "updated_at": "2026-08-29T03:25:28Z"
+      "open_issues": 0,
+      "pushed_at": "2026-08-24T10:27:46Z",
+      "updated_at": "2026-08-25T05:40:08Z"
     },
     {
       "repo": "weopenfire-git/dsh-market-quote",
@@ -82773,11 +82117,11 @@
     },
     {
       "repo": "Whale-Zhang/dsh-complete-chime",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T02:59:45Z",
-      "updated_at": "2026-08-28T11:01:39Z"
+      "updated_at": "2026-08-25T03:46:28Z"
     },
     {
       "repo": "Whale-Zhang/dsh-cron-tasks",
@@ -82909,11 +82253,11 @@
     },
     {
       "repo": "whitelonng/dshcode",
-      "stars": 545,
+      "stars": 534,
       "forks": 22,
       "open_issues": 0,
       "pushed_at": "2026-08-29T15:50:36Z",
-      "updated_at": "2026-08-30T12:33:38Z"
+      "updated_at": "2026-08-30T06:26:19Z"
     },
     {
       "repo": "WhitePlusMS/dsh-git-graph",
@@ -83024,7 +82368,7 @@
       "stars": 49,
       "forks": 10,
       "open_issues": 3,
-      "pushed_at": "2026-08-30T12:56:59Z",
+      "pushed_at": "2026-08-30T06:43:49Z",
       "updated_at": "2026-08-30T06:44:20Z"
     },
     {
@@ -83428,14 +82772,6 @@
       "updated_at": "2026-08-19T21:20:19Z"
     },
     {
-      "repo": "winghv/dsh-acp-activity",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T08:32:39Z",
-      "updated_at": "2026-08-30T08:32:53Z"
-    },
-    {
       "repo": "wingsky-1/dsh-plugin-hub",
       "stars": 5,
       "forks": 3,
@@ -83533,11 +82869,11 @@
     },
     {
       "repo": "WintryGrass/dsh-multi-candidate",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-21T11:54:18Z",
-      "updated_at": "2026-08-28T11:01:20Z"
+      "updated_at": "2026-08-25T03:46:46Z"
     },
     {
       "repo": "winyh/dsh-business",
@@ -83912,8 +83248,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T08:02:48Z",
-      "updated_at": "2026-08-27T08:06:20Z"
+      "pushed_at": "2026-08-26T14:37:18Z",
+      "updated_at": "2026-08-26T15:03:36Z"
     },
     {
       "repo": "wlz6/dsh-ide-ipc",
@@ -83925,11 +83261,11 @@
     },
     {
       "repo": "WM-CODER/custom-first-control-prompt",
-      "stars": 55,
+      "stars": 54,
       "forks": 1,
       "open_issues": 0,
       "pushed_at": "2026-08-21T12:04:28Z",
-      "updated_at": "2026-08-30T09:30:13Z"
+      "updated_at": "2026-08-29T23:36:54Z"
     },
     {
       "repo": "wmengxiang/dsh-prompt-optimizer",
@@ -83973,11 +83309,11 @@
     },
     {
       "repo": "woaiys3/deepseek-harness-android-app",
-      "stars": 142,
+      "stars": 141,
       "forks": 11,
       "open_issues": 3,
       "pushed_at": "2026-08-28T14:54:14Z",
-      "updated_at": "2026-08-30T07:20:43Z"
+      "updated_at": "2026-08-30T01:30:22Z"
     },
     {
       "repo": "WODE25500/dsh-az",
@@ -84066,46 +83402,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-20T11:45:02Z",
       "updated_at": "2026-08-28T11:02:23Z"
-    },
-    {
-      "repo": "WODE25500/dsh-token-caveman",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:59Z",
-      "updated_at": "2026-08-30T12:48:30Z"
-    },
-    {
-      "repo": "WODE25500/dsh-token-handoff",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:48Z",
-      "updated_at": "2026-08-30T12:46:03Z"
-    },
-    {
-      "repo": "WODE25500/dsh-token-headroom",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:55Z",
-      "updated_at": "2026-08-30T12:46:14Z"
-    },
-    {
-      "repo": "WODE25500/dsh-token-rtk",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:52Z",
-      "updated_at": "2026-08-30T12:46:14Z"
-    },
-    {
-      "repo": "WODE25500/dsh-token-skills",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:45:38Z",
-      "updated_at": "2026-08-30T12:45:55Z"
     },
     {
       "repo": "WODE25500/dsh-winget",
@@ -84216,8 +83512,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T22:29:03Z",
-      "updated_at": "2026-08-27T22:29:07Z"
+      "pushed_at": "2026-08-26T07:17:34Z",
+      "updated_at": "2026-08-26T07:18:59Z"
     },
     {
       "repo": "Wonghitman/dsh-kmp-client",
@@ -84468,14 +83764,6 @@
       "updated_at": "2026-08-30T06:44:13Z"
     },
     {
-      "repo": "WPH666-py/Genshen-Sandrone-Skin",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:55:49Z",
-      "updated_at": "2026-08-30T12:56:13Z"
-    },
-    {
       "repo": "wplleo/deepseek-harness-desktop",
       "stars": 0,
       "forks": 0,
@@ -84660,6 +83948,14 @@
       "updated_at": "2026-08-27T10:41:29Z"
     },
     {
+      "repo": "WSL043/dsh-native-reasoning-slider",
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T08:13:26Z",
+      "updated_at": "2026-08-25T20:31:47Z"
+    },
+    {
       "repo": "WSL043/dsh-native-session-manager",
       "stars": 3,
       "forks": 0,
@@ -84701,11 +83997,11 @@
     },
     {
       "repo": "wssfk12138/dsh-damage-pulse",
-      "stars": 144,
+      "stars": 143,
       "forks": 3,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-30T01:49:09Z",
-      "updated_at": "2026-08-30T11:49:35Z"
+      "updated_at": "2026-08-30T02:43:06Z"
     },
     {
       "repo": "wssfk12138/dsh-wechat-notify",
@@ -84961,7 +84257,7 @@
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T15:54:12Z",
-      "updated_at": "2026-08-28T03:39:47Z"
+      "updated_at": "2026-08-26T15:54:16Z"
     },
     {
       "repo": "wuyuanzhan43-cyber/deepseek-harness-exe",
@@ -85245,11 +84541,11 @@
     },
     {
       "repo": "WYH66666666/DSH-Transparent-UI-Plugin",
-      "stars": 391,
+      "stars": 390,
       "forks": 21,
       "open_issues": 21,
       "pushed_at": "2026-08-22T02:10:10Z",
-      "updated_at": "2026-08-30T10:47:59Z"
+      "updated_at": "2026-08-29T12:10:55Z"
     },
     {
       "repo": "wyl0929/dsh-notify",
@@ -85432,8 +84728,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T05:10:54Z",
-      "updated_at": "2026-08-30T05:11:08Z"
+      "pushed_at": "2026-08-25T07:45:00Z",
+      "updated_at": "2026-08-25T07:46:25Z"
     },
     {
       "repo": "x102201/deepseek-harness-helper",
@@ -85759,7 +85055,7 @@
       "repo": "xgone/dsh-remote",
       "stars": 51,
       "forks": 3,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-24T07:04:49Z",
       "updated_at": "2026-08-29T16:35:56Z"
     },
@@ -86069,11 +85365,11 @@
     },
     {
       "repo": "xiaobright/dsh-anchored-standard",
-      "stars": 3802,
+      "stars": 3798,
       "forks": 115,
       "open_issues": 17,
       "pushed_at": "2026-08-28T03:10:01Z",
-      "updated_at": "2026-08-30T09:59:04Z"
+      "updated_at": "2026-08-30T05:14:49Z"
     },
     {
       "repo": "xiaochaZ/dsh-session-title-summary",
@@ -86253,11 +85549,11 @@
     },
     {
       "repo": "xiaoksio/dsh-solution-explorer",
-      "stars": 8,
+      "stars": 3,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T22:24:24Z",
-      "updated_at": "2026-08-30T03:17:59Z"
+      "pushed_at": "2026-08-26T06:22:14Z",
+      "updated_at": "2026-08-26T06:20:38Z"
     },
     {
       "repo": "xiaoliang2/dsh-compact-after-task",
@@ -86821,11 +86117,11 @@
     },
     {
       "repo": "xiaxi626/dsh-skills-nexus",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T13:17:16Z",
-      "updated_at": "2026-08-29T13:17:58Z"
+      "pushed_at": "2026-08-23T14:57:20Z",
+      "updated_at": "2026-08-23T14:58:22Z"
     },
     {
       "repo": "xiaxingtianxia2-glitch/dsh-auto-exit",
@@ -86988,14 +86284,6 @@
       "updated_at": "2026-08-27T06:46:47Z"
     },
     {
-      "repo": "xieshuaix/dsh-agent-swarm",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:43:47Z",
-      "updated_at": "2026-08-30T12:44:20Z"
-    },
-    {
       "repo": "XieZongChen/dsh-md-notes",
       "stars": 15,
       "forks": 1,
@@ -87006,10 +86294,10 @@
     {
       "repo": "xiincs/deepseek-harness-desktop",
       "stars": 55,
-      "forks": 4,
-      "open_issues": 1,
+      "forks": 3,
+      "open_issues": 0,
       "pushed_at": "2026-08-23T15:16:22Z",
-      "updated_at": "2026-08-30T08:34:15Z"
+      "updated_at": "2026-08-29T16:43:22Z"
     },
     {
       "repo": "xiixiixixi/dsh-weixin-clawbot",
@@ -87605,11 +86893,11 @@
     },
     {
       "repo": "xmanrui/dsh-im",
-      "stars": 997,
-      "forks": 104,
-      "open_issues": 17,
-      "pushed_at": "2026-08-30T10:17:03Z",
-      "updated_at": "2026-08-30T11:31:02Z"
+      "stars": 988,
+      "forks": 103,
+      "open_issues": 16,
+      "pushed_at": "2026-08-30T05:08:26Z",
+      "updated_at": "2026-08-30T05:08:38Z"
     },
     {
       "repo": "xmanrui/dsh-weixin",
@@ -87645,11 +86933,11 @@
     },
     {
       "repo": "XMoon/dsh-profile-settings",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-23T04:18:35Z",
-      "updated_at": "2026-08-28T11:00:33Z"
+      "updated_at": "2026-08-25T03:47:05Z"
     },
     {
       "repo": "XMoon/dsh-subagent-router",
@@ -87981,11 +87269,11 @@
     },
     {
       "repo": "xuanyuanzhifeng/dsh-plugin-agent-workflow",
-      "stars": 129,
+      "stars": 128,
       "forks": 23,
-      "open_issues": 3,
+      "open_issues": 2,
       "pushed_at": "2026-08-24T14:31:04Z",
-      "updated_at": "2026-08-30T08:02:49Z"
+      "updated_at": "2026-08-30T03:22:07Z"
     },
     {
       "repo": "xuanyuying/dsh-desktop",
@@ -88069,11 +87357,11 @@
     },
     {
       "repo": "xuedai-mayi/dsh-wenshan",
-      "stars": 81,
+      "stars": 80,
       "forks": 0,
       "open_issues": 0,
       "pushed_at": "2026-08-26T18:51:27Z",
-      "updated_at": "2026-08-30T12:41:22Z"
+      "updated_at": "2026-08-30T02:34:28Z"
     },
     {
       "repo": "xuexiaolei1997/dsh-plugin-stock-x",
@@ -88328,7 +87616,7 @@
       "stars": 3,
       "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T13:47:15Z",
+      "pushed_at": "2026-08-26T13:27:34Z",
       "updated_at": "2026-08-26T13:16:00Z"
     },
     {
@@ -88450,14 +87738,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-17T17:40:01Z",
       "updated_at": "2026-08-17T17:41:44Z"
-    },
-    {
-      "repo": "xyAxzy/dsh-conversation-map",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:47:45Z",
-      "updated_at": "2026-08-30T12:48:03Z"
     },
     {
       "repo": "xychen0335/dsh-tui-astra",
@@ -88655,7 +87935,7 @@
       "repo": "Ya-MiC/hermes",
       "stars": 0,
       "forks": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "pushed_at": "2026-08-24T17:08:35Z",
       "updated_at": "2026-08-24T17:13:50Z"
     },
@@ -88781,11 +88061,11 @@
     },
     {
       "repo": "Yan-Zero/dsh-std",
-      "stars": 112,
+      "stars": 111,
       "forks": 2,
       "open_issues": 8,
       "pushed_at": "2026-08-29T09:03:50Z",
-      "updated_at": "2026-08-30T12:52:35Z"
+      "updated_at": "2026-08-30T01:26:33Z"
     },
     {
       "repo": "yan5236/dsh-memory",
@@ -89486,7 +88766,7 @@
     {
       "repo": "Ychris12138/dsh-usage-stats",
       "stars": 130,
-      "forks": 15,
+      "forks": 16,
       "open_issues": 7,
       "pushed_at": "2026-08-28T08:31:50Z",
       "updated_at": "2026-08-29T09:05:28Z"
@@ -89853,11 +89133,11 @@
     },
     {
       "repo": "yhyfhgs/dsh-model-hub",
-      "stars": 2,
-      "forks": 1,
+      "stars": 1,
+      "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-29T12:25:35Z",
-      "updated_at": "2026-08-29T12:25:53Z"
+      "pushed_at": "2026-08-25T08:36:41Z",
+      "updated_at": "2026-08-25T08:37:36Z"
     },
     {
       "repo": "Yi-111-a/dsh-jingling",
@@ -90116,6 +89396,14 @@
       "updated_at": "2026-08-24T15:20:57Z"
     },
     {
+      "repo": "yingxiaomo/mshell-core",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T12:15:44Z",
+      "updated_at": "2026-08-25T12:26:32Z"
+    },
+    {
       "repo": "yinhcao/yinchao-ai-music-skill",
       "stars": 10,
       "forks": 0,
@@ -90234,14 +89522,6 @@
       "open_issues": 1,
       "pushed_at": "2026-08-28T07:37:03Z",
       "updated_at": "2026-08-28T06:56:40Z"
-    },
-    {
-      "repo": "yj-liuzepeng/dsh-project-brain",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:01:35Z",
-      "updated_at": "2026-08-30T10:18:20Z"
     },
     {
       "repo": "yjh051108/dsh-engram-relay",
@@ -90397,11 +89677,11 @@
     },
     {
       "repo": "ymh0000123/dsh-theme-endfield",
-      "stars": 61,
+      "stars": 59,
       "forks": 2,
       "open_issues": 1,
       "pushed_at": "2026-08-30T04:39:17Z",
-      "updated_at": "2026-08-30T12:46:17Z"
+      "updated_at": "2026-08-30T05:04:32Z"
     },
     {
       "repo": "ymh0000123/dsh-update-checker",
@@ -90432,8 +89712,8 @@
       "stars": 1,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T20:24:54Z",
-      "updated_at": "2026-08-27T20:16:33Z"
+      "pushed_at": "2026-08-25T19:32:28Z",
+      "updated_at": "2026-08-26T12:36:42Z"
     },
     {
       "repo": "Yoahoug/dsh-launcher",
@@ -90704,8 +89984,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T14:54:41Z",
-      "updated_at": "2026-08-27T14:41:46Z"
+      "pushed_at": "2026-08-26T09:08:26Z",
+      "updated_at": "2026-08-26T08:38:50Z"
     },
     {
       "repo": "Yourtsao/gongwen-dsh",
@@ -90845,11 +90125,11 @@
     },
     {
       "repo": "ysr666/dsh-vision-router",
-      "stars": 1031,
+      "stars": 1028,
       "forks": 44,
-      "open_issues": 3,
+      "open_issues": 1,
       "pushed_at": "2026-08-30T05:03:25Z",
-      "updated_at": "2026-08-30T11:44:06Z"
+      "updated_at": "2026-08-30T06:34:56Z"
     },
     {
       "repo": "ystyle/dsh-tool-terminal-search",
@@ -91069,11 +90349,11 @@
     },
     {
       "repo": "yuanwang589-dev/deepseek-harness-quant",
-      "stars": 124,
+      "stars": 123,
       "forks": 42,
       "open_issues": 0,
       "pushed_at": "2026-08-17T08:12:39Z",
-      "updated_at": "2026-08-30T10:46:53Z"
+      "updated_at": "2026-08-30T05:38:20Z"
     },
     {
       "repo": "yuanyou299/dsh-memory",
@@ -91136,8 +90416,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T04:43:11Z",
-      "updated_at": "2026-08-27T04:43:14Z"
+      "pushed_at": "2026-08-23T13:07:27Z",
+      "updated_at": "2026-08-23T13:08:26Z"
     },
     {
       "repo": "YUCONG-28/dsh-skills-plugins",
@@ -91146,14 +90426,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-23T09:02:30Z",
       "updated_at": "2026-08-25T03:47:45Z"
-    },
-    {
-      "repo": "yudaxia1/one-dark-pro-dsh-plugin",
-      "stars": 1,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:07:30Z",
-      "updated_at": "2026-08-30T12:10:07Z"
     },
     {
       "repo": "YUEEEEY/dsh-desktop-host",
@@ -91197,11 +90469,11 @@
     },
     {
       "repo": "Yuer6327/NoLetMe",
-      "stars": 9,
-      "forks": 0,
+      "stars": 8,
+      "forks": 1,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T02:42:54Z",
-      "updated_at": "2026-08-28T08:55:24Z"
+      "pushed_at": "2026-08-25T05:14:01Z",
+      "updated_at": "2026-08-25T15:45:02Z"
     },
     {
       "repo": "yuexiaoliang/dsh-methodology",
@@ -91218,14 +90490,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-28T11:21:45Z",
       "updated_at": "2026-08-29T18:51:29Z"
-    },
-    {
-      "repo": "YUEYUEXYS/dsh-think-ultra",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:53:11Z",
-      "updated_at": "2026-08-30T12:54:28Z"
     },
     {
       "repo": "yufengnigel/dsh-session-rpc",
@@ -91376,8 +90640,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T00:51:13Z",
-      "updated_at": "2026-08-27T00:55:46Z"
+      "pushed_at": "2026-08-24T16:56:33Z",
+      "updated_at": "2026-08-24T17:30:50Z"
     },
     {
       "repo": "yul761/dsh-statecore",
@@ -91909,11 +91173,11 @@
     },
     {
       "repo": "yyh-001/dsh-meme",
-      "stars": 66,
-      "forks": 5,
-      "open_issues": 10,
+      "stars": 65,
+      "forks": 4,
+      "open_issues": 4,
       "pushed_at": "2026-08-20T14:27:08Z",
-      "updated_at": "2026-08-30T08:42:02Z"
+      "updated_at": "2026-08-28T11:13:54Z"
     },
     {
       "repo": "yyking12/dsh-vision",
@@ -92008,8 +91272,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-30T12:51:20Z",
-      "updated_at": "2026-08-30T12:53:53Z"
+      "pushed_at": "2026-08-26T13:54:57Z",
+      "updated_at": "2026-08-26T14:10:25Z"
     },
     {
       "repo": "yzfly/awesome-dsh-skills",
@@ -92391,9 +91655,9 @@
       "repo": "ZASENJC/dsh-plugins-store",
       "stars": 69,
       "forks": 5,
-      "open_issues": 2,
-      "pushed_at": "2026-08-30T06:52:17Z",
-      "updated_at": "2026-08-30T06:52:26Z"
+      "open_issues": 1,
+      "pushed_at": "2026-08-30T00:34:22Z",
+      "updated_at": "2026-08-30T06:15:46Z"
     },
     {
       "repo": "zbc0315/dsh-synomega",
@@ -92893,11 +92157,11 @@
     },
     {
       "repo": "zenstory-ai/oh-story-dsh",
-      "stars": 219,
+      "stars": 218,
       "forks": 36,
       "open_issues": 3,
       "pushed_at": "2026-08-29T06:10:17Z",
-      "updated_at": "2026-08-30T11:30:40Z"
+      "updated_at": "2026-08-29T10:59:23Z"
     },
     {
       "repo": "zenvertao/dsh-inline-comments",
@@ -93072,8 +92336,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-27T00:26:19Z",
-      "updated_at": "2026-08-27T00:26:22Z"
+      "pushed_at": "2026-08-25T13:19:45Z",
+      "updated_at": "2026-08-25T14:20:21Z"
     },
     {
       "repo": "zerosloney/dsh-ralph-loop",
@@ -93210,6 +92474,14 @@
       "open_issues": 0,
       "pushed_at": "2026-08-16T10:46:37Z",
       "updated_at": "2026-08-25T04:50:50Z"
+    },
+    {
+      "repo": "Zh1rV/dsh-web-search-tavily",
+      "stars": 1,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-08-25T18:58:28Z",
+      "updated_at": "2026-08-25T19:05:23Z"
     },
     {
       "repo": "zh667/TokenLedger",
@@ -93932,14 +93204,6 @@
       "updated_at": "2026-08-25T03:47:46Z"
     },
     {
-      "repo": "zhengjy01/dsh-vercel-mcp",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:42:53Z",
-      "updated_at": "2026-08-30T12:45:12Z"
-    },
-    {
       "repo": "zhengjy01/weread-export",
       "stars": 2,
       "forks": 0,
@@ -94165,11 +93429,11 @@
     },
     {
       "repo": "Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins",
-      "stars": 465,
+      "stars": 456,
       "forks": 42,
       "open_issues": 6,
       "pushed_at": "2026-08-29T07:07:48Z",
-      "updated_at": "2026-08-30T12:37:02Z"
+      "updated_at": "2026-08-30T06:23:24Z"
     },
     {
       "repo": "zhiyuwang720-dev/cordis-py",
@@ -94685,11 +93949,11 @@
     },
     {
       "repo": "zhuyifang/tonghuasun-agent",
-      "stars": 153,
+      "stars": 152,
       "forks": 47,
       "open_issues": 6,
       "pushed_at": "2026-08-29T19:31:35Z",
-      "updated_at": "2026-08-30T09:50:14Z"
+      "updated_at": "2026-08-29T19:31:39Z"
     },
     {
       "repo": "zhuyoujie-2025/dsh-plugins",
@@ -95224,8 +94488,8 @@
       "stars": 0,
       "forks": 0,
       "open_issues": 0,
-      "pushed_at": "2026-08-28T10:01:21Z",
-      "updated_at": "2026-08-28T10:01:42Z"
+      "pushed_at": "2026-08-24T17:28:51Z",
+      "updated_at": "2026-08-24T17:31:45Z"
     },
     {
       "repo": "Zn-Dk/dsh-plugin-creator",
@@ -95596,14 +94860,6 @@
       "updated_at": "2026-08-18T02:27:19Z"
     },
     {
-      "repo": "ZoriaSoft/dsh-subagents",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:27:52Z",
-      "updated_at": "2026-08-30T12:28:10Z"
-    },
-    {
       "repo": "Zouu-X/dsh_remote",
       "stars": 3,
       "forks": 2,
@@ -95645,11 +94901,11 @@
     },
     {
       "repo": "zouyuxuan122/Deepseek-Harness-EAC",
-      "stars": 1436,
+      "stars": 1425,
       "forks": 49,
       "open_issues": 12,
-      "pushed_at": "2026-08-30T09:22:22Z",
-      "updated_at": "2026-08-30T12:55:38Z"
+      "pushed_at": "2026-08-30T02:33:57Z",
+      "updated_at": "2026-08-30T05:47:59Z"
     },
     {
       "repo": "zouzhe1/dsh-desktop",
@@ -95909,19 +95165,19 @@
     },
     {
       "repo": "ZSeven-W/dsh-ios",
-      "stars": 268,
+      "stars": 267,
       "forks": 23,
       "open_issues": 1,
       "pushed_at": "2026-08-24T15:57:29Z",
-      "updated_at": "2026-08-30T08:18:07Z"
+      "updated_at": "2026-08-30T03:17:17Z"
     },
     {
       "repo": "ZSeven-W/dsh-noema",
-      "stars": 129,
+      "stars": 128,
       "forks": 7,
       "open_issues": 0,
       "pushed_at": "2026-08-21T14:50:44Z",
-      "updated_at": "2026-08-30T08:22:50Z"
+      "updated_at": "2026-08-29T11:06:55Z"
     },
     {
       "repo": "zshqzcn/dsh-browser-control",
@@ -96148,14 +95404,6 @@
       "updated_at": "2026-08-25T10:24:01Z"
     },
     {
-      "repo": "zwfcrazy/dsh-bootstrap",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T12:49:16Z",
-      "updated_at": "2026-08-30T12:49:44Z"
-    },
-    {
       "repo": "ZwqJG/dsh-plugins",
       "stars": 0,
       "forks": 0,
@@ -96298,14 +95546,6 @@
       "open_issues": 1,
       "pushed_at": "2026-08-26T17:47:49Z",
       "updated_at": "2026-08-26T17:48:54Z"
-    },
-    {
-      "repo": "ZyfNO2/dsh-research-studio",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 0,
-      "pushed_at": "2026-08-30T09:04:25Z",
-      "updated_at": "2026-08-30T09:05:45Z"
     },
     {
       "repo": "zyh20041227/improved_vision_for_deepseek",
@@ -96474,14 +95714,6 @@
       "open_issues": 0,
       "pushed_at": "2026-08-26T03:20:35Z",
       "updated_at": "2026-08-26T03:20:49Z"
-    },
-    {
-      "repo": "zzy-12345678/dsh-file-convert",
-      "stars": 0,
-      "forks": 0,
-      "open_issues": 6,
-      "pushed_at": "2026-08-30T12:19:51Z",
-      "updated_at": "2026-08-30T12:20:32Z"
     },
     {
       "repo": "zzy1601/dsh-gitbash",
