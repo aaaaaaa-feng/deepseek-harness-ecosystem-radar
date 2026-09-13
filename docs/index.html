@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com/beacon.min.js; style-src 'self'; img-src 'self' data: https://github.com https://avatars.githubusercontent.com; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="same-origin">
+  <meta name="description" content="按小时更新的 DeepSeek Harness GitHub 生态早期雷达">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DeepSeek Harness 生态早期雷达">
+  <meta property="og:description" content="每小时发现新仓库，跟踪 DeepSeek Harness 生态的公开变化。">
+  <meta name="twitter:card" content="summary">
+  <title>DeepSeek Harness 生态早期雷达</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=20260816-avatar-orbit-1">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="hero" id="top">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#top">DSH / RADAR</a>
+      <div class="nav-links">
+        <a href="#ecosystem-top20">星球</a>
+        <a href="#ranking">排名</a>
+        <a href="#category-ranking">分类榜</a>
+        <a href="#methodology">方法</a>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">OPEN-SOURCE ECOSYSTEM OBSERVATORY</p>
+        <h1>DeepSeek Harness<br>生态早期雷达</h1>
+        <p class="lede">每小时发现新仓库，追踪公开指标与生态信号。每个数字都有时间和来源边界。</p>
+        <div class="status-line" role="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="freshness">正在读取最新快照…</span>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <p>研究起点</p>
+        <strong id="cutoff">—</strong>
+        <p>自动更新</p>
+        <strong id="schedule">—</strong>
+      </aside>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="metrics" aria-label="概览指标">
+      <article><span>已确认项目</span><strong id="project-count">—</strong></article>
+      <article><span>待复核候选</span><strong id="candidate-count">—</strong></article>
+      <article><span>历史快照</span><strong id="snapshot-count">—</strong></article>
+      <article><span>最新数据</span><strong class="date-metric" id="snapshot-date">—</strong></article>
+      <article class="location-metric"><span>维护者公开所在地</span><strong id="region-counts">—</strong><small id="region-unknown">正在统计…</small></article>
+    </section>
+
+    <section class="ecosystem-planet section" id="ecosystem-top20" aria-labelledby="ecosystem-top20-title">
+      <div class="section-head planet-section-head">
+        <div>
+          <p class="eyebrow">ECOSYSTEM AVATAR ORBIT</p>
+          <h2 id="ecosystem-top20-title">生态头像星球 · Top 20</h2>
+          <p>每个圆形代表一个开源项目，头像来自维护者的公开 GitHub 资料。名次越靠前，头像越大。</p>
+        </div>
+        <div class="planet-legend" aria-label="图例">
+          <span><i class="legend-dot legend-rank" aria-hidden="true"></i>大小 = 当前名次</span>
+          <span><i class="legend-dot legend-category" aria-hidden="true"></i>光环 = 功能分类</span>
+        </div>
+      </div>
+      <div class="planet-layout">
+        <div class="planet-stage" id="planet-stage" role="region" aria-label="当前关注度排名前二十项目头像图">
+          <div class="planet-stage-label" aria-hidden="true"><span>LIVE ORBIT</span><strong>20</strong></div>
+          <div class="planet-leaders" id="planet-leaders" role="list" aria-label="前三名项目"></div>
+          <div class="planet-field" id="planet-field" role="list" aria-label="第四至第二十名项目"></div>
+        </div>
+        <article class="planet-detail" id="planet-detail" aria-live="polite" aria-atomic="true">
+          <p class="planet-detail-loading">正在装载 Top 20 项目…</p>
+        </article>
+      </div>
+      <p class="planet-boundary">头像大小只表达当前关注度名次，不表示项目质量、实际用户数，也不表示规模差距的倍数。点击或聚焦头像可查看项目详情。</p>
+    </section>
+
+    <section class="section" id="ranking">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">CURRENT ATTENTION</p>
+          <h2>当前关注度排名</h2>
+          <p id="ranking-window">由 Stars 与 Forks 的对数分数计算，不是产品质量榜。</p>
+          <p class="translation-note">中文介绍优先展示；有英文原文时可以展开核对。</p>
+        </div>
+        <div class="controls">
+          <label>搜索 <input id="search" type="search" placeholder="owner/repo、中文功能或地点" aria-controls="ranking-table"></label>
+          <label>分类 <select id="category" aria-controls="ranking-table"><option value="">全部分类</option></select></label>
+          <label>所在地 <select id="region" aria-controls="ranking-table"><option value="">全部地区</option></select></label>
+        </div>
+      </div>
+      <div class="ranking-meta">
+        <p id="ranking-status" aria-live="polite">正在准备排名…</p>
+        <p class="table-scroll-note">手机端自动切换为卡片，在榜单视窗内上下滑动即可查看完整排名。</p>
+      </div>
+      <div class="ranking-frame" id="ranking-frame">
+        <div class="ranking-frame-bar">
+          <div class="ranking-frame-status">
+            <span class="ranking-frame-dot" aria-hidden="true"></span>
+            <strong id="ranking-range">正在计算可见排名…</strong>
+          </div>
+          <div class="ranking-frame-actions">
+            <span id="ranking-scroll-help">固定视窗 · 框内滚动全部排名，榜尾后继续滚动进入下一部分。</span>
+            <span class="ranking-frame-buttons">
+              <button id="ranking-scroll-next" type="button" aria-controls="ranking-viewport" disabled>向下翻榜</button>
+              <button id="ranking-scroll-top" type="button" aria-controls="ranking-viewport" disabled>回到榜首</button>
+            </span>
+          </div>
+        </div>
+        <div class="ranking-progress" aria-hidden="true"><span id="ranking-progress-bar"></span></div>
+        <div class="table-wrap ranking-viewport" id="ranking-viewport" tabindex="0" aria-label="完整关注度排名" aria-describedby="ranking-scroll-help">
+          <table id="ranking-table">
+            <caption>DeepSeek Harness 相关项目关注度排名</caption>
+            <colgroup>
+              <col class="col-rank"><col class="col-project"><col class="col-region"><col class="col-category"><col class="col-number">
+              <col class="col-number"><col class="col-score"><col class="col-delta"><col class="col-delta">
+            </colgroup>
+            <thead><tr><th scope="col">#</th><th scope="col">项目</th><th scope="col">公开所在地</th><th scope="col">分类</th><th scope="col">Stars</th><th scope="col">Forks</th><th scope="col">关注分</th><th scope="col" id="window-header">窗口 Stars Δ</th><th scope="col">排名变化</th></tr></thead>
+            <tbody id="ranking-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="category-ranking">
+      <div class="section-head category-section-head">
+        <div>
+          <p class="eyebrow">CATEGORY LEADERBOARD</p>
+          <h2>功能分类榜</h2>
+          <p id="category-ranking-note">默认按分类内项目的 Stars 总量排序，不是质量评分。</p>
+        </div>
+        <div class="sort-tabs" role="group" aria-label="分类榜排序方式">
+          <button class="sort-tab" type="button" data-category-sort="stars" aria-pressed="true">Stars 总量</button>
+          <button class="sort-tab" type="button" data-category-sort="projects" aria-pressed="false">项目数量</button>
+          <button class="sort-tab" type="button" data-category-sort="momentum" aria-pressed="false">窗口增长</button>
+        </div>
+      </div>
+      <div class="category-podium" id="category-podium" aria-live="polite"></div>
+      <div class="table-wrap category-table-wrap">
+        <table class="category-table" id="category-ranking-table">
+          <caption>DeepSeek Harness 功能分类排名</caption>
+          <thead><tr><th scope="col">#</th><th scope="col">功能分类</th><th scope="col">项目数</th><th scope="col">Stars 总量</th><th scope="col">Stars 占比</th><th scope="col">窗口 Stars Δ</th><th scope="col">头部项目</th></tr></thead>
+          <tbody id="category-ranking-body"></tbody>
+        </table>
+      </div>
+      <p class="category-boundary">分类排名描述公开规模和变化。一个头部项目可能显著影响分类 Stars 总量，因此可以切换到“项目数量”交叉查看。</p>
+    </section>
+
+    <section class="split section" id="momentum">
+      <div>
+        <p class="eyebrow">OBSERVED MOMENTUM</p>
+        <h2>观察窗口动量</h2>
+        <p id="momentum-note">至少有两个快照后才生成。</p>
+        <ol class="movers" id="movers"></ol>
+      </div>
+      <div>
+        <p class="eyebrow">CATEGORY MAP</p>
+        <h2>项目方向分布</h2>
+        <div class="category-bars" id="category-bars"></div>
+      </div>
+    </section>
+
+    <section class="method section" id="methodology">
+      <p class="eyebrow">READ THIS BEFORE SHARING</p>
+      <h2>这是什么，也不是什么</h2>
+      <div class="method-grid">
+        <article><strong>是</strong><p>带来源、时间和历史快照的 GitHub 公开指标观察。</p></article>
+        <article><strong>不是</strong><p>绝对全网穷尽、产品质量、安全性或真实用户数排名。</p></article>
+        <article><strong>已确认</strong><p>表示相关性与实现入口有证据，不表示已经逐个安装验收。</p></article>
+        <article><strong>所在地</strong><p>只采用维护者主动公开的 GitHub 地点，不根据姓名、语言或头像推断国籍。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>DeepSeek Harness 生态早期雷达 · Snapshot-based, reproducible, evidence-bounded.</p>
+    <p><a id="repository-link" class="footer-link" hidden target="_blank" rel="noopener noreferrer">GitHub 仓库</a> <span id="footer-time"></span></p>
+  </footer>
+  <noscript><p class="noscript">需要启用 JavaScript 才能读取排名数据。</p></noscript>
+  <script type="module" src="./app.js?v=20260816-avatar-orbit-1"></script>
+</body>
+</html>
